@@ -1,9 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Kufi_Arabic, Pixelify_Sans, Press_Start_2P } from "next/font/google";
+import { Noto_Kufi_Arabic, Pixelify_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./pixel-icons.css";
 import "./globals.css";
 
-const pixel = Press_Start_2P({ weight: "400", subsets: ["latin"], variable: "--font-pixel" });
+// Silkscreen: a readable pixel font for titles and labels (OFL). It draws smaller than
+// the Press Start 2P it replaced, so size-adjust scales it up to keep existing sizes.
+const pixel = localFont({
+  src: [
+    { path: "./fonts/Silkscreen-Regular.ttf", weight: "400" },
+    { path: "./fonts/Silkscreen-Bold.ttf", weight: "700" },
+  ],
+  variable: "--font-pixel",
+  declarations: [{ prop: "size-adjust", value: "135%" }],
+});
 const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
