@@ -6,13 +6,12 @@ export const profile = {
   handle: "nelmkt",
   headline: "FCIT Student @ KAU · Waed ’26 · IEEE ’25 · UNCCD COP16 ’24 · Mawhiba Alumna",
   tagline:
-    "Undergraduate researcher merging technology with complex problems to contribute in real-world impact.",
+    "Undergraduate researcher applying AI and machine learning to complex, real-world problems.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
-    "As a kid, a question never stayed a question for long: I kept digging until I understood the how and the why. These days that curiosity mostly lives in code. I write Python, TypeScript, Rust and Ruby, train ML models with XGBoost and scikit-learn, build full-stack web apps with Next.js, and wire up Raspberry Pi hardware when a problem needs to leave the screen.",
-    "I love problem solving, and programming is how I do it, whether that means building a data pipeline, a model or an IoT device. After my bachelor's, I'm aiming for a Ph.D. in AI/ML and a career in academia, doing research that uses tech to make cities like Jeddah smarter and more sustainable.",
-    "Along the way I've built a few things, including Wahaj and Aykah, which you'll find in the Quest Log below.",
-    "I'm also an artist. When I'm away from the keyboard, I'm usually designing or painting, which probably explains why this site looks the way it does.",
+    "I'm a computer science student at King Abdulaziz University who loves problem solving through code. I work in Python, TypeScript, Rust and Ruby, build machine learning models with XGBoost and scikit-learn, develop full-stack applications with Next.js and Node.js, and prototype hardware on Raspberry Pi.",
+    "My goal is a Ph.D. in AI/ML and a career in academia, researching how technology can make cities like Jeddah smarter and more sustainable. My projects, including Wahaj and Aykah, are in the Quest Log below.",
+    "I'm also an artist. Away from the keyboard I design and paint, which probably explains why this site looks the way it does.",
   ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
@@ -20,8 +19,8 @@ export const profile = {
     { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
     { label: "BASE", value: "Jeddah, Saudi Arabia" },
     { label: "LANGS", value: "Arabic · English" },
-    { label: "MAIN QUEST", value: "Graduate research → Ph.D" },
-    { label: "SIDE QUEST", value: "Designing & painting" },
+    { label: "MAIN QUEST", value: "Ph.D. in AI/ML → academia" },
+    { label: "SIDE QUEST", value: "Design & painting" },
   ],
   interests: [
     "AI/ML engineering",

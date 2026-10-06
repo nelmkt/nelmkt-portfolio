@@ -139,7 +139,7 @@ export default function Portfolio() {
         <section id="bonus" className="stage">
           <StageTag code="1-2" label="BONUS STAGE · LANGUAGE RUSH" />
           <p className="stage-lede">
-            My programming languages, as collectibles. Jump to grab each gem and fill your inventory, and watch out for bugs.
+            The languages I program in, as collectibles. Jump to collect each one and avoid the bugs.
           </p>
           <div className="box game-box">
             <RunnerGame collected={collected} onCollect={onCollect} />
@@ -319,7 +319,7 @@ export default function Portfolio() {
             <div className="save-crystal" aria-hidden="true" />
             <div>
               <h3>OPEN TO RESEARCH COLLABORATION</h3>
-              <p>The fastest route is LinkedIn or email. Speaks Arabic and English.</p>
+              <p>The quickest way to reach me is LinkedIn or email. I work in Arabic and English.</p>
             </div>
           </div>
           <ul className="links">
