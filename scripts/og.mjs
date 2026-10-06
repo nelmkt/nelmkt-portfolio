@@ -111,7 +111,6 @@ const svg = `
   <rect x="${W / 2 - 222}" y="${H - 96}" width="460" height="58" fill="none" stroke="#1a0612" stroke-width="4" opacity=".6"/>
   <polygon points="${W / 2 - 200},${H - 87} ${W / 2 - 200},${H - 63} ${W / 2 - 184},${H - 75}" fill="#ff1f7a"/>
   <text x="${W / 2 + 14}" y="${H - 64}" font-size="24" font-family="Press Start 2P" fill="#3b0f2e" text-anchor="middle">NELMKT.COM</text>
-  <text x="${W - 60}" y="${H - 64}" font-size="14" font-family="Press Start 2P" fill="#ffffff" text-anchor="end" opacity=".85">ML · GREEN TECH</text>
   <rect y="${H - 10}" width="${W}" height="10" fill="url(#rainbow)"/>
 </svg>`;
 
