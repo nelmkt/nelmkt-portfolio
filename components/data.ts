@@ -16,6 +16,7 @@ export const profile = {
   ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
+    { label: "TITLE", value: "Youngest UN-certified Saudi researcher · 4 national & international recognitions" },
     { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
     { label: "BASE", value: "Jeddah, Saudi Arabia" },
     { label: "LANGS", value: "Arabic · English" },
@@ -132,7 +133,7 @@ export const trophies = [
   {
     year: "DEC 2024",
     title: "Young Researchers Award · Modern Technologies",
-    detail: "Youngest participant of 209 researchers and professors from 36 countries",
+    detail: "Youngest participant of 209 researchers and professors from 36 countries, making me the youngest UN-certified Saudi researcher",
     by: "UNCCD COP16",
     tier: "legendary",
   },

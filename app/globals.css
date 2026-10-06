@@ -1534,3 +1534,8 @@ body.cheat .hud {
   opacity: 1;
   text-shadow: 2px 2px 0 #1a0612;
 }
+
+/* an odd last stat spans both columns so the grid has no gap */
+.stats div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
