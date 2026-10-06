@@ -6,29 +6,30 @@ export const profile = {
   handle: "nelmkt",
   headline: "FCIT Student @ KAU · Waed ’26 · IEEE ’25 · UNCCD COP16 ’24 · Mawhiba Alumna",
   tagline:
-    "Undergraduate researcher applying AI and machine learning to complex, real-world problems.",
+    "Undergraduate researcher and builder working across software, hardware, design and AI.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
     "I'm a computer science student at King Abdulaziz University who loves problem solving through code. I work in Python, TypeScript, Rust and Ruby, build machine learning models with XGBoost and scikit-learn, develop full-stack applications with Next.js and Node.js, and prototype hardware on Raspberry Pi.",
-    "My goal is a Ph.D. in AI/ML and a career in academia, researching how technology can make cities like Jeddah smarter and more sustainable. My projects, including Wahaj and Aykah, are in the Quest Log below.",
+    "My goal is a Ph.D. and a career in academia, researching how technology can make cities like Jeddah smarter and more sustainable. My projects, including Wahaj and Aykah, are in the Quest Log below.",
     "I'm also an artist. Away from the keyboard I design and paint, which probably explains why this site looks the way it does.",
   ],
   stats: [
-    { label: "ROLE", value: "Researcher · Innovator · ML Engineer" },
-    { label: "RECOGNITION", value: "One of the youngest Saudi researchers recognized at UNCCD COP16 · 5 national & international recognitions and 3 national & international awards" },
-    { label: "EDUCATION", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
-    { label: "LOCATION", value: "Jeddah, Saudi Arabia" },
-    { label: "LANGUAGES", value: "Arabic · English" },
-    { label: "GOAL", value: "Ph.D. in AI/ML and a career in academia" },
-    { label: "OUTSIDE CODE", value: "Design & painting" },
+    { label: "CLASS", value: "Researcher · Developer · Designer · ML Engineer" },
+    { label: "TITLE", value: "One of the youngest Saudi researchers recognized at UNCCD COP16 · 5 national & international recognitions and 3 national & international awards" },
+    { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
+    { label: "BASE", value: "Jeddah, Saudi Arabia" },
+    { label: "LANGS", value: "Arabic · English" },
+    { label: "MAIN QUEST", value: "Ph.D. → academia" },
+    { label: "SIDE QUEST", value: "Design & painting" },
   ],
   interests: [
-    "AI/ML engineering",
-    "Applied ML",
     "Full-stack development",
-    "Reproducible research",
+    "Hardware & IoT",
+    "UI & graphic design",
+    "Research",
+    "AI/ML",
+    "Leadership & events",
     "Green technology",
-    "IoT",
   ],
 };
 
@@ -51,7 +52,7 @@ export const quests: Quest[] = [
     id: "wahaj",
     title: "Wahaj",
     titleAr: "وهاج",
-    status: "RESEARCH · JUN–OCT 2026 · ARCHIVED ON ZENODO",
+    status: "MAIN QUEST · JUN–OCT 2026 · RELEASED",
     url: "https://github.com/nelmkt/Wahaj-Framework",
     image:
       "https://raw.githubusercontent.com/nelmkt/Wahaj-Framework/v11-framework-ml/figures_r1/fig_r1_dose_contrasts.png",
@@ -75,7 +76,7 @@ export const quests: Quest[] = [
     id: "aykah",
     title: "Aykah",
     titleAr: "آيكة",
-    status: "PROJECT · OCT 2024–MAR 2025 · PATENTED · AWARD-WINNING",
+    status: "QUEST COMPLETE · OCT 2024–MAR 2025 · PATENTED · MULTI-AWARD",
     url: "https://github.com/nelmkt/Smart-Bin-Aykah",
     image:
       "https://raw.githubusercontent.com/nelmkt/Smart-Bin-Aykah/main/images/prototype.jpg",
@@ -179,13 +180,15 @@ export const languages = [
   { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING" },
 ] as const;
 
+// Broad development skills first; ML is one strand among several.
 export const skillTree = [
-  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
-  { branch: "Data", items: ["scikit-learn", "pandas", "NumPy"] },
-  { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
   { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js"] },
   { branch: "Tools", items: ["Git", "Docker"] },
+  { branch: "Design & communication", items: ["UI prototyping", "Layout & graphic design", "Public speaking", "Scientific presentation"] },
+  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
+  { branch: "Data", items: ["scikit-learn", "pandas", "NumPy"] },
+  { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
   {
     branch: "Hardware",
     items: [
@@ -247,12 +250,12 @@ export const links = [
 ];
 
 export const stages = [
-  { id: "player", code: "01", label: "ABOUT" },
-  { id: "quests", code: "02", label: "PROJECTS" },
-  { id: "trophies", code: "03", label: "AWARDS" },
-  { id: "academy", code: "04", label: "EDUCATION" },
-  { id: "skills", code: "05", label: "SKILLS" },
-  { id: "bonus", code: "06", label: "MINI-GAME" },
-  { id: "party", code: "07", label: "LEADERSHIP" },
-  { id: "save", code: "08", label: "CONTACT" },
+  { id: "player", code: "1-1", label: "PLAYER" },
+  { id: "bonus", code: "1-2", label: "BONUS" },
+  { id: "quests", code: "1-3", label: "QUESTS" },
+  { id: "trophies", code: "1-4", label: "TROPHIES" },
+  { id: "academy", code: "1-5", label: "ACADEMY" },
+  { id: "skills", code: "1-6", label: "SKILLS" },
+  { id: "party", code: "1-7", label: "PARTY" },
+  { id: "save", code: "1-8", label: "SAVE" },
 ];
