@@ -8,8 +8,8 @@ type Props = {
   size?: number;
   /** on-screen size of one pixel */
   scale?: number;
-  /** pixel drop shadow color; omit for none */
-  shadow?: string;
+  /** pixel drop shadow colour(s); each extra colour sits one more pixel out, like stacked text-shadows */
+  shadow?: string | string[];
   className?: string;
   lang?: string;
 };
@@ -18,8 +18,10 @@ type Props = {
 // up with nearest-neighbour so any script (here Arabic) gets a true pixel look.
 export default function PixelText({ text, size = 13, scale = 3, shadow, className, lang = "ar" }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
+  const shadowKey = (Array.isArray(shadow) ? shadow : shadow ? [shadow] : []).join("|");
 
   useEffect(() => {
+    const shadows = shadowKey ? shadowKey.split("|") : [];
     const canvas = ref.current!;
     const family =
       getComputedStyle(document.documentElement).getPropertyValue("--font-ar").trim() || "sans-serif";
@@ -31,8 +33,8 @@ export default function PixelText({ text, size = 13, scale = 3, shadow, classNam
       probe.font = font;
       const m = probe.measureText(text);
       const pad = 2;
-      const w = Math.ceil(m.width) + pad * 2 + 1;
-      const h = Math.ceil(size * 1.9) + 1;
+      const w = Math.ceil(m.width) + pad * 2 + shadows.length;
+      const h = Math.ceil(size * 1.9) + shadows.length;
 
       const src = document.createElement("canvas");
       src.width = w;
@@ -60,10 +62,12 @@ export default function PixelText({ text, size = 13, scale = 3, shadow, classNam
         for (let y = 0; y < h; y++)
           for (let x = 0; x < w; x++) if (on[y * w + x]) ctx.fillRect(x + dx, y + dy, 1, 1);
       };
-      if (shadow) {
-        const v = shadow.match(/^var\((--[\w-]+)\)$/);
-        paint(v ? getComputedStyle(canvas).getPropertyValue(v[1]).trim() : shadow, 1, 1);
-      }
+      const resolve = (c: string) => {
+        const v = c.match(/^var\((--[\w-]+)\)$/);
+        return v ? getComputedStyle(canvas).getPropertyValue(v[1]).trim() : c;
+      };
+      // farthest shadow first, then nearer ones, then the glyphs
+      for (let k = shadows.length - 1; k >= 0; k--) paint(resolve(shadows[k]), k + 1, k + 1);
       paint(color, 0, 0);
     };
 
@@ -72,7 +76,7 @@ export default function PixelText({ text, size = 13, scale = 3, shadow, classNam
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     mq.addEventListener("change", draw);
     return () => mq.removeEventListener("change", draw);
-  }, [text, size, scale, shadow]);
+  }, [text, size, scale, shadowKey]);
 
   return <canvas ref={ref} className={`pixel-text ${className ?? ""}`} role="img" aria-label={text} lang={lang} />;
 }

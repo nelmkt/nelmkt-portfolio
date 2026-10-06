@@ -1502,3 +1502,16 @@ body.cheat .hud {
     opacity: 0.15;
   }
 }
+
+/* start screen: all text white, with a dark pixel shadow for legibility */
+.start-kicker,
+.start-sub,
+.start-meta,
+.start-arcade,
+.start-arcade b,
+.start-arcade span:nth-child(2) b,
+.start-arcade span:last-child b {
+  color: #ffffff;
+  opacity: 1;
+  text-shadow: 2px 2px 0 #1a0612;
+}
