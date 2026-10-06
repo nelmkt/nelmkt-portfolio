@@ -110,6 +110,13 @@ export const trophies = [
   },
   {
     year: "SEP 2026",
+    title: "Featured · Saudi Gazette",
+    detail: "Feature story on my journey from curiosity to the award-winning Aykah smart bin",
+    by: "Saudi Gazette",
+    tier: "gold",
+  },
+  {
+    year: "SEP 2026",
     title: "Certificate of Appreciation",
     detail: "For distinguished participation in local and international competitions",
     by: "King Abdulaziz University",
