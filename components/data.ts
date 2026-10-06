@@ -198,8 +198,8 @@ export const sideQuests = [
 ];
 
 export const links = [
-  { label: "LinkedIn", value: "in/nelmkt", url: "https://www.linkedin.com/in/nelmkt/", primary: true },
-  { label: "Email", value: "nalmaktoum0001@stu.kau.edu.sa", url: "mailto:nalmaktoum0001@stu.kau.edu.sa", primary: true },
+  { label: "LinkedIn", value: "in/nelmkt", url: "https://www.linkedin.com/in/nelmkt/" },
+  { label: "Email", value: "nalmaktoum0001@stu.kau.edu.sa", url: "mailto:nalmaktoum0001@stu.kau.edu.sa" },
   { label: "X", value: "@nelmkt", url: "https://x.com/nelmkt" },
   { label: "GitHub", value: "nelmkt", url: "https://github.com/nelmkt" },
   { label: "ORCID", value: "0009-0007-9887-0280", url: "https://orcid.org/0009-0007-9887-0280" },

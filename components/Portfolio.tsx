@@ -315,7 +315,7 @@ export default function Portfolio() {
             {links.map((l) => (
               <li key={l.label}>
                 <a
-                  className={`box link${l.primary ? " primary" : ""}`}
+                  className="box link"
                   href={l.url}
                   target={l.url.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noreferrer"
