@@ -6,15 +6,15 @@ export const profile = {
   handle: "nelmkt",
   headline: "FCIT Student @ KAU · Waed ’26 · IEEE ’25 · UNCCD COP16 ’24 · Mawhiba Alumna",
   tagline:
-    "Undergraduate researcher and builder working across software, hardware, design and AI.",
+    "Undergraduate researcher and developer working across software, hardware, data and AI.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
     "I'm a computer science student at King Abdulaziz University who loves problem solving through code. I work in Python, TypeScript, Rust and Ruby, build machine learning models with XGBoost and scikit-learn, develop full-stack applications with Next.js and Node.js, and prototype hardware on Raspberry Pi.",
-    "My goal is a Ph.D. and a career in academia, researching how technology can make cities like Jeddah smarter and more sustainable. My projects, including Wahaj and Aykah, are in the Quest Log below.",
+    "My research sits where computing meets real-world systems: reproducible ML pipelines, satellite and sensor data, and IoT prototypes that make it out of the lab. My goal is a Ph.D. and a career in academia, building technology that makes cities like Jeddah smarter and more sustainable. My projects, including Wahaj and Aykah, are in the Quest Log below.",
     "I'm also an artist. Away from the keyboard I design and paint, which probably explains why this site looks the way it does.",
   ],
   stats: [
-    { label: "CLASS", value: "Researcher · Developer · Designer · ML Engineer" },
+    { label: "CLASS", value: "Researcher · Developer · ML Engineer" },
     { label: "TITLE", value: "Youngest UN-certified Saudi researcher · 5 national & international recognitions and 3 national & international awards" },
     { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
     { label: "BASE", value: "Jeddah, Saudi Arabia" },
@@ -25,7 +25,7 @@ export const profile = {
   interests: [
     "Full-stack development",
     "Hardware & IoT",
-    "UI & graphic design",
+    "Software engineering",
     "Research",
     "AI/ML",
     "Leadership & events",
@@ -185,7 +185,7 @@ export const skillTree = [
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
   { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js"] },
   { branch: "Tools", items: ["Git", "Docker"] },
-  { branch: "Design & communication", items: ["UI prototyping", "Layout & graphic design", "Public speaking", "Scientific presentation"] },
+  { branch: "UI & communication", items: ["UI prototyping", "Public speaking", "Scientific presentation"] },
   { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
   { branch: "Data", items: ["scikit-learn", "pandas", "NumPy"] },
   { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
