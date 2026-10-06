@@ -83,7 +83,7 @@ export default function Portfolio() {
           <div className="player-grid">
             <div className="box player-portrait">
               <div className="portrait-frame">
-                <img className="portrait-img" src="/portrait.png" alt="Pixel-art portrait of Nelly" width={600} height={600} />
+                <img className="portrait-img" src="/portrait.jpg" alt="Pixel-art portrait of Nelly" width={433} height={412} />
               </div>
               <p className="player-handle">@{profile.handle}</p>
               <div className="xp">
