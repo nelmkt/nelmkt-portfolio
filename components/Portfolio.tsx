@@ -214,13 +214,16 @@ export default function Portfolio() {
                 <span className="trophy-icon" aria-hidden="true">
                   <PixelIcon name={t.tier === "legendary" ? "star" : t.tier === "patent" ? "scroll" : "trophy"} size={26} />
                 </span>
-                <div>
+                <div className="trophy-body">
                   <p className="trophy-year">
-                    {t.year} · ACHIEVEMENT UNLOCKED{t.tier === "legendary" ? " · LEGENDARY" : ""}
+                    ACHIEVEMENT UNLOCKED{t.tier === "legendary" ? " · LEGENDARY" : ""}
                   </p>
                   <h3>{t.title}</h3>
                   <p className="trophy-detail">{t.detail}</p>
-                  <p className="trophy-by">{t.by}</p>
+                </div>
+                <div className="trophy-meta">
+                  <span className="trophy-date">{t.year}</span>
+                  <span className="trophy-by">{t.by}</span>
                 </div>
               </li>
             ))}
