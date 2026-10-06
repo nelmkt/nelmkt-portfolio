@@ -1216,3 +1216,17 @@ body.cheat .hud {
     filter: hue-rotate(360deg);
   }
 }
+
+/* Stacked boxes step from deep pink (first) to pastel pink (last). --t is set per item. */
+.ramp {
+  --ramp: color-mix(in srgb, #ffc2dc calc(var(--t, 0) * 100%), #b0125e);
+  border-color: var(--ramp);
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--ramp) 45%, #000);
+}
+.link.ramp:hover {
+  box-shadow: 6px 6px 0 color-mix(in srgb, var(--ramp) 45%, #000);
+}
+.ramp .slot,
+.ramp .trophy-icon {
+  border-color: var(--ramp);
+}

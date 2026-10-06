@@ -12,6 +12,9 @@ import { academy, languages, links, party, profile, quests, sideQuests, skillTre
 
 const STORE_KEY = "nelmkt-collected";
 
+// Position in a stack of boxes, 0 (first, deep pink) to 1 (last, pastel pink).
+const ramp = (i: number, n: number) => ({ ["--t" as string]: n > 1 ? i / (n - 1) : 0 });
+
 export default function Portfolio() {
   const [collected, setCollected] = useState<string[]>([]);
   const [active, setActive] = useState("player");
@@ -157,8 +160,8 @@ export default function Portfolio() {
         <section id="quests" className="stage">
           <StageTag code="1-3" label="QUEST LOG" />
           <div className="quests">
-            {quests.map((q) => (
-              <article key={q.id} className="box quest">
+            {quests.map((q, i) => (
+              <article key={q.id} className="box quest ramp" style={ramp(i, quests.length)}>
                 <div className="quest-media">
                   <img src={q.image} alt={q.imageAlt} loading="lazy" />
                 </div>
@@ -206,8 +209,8 @@ export default function Portfolio() {
         <section id="trophies" className="stage">
           <StageTag code="1-4" label="TROPHY ROOM" />
           <ol className="trophies">
-            {trophies.map((t) => (
-              <li key={t.title} className={`box trophy ${t.tier}`}>
+            {trophies.map((t, i) => (
+              <li key={t.title} className={`box trophy ramp ${t.tier}`} style={ramp(i, trophies.length)}>
                 <span className="trophy-icon" aria-hidden="true">
                   <PixelIcon name={t.tier === "legendary" ? "star" : t.tier === "patent" ? "scroll" : "trophy"} size={26} />
                 </span>
@@ -228,8 +231,8 @@ export default function Portfolio() {
         <section id="academy" className="stage">
           <StageTag code="1-5" label="ACADEMY & SIDE QUESTS" />
           <div className="academy">
-            {academy.map((a) => (
-              <div key={a.school} className="box school">
+            {academy.map((a, i) => (
+              <div key={a.school} className="box school ramp" style={ramp(i, academy.length)}>
                 <p className="school-when">{a.when}</p>
                 <h3>{a.school}</h3>
                 <p className="school-degree">{a.degree}</p>
@@ -239,8 +242,8 @@ export default function Portfolio() {
           </div>
           <h3 className="sub-tag">SIDE QUESTS CLEARED</h3>
           <ul className="side-quests">
-            {sideQuests.map((s) => (
-              <li key={s.title} className="box side">
+            {sideQuests.map((s, i) => (
+              <li key={s.title} className="box side ramp" style={ramp(i, sideQuests.length)}>
                 <span className="side-check"><PixelIcon name="check" size={14} /></span>
                 <div>
                   <h4>{s.title}</h4>
@@ -274,8 +277,8 @@ export default function Portfolio() {
             </ul>
           </div>
           <div className="branches">
-            {skillTree.map((b) => (
-              <div key={b.branch} className="box branch">
+            {skillTree.map((b, i) => (
+              <div key={b.branch} className="box branch ramp" style={ramp(i, skillTree.length)}>
                 <h3>{b.branch.toUpperCase()}</h3>
                 <ul className="chips">
                   {b.items.map((i) => (
@@ -292,7 +295,7 @@ export default function Portfolio() {
           <StageTag code="1-7" label="PARTY & GUILDS" />
           <ul className="party">
             {party.map((p, i) => (
-              <li key={p.role + p.where} className={`box member${p.lead ? " lead" : ""}`}>
+              <li key={p.role + p.where} className={`box member ramp${p.lead ? " lead" : ""}`} style={ramp(i, party.length)}>
                 <span className="slot">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{p.role}</h3>
@@ -315,10 +318,11 @@ export default function Portfolio() {
             </div>
           </div>
           <ul className="links">
-            {links.map((l) => (
+            {links.map((l, i) => (
               <li key={l.label}>
                 <a
-                  className="box link"
+                  className="box link ramp"
+                  style={ramp(i, links.length)}
                   href={l.url}
                   target={l.url.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noreferrer"
