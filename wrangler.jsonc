@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nelmkt",
+  "compatibility_date": "2026-10-01",
+  "routes": [
+    { "pattern": "nelmkt.com", "custom_domain": true },
+    { "pattern": "www.nelmkt.com", "custom_domain": true }
+  ],
+  // Static site: serve the Next.js export in ./out, no server code.
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}

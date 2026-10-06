@@ -10,7 +10,7 @@ A pink, retro video-game portfolio for **Nelly Almaktoum**: researcher & innovat
 - **Stage 1-6 Party & Guilds** – community roles
 - **Stage 1-7 Save Point** – contact
 
-Built with Next.js, TypeScript, HTML and CSS, exported as a static site and hosted on Cloudflare Pages.
+Built with Next.js, TypeScript, HTML and CSS, exported as a static site and served from Cloudflare (Workers static assets).
 
 ## Run locally
 
@@ -23,5 +23,5 @@ npm run dev
 
 ```bash
 npm run build
-npx wrangler pages deploy out --project-name nelmkt
+npx wrangler deploy
 ```
