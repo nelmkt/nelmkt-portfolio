@@ -22,8 +22,7 @@ export const profile = {
     { label: "SIDE QUEST", value: "Designing & painting" },
   ],
   interests: [
-    "ML engineering",
-    "Artificial intelligence",
+    "AI/ML engineering",
     "Applied ML",
     "Full-stack development",
     "Reproducible research",
