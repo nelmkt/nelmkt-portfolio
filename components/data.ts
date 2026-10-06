@@ -9,8 +9,8 @@ export const profile = {
     "Undergraduate researcher merging technology with complex problems to contribute in real-world impact.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
-    "As a kid, a question never stayed a question for long: I kept digging until I understood the how and the why. That habit stuck. Most of what I build starts with noticing something everyone else walks past and asking why it can't work better.",
-    "I believe less in born talent and more in discipline, and I only want to build things that solve a real problem for real people. Right now that means working where AI and environmental sustainability meet, with a dream of helping cities like Jeddah, and the smart cities rising across Saudi Arabia, become greener and more efficient.",
+    "As a kid, a question never stayed a question for long: I kept digging until I understood the how and the why. These days that curiosity mostly lives in code. I write Python, TypeScript, Rust and Ruby, train ML models with XGBoost and scikit-learn, build full-stack web apps with Next.js, and wire up Raspberry Pi hardware when a problem needs to leave the screen.",
+    "I believe less in born talent and more in discipline, and I like engineering that solves a real problem for real people, whether that's a data pipeline, a model or an IoT device. I'm working toward AI/ML engineering and graduate research, with a soft spot for using tech to make cities like Jeddah smarter and more sustainable.",
     "Along the way I've built a few things, including Wahaj and Aykah, which you'll find in the Quest Log below.",
     "I'm also an artist. When I'm not training models, I'm usually designing or painting, which probably explains why this site looks the way it does.",
   ],
