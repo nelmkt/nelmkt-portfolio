@@ -10,7 +10,7 @@ export const profile = {
   about:
     "I work where machine learning, remote sensing and sustainability meet: measuring what a green intervention actually does, and being explicit about what the data cannot show. My research so far covers urban greening and heat in desalination-dependent cities, and low-cost smart waste management.",
   stats: [
-    { label: "CLASS", value: "Researcher & Innovator" },
+    { label: "CLASS", value: "Researcher · Innovator · ML & AI Engineer" },
     { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
     { label: "BASE", value: "Jeddah, Saudi Arabia" },
     { label: "LANGS", value: "Arabic · English" },
@@ -18,6 +18,8 @@ export const profile = {
     { label: "SIDE QUEST", value: "Designing & painting" },
   ],
   interests: [
+    "ML engineering",
+    "AI engineering",
     "Applied ML",
     "Full-stack development",
     "Reproducible research",
@@ -143,7 +145,7 @@ export const languages = [
 ] as const;
 
 export const skillTree = [
-  { branch: "Machine learning & data", items: ["XGBoost", "scikit-learn", "pandas", "NumPy", "Spatial cross-validation"] },
+  { branch: "ML & AI engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
   { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
   { branch: "Back end", items: ["Python", "Ruby", "Rust"] },

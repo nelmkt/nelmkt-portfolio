@@ -7,16 +7,16 @@
   --surface: #120c11;
   --surface-2: #2a1424;
   --ink: #ffe6f1;
-  --ink-soft: #d99bbd;
-  --line: #ffb3d1;
+  --ink-soft: #e07fb2;
+  --line: #ff3d8b;
   --accent: #ff4f9a;
   --accent-2: #7a2353;
   --on-accent: #ffffff;
-  --shadow: rgba(255, 61, 139, 0.55);
+  --shadow: #8c0f4a;
   --gold: #f5b82e;
   --bar: #0b070a;
   --heart: #ff2f6d;
-  --thermal: linear-gradient(90deg, #ff3d8b, #ff9f43, #f5d547, #5ee3a1, #4fb3ff, #a66bff);
+  --thermal: linear-gradient(90deg, #ff1f7a, #ff6a00, #ffd000, #00d25b, #0091ff, #8a2be2);
   --pixel: var(--font-pixel), "Courier New", monospace;
   --body: var(--font-body), system-ui, sans-serif;
   color-scheme: dark;
@@ -67,8 +67,8 @@ img {
 /* ---------- pixel box ---------- */
 .box {
   background: var(--surface);
-  border: 4px solid var(--line);
-  box-shadow: 6px 6px 0 var(--shadow);
+  border: 2px solid var(--line);
+  box-shadow: 4px 4px 0 var(--shadow);
   position: relative;
 }
 
@@ -81,14 +81,14 @@ img {
   background: var(--accent);
   color: var(--on-accent);
   text-decoration: none;
-  border: 4px solid var(--line);
+  border: 2px solid var(--line);
   box-shadow: 4px 4px 0 var(--shadow);
   transition: transform 0.08s steps(2), box-shadow 0.08s steps(2);
   cursor: pointer;
 }
 .btn:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--shadow);
+  box-shadow: 4px 4px 0 var(--shadow);
 }
 .btn:active {
   transform: translate(4px, 4px);
@@ -322,7 +322,7 @@ main {
   text-align: center;
 }
 .portrait-frame {
-  padding: 4px;
+  padding: 2px;
   background: var(--thermal);
 }
 .portrait-img {
@@ -346,7 +346,7 @@ main {
 .xp-bar {
   flex: 1;
   height: 14px;
-  border: 3px solid var(--line);
+  border: 2px solid var(--line);
   background: var(--surface-2);
 }
 .xp-bar i {
@@ -421,7 +421,7 @@ main {
   font-family: var(--pixel);
   font-size: 11px;
   padding: 6px 10px;
-  border: 3px solid var(--line);
+  border: 2px solid var(--line);
 }
 .dialog p {
   margin: 0 0 10px;
@@ -480,7 +480,7 @@ main {
   width: 18px;
   height: 18px;
   background: var(--gem);
-  border: 3px solid var(--line);
+  border: 2px solid var(--line);
   transform: rotate(45deg);
   box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.5);
 }
@@ -511,7 +511,7 @@ main {
    stretching down the whole card. */
 .quest-media {
   margin: 20px 0 20px 20px;
-  padding: 4px;
+  padding: 2px;
   background: var(--thermal);
   box-shadow: 4px 4px 0 var(--shadow);
 }
@@ -611,12 +611,12 @@ main {
   place-items: center;
   font-size: 26px;
   background: var(--surface-2);
-  border: 3px solid var(--line);
+  border: 2px solid var(--line);
 }
 .trophy.legendary {
   grid-column: 1 / -1;
   border-image: var(--thermal) 1;
-  box-shadow: 6px 6px 0 var(--gold);
+  box-shadow: 4px 4px 0 var(--gold);
 }
 .trophy.legendary .trophy-icon {
   background: var(--gold);
@@ -796,7 +796,7 @@ main {
   font-family: var(--pixel);
   font-size: 11px;
   background: var(--surface-2);
-  border: 3px solid var(--line);
+  border: 2px solid var(--line);
   padding: 8px 6px;
 }
 .member h3 {
@@ -847,9 +847,9 @@ main {
   width: 40px;
   height: 40px;
   background: var(--thermal);
-  border: 4px solid var(--line);
+  border: 2px solid var(--line);
   transform: rotate(45deg);
-  box-shadow: inset 6px 6px 0 rgba(255, 255, 255, 0.45);
+  box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.45);
   animation: bob-rot 1.4s steps(2) infinite;
 }
 .links {
@@ -870,7 +870,7 @@ main {
 }
 .link:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0 var(--shadow);
+  box-shadow: 6px 6px 0 var(--shadow);
 }
 .link-label {
   font-family: var(--pixel);
