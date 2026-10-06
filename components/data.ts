@@ -10,9 +10,9 @@ export const profile = {
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
     "As a kid, a question never stayed a question for long: I kept digging until I understood the how and the why. These days that curiosity mostly lives in code. I write Python, TypeScript, Rust and Ruby, train ML models with XGBoost and scikit-learn, build full-stack web apps with Next.js, and wire up Raspberry Pi hardware when a problem needs to leave the screen.",
-    "I love problem solving, and programming is how I do it: I like building things that fix a real problem for real people, whether that's a data pipeline, a model or an IoT device. I'm working toward AI/ML engineering and graduate research, with a soft spot for using tech to make cities like Jeddah smarter and more sustainable.",
+    "I love problem solving, and programming is how I do it, whether that means building a data pipeline, a model or an IoT device. After my bachelor's, I'm aiming for postgraduate study, a master's and then a Ph.D. in AI/ML engineering, with research that uses tech to make cities like Jeddah smarter and more sustainable.",
     "Along the way I've built a few things, including Wahaj and Aykah, which you'll find in the Quest Log below.",
-    "I'm also an artist. When I'm not training models, I'm usually designing or painting, which probably explains why this site looks the way it does.",
+    "I'm also an artist. When I'm away from the keyboard, I'm usually designing or painting, which probably explains why this site looks the way it does.",
   ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
