@@ -1435,3 +1435,70 @@ body.cheat .hud {
     height: 60px;
   }
 }
+
+/* ---------- start screen: calmer pass ---------- */
+.start-screen::after {
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0 2px, transparent 2px 4px);
+}
+.start-sky {
+  background:
+    radial-gradient(ellipse 60% 22% at 50% 62%, rgba(255, 61, 139, 0.28), transparent 70%),
+    linear-gradient(#08030a 0%, #170614 38%, #3a0b2c 58%, #5c1340 62%, #08030a 62.2%);
+}
+.start-star {
+  opacity: 0.55;
+  animation: twinkle-soft 4.5s ease-in-out infinite;
+}
+.start-star.pink {
+  background: #e98fb8;
+}
+.start-sun {
+  filter: drop-shadow(0 0 16px rgba(255, 61, 139, 0.35));
+}
+.start-floor {
+  background-image: linear-gradient(rgba(255, 61, 139, 0.38) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(255, 61, 139, 0.38) 1.5px, transparent 1.5px);
+  animation-duration: 2.6s;
+}
+.start-title {
+  text-shadow: 3px 3px 0 #b8306f, 6px 6px 0 #1a0612;
+  animation: none;
+}
+.start-kicker {
+  color: #d98bb0;
+}
+.start-thermal {
+  height: 5px;
+  box-shadow: 3px 3px 0 #1a0612;
+  opacity: 0.85;
+}
+.start-sub {
+  color: #ead6e1;
+  text-shadow: none;
+}
+.start-btn {
+  color: #2a0a20;
+  background: #f6e9ef;
+  box-shadow: 0 0 0 3px #f6e9ef, 5px 5px 0 3px #1a0612;
+}
+.start-btn::before {
+  border-left-color: #d92d74;
+  animation: cursor-blink 1.6s steps(1) infinite;
+}
+.start-meta {
+  opacity: 0.6;
+}
+.start-arcade {
+  color: #d9c4cf;
+  opacity: 0.85;
+}
+.start-arcade b,
+.start-arcade span:nth-child(2) b,
+.start-arcade span:last-child b {
+  color: #c87aa0;
+}
+@keyframes twinkle-soft {
+  50% {
+    opacity: 0.15;
+  }
+}

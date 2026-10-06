@@ -6,14 +6,14 @@ import { profile } from "./data";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
 // Deterministic "random" so server and client render the same star field.
-const STARS = Array.from({ length: 46 }, (_, i) => {
+const STARS = Array.from({ length: 28 }, (_, i) => {
   const r = (n: number) => ((Math.sin(i * 97.13 + n * 13.7) + 1) / 2) % 1;
   return {
     left: `${(r(1) * 100).toFixed(2)}%`,
     top: `${(r(2) * 56).toFixed(2)}%`,
     size: r(3) > 0.8 ? 4 : r(3) > 0.4 ? 3 : 2,
-    delay: `${(r(4) * 3).toFixed(2)}s`,
-    pink: r(5) > 0.7,
+    delay: `${(r(4) * 4.5).toFixed(2)}s`,
+    pink: r(5) > 0.8,
   };
 });
 
@@ -117,7 +117,7 @@ export default function StartScreen() {
           ALMAKTOUM
         </h1>
         <p className="start-ar">
-          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#a66bff" />
+          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#1a0612" />
         </p>
         <div className="start-thermal" aria-hidden="true" />
         <p className="start-sub">Researcher &amp; Innovator · ML Engineering · Green Tech</p>
