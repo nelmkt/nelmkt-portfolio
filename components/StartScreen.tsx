@@ -59,7 +59,7 @@ export default function StartScreen() {
           <PixelText text={profile.nameAr} size={14} scale={3} shadow="#3b0f2e" />
         </p>
         <div className="start-thermal" aria-hidden="true" />
-        <p className="start-sub">Researcher &amp; Innovator · ML &amp; AI Engineering · Green Tech</p>
+        <p className="start-sub">Researcher &amp; Innovator · ML Engineering · Green Tech</p>
         <button className="start-btn" onClick={start} autoFocus>
           PRESS START
         </button>
