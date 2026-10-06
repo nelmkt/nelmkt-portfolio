@@ -49,18 +49,32 @@ export default function PixelText({ text, size = 13, scale = 3, shadow, classNam
 
       const data = s.getImageData(0, 0, w, h);
       const on = new Uint8Array(w * h);
-      for (let i = 0; i < w * h; i++) on[i] = data.data[i * 4 + 3] > 110 ? 1 : 0;
+      let minX = w, maxX = -1, minY = h, maxY = -1;
+      for (let y = 0; y < h; y++)
+        for (let x = 0; x < w; x++)
+          if (data.data[(y * w + x) * 4 + 3] > 110) {
+            on[y * w + x] = 1;
+            if (x < minX) minX = x;
+            if (x > maxX) maxX = x;
+            if (y < minY) minY = y;
+            if (y > maxY) maxY = y;
+          }
+      if (maxX < 0) return;
 
-      canvas.width = w;
-      canvas.height = h;
-      canvas.style.width = `${w * scale}px`;
-      canvas.style.height = `${h * scale}px`;
+      // Crop to the inked pixels so the canvas edge is the glyph edge; this lets the
+      // text line up with neighbouring HTML text instead of floating in padding.
+      const cw = maxX - minX + 1 + shadows.length;
+      const ch = maxY - minY + 1 + shadows.length;
+      canvas.width = cw;
+      canvas.height = ch;
+      canvas.style.width = `${cw * scale}px`;
+      canvas.style.height = `${ch * scale}px`;
       const ctx = canvas.getContext("2d")!;
-      ctx.clearRect(0, 0, w, h);
+      ctx.clearRect(0, 0, cw, ch);
       const paint = (fill: string, dx: number, dy: number) => {
         ctx.fillStyle = fill;
-        for (let y = 0; y < h; y++)
-          for (let x = 0; x < w; x++) if (on[y * w + x]) ctx.fillRect(x + dx, y + dy, 1, 1);
+        for (let y = minY; y <= maxY; y++)
+          for (let x = minX; x <= maxX; x++) if (on[y * w + x]) ctx.fillRect(x - minX + dx, y - minY + dy, 1, 1);
       };
       const resolve = (c: string) => {
         const v = c.match(/^var\((--[\w-]+)\)$/);
