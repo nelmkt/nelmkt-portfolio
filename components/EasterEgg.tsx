@@ -20,7 +20,7 @@ export default function EasterEgg() {
 
   useEffect(() => {
     console.log(
-      `%c${BANNER}\n\n%cHey, fellow curious one 👾\nThe footer is speaking binary. Click it to translate, or decode it yourself:\n${BINARY}`,
+      `%c${BANNER}\n\n%cHey, fellow curious one <3\nThe footer is speaking binary. Click it to translate, or decode it yourself:\n${BINARY}\n\nOld-school players might also try: up up down down left right left right B A`,
       "color:#ff3d8b;font-family:monospace;font-weight:bold",
       "color:#c08bd6;font-family:monospace",
     );

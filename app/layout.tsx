@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Kufi_Arabic, Pixelify_Sans, Press_Start_2P } from "next/font/google";
+import "./pixel-icons.css";
 import "./globals.css";
 
 const pixel = Press_Start_2P({ weight: "400", subsets: ["latin"], variable: "--font-pixel" });

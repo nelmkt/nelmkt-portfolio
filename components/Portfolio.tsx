@@ -1,8 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import CheatCode from "./CheatCode";
 import EasterEgg from "./EasterEgg";
 import PixelHeart from "./PixelHeart";
+import PixelIcon from "./PixelIcon";
 import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
@@ -51,6 +53,7 @@ export default function Portfolio() {
   return (
     <>
       <StartScreen />
+      <CheatCode />
 
       <header className="hud">
         <a className="hud-logo" href="#player" aria-label="Back to top">
@@ -107,10 +110,10 @@ export default function Portfolio() {
               </dl>
               <div className="cta-row">
                 <a className="btn" href="#bonus">
-                  ▶ PLAY BONUS STAGE
+                  <PixelIcon name="play" size={12} /> PLAY BONUS STAGE
                 </a>
                 <a className="btn btn-alt" href="#save">
-                  ✉ SAVE POINT
+                  <PixelIcon name="mail" size={12} /> SAVE POINT
                 </a>
               </div>
             </div>
@@ -147,7 +150,7 @@ export default function Portfolio() {
               );
             })}
           </div>
-          {allUnlocked && <p className="all-unlocked">★ ALL LANGUAGES UNLOCKED ★</p>}
+          {allUnlocked && <p className="all-unlocked"><PixelIcon name="star" /> ALL LANGUAGES UNLOCKED <PixelIcon name="star" /></p>}
         </section>
 
         {/* 1-3 QUESTS */}
@@ -178,13 +181,13 @@ export default function Portfolio() {
                     {q.loot.map((l) => (
                       <li key={l.label}>
                         <a href={l.url} target="_blank" rel="noreferrer">
-                          ◆ {l.label}
+                          <PixelIcon name="gem" size={10} /> {l.label}
                         </a>
                       </li>
                     ))}
                     <li>
                       <a href={q.url} target="_blank" rel="noreferrer">
-                        ◆ Source on GitHub
+                        <PixelIcon name="gem" size={10} /> Source on GitHub
                       </a>
                     </li>
                   </ul>
@@ -206,7 +209,7 @@ export default function Portfolio() {
             {trophies.map((t) => (
               <li key={t.title} className={`box trophy ${t.tier}`}>
                 <span className="trophy-icon" aria-hidden="true">
-                  {t.tier === "legendary" ? "★" : "🏆"}
+                  <PixelIcon name={t.tier === "legendary" ? "star" : t.tier === "patent" ? "scroll" : "trophy"} size={26} />
                 </span>
                 <div>
                   <p className="trophy-year">
@@ -238,7 +241,7 @@ export default function Portfolio() {
           <ul className="side-quests">
             {sideQuests.map((s) => (
               <li key={s.title} className="box side">
-                <span className="side-check" aria-hidden="true">✔</span>
+                <span className="side-check"><PixelIcon name="check" size={14} /></span>
                 <div>
                   <h4>{s.title}</h4>
                   <p>

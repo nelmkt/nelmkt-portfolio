@@ -592,10 +592,13 @@ main {
   margin-bottom: 6px;
 }
 .objectives li::before {
-  content: "✔";
+  content: "";
   position: absolute;
-  left: 0;
-  color: var(--accent);
+  left: 2px;
+  top: 7px;
+  width: 14px;
+  height: 14px;
+  background: var(--px-check) center / contain no-repeat;
 }
 .loot {
   list-style: none;
@@ -766,8 +769,13 @@ main {
   border-width: 2px;
 }
 .lang-list li.got .lang-name::after {
-  content: " ★";
-  color: var(--gold);
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 8px;
+  vertical-align: -1px;
+  background: var(--px-star) center / contain no-repeat;
 }
 .lang-meter {
   display: flex;
@@ -1082,5 +1090,129 @@ main {
   .save {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ---------- pixel icons + refinements ---------- */
+.pixel-icon {
+  display: inline-block;
+  vertical-align: -1px;
+  flex: none;
+}
+.btn .pixel-icon {
+  margin-right: 6px;
+  vertical-align: 0;
+}
+.trophy-icon {
+  color: var(--accent);
+}
+.trophy.patent {
+  border-color: #a66bff;
+  box-shadow: 4px 4px 0 #4b1f8a;
+}
+.trophy.patent .trophy-icon {
+  background: #a66bff;
+  color: #1a0612;
+}
+.trophy.patent .trophy-year {
+  color: #c39bff;
+}
+.side-check {
+  color: var(--accent);
+  padding-top: 3px;
+}
+.loot .pixel-icon {
+  margin-right: 4px;
+}
+.all-unlocked .pixel-icon {
+  color: var(--gold);
+  margin: 0 8px;
+}
+
+/* blinking text cursor after each stage title */
+.stage-label::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 0.9em;
+  margin-left: 8px;
+  vertical-align: -0.1em;
+  background: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}
+
+/* pixel cursor + scrollbar */
+html,
+body {
+  cursor: var(--px-cursor) 0 0, auto;
+}
+a,
+button,
+.game-canvas,
+.egg {
+  cursor: var(--px-cursor) 0 0, pointer;
+}
+html {
+  scrollbar-color: var(--accent) var(--bar);
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bar);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border: 3px solid var(--bar);
+}
+
+/* cards lift a step on hover, like a menu selection */
+.trophy,
+.member,
+.side,
+.school,
+.branch,
+.inv-slot.got {
+  transition: transform 0.08s steps(2), box-shadow 0.08s steps(2);
+}
+.trophy:hover,
+.member:hover,
+.side:hover,
+.school:hover,
+.branch:hover {
+  transform: translate(-2px, -2px);
+}
+
+/* cheat code (Konami) */
+.cheat-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  z-index: 120;
+  transform: translateX(-50%);
+  background: var(--bar);
+  color: #fff;
+  border: 2px solid var(--accent);
+  box-shadow: 4px 4px 0 var(--shadow);
+  font-family: var(--pixel);
+  font-size: 11px;
+  line-height: 1.8;
+  padding: 12px 16px;
+  text-align: center;
+  white-space: nowrap;
+  animation: fade-in 0.2s steps(3);
+}
+.cheat-toast b {
+  color: var(--accent);
+  font-weight: 400;
+}
+body.cheat main,
+body.cheat .hud {
+  animation: rainbow 2.4s steps(12) infinite;
+}
+@keyframes rainbow {
+  to {
+    filter: hue-rotate(360deg);
   }
 }

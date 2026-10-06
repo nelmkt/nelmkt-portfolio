@@ -71,7 +71,7 @@ export const quests: Quest[] = [
     id: "aykah",
     title: "Aykah",
     titleAr: "آيكة",
-    status: "QUEST COMPLETE · OCT 2024–MAR 2025 · MULTI-AWARD",
+    status: "QUEST COMPLETE · OCT 2024–MAR 2025 · PATENTED · MULTI-AWARD",
     url: "https://github.com/nelmkt/Smart-Bin-Aykah",
     image:
       "https://raw.githubusercontent.com/nelmkt/Smart-Bin-Aykah/main/images/prototype.jpg",
@@ -83,6 +83,7 @@ export const quests: Quest[] = [
       "Raspberry Pi with ultrasonic fill sensing, LCD interface, LED status indicators and air filtration",
       "Community survey of 222 participants on waste disposal behaviour and acceptance of smart waste technology",
       "Young Researchers Award (Modern Technologies) at UNCCD COP16",
+      "Patented: the Aykah smart waste management system is protected by a patent",
     ],
     loot: [
       {
@@ -95,6 +96,13 @@ export const quests: Quest[] = [
 ];
 
 export const trophies = [
+  {
+    year: "PATENT",
+    title: "Patent · Aykah Smart Bin",
+    detail: "Patent for Aykah, the solar-powered IoT smart waste management system",
+    by: "Inventor: Nelly Almaktoum",
+    tier: "patent",
+  },
   {
     year: "SEP 2026",
     title: "Certificate of Appreciation",
@@ -146,6 +154,7 @@ export const languages = [
 
 export const skillTree = [
   { branch: "ML & AI engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
+  { branch: "Data", items: ["scikit-learn", "pandas", "NumPy"] },
   { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
   { branch: "Back end", items: ["Python", "Ruby", "Rust"] },

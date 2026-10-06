@@ -1,5 +1,5 @@
 // 16x20 pixel player sprite, styled after the portrait: messy black hair with a tuft,
-// round glasses, tongue out, black top, pink sneakers. Drawn by the mini-game.
+// side strands, round glasses, tongue out, black top, black shoes. Drawn by the mini-game.
 
 export const PALETTE: Record<string, string> = {
   k: "#140c12", // outline
@@ -14,7 +14,7 @@ export const PALETTE: Record<string, string> = {
   B: "#26242b", // top
   b: "#4a4652", // top fold
   P: "#4b2f6b", // trousers
-  F: "#ff3d8b", // sneakers
+  F: "#2f2c34", // shoes (black)
 };
 
 const BODY = [
@@ -26,10 +26,10 @@ const BODY = [
   ".kHHHkSSkHkSSHk.",
   ".kHkGWEGGGWEGkHk",
   ".kHkGEEGSGEEGkHk",
-  ".kHksSSSSSSSsk..",
-  "..kkSSSSTSSSk...",
-  "...kkSSSSSSkk...",
-  ".....kSSSSk.....",
+  "..kHsSSSSSSSsHk.", // side strands start
+  "..kHkSSSTSSSkHk.",
+  "..kH.kkSSSSkkHk.",
+  "...k.kSSSSk..k..", // strand tips
   "...kBBBkkBBBk...",
   "..kBBBBBBBBBBk..",
   ".kBbBBBBBBBBbBk.",
