@@ -1,39 +1,51 @@
-// 12x14 pixel player sprite, drawn on canvas by Avatar and the mini-game.
+// 16x20 pixel player sprite, styled after the portrait: messy black hair with a tuft,
+// round glasses, tongue out, black top, pink sneakers. Drawn by the mini-game.
 
-// Styled after the portrait: black hair, glasses, black top.
 export const PALETTE: Record<string, string> = {
-  k: "#140c12",
-  p: "#2b2b2b",
-  h: "#4a4a4a",
-  s: "#fde3c4",
-  g: "#1a1a1a",
-  e: "#9a9a9a",
-  b: "#f08aa8",
-  d: "#383838",
-  j: "#5a2a4c",
+  k: "#140c12", // outline
+  H: "#2b2b30", // hair
+  h: "#55505e", // hair shine
+  S: "#fde3c4", // skin
+  s: "#efbfa0", // cheek / shade
+  G: "#1d1a22", // glasses frame
+  W: "#ffffff", // eye shine
+  E: "#8e8a99", // eyes (grey)
+  T: "#f37aa3", // tongue
+  B: "#26242b", // top
+  b: "#4a4652", // top fold
+  P: "#4b2f6b", // trousers
+  F: "#ff3d8b", // sneakers
 };
 
 const BODY = [
-  "...kkkkkk...",
-  "..kpphhppk..",
-  ".kppppppppk.",
-  ".kpssppsspk.",
-  ".kgggsgggpk.",
-  ".kgegggegpk.",
-  ".kpsssssspk.",
-  ".kpsssbsspk.",
-  "..kpkssskp..",
-  ".kkkksskkkk.",
-  "kddddddddddk",
-  "ksddddddddsk",
+  "....kkkkkk......",
+  "...kHHHHHHkk....",
+  "..kHHhhHHHHHk.k.",
+  ".kHHhHHHHHHHHkHk",
+  ".kHHHHHkHHHkHHHk",
+  ".kHHHkSSkHkSSHk.",
+  ".kHkGWEGGGWEGkHk",
+  ".kHkGEEGSGEEGkHk",
+  ".kHksSSSSSSSsk..",
+  "..kkSSSSTSSSk...",
+  "...kkSSSSSSkk...",
+  ".....kSSSSk.....",
+  "...kBBBkkBBBk...",
+  "..kBBBBBBBBBBk..",
+  ".kBbBBBBBBBBbBk.",
+  ".kSkBBBBBBBBkSk.",
+  "...kBBBBBBBBk...",
+  "...kPPPPPPPPk...",
 ];
 
-const LEGS_A = ["..kjk..kjk..", ".kkk....kkk."];
-const LEGS_B = ["...kjkkjk...", "...kkkkkk..."];
+const LEGS_STRIDE = ["..kPPk....kPPk..", ".kFFFk....kFFFk."];
+const LEGS_PASS = ["....kPPkkPPk....", "....kFFkkFFk...."];
+const LEGS_TUCK = ["...kPPk..kPPk...", "...kFFk..kFFk..."];
 
-export const FRAMES = [BODY.concat(LEGS_A), BODY.concat(LEGS_B)];
-export const SPRITE_W = 12;
-export const SPRITE_H = 14; // 12 body rows + 2 leg rows
+// [run A, run B, jump]
+export const FRAMES = [BODY.concat(LEGS_STRIDE), BODY.concat(LEGS_PASS), BODY.concat(LEGS_TUCK)];
+export const SPRITE_W = 16;
+export const SPRITE_H = 20; // 18 body rows + 2 leg rows
 
 export function drawSprite(
   ctx: CanvasRenderingContext2D,

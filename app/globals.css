@@ -176,16 +176,37 @@ img {
   font-size: 18px;
   text-shadow: 2px 2px 0 #3b0f2e;
 }
+/* Steady box; only the pixel arrow blinks. */
 .start-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
   font-family: var(--pixel);
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1;
   color: #3b0f2e;
   background: #fff;
-  border: 4px solid #3b0f2e;
-  box-shadow: 4px 4px 0 #3b0f2e;
-  padding: 14px 20px;
+  border: 3px solid #1a0612;
+  box-shadow: 0 0 0 3px #fff, 6px 6px 0 3px #1a0612;
+  padding: 16px 24px 16px 20px;
   cursor: pointer;
-  animation: blink 1s steps(1) infinite;
+  transition: transform 0.08s steps(2), box-shadow 0.08s steps(2);
+}
+.start-btn::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 9px solid #ff1f7a;
+  animation: blink 0.9s steps(1) infinite;
+}
+.start-btn:hover {
+  background: #ffe3ef;
+}
+.start-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 3px #fff, 2px 2px 0 3px #1a0612;
 }
 .start-meta {
   font-family: var(--pixel);

@@ -61,7 +61,7 @@ export default function StartScreen() {
         <div className="start-thermal" aria-hidden="true" />
         <p className="start-sub">Researcher &amp; Innovator · ML &amp; AI Engineering · Green Tech</p>
         <button className="start-btn" onClick={start} autoFocus>
-          ▶ PRESS START
+          PRESS START
         </button>
         <p className="start-meta">© 2026 · 1 PLAYER · PORTFOLIO EDITION</p>
       </div>

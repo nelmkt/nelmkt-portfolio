@@ -268,7 +268,13 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       }
 
       const airborne = s.py < GROUND - PH;
-      const frame = airborne ? FRAMES[1] : FRAMES[Math.floor(s.tick / 7) % 2];
+      const frame = airborne ? FRAMES[2] : FRAMES[Math.floor(s.tick / 7) % 2];
+
+      // pixel ground shadow that shrinks as the runner rises
+      const lift = Math.min(1, (GROUND - PH - s.py) / 110);
+      const shadowW = Math.round((PW - 12) * (1 - lift * 0.6) / 3) * 3;
+      ctx.fillStyle = "rgba(59, 15, 46, 0.22)";
+      ctx.fillRect(PX + (PW - shadowW) / 2, GROUND - 3, shadowW, 3);
       if (!(s.invuln > 0 && Math.floor(s.invuln / 5) % 2 === 0)) {
         drawSprite(ctx, frame, PX, s.py, SCALE);
       }
