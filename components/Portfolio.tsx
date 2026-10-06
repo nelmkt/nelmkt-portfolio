@@ -332,6 +332,7 @@ export default function Portfolio() {
                 >
                   <span className="link-label">{l.label}</span>
                   <span className="link-value">{l.value}</span>
+                  <PixelIcon name="play" size={10} />
                 </a>
               </li>
             ))}
