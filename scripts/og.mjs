@@ -46,6 +46,34 @@ const shadowed = (txt, x, y, size, family, step) =>
     .map(([fill, d]) => `<text x="${x + d}" y="${y + d}" font-size="${size}" font-family="${family}" font-weight="700" fill="${fill}" text-anchor="middle">${txt}</text>`)
     .join("");
 
+// Pixel Arabic, like components/PixelText.tsx: render tiny, keep solid pixels, crop,
+// then redraw each pixel as a scale x scale square with the stacked shadow.
+const pixelArabic = (txt, cx, top, size, scale) => {
+  const sw = size * 20, sh = size * 3;
+  const tiny = new Resvg(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${sw}" height="${sh}"><text x="${sw / 2}" y="${sh * 0.62}" font-size="${size}" font-family="Noto Kufi Arabic" font-weight="700" fill="#000" text-anchor="middle">${txt}</text></svg>`,
+    { font: { fontFiles: [join(here, "fonts/NotoKufiArabic-Bold.ttf")], loadSystemFonts: false } },
+  ).render();
+  const px = tiny.pixels;
+  const on = [];
+  let minX = sw, maxX = -1, minY = sh, maxY = -1;
+  for (let y = 0; y < sh; y++)
+    for (let x = 0; x < sw; x++)
+      if (px[(y * sw + x) * 4 + 3] > 110) {
+        on.push([x, y]);
+        minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+        minY = Math.min(minY, y); maxY = Math.max(maxY, y);
+      }
+  const x0 = Math.round(cx - ((maxX - minX + 1) * scale) / 2);
+  return [["#1a0612", 2], ["#b8306f", 1], ["#ffffff", 0]]
+    .map(([fill, d]) =>
+      `<g fill="${fill}">` +
+      on.map(([x, y]) => `<rect x="${x0 + (x - minX + d) * scale}" y="${top + (y - minY + d) * scale}" width="${scale}" height="${scale}"/>`).join("") +
+      `</g>`,
+    )
+    .join("");
+};
+
 const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">
   <defs>
@@ -76,7 +104,7 @@ const svg = `
 
   <text x="${W / 2}" y="78" font-size="18" font-family="Press Start 2P" fill="#ff8cc0" text-anchor="middle" letter-spacing="4">NELMKT PRESENTS</text>
   ${shadowed("NELLY ALMAKTOUM", W / 2, 178, 62, "Press Start 2P", 4)}
-  ${shadowed("نيللي المكتوم", W / 2, 296, 76, "Noto Kufi Arabic", 4)}
+  ${pixelArabic("نيللي المكتوم", W / 2, 222, 17, 4)}
 
   ${grid(SPRITE, 150, HZ + 40, 7, SPRITE_COLORS)}
   <rect x="${W / 2 - 230}" y="${H - 104}" width="460" height="58" fill="#ffffff" stroke="#1a0612" stroke-width="4"/>

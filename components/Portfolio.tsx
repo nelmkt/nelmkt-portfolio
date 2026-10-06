@@ -123,8 +123,9 @@ export default function Portfolio() {
           </div>
           <div className="box dialog">
             <span className="dialog-name">NELLY</span>
-            <p>{profile.about}</p>
-            <p>I aim to continue into graduate research and a Ph.D, and I also design and paint on the side.</p>
+            {profile.about.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
             <ul className="chips">
               {profile.interests.map((i) => (
                 <li key={i}>{i}</li>

@@ -7,8 +7,12 @@ export const profile = {
   headline: "FCIT Student @ KAU · Waed ’26 · IEEE ’25 · UNCCD COP16 ’24 · Mawhiba Alumna",
   tagline:
     "Undergraduate researcher merging technology with complex problems to contribute in real-world impact.",
-  about:
-    "I work where machine learning, remote sensing and sustainability meet: measuring what a green intervention actually does, and being explicit about what the data cannot show. My research so far covers urban greening and heat in desalination-dependent cities, and low-cost smart waste management.",
+  // Bio shown in the "NELLY" dialog box, one string per paragraph.
+  about: [
+    "I work where machine learning, remote sensing and sustainability meet: measuring what a green intervention actually does, and being honest about what the data cannot show.",
+    "So far that has meant Wahaj, a framework for weighing urban greening against energy costs in desalination-dependent cities, and Aykah, a patented, solar-powered smart bin. Next stop: graduate research and a Ph.D.",
+    "Away from the keyboard, I design and paint.",
+  ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
     { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
