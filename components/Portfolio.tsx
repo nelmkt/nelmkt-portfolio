@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import EasterEgg from "./EasterEgg";
+import PixelHeart from "./PixelHeart";
 import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
@@ -62,7 +64,9 @@ export default function Portfolio() {
           ))}
         </nav>
         <div className="hud-hearts" aria-hidden="true">
-          ♥♥♥
+          <PixelHeart />
+          <PixelHeart />
+          <PixelHeart />
         </div>
       </header>
 
@@ -88,7 +92,7 @@ export default function Portfolio() {
               <h1 className="player-name">
                 {profile.name}
                 <span className="player-ar">
-                  <PixelText text={profile.nameAr} size={13} scale={3} shadow="var(--accent-2)" />
+                  <PixelText text={profile.nameAr} size={17} scale={2} shadow="var(--accent-2)" />
                 </span>
               </h1>
               <p className="player-headline">{profile.headline}</p>
@@ -159,7 +163,7 @@ export default function Portfolio() {
                   <p className="quest-status">{q.status}</p>
                   <h3>
                     <a href={q.url} target="_blank" rel="noreferrer">
-                      {q.title} <span className="quest-ar">· <PixelText text={q.titleAr} size={12} scale={2} /></span>
+                      {q.title} <span className="quest-ar">· <PixelText text={q.titleAr} size={13} scale={2} /></span>
                     </a>
                   </h3>
                   <p>{q.summary}</p>
@@ -327,6 +331,7 @@ export default function Portfolio() {
 
       <footer className="footer">
         <p className="thanks">THANKS FOR PLAYING!</p>
+        <EasterEgg />
         <p>© 2026 Nelly Almaktoum · Built with Next.js, TypeScript, HTML &amp; CSS</p>
       </footer>
     </>

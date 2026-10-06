@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { languages } from "./data";
+import { HEART } from "./PixelHeart";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
 const W = 640;
@@ -189,7 +190,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
     const drawGem = (x: number, y: number, color: string, label: string, t: number) => {
       const bob = Math.round(Math.sin((t + x) * 0.08) * 2);
       const yy = y + bob;
-      ctx.fillStyle = "#2d1a27";
+      ctx.fillStyle = "#14213d";
       ctx.fillRect(x + 4, yy, 8, 2);
       ctx.fillRect(x + 2, yy + 2, 12, 2);
       ctx.fillRect(x, yy + 4, 16, 6);
@@ -203,12 +204,12 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       ctx.fillRect(x + 6, yy + 12, 4, 2);
       ctx.fillStyle = "rgba(255,255,255,.75)";
       ctx.fillRect(x + 4, yy + 4, 2, 2);
-      text(label, x + 8, yy - 4, 7, "#2d1a27", "center");
+      text(label, x + 8, yy - 4, 7, "#14213d", "center");
     };
 
     const drawBug = (x: number, y: number, t: number) => {
       const leg = Math.floor(t / 6) % 2;
-      ctx.fillStyle = "#2d1a27";
+      ctx.fillStyle = "#14213d";
       ctx.fillRect(x + 4, y + 2, 14, 12);
       ctx.fillRect(x + 2, y + 6, 18, 6);
       ctx.fillRect(x + 6, y - 2, 2, 4);
@@ -216,7 +217,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       ctx.fillRect(x + (leg ? 2 : 4), y + 14, 2, 4);
       ctx.fillRect(x + 10, y + 14, 2, 4);
       ctx.fillRect(x + (leg ? 18 : 16), y + 14, 2, 4);
-      ctx.fillStyle = "#9b3d8c";
+      ctx.fillStyle = "#e0604a";
       ctx.fillRect(x + 6, y + 4, 10, 8);
       ctx.fillStyle = "#ffffff";
       ctx.fillRect(x + 6, y + 6, 2, 2);
@@ -226,8 +227,8 @@ export default function RunnerGame({ collected, onCollect }: Props) {
     const render = () => {
       const s = stateRef.current;
       const sky = ctx.createLinearGradient(0, 0, 0, GROUND);
-      sky.addColorStop(0, "#f3e8ee");
-      sky.addColorStop(1, "#fdfafb");
+      sky.addColorStop(0, "#d9f1ec");
+      sky.addColorStop(1, "#fbfaf6");
       ctx.fillStyle = sky;
       ctx.fillRect(0, 0, W, H);
 
@@ -241,7 +242,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       }
 
       // pixel hills
-      ctx.fillStyle = "#ebdde4";
+      ctx.fillStyle = "#c8e3dc";
       for (let i = 0; i < 6; i++) {
         const hx = ((i * 140 - s.scroll * 0.45) % (W + 140) + W + 140) % (W + 140) - 70;
         for (let step = 0; step < 4; step++) {
@@ -250,11 +251,11 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       }
 
       // ground
-      ctx.fillStyle = "#2d1a27";
+      ctx.fillStyle = "#14213d";
       ctx.fillRect(0, GROUND, W, 4);
-      ctx.fillStyle = "#e6d8df";
+      ctx.fillStyle = "#e8e1d3";
       ctx.fillRect(0, GROUND + 4, W, H - GROUND - 4);
-      ctx.fillStyle = "#d6c3cd";
+      ctx.fillStyle = "#d6ccb8";
       const off = Math.floor(s.scroll) % 24;
       for (let gx = -off; gx < W; gx += 24) {
         ctx.fillRect(gx, GROUND + 10, 12, 4);
@@ -273,29 +274,43 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       }
 
       // HUD
-      text(`SCORE ${String(s.score).padStart(5, "0")}`, 12, 18, 9, "#2d1a27");
-      text(`BEST ${String(Math.max(bestRef.current, s.score)).padStart(5, "0")}`, 12, 32, 7, "#6e5a67");
-      text(`LANGS ${collectedRef.current.length}/${languages.length}`, W / 2, 18, 9, "#2d1a27", "center");
-      text("♥".repeat(Math.max(0, s.hearts)) + "♡".repeat(3 - Math.max(0, s.hearts)), W - 12, 20, 14, "#e0387f", "right");
+      text(`SCORE ${String(s.score).padStart(5, "0")}`, 12, 18, 9, "#14213d");
+      text(`BEST ${String(Math.max(bestRef.current, s.score)).padStart(5, "0")}`, 12, 32, 7, "#55607a");
+      text(`LANGS ${collectedRef.current.length}/${languages.length}`, W / 2, 18, 9, "#14213d", "center");
+      for (let i = 0; i < 3; i++) {
+        const full = i < s.hearts;
+        const hx = W - 12 - (3 - i) * 20;
+        HEART.forEach((row, y) =>
+          [...row].forEach((c, x) => {
+            if (c !== "X") return;
+            ctx.fillStyle = full ? "#eb5757" : "#c9c1b0";
+            ctx.fillRect(hx + x * 2, 8 + y * 2, 2, 2);
+          }),
+        );
+        if (full) {
+          ctx.fillStyle = "rgba(255,255,255,.7)";
+          ctx.fillRect(hx + 2, 10, 2, 2);
+        }
+      }
 
       if (s.toastT > 0) {
-        text(s.toast, W / 2, 62, 12, "#e0387f", "center");
+        text(s.toast, W / 2, 62, 12, "#0e8f81", "center");
       }
 
       if (s.mode !== "playing") {
-        ctx.fillStyle = "rgba(253, 250, 251, 0.86)";
+        ctx.fillStyle = "rgba(251, 250, 246, 0.88)";
         ctx.fillRect(0, 0, W, H);
         if (s.mode === "ready") {
-          text("LANGUAGE RUSH", W / 2, 74, 18, "#e0387f", "center");
-          text("COLLECT THE LANGUAGE GEMS · DODGE THE BUGS", W / 2, 100, 8, "#2d1a27", "center");
+          text("LANGUAGE RUSH", W / 2, 74, 18, "#0e8f81", "center");
+          text("COLLECT THE LANGUAGE GEMS · DODGE THE BUGS", W / 2, 100, 8, "#14213d", "center");
           if (Math.floor(performance.now() / 500) % 2 === 0) {
-            text("TAP OR PRESS SPACE TO START", W / 2, 130, 10, "#2d1a27", "center");
+            text("TAP OR PRESS SPACE TO START", W / 2, 130, 10, "#14213d", "center");
           }
         } else {
-          text("GAME OVER", W / 2, 74, 20, "#e0387f", "center");
-          text(`SCORE ${s.score}`, W / 2, 100, 10, "#2d1a27", "center");
+          text("GAME OVER", W / 2, 74, 20, "#0e8f81", "center");
+          text(`SCORE ${s.score}`, W / 2, 100, 10, "#14213d", "center");
           if (Math.floor(performance.now() / 500) % 2 === 0) {
-            text("TAP OR PRESS SPACE TO RETRY", W / 2, 130, 10, "#2d1a27", "center");
+            text("TAP OR PRESS SPACE TO RETRY", W / 2, 130, 10, "#14213d", "center");
           }
         }
       }
