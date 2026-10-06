@@ -461,17 +461,6 @@ main {
   margin: 0 0 10px;
   max-width: 75ch;
 }
-/* RPG text-box "next" arrow in the corner */
-.dialog::after {
-  content: "";
-  position: absolute;
-  right: 18px;
-  bottom: 14px;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 9px solid var(--accent);
-  animation: cursor-blink 1.4s steps(1) infinite;
-}
 
 /* ---------- game ---------- */
 .game-box {
