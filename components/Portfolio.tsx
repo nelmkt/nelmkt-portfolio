@@ -104,6 +104,15 @@ export default function Portfolio() {
               </h1>
               <p className="player-headline">{profile.headline}</p>
               <p className="player-tag">{profile.tagline}</p>
+              <div className="highlight">
+                <span className="highlight-icon" aria-hidden="true">
+                  <PixelIcon name="star" size={22} />
+                </span>
+                <div>
+                  <p className="highlight-title">{profile.highlight}</p>
+                  <p className="highlight-detail">{profile.highlightDetail}</p>
+                </div>
+              </div>
               <dl className="box stats">
                 {profile.stats.map((s) => (
                   <div key={s.label}>
@@ -127,6 +136,7 @@ export default function Portfolio() {
             {profile.about.map((p) => (
               <p key={p}>{p}</p>
             ))}
+            <p className="chips-label">FOCUS AREAS</p>
             <ul className="chips">
               {profile.interests.map((i) => (
                 <li key={i}>{i}</li>

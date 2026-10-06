@@ -1539,3 +1539,100 @@ body.cheat .hud {
 .stats div:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
+
+/* ---------- visual revision ---------- */
+body {
+  font-size: 17px;
+  line-height: 1.7;
+}
+.player-headline {
+  font-size: 11px;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+}
+.player-tag {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+/* headline achievement banner */
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 22px;
+  padding: 12px 16px;
+  background: linear-gradient(90deg, rgba(245, 184, 46, 0.14), transparent 70%);
+  border: 1.5px solid var(--gold);
+  box-shadow: 4px 4px 0 #5a3d06;
+}
+.highlight-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  background: var(--gold);
+  color: #2a0a20;
+}
+.highlight-title {
+  margin: 0;
+  font-family: var(--pixel);
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--gold);
+}
+.highlight-detail {
+  margin: 2px 0 0;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+/* stats: tidy 3 x 2 grid */
+.stats {
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+.stats dd {
+  font-size: 16px;
+  line-height: 1.45;
+}
+/* focus-area chips get a label */
+.chips-label {
+  font-family: var(--pixel);
+  font-size: 10px;
+  color: var(--accent);
+  margin: 18px 0 0 !important;
+}
+.dialog p {
+  max-width: 70ch;
+}
+/* skill tree as masonry columns, so uneven boxes leave no gaps */
+.branches {
+  display: block;
+  columns: 3 260px;
+  column-gap: 22px;
+}
+.branch {
+  break-inside: avoid;
+  margin-bottom: 22px;
+}
+/* project cards: comfortable reading width */
+.quest-body > p,
+.objectives li {
+  max-width: 68ch;
+}
+.objectives li {
+  margin-bottom: 8px;
+}
+@media (max-width: 860px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .highlight-title {
+    font-size: 13px;
+  }
+}

@@ -13,23 +13,25 @@ export const profile = {
     "My research sits where computing meets real-world systems: reproducible ML pipelines, satellite and sensor data, and IoT prototypes that make it out of the lab. My goal is a Ph.D. and a career in academia, building technology that makes cities like Jeddah smarter and more sustainable. My projects, including Wahaj and Aykah, are in the Quest Log below.",
     "I'm also an artist. Away from the keyboard I design and paint, which probably explains why this site looks the way it does.",
   ],
+  // Headline achievement, shown as its own banner under the tagline.
+  highlight: "Youngest UN-certified Saudi researcher",
+  highlightDetail: "5 national & international recognitions · 3 national & international awards",
   stats: [
     { label: "CLASS", value: "Researcher · Developer · ML Engineer" },
-    { label: "TITLE", value: "Youngest UN-certified Saudi researcher · 5 national & international recognitions and 3 national & international awards" },
-    { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
+    { label: "GUILD", value: "KAU · BS Computer Science · Waed track" },
     { label: "BASE", value: "Jeddah, Saudi Arabia" },
     { label: "LANGS", value: "Arabic · English" },
     { label: "MAIN QUEST", value: "Ph.D. → academia" },
     { label: "SIDE QUEST", value: "Design & painting" },
   ],
+  // Focus areas: technical and research only, in one consistent form.
   interests: [
-    "Full-stack development",
-    "Hardware & IoT",
     "Software engineering",
-    "Research",
-    "AI/ML",
-    "Leadership & events",
-    "Green technology",
+    "Full-stack web development",
+    "Machine learning",
+    "IoT & embedded systems",
+    "Remote sensing",
+    "Sustainable technology",
   ],
 };
 
