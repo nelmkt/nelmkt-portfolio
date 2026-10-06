@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 // A line from Nelly's own post about her journey, hidden as 8-bit ASCII binary.
-const SECRET = "stay curious & keep going";
+const SECRET = "stay curious";
 const BINARY = Array.from(SECRET, (c) => c.charCodeAt(0).toString(2).padStart(8, "0")).join(" ");
 
 const BANNER = [
@@ -21,8 +21,8 @@ export default function EasterEgg() {
   useEffect(() => {
     console.log(
       `%c${BANNER}\n\n%cHey, fellow curious one 👾\nThe footer is speaking binary. Click it to translate, or decode it yourself:\n${BINARY}`,
-      "color:#2bd1c0;font-family:monospace;font-weight:bold",
-      "color:#f2994a;font-family:monospace",
+      "color:#ff3d8b;font-family:monospace;font-weight:bold",
+      "color:#c08bd6;font-family:monospace",
     );
     return () => {
       if (timer.current) clearInterval(timer.current);

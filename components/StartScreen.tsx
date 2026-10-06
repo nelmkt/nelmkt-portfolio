@@ -56,14 +56,14 @@ export default function StartScreen() {
           ALMAKTOUM
         </h1>
         <p className="start-ar">
-          <PixelText text={profile.nameAr} size={16} scale={3} shadow="#0e9f8e" />
+          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#3b0f2e" />
         </p>
         <div className="start-thermal" aria-hidden="true" />
         <p className="start-sub">Researcher &amp; Innovator · AI/ML &amp; Green Tech</p>
         <button className="start-btn" onClick={start} autoFocus>
           ▶ PRESS START
         </button>
-        <p className="start-meta">© 2026 · 1 PLAYER · RESEARCH EDITION</p>
+        <p className="start-meta">© 2026 · 1 PLAYER · PORTFOLIO EDITION</p>
       </div>
     </div>
   );

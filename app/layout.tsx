@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono, Noto_Kufi_Arabic, Press_Start_2P, Space_Grotesk } from "next/font/google";
+import { Noto_Kufi_Arabic, Pixelify_Sans, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
 const pixel = Press_Start_2P({ weight: "400", subsets: ["latin"], variable: "--font-pixel" });
-const display = Space_Grotesk({ subsets: ["latin"], variable: "--font-display" });
-const body = Inter({ subsets: ["latin"], variable: "--font-body" });
-const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
 export const metadata: Metadata = {
@@ -23,15 +21,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0b1220",
+  themeColor: "#ff3d8b",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${pixel.variable} ${display.variable} ${body.variable} ${mono.variable} ${arabic.variable}`}
-    >
+    <html lang="en" className={`${pixel.variable} ${body.variable} ${arabic.variable}`}>
       <body>{children}</body>
     </html>
   );

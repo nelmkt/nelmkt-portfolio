@@ -92,7 +92,7 @@ export default function Portfolio() {
               <h1 className="player-name">
                 {profile.name}
                 <span className="player-ar">
-                  <PixelText text={profile.nameAr} size={17} scale={2} shadow="var(--accent-2)" />
+                  <PixelText text={profile.nameAr} size={13} scale={3} shadow="var(--accent-2)" />
                 </span>
               </h1>
               <p className="player-headline">{profile.headline}</p>
