@@ -16,7 +16,7 @@ export const profile = {
   ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
-    { label: "TITLE", value: "Youngest UN-certified Saudi researcher · 4 national & international recognitions" },
+    { label: "TITLE", value: "One of the youngest Saudi researchers recognized at UNCCD COP16 · 4 national & international recognitions" },
     { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
     { label: "BASE", value: "Jeddah, Saudi Arabia" },
     { label: "LANGS", value: "Arabic · English" },
@@ -133,9 +133,24 @@ export const trophies = [
   {
     year: "DEC 2024",
     title: "Young Researchers Award · Modern Technologies",
-    detail: "Youngest participant of 209 researchers and professors from 36 countries, making me the youngest UN-certified Saudi researcher",
-    by: "UNCCD COP16",
+    detail:
+      "Selected by an international panel and received at 16, making me one of the youngest Saudi researchers to be recognized through the initiative (youngest of 209 researchers and professors from 36 countries)",
+    by: "United Nations Convention to Combat Desertification (UNCCD COP16)",
     tier: "legendary",
+  },
+  {
+    year: "NATIONAL",
+    title: "National Recognition · NCM",
+    detail: "Official recognition of Aykah among the selected Young Researchers at UNCCD COP16",
+    by: "National Center for Meteorology (NCM)",
+    tier: "gold",
+  },
+  {
+    year: "NATIONAL",
+    title: "National Recognition · MEWA",
+    detail: "National recognition for the Aykah smart bin",
+    by: "Ministry of Environment, Water and Agriculture (MEWA)",
+    tier: "gold",
   },
   {
     year: "FEB 2022",
