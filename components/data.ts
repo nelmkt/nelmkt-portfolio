@@ -9,8 +9,8 @@ export const profile = {
     "Undergraduate researcher merging technology with complex problems to contribute in real-world impact.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
-    "I'm a CS student at KAU who likes building things where machine learning, remote sensing and sustainability meet: training models in Python, pulling satellite data out of Google Earth Engine, and wiring up the occasional Raspberry Pi. I like problems that are messy and real, and I care as much about what the data can't show as what it can.",
-    "The plan is graduate research and a Ph.D., and one day, work that helps hot, water-scarce cities like Jeddah grow greener without paying for it in energy.",
+    "As a kid, a question never stayed a question for long: I kept digging until I understood the how and the why. That habit stuck. Most of what I build starts with noticing something everyone else walks past and asking why it can't work better.",
+    "I believe less in born talent and more in discipline, and I only want to build things that solve a real problem for real people. Right now that means working where AI and environmental sustainability meet, with a dream of helping cities like Jeddah, and the smart cities rising across Saudi Arabia, become greener and more efficient.",
     "Along the way I've built a few things, including Wahaj and Aykah, which you'll find in the Quest Log below.",
     "I'm also an artist. When I'm not training models, I'm usually designing or painting, which probably explains why this site looks the way it does.",
   ],
