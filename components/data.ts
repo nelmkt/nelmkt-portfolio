@@ -153,6 +153,7 @@ export const languages = [
   { name: "JavaScript", short: "JS", color: "#F7DF1E", tier: "MAIN" },
   { name: "C++", short: "C++", color: "#00599C", tier: "WORKING" },
   { name: "C#", short: "C#", color: "#512BD4", tier: "WORKING" },
+  { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING" },
 ] as const;
 
 export const skillTree = [
