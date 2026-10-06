@@ -185,7 +185,8 @@ export const skillTree = [
   { branch: "Data", items: ["scikit-learn", "pandas", "NumPy"] },
   { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
-  { branch: "Back end", items: ["Python", "Ruby", "Rust"] },
+  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js"] },
+  { branch: "Tools", items: ["Git"] },
   {
     branch: "Hardware",
     items: [
