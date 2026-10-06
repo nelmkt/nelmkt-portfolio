@@ -67,7 +67,7 @@ img {
 /* ---------- pixel box ---------- */
 .box {
   background: var(--surface);
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   box-shadow: 4px 4px 0 var(--shadow);
   position: relative;
 }
@@ -81,7 +81,7 @@ img {
   background: var(--accent);
   color: var(--on-accent);
   text-decoration: none;
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   box-shadow: 4px 4px 0 var(--shadow);
   transition: transform 0.08s steps(2), box-shadow 0.08s steps(2);
   cursor: pointer;
@@ -109,7 +109,7 @@ img {
 }
 .chips li {
   background: var(--surface-2);
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   padding: 2px 10px;
   font-size: 16px;
 }
@@ -343,7 +343,7 @@ main {
   text-align: center;
 }
 .portrait-frame {
-  padding: 2px;
+  padding: 1.5px;
   background: var(--thermal);
 }
 .portrait-img {
@@ -367,7 +367,7 @@ main {
 .xp-bar {
   flex: 1;
   height: 14px;
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   background: var(--surface-2);
 }
 .xp-bar i {
@@ -442,7 +442,7 @@ main {
   font-family: var(--pixel);
   font-size: 11px;
   padding: 6px 10px;
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
 }
 .dialog p {
   margin: 0 0 10px;
@@ -501,7 +501,7 @@ main {
   width: 18px;
   height: 18px;
   background: var(--gem);
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   transform: rotate(45deg);
   box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.5);
 }
@@ -532,7 +532,7 @@ main {
    stretching down the whole card. */
 .quest-media {
   margin: 20px 0 20px 20px;
-  padding: 2px;
+  padding: 1.5px;
   background: var(--thermal);
   box-shadow: 4px 4px 0 var(--shadow);
 }
@@ -550,7 +550,7 @@ main {
   font-size: 8px;
   line-height: 1.6;
   background: var(--surface-2);
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   padding: 6px 8px;
   margin: 0 0 12px;
 }
@@ -635,7 +635,7 @@ main {
   place-items: center;
   font-size: 26px;
   background: var(--surface-2);
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
 }
 .trophy.legendary {
   grid-column: 1 / -1;
@@ -784,7 +784,7 @@ main {
 .lang-meter i {
   width: 12px;
   height: 14px;
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   background: var(--surface-2);
 }
 .lang-meter i.on {
@@ -825,7 +825,7 @@ main {
   font-family: var(--pixel);
   font-size: 11px;
   background: var(--surface-2);
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   padding: 8px 6px;
 }
 .member h3 {
@@ -876,7 +876,7 @@ main {
   width: 40px;
   height: 40px;
   background: var(--thermal);
-  border: 2px solid var(--line);
+  border: 1.5px solid var(--line);
   transform: rotate(45deg);
   box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.45);
   animation: bob-rot 1.4s steps(2) infinite;
