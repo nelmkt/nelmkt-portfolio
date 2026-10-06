@@ -1,16 +1,52 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PixelText from "./PixelText";
 import { profile } from "./data";
+import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
+
+// Deterministic "random" so server and client render the same star field.
+const STARS = Array.from({ length: 46 }, (_, i) => {
+  const r = (n: number) => ((Math.sin(i * 97.13 + n * 13.7) + 1) / 2) % 1;
+  return {
+    left: `${(r(1) * 100).toFixed(2)}%`,
+    top: `${(r(2) * 56).toFixed(2)}%`,
+    size: r(3) > 0.8 ? 4 : r(3) > 0.4 ? 3 : 2,
+    delay: `${(r(4) * 3).toFixed(2)}s`,
+    pink: r(5) > 0.7,
+  };
+});
+
+function StartRunner() {
+  const ref = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    const canvas = ref.current!;
+    const ctx = canvas.getContext("2d")!;
+    let f = 0;
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawSprite(ctx, FRAMES[f % 2], 0, 0, 1);
+    };
+    draw();
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const id = setInterval(() => {
+      f++;
+      draw();
+    }, 140);
+    return () => clearInterval(id);
+  }, []);
+  return <canvas ref={ref} className="start-runner" width={SPRITE_W} height={SPRITE_H} aria-hidden="true" />;
+}
 
 export default function StartScreen() {
   const [open, setOpen] = useState(true);
   const [leaving, setLeaving] = useState(false);
+  const [best, setBest] = useState(0);
 
   useEffect(() => {
     try {
       if (sessionStorage.getItem("nelmkt-started")) setOpen(false);
+      setBest(Number(localStorage.getItem("nelmkt-best") || 0));
     } catch {}
   }, []);
 
@@ -48,6 +84,31 @@ export default function StartScreen() {
       aria-label="Start screen"
       onClick={start}
     >
+      <div className="start-sky" aria-hidden="true">
+        {STARS.map((s, i) => (
+          <span
+            key={i}
+            className={`start-star${s.pink ? " pink" : ""}`}
+            style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
+          />
+        ))}
+        <div className="start-sun" />
+      </div>
+      <div className="start-floor" aria-hidden="true" />
+      <StartRunner />
+
+      <div className="start-arcade" aria-hidden="true">
+        <span>
+          <b>1UP</b> 000000
+        </span>
+        <span>
+          <b>HI-SCORE</b> {String(best).padStart(6, "0")}
+        </span>
+        <span>
+          <b>CREDIT</b> 01
+        </span>
+      </div>
+
       <div className="start-inner">
         <p className="start-kicker">NELMKT PRESENTS</p>
         <h1 className="start-title">
@@ -56,7 +117,7 @@ export default function StartScreen() {
           ALMAKTOUM
         </h1>
         <p className="start-ar">
-          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#3b0f2e" />
+          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#a66bff" />
         </p>
         <div className="start-thermal" aria-hidden="true" />
         <p className="start-sub">Researcher &amp; Innovator · ML Engineering · Green Tech</p>
