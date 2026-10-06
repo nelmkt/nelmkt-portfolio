@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
-import { languages, links, party, profile, quests, skillTree, stages, trophies } from "./data";
+import { academy, languages, links, party, profile, quests, sideQuests, skillTree, stages, trophies } from "./data";
 
 const STORE_KEY = "nelmkt-collected";
 
@@ -91,6 +91,7 @@ export default function Portfolio() {
                   <PixelText text={profile.nameAr} size={13} scale={3} shadow="var(--accent-2)" />
                 </span>
               </h1>
+              <p className="player-headline">{profile.headline}</p>
               <p className="player-tag">{profile.tagline}</p>
               <dl className="box stats">
                 {profile.stats.map((s) => (
@@ -216,9 +217,38 @@ export default function Portfolio() {
           </ol>
         </section>
 
-        {/* 1-5 SKILLS */}
+        {/* 1-5 ACADEMY */}
+        <section id="academy" className="stage">
+          <StageTag code="1-5" label="ACADEMY & SIDE QUESTS" />
+          <div className="academy">
+            {academy.map((a) => (
+              <div key={a.school} className="box school">
+                <p className="school-when">{a.when}</p>
+                <h3>{a.school}</h3>
+                <p className="school-degree">{a.degree}</p>
+                <p className="school-note">{a.note}</p>
+              </div>
+            ))}
+          </div>
+          <h3 className="sub-tag">SIDE QUESTS CLEARED</h3>
+          <ul className="side-quests">
+            {sideQuests.map((s) => (
+              <li key={s.title} className="box side">
+                <span className="side-check" aria-hidden="true">✔</span>
+                <div>
+                  <h4>{s.title}</h4>
+                  <p>
+                    {s.by} · {s.when}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 1-6 SKILLS */}
         <section id="skills" className="stage">
-          <StageTag code="1-5" label="SKILL TREE" />
+          <StageTag code="1-6" label="SKILL TREE" />
           <div className="box lang-panel">
             <h3>LANGUAGES</h3>
             <ul className="lang-list">
@@ -250,25 +280,26 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 1-6 PARTY */}
+        {/* 1-7 PARTY */}
         <section id="party" className="stage">
-          <StageTag code="1-6" label="PARTY & GUILDS" />
+          <StageTag code="1-7" label="PARTY & GUILDS" />
           <ul className="party">
             {party.map((p, i) => (
-              <li key={p.role + p.where} className="box member">
+              <li key={p.role + p.where} className={`box member${p.lead ? " lead" : ""}`}>
                 <span className="slot">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{p.role}</h3>
                   <p>{p.where}</p>
+                  <p className="member-when">{p.when}</p>
                 </div>
               </li>
             ))}
           </ul>
         </section>
 
-        {/* 1-7 SAVE */}
+        {/* 1-8 SAVE */}
         <section id="save" className="stage">
-          <StageTag code="1-7" label="SAVE POINT" />
+          <StageTag code="1-8" label="SAVE POINT" />
           <div className="box save">
             <div className="save-crystal" aria-hidden="true" />
             <div>

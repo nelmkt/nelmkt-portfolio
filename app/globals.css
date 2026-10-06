@@ -1,15 +1,17 @@
+/* Pink is the accent, not the wallpaper: neutral warm surfaces, charcoal-plum ink,
+   pink reserved for highlights, the active stage and primary actions. */
 :root {
-  --bg: #ffe8f3;
-  --bg-grid: rgba(255, 79, 154, 0.08);
-  --surface: #fff7fb;
-  --surface-2: #ffd6ea;
-  --ink: #4a1238;
-  --ink-soft: #7d3a68;
-  --accent: #ff2f86;
-  --accent-2: #ff8cc0;
-  --shadow: #ff4f9a;
-  --gold: #f5b82e;
-  --bar: #4a1238;
+  --bg: #f7f3f5;
+  --bg-grid: rgba(45, 26, 39, 0.045);
+  --surface: #ffffff;
+  --surface-2: #f1e8ed;
+  --ink: #2d1a27;
+  --ink-soft: #6e5a67;
+  --accent: #e0387f;
+  --accent-2: #f4bfd6;
+  --shadow: #2d1a27;
+  --gold: #e9a923;
+  --bar: #2d1a27;
   --pixel: var(--font-pixel), "Courier New", monospace;
   --body: var(--font-body), system-ui, sans-serif;
   color-scheme: light;
@@ -17,30 +19,30 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #1f0a1a;
-    --bg-grid: rgba(255, 79, 154, 0.07);
-    --surface: #2e1028;
-    --surface-2: #451a3c;
-    --ink: #ffe3f1;
-    --ink-soft: #f0a9cf;
-    --accent: #ff5fa8;
-    --accent-2: #b8407f;
-    --shadow: #ff2f86;
-    --bar: #12040f;
+    --bg: #141013;
+    --bg-grid: rgba(255, 255, 255, 0.03);
+    --surface: #1e181c;
+    --surface-2: #2c2329;
+    --ink: #f3ebef;
+    --ink-soft: #b4a3ad;
+    --accent: #ff6fae;
+    --accent-2: #6b3550;
+    --shadow: #000000;
+    --bar: #0b080a;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #1f0a1a;
-  --bg-grid: rgba(255, 79, 154, 0.07);
-  --surface: #2e1028;
-  --surface-2: #451a3c;
-  --ink: #ffe3f1;
-  --ink-soft: #f0a9cf;
-  --accent: #ff5fa8;
-  --accent-2: #b8407f;
-  --shadow: #ff2f86;
-  --bar: #12040f;
+  --bg: #141013;
+  --bg-grid: rgba(255, 255, 255, 0.03);
+  --surface: #1e181c;
+  --surface-2: #2c2329;
+  --ink: #f3ebef;
+  --ink-soft: #b4a3ad;
+  --accent: #ff6fae;
+  --accent-2: #6b3550;
+  --shadow: #000000;
+  --bar: #0b080a;
   color-scheme: dark;
 }
 
@@ -141,7 +143,7 @@ img {
   display: grid;
   place-items: center;
   padding: 16px;
-  background: radial-gradient(circle at 50% 40%, #ff8cc0 0%, #ff4f9a 45%, #b0185e 100%);
+  background: radial-gradient(circle at 50% 35%, #3d2636 0%, #1f141b 60%, #120b10 100%);
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -174,7 +176,7 @@ img {
   line-height: 1.15;
   margin: 0;
   color: #fff;
-  text-shadow: 4px 4px 0 #4a1238, 8px 8px 0 rgba(74, 18, 56, 0.35);
+  text-shadow: 4px 4px 0 #e0387f, 8px 8px 0 rgba(0, 0, 0, 0.45);
 }
 .start-ar {
   margin: 12px 0 0;
@@ -183,15 +185,14 @@ img {
 .start-avatar {
   margin: 24px auto 20px;
   width: fit-content;
-  animation: bob 1.2s steps(2) infinite;
 }
 .start-btn {
   font-family: var(--pixel);
   font-size: 16px;
-  color: #4a1238;
+  color: #2d1a27;
   background: #fff;
-  border: 4px solid #4a1238;
-  box-shadow: 4px 4px 0 #4a1238;
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0 #e0387f;
   padding: 14px 20px;
   cursor: pointer;
   animation: blink 1s steps(1) infinite;
@@ -243,7 +244,7 @@ img {
   padding: 8px 8px;
   white-space: nowrap;
   border: 2px solid transparent;
-  color: #ffd6ea;
+  color: #d9c9d2;
 }
 .hud-nav a .code {
   color: var(--accent-2);
@@ -327,8 +328,8 @@ main {
 }
 .start-avatar img {
   width: 180px;
-  border: 4px solid #4a1238;
-  box-shadow: 6px 6px 0 #4a1238;
+  border: 4px solid #000;
+  box-shadow: 6px 6px 0 #e0387f;
 }
 .pixel-text {
   display: inline-block;
@@ -360,7 +361,7 @@ main {
 .xp-bar i {
   display: block;
   height: 100%;
-  background: repeating-linear-gradient(90deg, var(--accent) 0 6px, #ff6fae 6px 8px);
+  background: repeating-linear-gradient(90deg, var(--accent) 0 6px, #f07aae 6px 8px);
   transition: width 0.4s steps(8);
 }
 .player-name {
@@ -445,7 +446,7 @@ main {
 .game-hint {
   margin: 8px 0 0;
   text-align: center;
-  color: #ffd6ea;
+  color: #d9c9d2;
   font-family: var(--pixel);
   font-size: 9px;
 }
@@ -807,7 +808,7 @@ main {
   padding: 32px 16px 40px;
   text-align: center;
   background: var(--bar);
-  color: #ffd6ea;
+  color: #d9c9d2;
   border-top: 4px solid var(--accent);
 }
 .footer p {
@@ -937,5 +938,91 @@ main {
   .save {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ---------- headline / academy / side quests ---------- */
+.player-headline {
+  font-family: var(--pixel);
+  font-size: 9px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+}
+.academy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.school {
+  padding: 18px 20px;
+}
+.school-when {
+  font-family: var(--pixel);
+  font-size: 9px;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+.school h3 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.25;
+}
+.school-degree {
+  margin: 2px 0 6px;
+  font-weight: 600;
+}
+.school-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+.sub-tag {
+  font-family: var(--pixel);
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin: 36px 0 16px;
+}
+.side-quests {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+.side {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  box-shadow: 4px 4px 0 var(--shadow);
+}
+.side-check {
+  color: var(--accent);
+  font-weight: 700;
+}
+.side h4 {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.3;
+}
+.side p {
+  margin: 2px 0 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.member-when {
+  font-family: var(--pixel);
+  font-size: 8px !important;
+  color: var(--accent) !important;
+  margin-top: 8px !important;
+}
+.member.lead {
+  border-color: var(--accent);
+}
+@media (max-width: 860px) {
+  .academy {
+    grid-template-columns: 1fr;
   }
 }

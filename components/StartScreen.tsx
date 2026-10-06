@@ -56,7 +56,7 @@ export default function StartScreen() {
           ALMAKTOUM
         </h1>
         <p className="start-ar">
-          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#4a1238" />
+          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#e0387f" />
         </p>
         <div className="start-avatar">
           <img src="/portrait.png" alt="Pixel-art portrait of Nelly" width={180} height={180} />

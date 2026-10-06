@@ -24,7 +24,7 @@ const BODY = [
   ".kpsssbsspk.",
   "..kpkssskp..",
   ".kkkksskkkk.",
-  "kddddssddddk",
+  "kddddddddddk",
   "ksddddddddsk",
 ];
 
