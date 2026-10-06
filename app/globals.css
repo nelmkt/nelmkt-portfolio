@@ -125,7 +125,7 @@ img {
   display: grid;
   place-items: center;
   padding: 16px;
-  background: radial-gradient(circle at 50% 40%, #ff7ab4 0%, #e0287a 45%, #5a0f3f 100%);
+  background: radial-gradient(circle at 50% 40%, #d94a8c 0%, #a3175a 45%, #3a0828 100%);
   color: #fff;
   cursor: pointer;
   text-align: center;
