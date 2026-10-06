@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import CheatCode from "./CheatCode";
+import ContactIcon from "./ContactIcon";
 import EasterEgg from "./EasterEgg";
 import PixelHeart from "./PixelHeart";
 import PixelIcon from "./PixelIcon";
@@ -331,6 +332,7 @@ export default function Portfolio() {
                   target={l.url.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noreferrer"
                 >
+                  <ContactIcon name={l.label} />
                   <span className="link-label">{l.label}</span>
                   <span className="link-value">{l.value}</span>
                   <PixelIcon name="play" size={10} />

@@ -461,6 +461,17 @@ main {
   margin: 0 0 10px;
   max-width: 75ch;
 }
+/* RPG text-box "next" arrow in the corner */
+.dialog::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid var(--accent);
+  animation: cursor-blink 1.4s steps(1) infinite;
+}
 
 /* ---------- game ---------- */
 .game-box {
@@ -957,30 +968,39 @@ main {
 }
 .link {
   display: grid;
-  grid-template-columns: 170px 1fr auto;
+  grid-template-columns: 30px 150px 1fr auto;
   align-items: center;
   gap: 16px;
-  padding: 14px 18px;
+  padding: 12px 18px;
   text-decoration: none;
   transition: transform 0.08s steps(2), box-shadow 0.08s steps(2);
+}
+.contact-icon {
+  display: block;
+  image-rendering: pixelated;
+  box-shadow: 2px 2px 0 #000;
 }
 .link .pixel-icon {
   color: var(--ramp, var(--accent));
 }
 @media (max-width: 560px) {
   .link {
-    grid-template-columns: 1fr auto;
-    gap: 6px 12px;
+    grid-template-columns: 30px 1fr auto;
+    gap: 4px 12px;
+  }
+  .contact-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
   }
   .link-label {
-    grid-column: 1;
+    grid-column: 2;
   }
   .link-value {
-    grid-column: 1;
+    grid-column: 2;
     grid-row: 2;
   }
   .link .pixel-icon {
-    grid-column: 2;
+    grid-column: 3;
     grid-row: 1 / span 2;
   }
 }

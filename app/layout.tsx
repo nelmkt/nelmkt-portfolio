@@ -8,15 +8,15 @@ const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
 export const metadata: Metadata = {
-  title: "Nelly Almaktoum · nelmkt",
+  title: "Nelly Almaktoum",
   description:
     "Nelly Almaktoum: undergraduate researcher at King Abdulaziz University working on applied ML, remote sensing and green technology.",
   metadataBase: new URL("https://nelmkt.com"),
   openGraph: {
-    title: "Nelly Almaktoum · nelmkt",
+    title: "Nelly Almaktoum",
     description: "Researcher & innovator: ML engineering and green tech. Press start.",
     url: "https://nelmkt.com",
-    siteName: "nelmkt",
+    siteName: "Nelly Almaktoum",
     type: "website",
     images: [
       {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nelly Almaktoum · nelmkt",
+    title: "Nelly Almaktoum",
     description: "Researcher & innovator: ML engineering and green tech. Press start.",
     images: ["/og.png"],
   },

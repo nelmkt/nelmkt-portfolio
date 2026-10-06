@@ -9,9 +9,9 @@ export const profile = {
     "Undergraduate researcher merging technology with complex problems to contribute in real-world impact.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
-    "I'm a computer science student and researcher focused on AI/ML engineering, working where machine learning, remote sensing and sustainability meet. I like building models that measure what a green intervention actually does, and being honest about what the data cannot show.",
-    "That has led to Wahaj, a reproducible ML framework that weighs urban greening against desalination energy costs in Jeddah, and Aykah, a patented, solar-powered smart bin recognised at UNCCD COP16. Next stop: graduate research and a Ph.D.",
-    "Outside code and research, I design and paint.",
+    "Player 1 has entered the chat. I'm Nelly, a CS student at KAU who teaches machines to read satellite data. My main quest: training ML models on Landsat imagery to find out whether greening Jeddah actually cools it down (spoiler: about −1.18 °C per greened pixel outside the built-up area), and being stubbornly honest about what the data can't prove.",
+    "Boss fights cleared so far: Aykah, a solar-powered smart bin that went from a school project to a patent, and an award at UNCCD COP16, where I was the youngest of 209 researchers. Also this website, which hides a mini-game, a secret message and at least one cheat code.",
+    "Current loadout: Python, XGBoost and Google Earth Engine. Next level: graduate research and a Ph.D. When I log off, I'm designing or painting.",
   ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
