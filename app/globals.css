@@ -1,56 +1,24 @@
-/* Retro pink arcade: square pixel boxes, hard shadows, pixel type,
-   and a rainbow ramp for frames, bars and rules. */
+/* Retro pink arcade on a black grid: square pixel boxes, hard shadows,
+   pixel type, and a rainbow ramp for frames, bars and rules. One theme for
+   every visitor, so it always reads as an arcade screen. */
 :root {
-  --bg: #fff0f6;
-  --bg-grid: rgba(255, 61, 139, 0.07);
-  --surface: #ffffff;
-  --surface-2: #ffd9e8;
-  --ink: #3b0f2e;
-  --ink-soft: #8a4f74;
-  --line: #3b0f2e;
-  --accent: #ff3d8b;
-  --accent-2: #ffb3d1;
+  --bg: #000000;
+  --bg-grid: rgba(255, 61, 139, 0.16);
+  --surface: #120c11;
+  --surface-2: #2a1424;
+  --ink: #ffe6f1;
+  --ink-soft: #d99bbd;
+  --line: #ffb3d1;
+  --accent: #ff4f9a;
+  --accent-2: #7a2353;
   --on-accent: #ffffff;
-  --shadow: #3b0f2e;
+  --shadow: rgba(255, 61, 139, 0.55);
   --gold: #f5b82e;
-  --bar: #2a0a20;
+  --bar: #0b070a;
   --heart: #ff2f6d;
   --thermal: linear-gradient(90deg, #ff3d8b, #ff9f43, #f5d547, #5ee3a1, #4fb3ff, #a66bff);
   --pixel: var(--font-pixel), "Courier New", monospace;
   --body: var(--font-body), system-ui, sans-serif;
-  color-scheme: light;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #1a0b16;
-    --bg-grid: rgba(255, 95, 168, 0.06);
-    --surface: #26101f;
-    --surface-2: #3a1830;
-    --ink: #ffe6f1;
-    --ink-soft: #e2a3c4;
-    --line: #ffb3d1;
-    --accent: #ff5fa8;
-    --accent-2: #8a2a5c;
-    --on-accent: #1a0b16;
-    --shadow: #000000;
-    --bar: #120510;
-    color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #1a0b16;
-  --bg-grid: rgba(255, 95, 168, 0.06);
-  --surface: #26101f;
-  --surface-2: #3a1830;
-  --ink: #ffe6f1;
-  --ink-soft: #e2a3c4;
-  --line: #ffb3d1;
-  --accent: #ff5fa8;
-  --accent-2: #8a2a5c;
-  --on-accent: #1a0b16;
-  --shadow: #000000;
-  --bar: #120510;
   color-scheme: dark;
 }
 
