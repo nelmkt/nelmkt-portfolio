@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import CheatCode from "./CheatCode";
 import ContactIcon from "./ContactIcon";
 import EasterEgg from "./EasterEgg";
+import PageFx from "./PageFx";
 import PixelHeart from "./PixelHeart";
 import PixelIcon from "./PixelIcon";
 import PixelText from "./PixelText";
@@ -58,6 +59,7 @@ export default function Portfolio() {
     <>
       <StartScreen />
       <CheatCode />
+      <PageFx />
 
       <header className="hud">
         <a className="hud-logo" href="#player" aria-label="Back to top">

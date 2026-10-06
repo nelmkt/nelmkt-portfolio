@@ -1636,3 +1636,115 @@ body {
     font-size: 13px;
   }
 }
+
+/* ---------- visual enhancements ---------- */
+/* rainbow scroll-progress bar along the very top */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 60;
+  pointer-events: none;
+}
+.scroll-progress i {
+  display: block;
+  height: 100%;
+  background: var(--thermal);
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* sections step into view (only once JS has marked the page ready) */
+.reveal-ready main .stage {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.45s steps(5), transform 0.45s steps(5);
+}
+.reveal-ready main .stage.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* fading rainbow rule under each section title */
+.stage-tag {
+  position: relative;
+  padding-bottom: 14px;
+}
+.stage-tag::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--thermal);
+  opacity: 0.55;
+  -webkit-mask: linear-gradient(90deg, #000 30%, transparent);
+  mask: linear-gradient(90deg, #000 30%, transparent);
+}
+
+/* cards light up a little on hover */
+.box.ramp {
+  transition: transform 0.08s steps(2), box-shadow 0.15s, border-color 0.15s;
+}
+.box.ramp:hover {
+  border-color: color-mix(in srgb, var(--ramp) 65%, #ffffff);
+  box-shadow: 4px 4px 0 color-mix(in srgb, var(--ramp) 45%, #000), 0 0 22px color-mix(in srgb, var(--ramp) 30%, transparent);
+}
+.quest-media img {
+  transition: transform 0.25s steps(4);
+}
+.quest:hover .quest-media img {
+  transform: scale(1.02);
+}
+
+/* pixel back-to-top button */
+.to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 55;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  font-family: var(--pixel);
+  font-size: 11px;
+  color: #fff;
+  text-decoration: none;
+  background: var(--bar);
+  border: 1.5px solid var(--accent);
+  box-shadow: 3px 3px 0 var(--shadow);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.2s steps(3), transform 0.2s steps(3);
+}
+.to-top.show {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.to-top:hover {
+  background: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready main .stage {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media print {
+  .reveal-ready main .stage {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .scroll-progress,
+  .to-top {
+    display: none;
+  }
+}
