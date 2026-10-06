@@ -9,9 +9,10 @@ export const profile = {
     "Undergraduate researcher merging technology with complex problems to contribute in real-world impact.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
-    "I spend a lot of my time asking satellites questions. For Wahaj, the question was whether greening Jeddah actually cools it down, and what that costs a city that drinks desalinated water. The answer came out at about −1.18 °C per greened pixel outside the built-up area, with an energy bill attached. I care as much about what the data can't show as what it can.",
-    "Before that came Aykah, a solar-powered smart bin I built as a school project. It ended up with a patent and an award at UNCCD COP16.",
-    "These days I'm a CS student at KAU, working toward graduate research and a Ph.D. When I'm not training models, I'm usually designing or painting, which probably explains why this site looks the way it does.",
+    "I'm a CS student at KAU who likes building things where machine learning, remote sensing and sustainability meet: training models in Python, pulling satellite data out of Google Earth Engine, and wiring up the occasional Raspberry Pi. I like problems that are messy and real, and I care as much about what the data can't show as what it can.",
+    "The plan is graduate research and a Ph.D., and one day, work that helps hot, water-scarce cities like Jeddah grow greener without paying for it in energy.",
+    "Along the way I've built a few things, including Wahaj and Aykah, which you'll find in the Quest Log below.",
+    "I'm also an artist. When I'm not training models, I'm usually designing or painting, which probably explains why this site looks the way it does.",
   ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
