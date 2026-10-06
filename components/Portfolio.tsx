@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import Avatar from "./Avatar";
+import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
 import { languages, links, party, profile, quests, skillTree, stages, trophies } from "./data";
@@ -73,7 +73,7 @@ export default function Portfolio() {
           <div className="player-grid">
             <div className="box player-portrait">
               <div className="portrait-frame">
-                <Avatar scale={12} />
+                <img className="portrait-img" src="/portrait.png" alt="Pixel-art portrait of Nelly" width={600} height={600} />
               </div>
               <p className="player-handle">@{profile.handle}</p>
               <div className="xp">
@@ -87,8 +87,8 @@ export default function Portfolio() {
             <div className="player-info">
               <h1 className="player-name">
                 {profile.name}
-                <span className="player-ar" lang="ar" dir="rtl">
-                  {profile.nameAr}
+                <span className="player-ar">
+                  <PixelText text={profile.nameAr} size={13} scale={3} shadow="var(--accent-2)" />
                 </span>
               </h1>
               <p className="player-tag">{profile.tagline}</p>
@@ -158,7 +158,7 @@ export default function Portfolio() {
                   <p className="quest-status">{q.status}</p>
                   <h3>
                     <a href={q.url} target="_blank" rel="noreferrer">
-                      {q.title} <span lang="ar">· {q.titleAr}</span>
+                      {q.title} <span className="quest-ar">· <PixelText text={q.titleAr} size={12} scale={2} /></span>
                     </a>
                   </h3>
                   <p>{q.summary}</p>

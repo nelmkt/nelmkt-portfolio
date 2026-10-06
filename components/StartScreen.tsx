@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Avatar from "./Avatar";
+import PixelText from "./PixelText";
 import { profile } from "./data";
 
 export default function StartScreen() {
@@ -55,11 +55,11 @@ export default function StartScreen() {
           <br />
           ALMAKTOUM
         </h1>
-        <p className="start-ar" lang="ar" dir="rtl">
-          {profile.nameAr}
+        <p className="start-ar">
+          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#4a1238" />
         </p>
         <div className="start-avatar">
-          <Avatar scale={8} />
+          <img src="/portrait.png" alt="Pixel-art portrait of Nelly" width={180} height={180} />
         </div>
         <button className="start-btn" onClick={start} autoFocus>
           ▶ PRESS START

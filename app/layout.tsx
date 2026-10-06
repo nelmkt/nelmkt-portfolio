@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Pixelify_Sans, Press_Start_2P } from "next/font/google";
+import { Noto_Kufi_Arabic, Pixelify_Sans, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
 const pixel = Press_Start_2P({ weight: "400", subsets: ["latin"], variable: "--font-pixel" });
 const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
+const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
 export const metadata: Metadata = {
   title: "Nelly Almaktoum · nelmkt",
@@ -25,7 +26,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${pixel.variable} ${body.variable}`}>
+    <html lang="en" className={`${pixel.variable} ${body.variable} ${arabic.variable}`}>
       <body>{children}</body>
     </html>
   );

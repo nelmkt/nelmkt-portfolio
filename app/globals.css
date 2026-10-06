@@ -177,9 +177,8 @@ img {
   text-shadow: 4px 4px 0 #4a1238, 8px 8px 0 rgba(74, 18, 56, 0.35);
 }
 .start-ar {
-  font-size: 28px;
   margin: 12px 0 0;
-  text-shadow: 2px 2px 0 #4a1238;
+  color: #fff;
 }
 .start-avatar {
   margin: 24px auto 20px;
@@ -315,11 +314,30 @@ main {
   display: grid;
   place-items: center;
 }
-.avatar {
+.portrait-frame {
+  padding: 0 !important;
+  overflow: hidden;
+}
+.portrait-img,
+.start-avatar img {
   image-rendering: pixelated;
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
+}
+.start-avatar img {
+  width: 180px;
+  border: 4px solid #4a1238;
+  box-shadow: 6px 6px 0 #4a1238;
+}
+.pixel-text {
+  display: inline-block;
+  vertical-align: middle;
+  image-rendering: pixelated;
+  max-width: 100%;
+}
+.quest-ar {
+  white-space: nowrap;
 }
 .player-handle {
   font-family: var(--pixel);
@@ -356,10 +374,7 @@ main {
 }
 .player-ar {
   display: block;
-  font-family: system-ui, sans-serif;
-  font-size: 0.6em;
   margin-top: 10px;
-  text-shadow: none;
   color: var(--accent);
 }
 .player-tag {

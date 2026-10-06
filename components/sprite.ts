@@ -1,36 +1,39 @@
 // 12x14 pixel player sprite, drawn on canvas by Avatar and the mini-game.
 
+// Styled after the portrait: black hair, glasses, black top.
 export const PALETTE: Record<string, string> = {
-  k: "#4a1238",
-  p: "#ff4f9a",
-  h: "#ffa3cf",
-  s: "#ffe2d1",
-  b: "#ff7fb0",
-  w: "#ffffff",
-  d: "#7a2a5c",
+  k: "#140c12",
+  p: "#2b2b2b",
+  h: "#4a4a4a",
+  s: "#fde3c4",
+  g: "#1a1a1a",
+  e: "#9a9a9a",
+  b: "#f08aa8",
+  d: "#383838",
+  j: "#5a2a4c",
 };
 
 const BODY = [
   "...kkkkkk...",
-  "..kppppppk..",
-  ".kpphhhhppk.",
-  ".kphsssshpk.",
-  ".kpsksskspk.",
-  ".kpbssssbpk.",
-  ".kpphsshppk.",
-  "..kkhhhhkk..",
-  ".khhwwwwhhk.",
-  "khhhwhhwhhhk",
-  "kshhhwwhhhsk",
-  ".khhhhhhhhk.",
+  "..kpphhppk..",
+  ".kppppppppk.",
+  ".kpssppsspk.",
+  ".kgggsgggpk.",
+  ".kgegggegpk.",
+  ".kpsssssspk.",
+  ".kpsssbsspk.",
+  "..kpkssskp..",
+  ".kkkksskkkk.",
+  "kddddssddddk",
+  "ksddddddddsk",
 ];
 
-const LEGS_A = ["..kdk..kdk..", ".kkk....kkk."];
-const LEGS_B = ["...kdkkdk...", "...kkkkkk..."];
+const LEGS_A = ["..kjk..kjk..", ".kkk....kkk."];
+const LEGS_B = ["...kjkkjk...", "...kkkkkk..."];
 
 export const FRAMES = [BODY.concat(LEGS_A), BODY.concat(LEGS_B)];
 export const SPRITE_W = 12;
-export const SPRITE_H = 14;
+export const SPRITE_H = 14; // 12 body rows + 2 leg rows
 
 export function drawSprite(
   ctx: CanvasRenderingContext2D,
