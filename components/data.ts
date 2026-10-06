@@ -14,13 +14,13 @@ export const profile = {
     "I'm also an artist. Away from the keyboard I design and paint, which probably explains why this site looks the way it does.",
   ],
   stats: [
-    { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
-    { label: "TITLE", value: "One of the youngest Saudi researchers recognized at UNCCD COP16 · 5 national & international recognitions and 3 national & international awards" },
-    { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
-    { label: "BASE", value: "Jeddah, Saudi Arabia" },
-    { label: "LANGS", value: "Arabic · English" },
-    { label: "MAIN QUEST", value: "Ph.D. in AI/ML → academia" },
-    { label: "SIDE QUEST", value: "Design & painting" },
+    { label: "ROLE", value: "Researcher · Innovator · ML Engineer" },
+    { label: "RECOGNITION", value: "One of the youngest Saudi researchers recognized at UNCCD COP16 · 5 national & international recognitions and 3 national & international awards" },
+    { label: "EDUCATION", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
+    { label: "LOCATION", value: "Jeddah, Saudi Arabia" },
+    { label: "LANGUAGES", value: "Arabic · English" },
+    { label: "GOAL", value: "Ph.D. in AI/ML and a career in academia" },
+    { label: "OUTSIDE CODE", value: "Design & painting" },
   ],
   interests: [
     "AI/ML engineering",
@@ -51,7 +51,7 @@ export const quests: Quest[] = [
     id: "wahaj",
     title: "Wahaj",
     titleAr: "وهاج",
-    status: "MAIN QUEST · JUN–OCT 2026 · RELEASED",
+    status: "RESEARCH · JUN–OCT 2026 · ARCHIVED ON ZENODO",
     url: "https://github.com/nelmkt/Wahaj-Framework",
     image:
       "https://raw.githubusercontent.com/nelmkt/Wahaj-Framework/v11-framework-ml/figures_r1/fig_r1_dose_contrasts.png",
@@ -75,7 +75,7 @@ export const quests: Quest[] = [
     id: "aykah",
     title: "Aykah",
     titleAr: "آيكة",
-    status: "QUEST COMPLETE · OCT 2024–MAR 2025 · PATENTED · MULTI-AWARD",
+    status: "PROJECT · OCT 2024–MAR 2025 · PATENTED · AWARD-WINNING",
     url: "https://github.com/nelmkt/Smart-Bin-Aykah",
     image:
       "https://raw.githubusercontent.com/nelmkt/Smart-Bin-Aykah/main/images/prototype.jpg",
@@ -247,12 +247,12 @@ export const links = [
 ];
 
 export const stages = [
-  { id: "player", code: "1-1", label: "PLAYER" },
-  { id: "bonus", code: "1-2", label: "BONUS" },
-  { id: "quests", code: "1-3", label: "QUESTS" },
-  { id: "trophies", code: "1-4", label: "TROPHIES" },
-  { id: "academy", code: "1-5", label: "ACADEMY" },
-  { id: "skills", code: "1-6", label: "SKILLS" },
-  { id: "party", code: "1-7", label: "PARTY" },
-  { id: "save", code: "1-8", label: "SAVE" },
+  { id: "player", code: "01", label: "ABOUT" },
+  { id: "quests", code: "02", label: "PROJECTS" },
+  { id: "trophies", code: "03", label: "AWARDS" },
+  { id: "academy", code: "04", label: "EDUCATION" },
+  { id: "skills", code: "05", label: "SKILLS" },
+  { id: "bonus", code: "06", label: "MINI-GAME" },
+  { id: "party", code: "07", label: "LEADERSHIP" },
+  { id: "save", code: "08", label: "CONTACT" },
 ];
