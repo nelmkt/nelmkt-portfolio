@@ -16,7 +16,7 @@ export const profile = {
   ],
   stats: [
     { label: "CLASS", value: "Researcher · Innovator · ML Engineer" },
-    { label: "TITLE", value: "One of the youngest Saudi researchers recognized at UNCCD COP16 · 4 national & international recognitions" },
+    { label: "TITLE", value: "One of the youngest Saudi researchers recognized at UNCCD COP16 · 4 national & international recognitions and 3 national & international awards" },
     { label: "GUILD", value: "KAU · BS Computer Science · Waed Distinctive Excellence track" },
     { label: "BASE", value: "Jeddah, Saudi Arabia" },
     { label: "LANGS", value: "Arabic · English" },
