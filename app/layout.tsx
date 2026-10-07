@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Kufi_Arabic, Pixelify_Sans } from "next/font/google";
+import { Noto_Kufi_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 import "./pixel-icons.css";
 import "./globals.css";
@@ -11,7 +11,12 @@ const pixel = localFont({
   variable: "--font-pixel",
   declarations: [{ prop: "size-adjust", value: "200%" }],
 });
-const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
+// Body text uses Jersey 10 too, scaled separately so paragraphs stay comfortable to read.
+const body = localFont({
+  src: "./fonts/Jersey10-Regular.ttf",
+  variable: "--font-body",
+  declarations: [{ prop: "size-adjust", value: "150%" }],
+});
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
 export const metadata: Metadata = {
