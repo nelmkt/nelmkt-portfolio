@@ -9,13 +9,13 @@ export const profile = {
     "Undergraduate researcher and developer working across software, hardware, data and AI.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
-    "I'm a computer science student at King Abdulaziz University who loves solving problems with code, from machine learning models to full-stack web apps and Raspberry Pi hardware.",
-    "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects, including Wahaj and Aykah, are in the Quest Log below.",
+    "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.",
+    "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.",
     "I'm also an artist, which probably explains why this site looks the way it does.",
   ],
   // Headline achievement, shown as its own banner under the tagline.
   highlight: "Youngest UN-certified Saudi researcher",
-  highlightDetail: "5 national & international recognitions · 3 national & international awards",
+  highlightDetail: "6 national & international recognitions · 3 national & international awards",
   stats: [
     { label: "CLASS", value: "Researcher · Developer · ML Engineer" },
     { label: "GUILD", value: "KAU · BS Computer Science · Waed track" },
