@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Kufi_Arabic } from "next/font/google";
+import { Noto_Kufi_Arabic, Pixelify_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import "./pixel-icons.css";
 import "./globals.css";
@@ -11,13 +11,7 @@ const pixel = localFont({
   variable: "--font-pixel",
   declarations: [{ prop: "size-adjust", value: "200%" }],
 });
-// Body text: VT323, a lighter pixel font (OFL) so long paragraphs aren't heavy next to
-// the bold Jersey 10 headings. It draws small, so size-adjust scales it up.
-const body = localFont({
-  src: "./fonts/VT323-Regular.ttf",
-  variable: "--font-body",
-  declarations: [{ prop: "size-adjust", value: "135%" }],
-});
+const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
 export const metadata: Metadata = {
