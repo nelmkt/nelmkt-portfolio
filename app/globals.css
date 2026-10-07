@@ -130,7 +130,8 @@ img {
   color: #fff;
   cursor: pointer;
   text-align: center;
-  animation: fade-in 0.3s steps(4);
+  /* No fade-in: the screen must be opaque from the first frame, or the page
+     underneath (e.g. the gold title banner) flashes through. */
 }
 .start-screen::after {
   content: "";

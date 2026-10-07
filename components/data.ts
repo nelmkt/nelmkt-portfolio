@@ -9,9 +9,9 @@ export const profile = {
     "Undergraduate researcher and developer working across software, hardware, data and AI.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
-    "I'm a computer science student at King Abdulaziz University who loves problem solving through code. I work in Python, TypeScript, Rust and Ruby, build machine learning models with XGBoost and scikit-learn, develop full-stack applications with Next.js and Node.js, and prototype hardware on Raspberry Pi.",
-    "My research sits where computing meets real-world systems: reproducible ML pipelines, satellite and sensor data, and IoT prototypes that make it out of the lab. My goal is a Ph.D. and a career in academia, building technology that makes cities like Jeddah smarter and more sustainable. My projects, including Wahaj and Aykah, are in the Quest Log below.",
-    "I'm also an artist. Away from the keyboard I design and paint, which probably explains why this site looks the way it does.",
+    "I'm a computer science student at King Abdulaziz University who loves solving problems with code, from machine learning models to full-stack web apps and Raspberry Pi hardware.",
+    "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects, including Wahaj and Aykah, are in the Quest Log below.",
+    "I'm also an artist, which probably explains why this site looks the way it does.",
   ],
   // Headline achievement, shown as its own banner under the tagline.
   highlight: "Youngest UN-certified Saudi researcher",
@@ -26,9 +26,8 @@ export const profile = {
   ],
   // Focus areas: technical and research only, in one consistent form.
   interests: [
-    "Software engineering",
+    "AI/ML engineering",
     "Full-stack web development",
-    "Machine learning",
     "IoT & embedded systems",
     "Remote sensing",
     "Sustainable technology",
