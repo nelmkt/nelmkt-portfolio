@@ -4,15 +4,12 @@ import localFont from "next/font/local";
 import "./pixel-icons.css";
 import "./globals.css";
 
-// Silkscreen: a readable pixel font for titles and labels (OFL). It draws smaller than
-// the Press Start 2P it replaced, so size-adjust scales it up to keep existing sizes.
+// Jersey 10: a bold, readable pixel font with lowercase, for titles and labels (OFL).
+// The stylesheet's sizes were set for wider pixel fonts, so size-adjust scales it up.
 const pixel = localFont({
-  src: [
-    { path: "./fonts/Silkscreen-Regular.ttf", weight: "400" },
-    { path: "./fonts/Silkscreen-Bold.ttf", weight: "700" },
-  ],
+  src: "./fonts/Jersey10-Regular.ttf",
   variable: "--font-pixel",
-  declarations: [{ prop: "size-adjust", value: "135%" }],
+  declarations: [{ prop: "size-adjust", value: "200%" }],
 });
 const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
