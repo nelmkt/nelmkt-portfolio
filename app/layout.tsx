@@ -11,11 +11,12 @@ const pixel = localFont({
   variable: "--font-pixel",
   declarations: [{ prop: "size-adjust", value: "200%" }],
 });
-// Body text uses Jersey 10 too, scaled separately so paragraphs stay comfortable to read.
+// Body text: VT323, a lighter pixel font (OFL) so long paragraphs aren't heavy next to
+// the bold Jersey 10 headings. It draws small, so size-adjust scales it up.
 const body = localFont({
-  src: "./fonts/Jersey10-Regular.ttf",
+  src: "./fonts/VT323-Regular.ttf",
   variable: "--font-body",
-  declarations: [{ prop: "size-adjust", value: "150%" }],
+  declarations: [{ prop: "size-adjust", value: "135%" }],
 });
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
