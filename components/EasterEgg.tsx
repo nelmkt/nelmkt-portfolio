@@ -73,7 +73,7 @@ export default function EasterEgg() {
   return (
     <button
       type="button"
-      className={`egg arcade-only${decoded ? " open" : ""}`}
+      className={`egg${decoded ? " open" : ""}`}
       onClick={toggle}
       data-hint={decoded ? undefined : t("psst… decode me")}
       aria-label={
