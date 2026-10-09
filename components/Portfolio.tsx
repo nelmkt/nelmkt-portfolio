@@ -188,7 +188,7 @@ export default function Portfolio() {
 
         {/* 1-2 BONUS */}
         <section id="bonus" className="stage arcade-only">
-          <StageTag code="1-2" label="BONUS STAGE · LANGUAGE RUSH" pro="" />
+          <StageTag code="1-2" label="BONUS STAGE - LANGUAGE RUSH" pro="" />
           <p className="stage-lede">
             {tr("The languages I program in, as collectibles. Jump to collect each one and avoid the bugs.")}
           </p>
@@ -227,7 +227,7 @@ export default function Portfolio() {
                   </p>
                   <h3>
                     <a href={q.url} target="_blank" rel="noreferrer">
-                      {q.title} <span className="quest-ar">· <PixelText text={q.titleAr} size={13} scale={2} /><span className="ar-plain" lang="ar">{q.titleAr}</span></span>
+                      {q.title} <span className="quest-ar">- <PixelText text={q.titleAr} size={13} scale={2} /><span className="ar-plain" lang="ar">{q.titleAr}</span></span>
                     </a>
                   </h3>
                   <p>{tr(q.summary)}</p>
@@ -274,7 +274,7 @@ export default function Portfolio() {
                 </span>
                 <div className="trophy-body">
                   <p className="trophy-year">
-                    <Dual a={`ACHIEVEMENT UNLOCKED${t.tier === "legendary" ? " · LEGENDARY" : ""}`} p={t.tier === "patent" ? "Patent" : t.tier === "legendary" ? "Distinction" : "Award"} />
+                    <Dual a={`ACHIEVEMENT UNLOCKED${t.tier === "legendary" ? " - LEGENDARY" : ""}`} p={t.tier === "patent" ? "Patent" : t.tier === "legendary" ? "Distinction" : "Award"} />
                   </p>
                   <h3>{tr(t.title)}</h3>
                   <p className="trophy-detail">{tr(t.detail)}</p>

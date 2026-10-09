@@ -107,14 +107,14 @@ export const quests: Quest[] = [
 export const trophies = [
   {
     year: "PATENT",
-    title: "Patent · Aykah Smart Bin",
+    title: "Patent - Aykah Smart Bin",
     detail: "Patent for Aykah, the solar-powered IoT smart waste management system",
     by: "Inventor: Nelly Almaktoum",
     tier: "patent",
   },
   {
     year: "SEP 2026",
-    title: "Featured · Saudi Gazette",
+    title: "Featured - Saudi Gazette",
     detail: "Feature story on my journey from curiosity to the award-winning Aykah smart bin",
     by: "Saudi Gazette",
     tier: "gold",
@@ -143,7 +143,7 @@ export const trophies = [
   },
   {
     year: "DEC 2024",
-    title: "Young Researchers Award · Modern Technologies",
+    title: "Young Researchers Award - Modern Technologies",
     detail:
       "Selected by an international panel and received at 16, making me the youngest UN-certified Saudi researcher (youngest of 209 researchers and professors from 36 countries)",
     by: "United Nations Convention to Combat Desertification (UNCCD COP16)",
@@ -151,21 +151,21 @@ export const trophies = [
   },
   {
     year: "NATIONAL",
-    title: "National Recognition · NCM",
+    title: "National Recognition - NCM",
     detail: "Official recognition of Aykah among the selected Young Researchers at UNCCD COP16",
     by: "National Center for Meteorology (NCM)",
     tier: "gold",
   },
   {
     year: "NATIONAL",
-    title: "National Recognition · MEWA",
+    title: "National Recognition - MEWA",
     detail: "National recognition for the Aykah smart bin",
     by: "Ministry of Environment, Water and Agriculture (MEWA)",
     tier: "gold",
   },
   {
     year: "FEB 2022",
-    title: "National Mathematics Olympiad · Final Stage",
+    title: "National Mathematics Olympiad - Final Stage",
     detail: "Representing the Western Region in the competition’s fourth edition",
     by: "Ministry of Education, Saudi Arabia",
     tier: "gold",
