@@ -140,6 +140,7 @@ export default function Portfolio() {
             <div className="box player-portrait">
               <div className="portrait-frame">
                 <img className="portrait-img" src="/portrait.jpg" alt="Pixel-art portrait of Nelly" width={433} height={412} />
+                <img className="portrait-photo" src="/photo.jpg" alt={tr("Photo of Nelly Almaktoum")} width={640} height={640} loading="lazy" />
               </div>
               <p className="player-handle">@{profile.handle}</p>
               <div className="xp arcade-only">

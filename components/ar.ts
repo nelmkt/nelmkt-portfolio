@@ -23,6 +23,7 @@ export const AR: Record<string, string> = {
   Contact: "تواصل",
   NELMKT: "NELMKT",
   "Nelly Almaktoum": "نيللي المكتوم",
+  "Photo of Nelly Almaktoum": "صورة نيللي المكتوم",
   STAGE: "المرحلة",
   "PLAYER SELECT": "اختر شخصيتك",
   "BONUS STAGE - LANGUAGE RUSH": "مرحلة المكافأة - سباق اللغات",

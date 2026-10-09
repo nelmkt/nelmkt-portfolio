@@ -43,6 +43,8 @@ export default function StartScreen() {
   const [open, setOpen] = useState(true);
   const [leaving, setLeaving] = useState(false);
   const [best, setBest] = useState(0);
+  // Which menu item is highlighted (0 = PRESS START, 1 = PROFESSIONAL MODE).
+  const [sel, setSel] = useState(0);
 
   useEffect(() => {
     try {
@@ -55,6 +57,15 @@ export default function StartScreen() {
     if (!open) return;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
+      // Up/down moves between the two menu items, like an arcade cabinet.
+      if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault();
+        const items = [...document.querySelectorAll<HTMLButtonElement>(".start-menu button")];
+        const next = (sel + 1) % items.length;
+        setSel(next);
+        items[next]?.focus();
+        return;
+      }
       // Enter/Space on a focused button already clicks it; let that button decide.
       if (e.target instanceof HTMLButtonElement && e.key !== "Escape") return;
       if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
@@ -96,6 +107,8 @@ export default function StartScreen() {
           />
         ))}
         <div className="start-sun" />
+        <div className="start-mountains far" />
+        <div className="start-mountains near" />
       </div>
       <div className="start-floor" aria-hidden="true" />
       <StartRunner />
@@ -126,12 +139,25 @@ export default function StartScreen() {
         <p className="start-sub">
           <span>Researcher &amp; Innovator</span> <span><i>-</i> ML Engineer</span> <span><i>-</i> Green Tech</span>
         </p>
-        <button className="start-btn" onClick={() => start("arcade")} autoFocus>
-          PRESS START
-        </button>
-        <button className="start-pro" onClick={() => start("pro")}>
-          PROFESSIONAL MODE
-        </button>
+        <div className="start-menu">
+          <button
+            className={`start-btn${sel === 0 ? " sel" : ""}`}
+            onClick={() => start("arcade")}
+            onFocus={() => setSel(0)}
+            onMouseEnter={() => setSel(0)}
+            autoFocus
+          >
+            PRESS START
+          </button>
+          <button
+            className={`start-pro${sel === 1 ? " sel" : ""}`}
+            onClick={() => start("pro")}
+            onFocus={() => setSel(1)}
+            onMouseEnter={() => setSel(1)}
+          >
+            PROFESSIONAL MODE
+          </button>
+        </div>
         <p className="start-meta">© 2026 - 1 PLAYER - PORTFOLIO EDITION</p>
       </div>
     </div>
