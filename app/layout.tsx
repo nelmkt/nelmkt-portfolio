@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Noto_Kufi_Arabic, Pixelify_Sans } from "next/font/google";
+import { DotGothic16, Noto_Kufi_Arabic } from "next/font/google";
 import localFont from "next/font/local";
+import { modeBootScript } from "../components/mode";
 import "./pixel-icons.css";
 import "./globals.css";
 
@@ -11,7 +12,17 @@ const pixel = localFont({
   variable: "--font-pixel",
   declarations: [{ prop: "size-adjust", value: "200%" }],
 });
-const body = Pixelify_Sans({ subsets: ["latin"], variable: "--font-body" });
+// DotGothic16: a pixel face with open, evenly spaced letters, so paragraphs stay easy to read.
+const body = DotGothic16({ weight: "400", subsets: ["latin"], variable: "--font-body" });
+// Professional mode swaps every pixel face for IBM Plex Sans (OFL). Headings get a
+// size-adjusted copy so the sizes tuned for the pixel font still read the same.
+const pro = localFont({ src: "./fonts/IBMPlexSans-Variable.ttf", weight: "100 700", variable: "--font-pro" });
+const proHeading = localFont({
+  src: "./fonts/IBMPlexSans-Variable.ttf",
+  weight: "100 700",
+  variable: "--font-pro-heading",
+  declarations: [{ prop: "size-adjust", value: "150%" }],
+});
 const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
 
 export const metadata: Metadata = {
@@ -49,7 +60,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${pixel.variable} ${body.variable} ${arabic.variable}`}>
+    <html lang="en" className={`${pixel.variable} ${body.variable} ${pro.variable} ${proHeading.variable} ${arabic.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: modeBootScript }} />
+      </head>
       <body>{children}</body>
     </html>
   );

@@ -128,7 +128,6 @@ img {
   overflow: hidden;
   background: #0d030a;
   color: #fff;
-  cursor: pointer;
   text-align: center;
   /* No fade-in: the screen must be opaque from the first frame, or the page
      underneath (e.g. the gold title banner) flashes through. */
@@ -541,13 +540,47 @@ main {
   gap: 4px;
   align-items: start;
 }
-/* Image sits in its own rainbow frame at its natural height instead of
-   stretching down the whole card. */
+/* Image is a link to the project, in a stepped pixel frame (notched corners
+   drawn with box-shadows) at its natural height. */
 .quest-media {
-  margin: 20px 0 20px 20px;
-  padding: 1.5px;
-  background: var(--thermal);
-  box-shadow: 4px 4px 0 var(--shadow);
+  display: block;
+  position: relative;
+  margin: 24px 8px 24px 24px;
+  padding: 4px;
+  background: var(--bar);
+  text-decoration: none;
+  box-shadow: 0 -4px 0 var(--accent), 0 4px 0 var(--accent), -4px 0 0 var(--accent), 4px 0 0 var(--accent),
+    4px 8px 0 var(--shadow), 8px 4px 0 var(--shadow);
+  transition: transform 0.08s steps(2);
+}
+.quest-media:hover {
+  transform: translate(-2px, -2px);
+}
+.quest-media-tag {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  font-family: var(--pixel);
+  font-size: 10px;
+  line-height: 1;
+  color: #fff;
+  background: var(--bar);
+  border: 1.5px solid var(--accent);
+  opacity: 0;
+  transition: opacity 0.15s steps(3);
+}
+.quest-media:hover .quest-media-tag,
+.quest-media:focus-visible .quest-media-tag {
+  opacity: 1;
+}
+@media (hover: none) {
+  .quest-media-tag {
+    opacity: 1;
+  }
 }
 .quest-media img {
   width: 100%;
@@ -938,15 +971,6 @@ main {
 .save p {
   margin: 0;
 }
-.save-crystal {
-  flex: none;
-  width: 40px;
-  height: 40px;
-  background: var(--thermal);
-  border: 1.5px solid var(--line);
-  transform: rotate(45deg);
-  box-shadow: inset 4px 4px 0 rgba(255, 255, 255, 0.45);
-}
 /* One contact per row so the dark→pastel ramp reads top to bottom. */
 .links {
   list-style: none;
@@ -1145,7 +1169,7 @@ main {
     grid-template-columns: 1fr;
   }
   .quest-media {
-    margin: 16px 16px 0;
+    margin: 20px 20px 4px;
     max-width: 420px;
   }
   .lang-list,
@@ -1323,7 +1347,7 @@ body.cheat .hud {
 
 /* Stacked boxes step from deep pink (first) to pastel pink (last). --t is set per item. */
 .ramp {
-  --ramp: color-mix(in srgb, #ffc2dc calc(var(--t, 0) * 100%), #b0125e);
+  --ramp: color-mix(in srgb, var(--ramp-hi, #ffc2dc) calc(var(--t, 0) * 100%), var(--ramp-lo, #b0125e));
   border-color: var(--ramp);
   box-shadow: 4px 4px 0 color-mix(in srgb, var(--ramp) 45%, #000);
 }
@@ -1680,7 +1704,7 @@ body {
   right: 0;
   bottom: 0;
   height: 2px;
-  background: var(--thermal);
+  background: var(--accent);
   opacity: 0.55;
   -webkit-mask: linear-gradient(90deg, #000 30%, transparent);
   mask: linear-gradient(90deg, #000 30%, transparent);
@@ -1748,4 +1772,284 @@ body {
   .to-top {
     display: none;
   }
+}
+
+/* ---------- section colours ---------- */
+/* Each stage has its own colour (in rainbow order) so sections are easy to tell
+   apart; borders, shadows, chips and the dark-to-pastel box ramp derive from it. */
+#player,
+.hud-nav a[href="#player"] {
+  --sec: #ff5fa2;
+}
+#bonus,
+.hud-nav a[href="#bonus"] {
+  --sec: #ff8a3d;
+}
+#quests,
+.hud-nav a[href="#quests"] {
+  --sec: #ffcc33;
+}
+#trophies,
+.hud-nav a[href="#trophies"] {
+  --sec: #3ddc84;
+}
+#academy,
+.hud-nav a[href="#academy"] {
+  --sec: #3dc8ff;
+}
+#skills,
+.hud-nav a[href="#skills"] {
+  --sec: #7d8bff;
+}
+#party,
+.hud-nav a[href="#party"] {
+  --sec: #b77bff;
+}
+#save,
+.hud-nav a[href="#save"] {
+  --sec: #ff6ec7;
+}
+.stage {
+  --accent: var(--sec);
+  --line: color-mix(in srgb, var(--sec) 78%, #000);
+  --shadow: color-mix(in srgb, var(--sec) 24%, #000);
+  --accent-2: color-mix(in srgb, var(--sec) 34%, #000);
+  --surface-2: color-mix(in srgb, var(--sec) 14%, #0b070a);
+  --ramp-lo: color-mix(in srgb, var(--sec) 68%, #000);
+  --ramp-hi: color-mix(in srgb, var(--sec) 45%, #fff);
+}
+.stage-label {
+  text-shadow: 2px 2px 0 var(--shadow);
+}
+.stage-label::after {
+  box-shadow: 2px 2px 0 var(--shadow);
+}
+.hud-nav a.on {
+  border-color: var(--sec);
+  background: color-mix(in srgb, var(--sec) 22%, transparent);
+}
+.hud-nav a.on .code {
+  color: var(--sec);
+}
+
+/* ---------- mode switch ---------- */
+.pro-only,
+.ar-plain {
+  display: none;
+}
+.mode-toggle {
+  flex: none;
+  font-family: var(--pixel);
+  font-size: 10px;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  background: transparent;
+  border: 1.5px solid #b36b93;
+  padding: 7px 9px;
+}
+.mode-toggle:hover {
+  border-color: var(--accent);
+  background: rgba(255, 61, 139, 0.18);
+}
+/* secondary choice on the start screen, under PRESS START */
+.start-pro {
+  display: block;
+  margin: 22px auto 0;
+  font-family: var(--pixel);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(13, 3, 10, 0.6);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  padding: 9px 14px;
+  text-shadow: 2px 2px 0 #1a0612;
+  cursor: var(--px-cursor) 0 0, pointer;
+}
+.start-pro:hover {
+  background: #fff;
+  color: #2a0a20;
+  text-shadow: none;
+}
+
+/* ---------- professional mode ---------- */
+/* Monochrome, light and plain for faculty and reviewers: no grid, rainbow,
+   pixel fonts, game labels or the bonus stage. */
+html[data-mode="pro"] {
+  --bg: #ffffff;
+  --bg-grid: transparent;
+  --surface: #ffffff;
+  --surface-2: #f3f3f3;
+  --ink: #1a1a1a;
+  --ink-soft: #555555;
+  --line: #d4d4d4;
+  --accent: #1a1a1a;
+  --accent-2: #e5e5e5;
+  --on-accent: #ffffff;
+  --shadow: transparent;
+  --gold: #1a1a1a;
+  --bar: #ffffff;
+  --heart: #1a1a1a;
+  --thermal: linear-gradient(#1a1a1a, #1a1a1a);
+  --pixel: var(--font-pro-heading), system-ui, sans-serif;
+  --body: var(--font-pro), system-ui, sans-serif;
+  color-scheme: light;
+}
+html[data-mode="pro"] .stage,
+html[data-mode="pro"] .hud-nav a {
+  --sec: #1a1a1a;
+  --accent: #1a1a1a;
+  --line: #d4d4d4;
+  --shadow: transparent;
+  --accent-2: #e5e5e5;
+  --surface-2: #f3f3f3;
+  --ramp-lo: #d4d4d4;
+  --ramp-hi: #d4d4d4;
+}
+html[data-mode="pro"] .arcade-only,
+html[data-mode="pro"] .hud-hearts,
+html[data-mode="pro"] .hud-p1,
+html[data-mode="pro"] .pixel-text,
+html[data-mode="pro"] .stage-label::after,
+html[data-mode="pro"] .quest-media-tag {
+  display: none !important;
+}
+html[data-mode="pro"] .pro-only {
+  display: inline;
+}
+html[data-mode="pro"] .ar-plain {
+  display: inline;
+  margin-left: 10px;
+  font-family: var(--font-ar), sans-serif;
+  font-weight: 700;
+  font-size: 0.8em;
+}
+html[data-mode="pro"] body {
+  background-image: none;
+  font-size: 17px;
+  line-height: 1.65;
+}
+html[data-mode="pro"],
+html[data-mode="pro"] body {
+  cursor: auto;
+}
+html[data-mode="pro"] a,
+html[data-mode="pro"] button {
+  cursor: pointer;
+}
+html[data-mode="pro"] main *,
+html[data-mode="pro"] .hud,
+html[data-mode="pro"] .hud *,
+html[data-mode="pro"] .footer * {
+  text-shadow: none !important;
+  box-shadow: none !important;
+  animation: none !important;
+}
+html[data-mode="pro"] main *:hover {
+  transform: none !important;
+}
+html[data-mode="pro"] .box,
+html[data-mode="pro"] .ramp {
+  border-width: 1px;
+  border-color: var(--line);
+}
+html[data-mode="pro"] .hud {
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+html[data-mode="pro"] .hud::after,
+html[data-mode="pro"] .footer::before,
+html[data-mode="pro"] .stage-tag::after {
+  background: var(--line);
+  height: 1px;
+  opacity: 1;
+  -webkit-mask: none;
+  mask: none;
+}
+html[data-mode="pro"] .hud-nav a {
+  color: var(--ink-soft);
+}
+html[data-mode="pro"] .hud-nav a .code {
+  display: none;
+}
+html[data-mode="pro"] .hud-nav a:hover,
+html[data-mode="pro"] .hud-nav a.on {
+  color: var(--ink);
+  border-color: transparent;
+  border-bottom-color: var(--ink);
+  background: transparent;
+}
+html[data-mode="pro"] .mode-toggle {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+html[data-mode="pro"] .mode-toggle:hover {
+  color: #fff;
+  background: var(--ink);
+}
+html[data-mode="pro"] .stage-label {
+  color: var(--ink);
+  font-weight: 600;
+}
+html[data-mode="pro"] .highlight {
+  background: #f5f5f5;
+  border-color: var(--line);
+}
+html[data-mode="pro"] .highlight-icon {
+  color: #fff;
+}
+html[data-mode="pro"] .portrait-frame {
+  background: var(--line);
+}
+html[data-mode="pro"] .quest-media {
+  margin: 20px 4px 20px 20px;
+  padding: 0;
+  border: 1px solid var(--line);
+}
+html[data-mode="pro"] .link-label,
+html[data-mode="pro"] .link .pixel-icon {
+  color: var(--ink);
+}
+html[data-mode="pro"] .contact-icon,
+html[data-mode="pro"] .gem {
+  filter: grayscale(1);
+}
+html[data-mode="pro"] .footer {
+  background: #f7f7f7;
+  color: var(--ink-soft);
+}
+html[data-mode="pro"] .to-top {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+html[data-mode="pro"] .to-top:hover {
+  color: #fff;
+}
+html[data-mode="pro"] .trophy.legendary {
+  border-image: none;
+  border-color: var(--ink);
+}
+html[data-mode="pro"] body.cheat main,
+html[data-mode="pro"] body.cheat .hud {
+  animation: none;
+}
+html[data-mode="pro"] .trophy.patent,
+html[data-mode="pro"] .trophy.patent .trophy-date {
+  border-color: var(--line);
+}
+html[data-mode="pro"] .trophy.patent .trophy-icon {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+html[data-mode="pro"] .trophy-year,
+html[data-mode="pro"] .trophy.patent .trophy-year,
+html[data-mode="pro"] .trophy-date,
+html[data-mode="pro"] .trophy.patent .trophy-date,
+html[data-mode="pro"] .trophy.legendary .trophy-date {
+  color: var(--ink-soft);
+}
+html[data-mode="pro"] .objectives li::before,
+html[data-mode="pro"] .portrait-img {
+  filter: grayscale(1);
 }

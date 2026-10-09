@@ -10,6 +10,7 @@ import PixelIcon from "./PixelIcon";
 import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
+import { toggleMode } from "./mode";
 import { academy, languages, links, party, profile, quests, sideQuests, skillTree, stages, trophies } from "./data";
 
 const STORE_KEY = "nelmkt-collected";
@@ -63,15 +64,18 @@ export default function Portfolio() {
 
       <header className="hud">
         <a className="hud-logo" href="#player" aria-label="Back to top">
-          <span className="hud-p1">P1</span> NELMKT
+          <span className="hud-p1">P1</span> <Dual a="NELMKT" p="Nelly Almaktoum" />
         </a>
         <nav className="hud-nav" aria-label="Stages">
           {stages.map((s) => (
-            <a key={s.id} href={`#${s.id}`} className={active === s.id ? "on" : ""}>
-              <span className="code">{s.code}</span> {s.label}
+            <a key={s.id} href={`#${s.id}`} className={`${active === s.id ? "on" : ""}${s.pro ? "" : " arcade-only"}`}>
+              <span className="code">{s.code}</span> <Dual a={s.label} p={s.pro} />
             </a>
           ))}
         </nav>
+        <button type="button" className="mode-toggle" onClick={toggleMode}>
+          <Dual a="PRO VIEW" p="Arcade view" />
+        </button>
         <div className="hud-hearts" aria-hidden="true">
           <PixelHeart />
           <PixelHeart />
@@ -82,14 +86,14 @@ export default function Portfolio() {
       <main>
         {/* 1-1 PLAYER */}
         <section id="player" className="stage">
-          <StageTag code="1-1" label="PLAYER SELECT" />
+          <StageTag code="1-1" label="PLAYER SELECT" pro="About" />
           <div className="player-grid">
             <div className="box player-portrait">
               <div className="portrait-frame">
                 <img className="portrait-img" src="/portrait.jpg" alt="Pixel-art portrait of Nelly" width={433} height={412} />
               </div>
               <p className="player-handle">@{profile.handle}</p>
-              <div className="xp">
+              <div className="xp arcade-only">
                 <span>LV</span>
                 <div className="xp-bar">
                   <i style={{ width: `${30 + (collected.length / languages.length) * 70}%` }} />
@@ -102,6 +106,7 @@ export default function Portfolio() {
                 {profile.name}
                 <span className="player-ar">
                   <PixelText text={profile.nameAr} size={13} scale={3} shadow="var(--accent-2)" />
+                  <span className="ar-plain" lang="ar">{profile.nameAr}</span>
                 </span>
               </h1>
               <p className="player-headline">{profile.headline}</p>
@@ -118,23 +123,25 @@ export default function Portfolio() {
               <dl className="box stats">
                 {profile.stats.map((s) => (
                   <div key={s.label}>
-                    <dt>{s.label}</dt>
+                    <dt>
+                      <Dual a={s.label} p={s.pro} />
+                    </dt>
                     <dd>{s.value}</dd>
                   </div>
                 ))}
               </dl>
               <div className="cta-row">
-                <a className="btn" href="#bonus">
+                <a className="btn arcade-only" href="#bonus">
                   <PixelIcon name="play" size={12} /> PLAY BONUS STAGE
                 </a>
                 <a className="btn btn-alt" href="#save">
-                  <PixelIcon name="mail" size={12} /> SAVE POINT
+                  <PixelIcon name="mail" size={12} /> <Dual a="SAVE POINT" p="Get in touch" />
                 </a>
               </div>
             </div>
           </div>
           <div className="box dialog">
-            <span className="dialog-name">NELLY</span>
+            <span className="dialog-name arcade-only">NELLY</span>
             {profile.about.map((p) => (
               <p key={p}>{p}</p>
             ))}
@@ -148,8 +155,8 @@ export default function Portfolio() {
         </section>
 
         {/* 1-2 BONUS */}
-        <section id="bonus" className="stage">
-          <StageTag code="1-2" label="BONUS STAGE · LANGUAGE RUSH" />
+        <section id="bonus" className="stage arcade-only">
+          <StageTag code="1-2" label="BONUS STAGE · LANGUAGE RUSH" pro="" />
           <p className="stage-lede">
             The languages I program in, as collectibles. Jump to collect each one and avoid the bugs.
           </p>
@@ -172,28 +179,33 @@ export default function Portfolio() {
 
         {/* 1-3 QUESTS */}
         <section id="quests" className="stage">
-          <StageTag code="1-3" label="QUEST LOG" />
+          <StageTag code="1-3" label="QUEST LOG" pro="Research & projects" />
           <div className="quests">
             {quests.map((q, i) => (
               <article key={q.id} className="box quest ramp" style={ramp(i, quests.length)}>
-                <div className="quest-media">
+                <a className="quest-media" href={q.url} target="_blank" rel="noreferrer" aria-label={`${q.title} on GitHub`}>
                   <img src={q.image} alt={q.imageAlt} loading="lazy" />
-                </div>
+                  <span className="quest-media-tag" aria-hidden="true">
+                    <Dual a="OPEN" p="View project" /> <PixelIcon name="play" size={8} />
+                  </span>
+                </a>
                 <div className="quest-body">
-                  <p className="quest-status">{q.status}</p>
+                  <p className="quest-status">
+                    <Dual a={q.status} p={q.statusPro} />
+                  </p>
                   <h3>
                     <a href={q.url} target="_blank" rel="noreferrer">
-                      {q.title} <span className="quest-ar">· <PixelText text={q.titleAr} size={13} scale={2} /></span>
+                      {q.title} <span className="quest-ar">· <PixelText text={q.titleAr} size={13} scale={2} /><span className="ar-plain" lang="ar">{q.titleAr}</span></span>
                     </a>
                   </h3>
                   <p>{q.summary}</p>
-                  <h4>OBJECTIVES CLEARED</h4>
+                  <h4><Dual a="OBJECTIVES CLEARED" p="Highlights" /></h4>
                   <ul className="objectives">
                     {q.objectives.map((o) => (
                       <li key={o}>{o}</li>
                     ))}
                   </ul>
-                  <h4>LOOT</h4>
+                  <h4><Dual a="LOOT" p="Links" /></h4>
                   <ul className="loot">
                     {q.loot.map((l) => (
                       <li key={l.label}>
@@ -221,7 +233,7 @@ export default function Portfolio() {
 
         {/* 1-4 TROPHIES */}
         <section id="trophies" className="stage">
-          <StageTag code="1-4" label="TROPHY ROOM" />
+          <StageTag code="1-4" label="TROPHY ROOM" pro="Recognition" />
           <ol className="trophies">
             {trophies.map((t, i) => (
               <li key={t.title} className={`box trophy ramp ${t.tier}`} style={ramp(i, trophies.length)}>
@@ -230,7 +242,7 @@ export default function Portfolio() {
                 </span>
                 <div className="trophy-body">
                   <p className="trophy-year">
-                    ACHIEVEMENT UNLOCKED{t.tier === "legendary" ? " · LEGENDARY" : ""}
+                    <Dual a={`ACHIEVEMENT UNLOCKED${t.tier === "legendary" ? " · LEGENDARY" : ""}`} p={t.tier === "patent" ? "Patent" : t.tier === "legendary" ? "Distinction" : "Award"} />
                   </p>
                   <h3>{t.title}</h3>
                   <p className="trophy-detail">{t.detail}</p>
@@ -246,7 +258,7 @@ export default function Portfolio() {
 
         {/* 1-5 ACADEMY */}
         <section id="academy" className="stage">
-          <StageTag code="1-5" label="ACADEMY & SIDE QUESTS" />
+          <StageTag code="1-5" label="ACADEMY & SIDE QUESTS" pro="Education & activities" />
           <div className="academy">
             {academy.map((a, i) => (
               <div key={a.school} className="box school ramp" style={ramp(i, academy.length)}>
@@ -257,7 +269,7 @@ export default function Portfolio() {
               </div>
             ))}
           </div>
-          <h3 className="sub-tag">SIDE QUESTS CLEARED</h3>
+          <h3 className="sub-tag"><Dual a="SIDE QUESTS CLEARED" p="Programs & certificates" /></h3>
           <ul className="side-quests">
             {sideQuests.map((s, i) => (
               <li key={s.title} className="box side ramp" style={ramp(i, sideQuests.length)}>
@@ -275,7 +287,7 @@ export default function Portfolio() {
 
         {/* 1-6 SKILLS */}
         <section id="skills" className="stage">
-          <StageTag code="1-6" label="SKILL TREE" />
+          <StageTag code="1-6" label="SKILL TREE" pro="Technical skills" />
           <div className="box lang-panel">
             <h3>LANGUAGES</h3>
             <ul className="lang-list">
@@ -309,7 +321,7 @@ export default function Portfolio() {
 
         {/* 1-7 PARTY */}
         <section id="party" className="stage">
-          <StageTag code="1-7" label="PARTY & GUILDS" />
+          <StageTag code="1-7" label="PARTY & GUILDS" pro="Leadership & community" />
           <ul className="party">
             {party.map((p, i) => (
               <li key={p.role + p.where} className={`box member ramp${p.lead ? " lead" : ""}`} style={ramp(i, party.length)}>
@@ -326,9 +338,8 @@ export default function Portfolio() {
 
         {/* 1-8 SAVE */}
         <section id="save" className="stage">
-          <StageTag code="1-8" label="SAVE POINT" />
+          <StageTag code="1-8" label="SAVE POINT" pro="Contact" />
           <div className="box save">
-            <div className="save-crystal" aria-hidden="true" />
             <div>
               <h3>OPEN TO RESEARCH COLLABORATION</h3>
               <p>The quickest way to reach me is LinkedIn or email. I work in Arabic and English.</p>
@@ -356,7 +367,7 @@ export default function Portfolio() {
       </main>
 
       <footer className="footer">
-        <p className="thanks">THANKS FOR PLAYING!</p>
+        <p className="thanks arcade-only">THANKS FOR PLAYING!</p>
         <EasterEgg />
         <p>© 2026 Nelly Almaktoum · Built with Next.js, TypeScript, HTML &amp; CSS</p>
       </footer>
@@ -364,11 +375,23 @@ export default function Portfolio() {
   );
 }
 
-function StageTag({ code, label }: { code: string; label: string }) {
+function StageTag({ code, label, pro }: { code: string; label: string; pro: string }) {
   return (
     <h2 className="stage-tag">
-      <span className="stage-code">STAGE {code}</span>
-      <span className="stage-label">{label}</span>
+      <span className="stage-code arcade-only">STAGE {code}</span>
+      <span className="stage-label">
+        <Dual a={label} p={pro} />
+      </span>
     </h2>
+  );
+}
+
+// The same spot reads as a game label in arcade mode and as plain wording in professional mode.
+function Dual({ a, p }: { a: string; p: string }) {
+  return (
+    <>
+      <span className="arcade-only">{a}</span>
+      <span className="pro-only">{p}</span>
+    </>
   );
 }

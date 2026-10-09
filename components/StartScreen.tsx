@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import PixelText from "./PixelText";
 import { profile } from "./data";
+import { type Mode, setMode } from "./mode";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
 // Deterministic "random" so server and client render the same star field.
@@ -54,6 +55,8 @@ export default function StartScreen() {
     if (!open) return;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
+      // Enter/Space on a focused button already clicks it; let that button decide.
+      if (e.target instanceof HTMLButtonElement && e.key !== "Escape") return;
       if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
         e.preventDefault();
         start();
@@ -66,7 +69,8 @@ export default function StartScreen() {
     };
   });
 
-  function start() {
+  function start(mode: Mode = "arcade") {
+    setMode(mode);
     try {
       sessionStorage.setItem("nelmkt-started", "1");
     } catch {}
@@ -82,7 +86,6 @@ export default function StartScreen() {
       role="dialog"
       aria-modal="true"
       aria-label="Start screen"
-      onClick={start}
     >
       <div className="start-sky" aria-hidden="true">
         {STARS.map((s, i) => (
@@ -121,8 +124,11 @@ export default function StartScreen() {
         </p>
         <div className="start-thermal" aria-hidden="true" />
         <p className="start-sub">Researcher &amp; Innovator · ML Engineer · Green Tech</p>
-        <button className="start-btn" onClick={start} autoFocus>
+        <button className="start-btn" onClick={() => start("arcade")} autoFocus>
           PRESS START
+        </button>
+        <button className="start-pro" onClick={() => start("pro")}>
+          PROFESSIONAL MODE
         </button>
         <p className="start-meta">© 2026 · 1 PLAYER · PORTFOLIO EDITION</p>
       </div>

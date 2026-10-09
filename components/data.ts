@@ -6,7 +6,7 @@ export const profile = {
   handle: "nelmkt",
   headline: "FCIT Student @ KAU · Waed ’26 · IEEE ’25 · UNCCD COP16 ’24 · Mawhiba Alumna",
   tagline:
-    "Undergraduate researcher and developer working across software, hardware, data and AI.",
+    "Undergraduate researcher and developer working across software, hardware, data and AI/ML.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
     "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.",
@@ -17,12 +17,12 @@ export const profile = {
   highlight: "Youngest UN-certified Saudi researcher",
   highlightDetail: "6 national & international recognitions · 3 national & international awards",
   stats: [
-    { label: "CLASS", value: "Researcher · Developer · ML Engineer" },
-    { label: "GUILD", value: "KAU · BS Computer Science · Waed track" },
-    { label: "BASE", value: "Jeddah, Saudi Arabia" },
-    { label: "LANGS", value: "Arabic · English" },
-    { label: "MAIN QUEST", value: "Ph.D. → academia" },
-    { label: "SIDE QUEST", value: "Design & painting" },
+    { label: "CLASS", pro: "Role", value: "Researcher · Developer · ML Engineer" },
+    { label: "GUILD", pro: "University", value: "KAU · BS Computer Science · Waed track" },
+    { label: "BASE", pro: "Location", value: "Jeddah, Saudi Arabia" },
+    { label: "LANGS", pro: "Languages", value: "Arabic · English" },
+    { label: "MAIN QUEST", pro: "Goal", value: "Ph.D. → academia" },
+    { label: "SIDE QUEST", pro: "Outside research", value: "Design & painting" },
   ],
   // Focus areas: technical and research only, in one consistent form.
   interests: [
@@ -39,6 +39,7 @@ export type Quest = {
   title: string;
   titleAr: string;
   status: string;
+  statusPro: string;
   url: string;
   image: string;
   imageAlt: string;
@@ -54,6 +55,7 @@ export const quests: Quest[] = [
     title: "Wahaj",
     titleAr: "وهاج",
     status: "MAIN QUEST · JUN–OCT 2026 · RELEASED",
+    statusPro: "Jun–Oct 2026 · Released",
     url: "https://github.com/nelmkt/Wahaj-Framework",
     image:
       "https://raw.githubusercontent.com/nelmkt/Wahaj-Framework/v11-framework-ml/figures_r1/fig_r1_dose_contrasts.png",
@@ -78,6 +80,7 @@ export const quests: Quest[] = [
     title: "Aykah",
     titleAr: "آيكة",
     status: "QUEST COMPLETE · OCT 2024–MAR 2025 · PATENTED · MULTI-AWARD",
+    statusPro: "Oct 2024–Mar 2025 · Patented · Multiple awards",
     url: "https://github.com/nelmkt/Smart-Bin-Aykah",
     image:
       "https://raw.githubusercontent.com/nelmkt/Smart-Bin-Aykah/main/images/prototype.jpg",
@@ -251,12 +254,12 @@ export const links = [
 ];
 
 export const stages = [
-  { id: "player", code: "1-1", label: "PLAYER" },
-  { id: "bonus", code: "1-2", label: "BONUS" },
-  { id: "quests", code: "1-3", label: "QUESTS" },
-  { id: "trophies", code: "1-4", label: "TROPHIES" },
-  { id: "academy", code: "1-5", label: "ACADEMY" },
-  { id: "skills", code: "1-6", label: "SKILLS" },
-  { id: "party", code: "1-7", label: "PARTY" },
-  { id: "save", code: "1-8", label: "SAVE" },
+  { id: "player", code: "1-1", label: "PLAYER", pro: "About" },
+  { id: "bonus", code: "1-2", label: "BONUS", pro: "" },
+  { id: "quests", code: "1-3", label: "QUESTS", pro: "Projects" },
+  { id: "trophies", code: "1-4", label: "TROPHIES", pro: "Recognition" },
+  { id: "academy", code: "1-5", label: "ACADEMY", pro: "Education" },
+  { id: "skills", code: "1-6", label: "SKILLS", pro: "Skills" },
+  { id: "party", code: "1-7", label: "PARTY", pro: "Leadership" },
+  { id: "save", code: "1-8", label: "SAVE", pro: "Contact" },
 ];
