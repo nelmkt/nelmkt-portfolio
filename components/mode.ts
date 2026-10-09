@@ -16,6 +16,17 @@ export function toggleMode() {
   setMode(document.documentElement.dataset.mode === "pro" ? "arcade" : "pro");
 }
 
+// Light or dark for professional mode; defaults to the visitor's system setting.
+export const THEME_KEY = "nelmkt-theme";
+
+export function toggleTheme() {
+  const next = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem(THEME_KEY, next);
+  } catch {}
+}
+
 // Runs inline in <head> before first paint, so a returning visitor never sees the wrong theme flash.
 // Only once the start screen has been passed this session; otherwise the visitor picks there.
-export const modeBootScript = `try{if(sessionStorage.getItem("nelmkt-started")&&localStorage.getItem("${MODE_KEY}")==="pro")document.documentElement.dataset.mode="pro"}catch(e){}`;
+export const modeBootScript = `try{var d=document.documentElement;if(sessionStorage.getItem("nelmkt-started")&&localStorage.getItem("${MODE_KEY}")==="pro")d.dataset.mode="pro";d.dataset.theme=localStorage.getItem("${THEME_KEY}")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){}`;

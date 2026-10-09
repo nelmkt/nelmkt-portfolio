@@ -2167,3 +2167,135 @@ html[data-mode="pro"] .to-top {
 html[data-mode="pro"] .to-top:hover {
   background: var(--accent);
 }
+
+/* professional mode: no pixel icons, aligned Arabic name, light/dark switch */
+html[data-mode="pro"] .pixel-icon,
+html[data-mode="pro"] .contact-icon,
+html[data-mode="pro"] .highlight-icon,
+html[data-mode="pro"] .trophy-icon,
+html[data-mode="pro"] .side-check,
+html[data-mode="pro"] .to-top svg {
+  display: none !important;
+}
+html[data-mode="pro"] .trophy {
+  grid-template-columns: 1fr 190px;
+}
+html[data-mode="pro"] .link {
+  grid-template-columns: 150px 1fr;
+}
+html[data-mode="pro"] .highlight {
+  padding: 14px 18px;
+}
+html[data-mode="pro"] .objectives li::before {
+  left: 4px;
+  top: 0.68em;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50% !important;
+  filter: none;
+}
+@media (max-width: 680px) {
+  html[data-mode="pro"] .trophy {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  html[data-mode="pro"] .link {
+    grid-template-columns: 1fr;
+  }
+  html[data-mode="pro"] .link-label,
+  html[data-mode="pro"] .link-value {
+    grid-column: 1;
+  }
+}
+/* Arabic sits directly under the English name, sharing its left edge */
+html[data-mode="pro"] .player-ar {
+  margin-top: 6px;
+}
+html[data-mode="pro"] .player-ar .ar-plain {
+  display: block;
+  margin: 0;
+  font-size: 0.62em;
+  line-height: 1.5;
+  text-align: left;
+}
+html[data-mode="pro"] .quest-ar .ar-plain {
+  margin-left: 4px;
+  font-size: 0.85em;
+  line-height: 1;
+}
+
+.theme-toggle {
+  display: none;
+}
+html[data-mode="pro"] .theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 30px;
+  padding: 0;
+  color: var(--accent);
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  border-radius: 8px !important;
+}
+html[data-mode="pro"] .theme-toggle:hover {
+  color: var(--on-accent);
+  background: var(--accent);
+}
+.theme-sun,
+html[data-theme="dark"] .theme-moon {
+  display: none;
+}
+html[data-theme="dark"] .theme-sun {
+  display: block;
+}
+html[data-mode="pro"] .hud {
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+}
+html[data-mode="pro"] main .box:hover {
+  border-color: color-mix(in srgb, var(--line) 70%, var(--ink));
+}
+html[data-mode="pro"] .to-top {
+  background: var(--surface);
+}
+
+/* professional mode, dark */
+html[data-mode="pro"][data-theme="dark"] {
+  --bg: #11141b;
+  --surface: #181c25;
+  --surface-2: #222734;
+  --ink: #e7e9ef;
+  --ink-soft: #a2a8b6;
+  --line: #2b3140;
+  --accent: #ec94ba;
+  --accent-2: rgba(236, 148, 186, 0.12);
+  --on-accent: #11141b;
+  --gold: #ec94ba;
+  --bar: #181c25;
+  --heart: #ec94ba;
+  --thermal: linear-gradient(#ec94ba, #ec94ba);
+  color-scheme: dark;
+}
+html[data-mode="pro"][data-theme="dark"] .stage,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a {
+  --sec: #ec94ba;
+  --accent: #ec94ba;
+  --line: #2b3140;
+  --accent-2: rgba(236, 148, 186, 0.12);
+  --surface-2: #222734;
+  --ramp-lo: #2b3140;
+  --ramp-hi: #2b3140;
+}
+html[data-mode="pro"][data-theme="dark"] main .box {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 14px rgba(0, 0, 0, 0.25) !important;
+}
+html[data-mode="pro"][data-theme="dark"] .highlight-title,
+html[data-mode="pro"][data-theme="dark"] .player-name {
+  color: var(--ink);
+}
+html[data-mode="pro"][data-theme="dark"] .quest-media img {
+  background: #fff;
+}

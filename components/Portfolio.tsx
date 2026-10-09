@@ -10,7 +10,7 @@ import PixelIcon from "./PixelIcon";
 import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
-import { toggleMode } from "./mode";
+import { toggleMode, toggleTheme } from "./mode";
 import { academy, languages, links, party, profile, quests, sideQuests, skillTree, stages, trophies } from "./data";
 
 const STORE_KEY = "nelmkt-collected";
@@ -73,6 +73,15 @@ export default function Portfolio() {
             </a>
           ))}
         </nav>
+        <button type="button" className="theme-toggle" onClick={toggleTheme} aria-label="Switch light or dark theme">
+          <svg className="theme-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+          </svg>
+          <svg className="theme-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" strokeWidth="2" />
+            <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </button>
         <button type="button" className="mode-toggle" onClick={toggleMode}>
           <Dual a="PRO VIEW" p="Arcade view" />
         </button>
