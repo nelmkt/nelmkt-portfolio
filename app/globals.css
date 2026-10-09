@@ -4195,3 +4195,14 @@ html[data-mode="pro"] .link {
     padding: 28px 32px 30px;
   }
 }
+
+/* only one arrow at a time: pixel in arcade, smooth in pro */
+.cfx-dot .cfx-smooth {
+  display: none;
+}
+html[data-mode="pro"] .cfx-dot .cfx-smooth {
+  display: block;
+}
+html[data-mode="pro"] .cfx-dot .cfx-pixel {
+  display: none;
+}

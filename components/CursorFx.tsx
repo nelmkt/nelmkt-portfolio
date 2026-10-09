@@ -40,11 +40,10 @@ export default function CursorFx() {
 
     let lastStage: Element | null | undefined;
 
-    const move = (e: MouseEvent) => {
-      wrap.classList.add("on");
-      dot.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-      const target = e.target instanceof Element ? e.target : null;
-      // Colour follows the section; the CSS transition makes the change glide.
+    let px = -100;
+    let py = -100;
+    // Colour follows the section under the pointer; the CSS transition makes the change glide.
+    const paint = (target: Element | null) => {
       const stage = target?.closest(".stage");
       if (stage !== lastStage) {
         lastStage = stage;
@@ -54,16 +53,29 @@ export default function CursorFx() {
       }
       wrap.classList.toggle("hover", !!target?.closest(CLICKABLE));
     };
+    const move = (e: MouseEvent) => {
+      px = e.clientX;
+      py = e.clientY;
+      wrap.classList.add("on");
+      dot.style.transform = `translate(${px}px, ${py}px)`;
+      paint(e.target instanceof Element ? e.target : null);
+    };
+    // Scrolling moves the page under a still pointer, so re-check what it is over.
+    const scroll = () => {
+      if (wrap.classList.contains("on")) paint(document.elementFromPoint(px, py));
+    };
     const leave = () => wrap.classList.remove("on");
     const down = () => wrap.classList.add("press");
     const up = () => wrap.classList.remove("press");
 
     window.addEventListener("mousemove", move, { passive: true });
+    window.addEventListener("scroll", scroll, { passive: true });
     document.addEventListener("mouseleave", leave);
     window.addEventListener("mousedown", down);
     window.addEventListener("mouseup", up);
     return () => {
       window.removeEventListener("mousemove", move);
+      window.removeEventListener("scroll", scroll);
       document.removeEventListener("mouseleave", leave);
       window.removeEventListener("mousedown", down);
       window.removeEventListener("mouseup", up);
