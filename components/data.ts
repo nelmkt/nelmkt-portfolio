@@ -10,13 +10,13 @@ export const profile = {
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
     "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.",
-    "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.",
+    "My research connects computing with real-world systems, especially water and the environment: reproducible ML pipelines, satellite data and IoT, from measuring what urban greening really does in Wahaj to catching pipeline leaks in real time with Maeen. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.",
     "I'm also an artist, which probably explains why this site looks the way it does.",
   ],
   // The professional view's bio: no game wording and no line about the arcade look.
   aboutPro: [
     "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.",
-    "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.",
+    "My research connects computing with real-world systems, especially water and the environment: reproducible ML pipelines, satellite data and IoT, from measuring what urban greening really does in Wahaj to catching pipeline leaks in real time with Maeen. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.",
   ],
   // Headline achievement, shown as its own banner under the tagline.
   highlight: "Youngest UN-certified Saudi researcher",
