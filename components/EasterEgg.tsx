@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useT } from "./lang";
 
 // A line from Nelly's own post about her journey, hidden as 8-bit ASCII binary.
 const SECRET = "stay curious";
@@ -14,6 +15,7 @@ const BANNER = [
 ].join("\n");
 
 export default function EasterEgg() {
+  const t = useT();
   const [text, setText] = useState(BINARY);
   const [decoded, setDecoded] = useState(false);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -59,7 +61,7 @@ export default function EasterEgg() {
       type="button"
       className={`egg arcade-only${decoded ? " open" : ""}`}
       onClick={toggle}
-      data-hint={decoded ? undefined : "psst… decode me"}
+      data-hint={decoded ? undefined : t("psst… decode me")}
       aria-label={decoded ? `Decoded message: ${SECRET}. Click to encode again.` : "Binary-encoded secret message. Click to decode."}
     >
       <span className="egg-text">{text}</span>

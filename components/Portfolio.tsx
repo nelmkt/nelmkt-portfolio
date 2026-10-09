@@ -171,8 +171,11 @@ export default function Portfolio() {
           </div>
           <div className="box dialog">
             <span className="dialog-name arcade-only">{tr("NELLY")}</span>
-            {profile.about.map((p) => (
-              <p key={p}>{tr(p)}</p>
+            {/* The last line is about this site's arcade look, so the professional view leaves it out. */}
+            {profile.about.map((p, i) => (
+              <p key={p} className={i === profile.about.length - 1 ? "arcade-only" : undefined}>
+                {tr(p)}
+              </p>
             ))}
             <p className="chips-label">{tr("FOCUS AREAS")}</p>
             <ul className="chips">

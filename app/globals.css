@@ -2923,13 +2923,16 @@ html[data-mode="pro"] .lang-toggle:hover {
 /* ---------- Arabic ---------- */
 /* Latin glyphs keep their fonts; Arabic falls back to Noto Kufi, with a
    scaled-up copy wherever the Latin font is scaled up. */
+/* Font names are spelled out (not the --font-* variables) because each variable
+   also carries an Arial-based "Fallback" face that has Arabic glyphs and would
+   otherwise win over Noto Kufi. */
 html[lang="ar"] {
-  --body: var(--font-body), var(--font-ar), sans-serif;
-  --pixel: var(--font-pixel), var(--font-ar-head), monospace;
+  --body: "Chakra Petch", "Noto Kufi Arabic", sans-serif;
+  --pixel: pixel, arabicHeading, monospace;
 }
 html[lang="ar"][data-mode="pro"] {
-  --body: var(--font-pro), var(--font-ar), sans-serif;
-  --pixel: var(--font-pro-heading), var(--font-ar-head), sans-serif;
+  --body: pro, "Noto Kufi Arabic", sans-serif;
+  --pixel: proHeading, arabicHeading, sans-serif;
 }
 html[lang="ar"] body,
 html[lang="ar"] body * {
@@ -3005,4 +3008,26 @@ html[data-mode="pro"][dir="rtl"] .link:hover .brand-icon {
 }
 [dir="rtl"] .link-value {
   text-align: right;
+}
+
+/* Arabic: no label renders below ~14px */
+html[lang="ar"] .quest-status,
+html[lang="ar"] .trophy-year,
+html[lang="ar"] .lang-tier,
+html[lang="ar"] .member-when,
+html[lang="ar"] .stats dt,
+html[lang="ar"] .game-hint,
+html[lang="ar"] .school-when,
+html[lang="ar"] .trophy-date,
+html[lang="ar"] .chips-label,
+html[lang="ar"] .quest h4,
+html[lang="ar"] .link-label,
+html[lang="ar"] .hud-nav a,
+html[lang="ar"] .mode-toggle,
+html[lang="ar"] .stage-code {
+  font-size: 10px !important;
+}
+html[lang="ar"] .chips li,
+html[lang="ar"] .chips.small li {
+  font-size: 14px !important;
 }
