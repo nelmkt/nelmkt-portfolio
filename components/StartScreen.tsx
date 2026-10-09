@@ -107,8 +107,6 @@ export default function StartScreen() {
           />
         ))}
         <div className="start-sun" />
-        <div className="start-mountains far" />
-        <div className="start-mountains near" />
       </div>
       <div className="start-floor" aria-hidden="true" />
       <StartRunner />

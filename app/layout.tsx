@@ -5,12 +5,24 @@ import { modeBootScript } from "../components/mode";
 import "./pixel-icons.css";
 import "./globals.css";
 
-// Pixelify Sans (OFL): an open, readable pixel face with real weights, for titles and labels.
-// The stylesheet's sizes were tuned for a smaller pixel font, so size-adjust scales it up.
+// Titles and labels: Chakra Petch (OFL), a squared game-UI face that stays readable.
+// (Still named "pixel": the stylesheet, Arabic stacks and game canvas refer to it by that
+// name, and its sizes were tuned for a small pixel font, so size-adjust scales it up.)
 const pixel = localFont({
+  src: [
+    { path: "./fonts/ChakraPetch-Medium.ttf", weight: "400" },
+    { path: "./fonts/ChakraPetch-Medium.ttf", weight: "500" },
+    { path: "./fonts/ChakraPetch-SemiBold.ttf", weight: "600" },
+    { path: "./fonts/ChakraPetch-Bold.ttf", weight: "700" },
+  ],
+  variable: "--font-pixel",
+  declarations: [{ prop: "size-adjust", value: "135%" }],
+});
+// Pixelify Sans (OFL): real pixel lettering, kept only for the big name on the start screen.
+const pixelArt = localFont({
   src: "./fonts/PixelifySans-Variable.ttf",
   weight: "400 700",
-  variable: "--font-pixel",
+  variable: "--font-pixel-art",
   declarations: [{ prop: "size-adjust", value: "145%" }],
 });
 // Chakra Petch: a squared, game-UI sans that keeps the arcade feel but reads easily in paragraphs.
@@ -68,7 +80,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${pixel.variable} ${body.variable} ${pro.variable} ${proHeading.variable} ${arabic.variable} ${arabicHeading.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${pixel.variable} ${pixelArt.variable} ${body.variable} ${pro.variable} ${proHeading.variable} ${arabic.variable} ${arabicHeading.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: modeBootScript }} />
       </head>
