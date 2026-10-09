@@ -2334,18 +2334,19 @@ html[data-mode="pro"] .link {
   }
 }
 
-/* professional mode: each section keeps its own muted colour */
+/* professional mode: each section keeps its own muted colour, in rainbow order
+   (red, orange, yellow, green, blue, indigo, violet) down the page */
 html[data-mode="pro"] #player,
 html[data-mode="pro"] .hud-nav a[href="#player"] {
-  --psec: #8c2f5a;
+  --psec: #b23a48;
 }
 html[data-mode="pro"] #quests,
 html[data-mode="pro"] .hud-nav a[href="#quests"] {
-  --psec: #1f6f8b;
+  --psec: #c2611f;
 }
 html[data-mode="pro"] #trophies,
 html[data-mode="pro"] .hud-nav a[href="#trophies"] {
-  --psec: #a0621a;
+  --psec: #a67c00;
 }
 html[data-mode="pro"] #academy,
 html[data-mode="pro"] .hud-nav a[href="#academy"] {
@@ -2353,27 +2354,27 @@ html[data-mode="pro"] .hud-nav a[href="#academy"] {
 }
 html[data-mode="pro"] #skills,
 html[data-mode="pro"] .hud-nav a[href="#skills"] {
-  --psec: #4b4fa8;
+  --psec: #1f6fa8;
 }
 html[data-mode="pro"] #party,
 html[data-mode="pro"] .hud-nav a[href="#party"] {
-  --psec: #7a3f9a;
+  --psec: #4b4fa8;
 }
 html[data-mode="pro"] #save,
 html[data-mode="pro"] .hud-nav a[href="#save"] {
-  --psec: #b0413e;
+  --psec: #7a3f9a;
 }
 html[data-mode="pro"][data-theme="dark"] #player,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#player"] {
-  --psec: #ec94ba;
+  --psec: #f08a94;
 }
 html[data-mode="pro"][data-theme="dark"] #quests,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#quests"] {
-  --psec: #6cc3dd;
+  --psec: #f0a066;
 }
 html[data-mode="pro"][data-theme="dark"] #trophies,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#trophies"] {
-  --psec: #e2a85a;
+  --psec: #e6c35c;
 }
 html[data-mode="pro"][data-theme="dark"] #academy,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#academy"] {
@@ -2381,15 +2382,15 @@ html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#academy"] {
 }
 html[data-mode="pro"][data-theme="dark"] #skills,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#skills"] {
-  --psec: #9da2f0;
+  --psec: #6cb4ee;
 }
 html[data-mode="pro"][data-theme="dark"] #party,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#party"] {
-  --psec: #c79be0;
+  --psec: #9da2f0;
 }
 html[data-mode="pro"][data-theme="dark"] #save,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#save"] {
-  --psec: #f08a84;
+  --psec: #c79be0;
 }
 html[data-mode="pro"] main .stage,
 html[data-mode="pro"] .hud-nav a {
@@ -2439,23 +2440,23 @@ html[data-mode="pro"][data-theme="dark"] .hud-nav a {
   --ramp-hi: #323232;
 }
 
-/* arcade: a lifted plum-black instead of near-black, with brighter text */
+/* arcade: a deep plum-black, a step above pure black, with soft (not stark) text */
 :root {
-  --bg: #1a121b;
-  --bg-grid: rgba(255, 95, 162, 0.09);
-  --surface: #251a26;
-  --surface-2: #33233a;
-  --ink: #fff5fa;
-  --ink-soft: #e0c3d3;
-  --bar: #120c13;
+  --bg: #0d090e;
+  --bg-grid: rgba(255, 95, 162, 0.065);
+  --surface: #171018;
+  --surface-2: #241827;
+  --ink: #efe2ea;
+  --ink-soft: #c3a5b6;
+  --bar: #09060a;
 }
 .stage {
   --surface-2: color-mix(in srgb, var(--sec) 16%, var(--surface));
 }
 
-/* arcade body text in Departure Mono: it is wide, so a touch smaller */
+/* arcade body text in Chakra Petch */
 body {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.75;
 }
 
@@ -2626,13 +2627,10 @@ html[data-mode="pro"][data-theme="dark"] .hud-nav a {
 }
 
 /* ---------- arcade breathing room ---------- */
-/* Departure Mono is a dense monospace, so the arcade side gets looser lines,
-   a touch of tracking and more padding than the original pixel font needed. */
+/* Generous lines and padding so the arcade side reads calmly. */
 html:not([data-mode="pro"]) body {
-  font-size: 15.5px;
-  line-height: 1.95;
-  letter-spacing: 0.015em;
-  word-spacing: -0.12em;
+  font-size: 17px;
+  line-height: 1.8;
 }
 html:not([data-mode="pro"]) .stage {
   padding: 76px 0 28px;
@@ -2772,7 +2770,7 @@ html:not([data-mode="pro"]) .link {
 }
 @media (max-width: 520px) {
   html:not([data-mode="pro"]) body {
-    font-size: 15px;
+    font-size: 16px;
   }
   html:not([data-mode="pro"]) .dialog,
   html:not([data-mode="pro"]) .quest-body {
@@ -2783,4 +2781,26 @@ html:not([data-mode="pro"]) .link {
   html:not([data-mode="pro"]) .branch {
     padding: 20px;
   }
+}
+
+/* tidy grids: skill branches in reading order with even rows, equal-height cards */
+html:not([data-mode="pro"]) .branches,
+html[data-mode="pro"] .branches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+  columns: auto;
+}
+.branches .branch {
+  margin-bottom: 0 !important;
+}
+.side-quests,
+.party,
+.academy {
+  align-items: stretch;
+}
+.side-quests > li,
+.party > li,
+.academy > .school {
+  height: 100%;
 }
