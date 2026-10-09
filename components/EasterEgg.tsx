@@ -1,11 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { useT } from "./lang";
+import { useContext, useEffect, useRef, useState } from "react";
+import { LangContext, useT } from "./lang";
 
-// A line from Nelly's own post about her journey, hidden as 8-bit ASCII binary.
-const SECRET = "stay curious";
-const BINARY = Array.from(SECRET, (c) => c.charCodeAt(0).toString(2).padStart(8, "0")).join(" ");
+// A line from Nelly's own post about her journey, hidden as 8-bit binary (the
+// UTF-8 bytes, so the Arabic version encodes the same way).
+const SECRETS = { en: "stay curious", ar: "ابقَ فضوليًا" };
+const toBinary = (s: string) =>
+  Array.from(new TextEncoder().encode(s), (b) => b.toString(2).padStart(8, "0")).join(" ");
+const BINARY = { en: toBinary(SECRETS.en), ar: toBinary(SECRETS.ar) };
 
 const BANNER = [
   " _  _  ___  _     __  __  _  __ _____ ",
@@ -16,13 +19,16 @@ const BANNER = [
 
 export default function EasterEgg() {
   const t = useT();
-  const [text, setText] = useState(BINARY);
+  const lang = useContext(LangContext);
+  const secret = SECRETS[lang];
+  const binary = BINARY[lang];
+  const [text, setText] = useState(binary);
   const [decoded, setDecoded] = useState(false);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     console.log(
-      `%c${BANNER}\n\n%cHey, fellow curious one <3\nThe footer is speaking binary. Click it to translate, or decode it yourself:\n${BINARY}\n\nOld-school players might also try: up up down down left right left right B A`,
+      `%c${BANNER}\n\n%cHey, fellow curious one <3\nThe footer is speaking binary. Click it to translate, or decode it yourself:\n${BINARY.en}\n\nOld-school players might also try: up up down down left right left right B A`,
       "color:#ff3d8b;font-family:monospace;font-weight:bold",
       "color:#c08bd6;font-family:monospace",
     );
@@ -31,9 +37,17 @@ export default function EasterEgg() {
     };
   }, []);
 
+  // Switching language re-hides the message in that language.
+  useEffect(() => {
+    if (timer.current) clearInterval(timer.current);
+    timer.current = null;
+    setDecoded(false);
+    setText(BINARY[lang]);
+  }, [lang]);
+
   function toggle() {
     if (timer.current) clearInterval(timer.current);
-    const target = decoded ? BINARY : SECRET;
+    const target = decoded ? binary : secret;
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     setDecoded(!decoded);
     if (reduce) {
@@ -62,9 +76,16 @@ export default function EasterEgg() {
       className={`egg arcade-only${decoded ? " open" : ""}`}
       onClick={toggle}
       data-hint={decoded ? undefined : t("psst… decode me")}
-      aria-label={decoded ? `Decoded message: ${SECRET}. Click to encode again.` : "Binary-encoded secret message. Click to decode."}
+      aria-label={
+        decoded
+          ? t(`Decoded message: ${secret}. Click to encode again.`)
+          : t("Binary-encoded secret message. Click to decode.")
+      }
     >
-      <span className="egg-text">{text}</span>
+      {/* binary always reads left to right; the decoded Arabic reads right to left */}
+      <span className="egg-text" dir={decoded && lang === "ar" ? "rtl" : "ltr"}>
+        {text}
+      </span>
     </button>
   );
 }
