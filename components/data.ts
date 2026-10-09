@@ -62,8 +62,8 @@ export const quests: Quest[] = [
     status: "NEW QUEST - OCT 2026 - IN PROGRESS",
     statusPro: "Oct 2026 - In progress",
     url: "https://github.com/nelmkt/maeen",
-    image: "https://raw.githubusercontent.com/nelmkt/maeen/main/docs/dashboard.jpg",
-    imageAlt: "The Maeen dashboard flagging a possible leak between two devices on a water pipeline",
+    image: "https://raw.githubusercontent.com/nelmkt/maeen/main/reports/leak_size_sweep.png",
+    imageAlt: "Maeen: leak detection and correct pipe segment for every leak size, from under 2% of the flow upward",
     summary:
       "Real-time detection, location and explanation of leaks and water-quality problems in water pipelines, turning in-pipe sensor streams into what is wrong, where, how serious, why and what to do.",
     objectives: [
