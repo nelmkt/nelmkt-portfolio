@@ -224,6 +224,11 @@ export const AR: Record<string, string> = {
   "2022 – 2025": "2022 – 2025",
   "Mawhiba Alumna: King Abdulaziz & His Companions Foundation for Giftedness & Creativity":
     "خريجة موهبة: مؤسسة الملك عبدالعزيز ورجاله للموهبة والإبداع",
+  "Miyahthon 2027": "مياهثون 2027",
+  "Saudi Water Authority": "الهيئة السعودية للمياه",
+  "IECE 2026 - International Engineering Conference": "المؤتمر الهندسي الدولي IECE 2026",
+  "Saudi Council of Engineers": "الهيئة السعودية للمهندسين",
+  "Dec 2026": "ديسمبر 2026",
   "Hackathon Al Hareeq": "هاكاثون الحريق",
   "Ministry of Environment, Water & Agriculture": "وزارة البيئة والمياه والزراعة",
   "Dec 2025": "ديسمبر 2025",

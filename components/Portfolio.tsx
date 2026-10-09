@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import CheatCode from "./CheatCode";
 import BrandIcon from "./BrandIcon";
 import ContactIcon from "./ContactIcon";
+import CursorFx from "./CursorFx";
 import EasterEgg from "./EasterEgg";
 import PageFx from "./PageFx";
 import PixelHeart from "./PixelHeart";
@@ -95,6 +96,7 @@ export default function Portfolio() {
 
   return (
     <LangContext.Provider value={lang}>
+      <CursorFx />
       <StartScreen />
       <CheatCode />
       <PageFx />

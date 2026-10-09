@@ -156,7 +156,7 @@ export default function StartScreen() {
             PROFESSIONAL MODE
           </button>
         </div>
-        <p className="start-meta">© 2026 - 1 PLAYER - PORTFOLIO EDITION</p>
+        <p className="start-meta">King Abdulaziz University - Jeddah, Saudi Arabia</p>
       </div>
     </div>
   );

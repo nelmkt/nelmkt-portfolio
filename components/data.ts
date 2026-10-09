@@ -243,8 +243,8 @@ export const academy = [
 ];
 
 export const sideQuests: { title: string; by?: string; when: string }[] = [
-  { title: "Myathoon 2027", when: "2027" },
-  { title: "IECE 2026", when: "2026" },
+  { title: "Miyahthon 2027", by: "Saudi Water Authority", when: "2027" },
+  { title: "IECE 2026 - International Engineering Conference", by: "Saudi Council of Engineers", when: "Dec 2026" },
   { title: "Hackathon Al Hareeq", by: "Ministry of Environment, Water & Agriculture", when: "Dec 2025" },
   { title: "Consulting Championship 2025", by: "Aramco", when: "Dec 2025" },
   { title: "The 2nd Scientific Forum", by: "King Abdulaziz University", when: "Nov 2025" },
