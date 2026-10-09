@@ -28,7 +28,7 @@ export const AR: Record<string, string> = {
   STAGE: "المرحلة",
   "PLAYER SELECT": "اختر شخصيتك",
   "BONUS STAGE - LANGUAGE RUSH": "مرحلة المكافأة - سباق اللغات",
-  "QUEST LOG": "سجل المهام",
+  "QUEST LOG": "سجل المشاريع",
   "Research & projects": "الأبحاث والمشاريع",
   "TROPHY ROOM": "قاعة الجوائز",
   "ACADEMY & SIDE QUESTS": "الدراسة والمهام الجانبية",
@@ -74,7 +74,7 @@ export const AR: Record<string, string> = {
     "طالبة في كلية الحاسبات وتقنية المعلومات بجامعة الملك عبدالعزيز - واعد 2026 - IEEE 2025 - UNCCD COP16 2024 - خريجة موهبة",
   "Undergraduate researcher and developer working across software, hardware, data and AI/ML.": "باحثة ومطوّرة جامعية، أعمل بين البرمجيات والعتاد والبيانات والذكاء الاصطناعي/تعلم الآلة.",
   "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.": "أدرس علوم الحاسب في جامعة الملك عبدالعزيز، وأستمتع بحل المشكلات بالبرمجة والعتاد: من نماذج تعلّم الآلة وتطبيقات الويب المتكاملة، إلى «آيكة»، حاوية النفايات الذكية العاملة بالطاقة الشمسية التي صممتها وبنيتها بنفسي من الفكرة حتى النموذج الأولي.",
-  "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.": "تجمع أبحاثي بين الحوسبة والعالم الحقيقي: مسارات تعلّم آلة قابلة للتكرار، وبيانات الأقمار الصناعية، وإنترنت الأشياء. هدفي الدكتوراه ومسيرة في المجال الأكاديمي، وستجد مشاريعي في سجل المهام بالأسفل.",
+  "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.": "تجمع أبحاثي بين الحوسبة والعالم الحقيقي: مسارات تعلّم آلة قابلة للتكرار، وبيانات الأقمار الصناعية، وإنترنت الأشياء. هدفي الدكتوراه ومسيرة في المجال الأكاديمي، وستجد مشاريعي في سجل المشاريع بالأسفل.",
   "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.":
     "تجمع أبحاثي بين الحوسبة والعالم الحقيقي: مسارات تعلّم آلة قابلة للتكرار، وبيانات الأقمار الصناعية، وإنترنت الأشياء. هدفي الدكتوراه ومسيرة في المجال الأكاديمي، وستجد أعمالي في قسم الأبحاث والمشاريع أدناه.",
   "I'm also an artist, which probably explains why this site looks the way it does.": "وأنا فنانة أيضًا، ولعل هذا ما يفسّر شكل هذا الموقع.",
