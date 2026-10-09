@@ -3684,3 +3684,164 @@ html[data-mode="pro"][lang="ar"] .egg[data-hint]::after,
 html[data-mode="pro"][lang="ar"] .egg.open {
   font-family: var(--font-ar), sans-serif;
 }
+
+/* ---------- start screen: arcade scene, professional finish ---------- */
+/* The horizon (sky, sun, glowing line, moving grid) and the running sprite stay
+   as they are. In front of them: a frosted panel, the pixel name with a soft
+   glow (no dark outlines), and clean professional type for everything else. */
+.start-inner {
+  width: min(560px, calc(100vw - 32px));
+  margin-bottom: 8vh;
+  padding: 34px 40px 28px;
+  background: rgba(13, 3, 10, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+.start-screen .start-inner * {
+  text-shadow: none !important;
+}
+.start-kicker {
+  font-family: var(--font-pro), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  color: #ff9cc8 !important;
+  margin-bottom: 16px;
+}
+.start-kicker::before,
+.start-kicker::after {
+  box-shadow: none;
+  background: rgba(255, 156, 200, 0.7);
+}
+.start-title {
+  color: #fff;
+  filter: none;
+  text-shadow: 0 0 18px rgba(255, 61, 139, 0.6), 0 0 2px rgba(255, 255, 255, 0.4) !important;
+}
+.start-ar {
+  margin-top: 12px;
+}
+.start-thermal {
+  width: 100%;
+  max-width: 360px;
+  height: 3px;
+  margin: 22px auto 16px;
+  border-radius: 3px !important;
+  box-shadow: none;
+  opacity: 1;
+}
+.start-sub {
+  font-family: var(--font-pro), system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  color: #f3dbe7 !important;
+  margin-bottom: 26px;
+}
+.start-sub i {
+  color: #ff8ac0;
+}
+.start-menu {
+  gap: 14px;
+}
+.start-menu .start-btn,
+.start-menu .start-pro {
+  min-width: 270px;
+  padding: 14px 22px;
+  font-family: var(--font-pro), system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px !important;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+.start-menu button.sel {
+  color: #2a0a20;
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 8px 24px rgba(255, 61, 139, 0.35);
+}
+.start-menu .start-btn::before,
+.start-menu .start-pro::before {
+  filter: none;
+}
+.start-menu button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+.start-meta {
+  font-family: var(--font-pro), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.6) !important;
+  margin-top: 24px;
+}
+.start-arcade,
+.start-arcade b,
+.start-arcade span:nth-child(2) b,
+.start-arcade span:last-child b {
+  text-shadow: none !important;
+}
+.start-arcade {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.start-arcade b {
+  color: #ff9cc8 !important;
+}
+@media (max-width: 520px) {
+  .start-inner {
+    padding: 26px 18px 22px;
+    margin-bottom: 6vh;
+  }
+  .start-sub {
+    font-size: 14px;
+  }
+  .start-menu .start-btn,
+  .start-menu .start-pro {
+    min-width: 0;
+    width: 100%;
+    max-width: 260px;
+  }
+  .start-menu .start-btn::before,
+  .start-menu .start-pro::before {
+    left: -20px;
+  }
+}
+/* fit the name inside the panel, let the sun show through, keep clear of the runner */
+.start-inner {
+  width: min(600px, calc(100vw - 32px));
+  margin-bottom: 14vh;
+  padding: 28px 36px 24px;
+  background: rgba(13, 3, 10, 0.32);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.start-title {
+  font-size: clamp(26px, 5.2vw, 50px);
+  line-height: 1.1;
+}
+.start-thermal {
+  margin: 18px auto 14px;
+}
+.start-sub {
+  margin-bottom: 22px;
+}
+.start-meta {
+  margin-top: 20px;
+}
+@media (max-height: 700px) {
+  .start-inner {
+    margin-bottom: 10vh;
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+}

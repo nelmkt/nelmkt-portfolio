@@ -131,7 +131,7 @@ export default function StartScreen() {
           ALMAKTOUM
         </h1>
         <p className="start-ar">
-          <PixelText text={profile.nameAr} size={14} scale={3} shadow={["#b8306f", "#1a0612"]} />
+          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#b8306f" />
         </p>
         <div className="start-thermal" aria-hidden="true" />
         <p className="start-sub">
