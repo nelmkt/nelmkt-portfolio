@@ -3381,3 +3381,42 @@ html[data-mode="pro"] .highlight-detail {
     font-size: 15px;
   }
 }
+
+/* headline banner title in Jersey 15 (English only; Arabic keeps Kufi) */
+html:not([data-mode="pro"]):not([lang="ar"]) .highlight-title {
+  font-family: var(--font-banner), monospace;
+  font-weight: 400;
+  font-size: 33px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 520px) {
+  html:not([data-mode="pro"]):not([lang="ar"]) .highlight-title {
+    font-size: 25px;
+  }
+}
+
+/* ---------- professional mode: custom cursor ---------- */
+/* a clean arrow in the ink colour, turning to the rose accent over anything clickable */
+html[data-mode="pro"],
+html[data-mode="pro"] body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%231d2433' stroke='%23ffffff' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
+}
+html[data-mode="pro"] a,
+html[data-mode="pro"] button,
+html[data-mode="pro"] .quest-media {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%23b23a48' stroke='%23ffffff' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, pointer;
+}
+html[data-mode="pro"][data-theme="dark"],
+html[data-mode="pro"][data-theme="dark"] body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%23ececec' stroke='%23121212' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
+}
+html[data-mode="pro"][data-theme="dark"] a,
+html[data-mode="pro"][data-theme="dark"] button,
+html[data-mode="pro"][data-theme="dark"] .quest-media {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%23f08a94' stroke='%23121212' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, pointer;
+}
+/* no handle under the photo in professional mode */
+html[data-mode="pro"] .player-handle {
+  display: none;
+}
