@@ -1,4 +1,4 @@
-# nelmkt.com · Press Start
+# nelmkt.com.. Press Start!
 
 A pink, retro arcade-style portfolio for **Nelly Almaktoum**: undergraduate researcher and innovator working on ML engineering, remote sensing and green tech.
 
