@@ -102,7 +102,11 @@ export default function RunnerGame({ collected, onCollect }: Props) {
     ctx.imageSmoothingEnabled = false;
 
     // Named faces (not --font-pixel) so Arabic falls back to Kufi, not the Arial-based fallback face.
-    const font = "pixel, arabicHeading, monospace";
+    // "digits" only covers 0-9, / and +, so numbers get the clearer Jersey 15 pixel face.
+    const font = "digits, pixel, arabicHeading, monospace";
+    // Canvas text does not trigger font downloads on its own, so ask for the faces up front.
+    document.fonts?.load("16px digits", "0123456789/+");
+    document.fonts?.load("600 16px pixel", "SCORE");
     const ar = () => langRef.current === "ar";
 
     let raf = 0;

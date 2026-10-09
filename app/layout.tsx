@@ -15,6 +15,15 @@ const pixel = localFont({
 });
 // Jersey 15 (OFL): sturdy, very legible pixel lettering for the headline achievement banner.
 const banner = localFont({ src: "./fonts/Jersey15-Regular.ttf", variable: "--font-banner" });
+// The same face, digits only, for the numbers drawn in the bonus game (scaled to match the pixel labels).
+const digits = localFont({
+  src: "./fonts/Jersey15-Regular.ttf",
+  variable: "--font-digits",
+  declarations: [
+    { prop: "unicode-range", value: "U+0030-0039, U+002F, U+002B" },
+    { prop: "size-adjust", value: "175%" },
+  ],
+});
 // Chakra Petch: a squared, game-UI sans that keeps the arcade feel but reads easily in paragraphs.
 const body = Chakra_Petch({ weight: ["400", "500", "600", "700"], subsets: ["latin"], variable: "--font-body" });
 // Professional mode swaps every pixel face for IBM Plex Sans (OFL). Headings get a
@@ -70,7 +79,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${pixel.variable} ${banner.variable} ${body.variable} ${pro.variable} ${proHeading.variable} ${arabic.variable} ${arabicHeading.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${pixel.variable} ${banner.variable} ${digits.variable} ${body.variable} ${pro.variable} ${proHeading.variable} ${arabic.variable} ${arabicHeading.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: modeBootScript }} />
       </head>
