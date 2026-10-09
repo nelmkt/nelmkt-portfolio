@@ -23,7 +23,14 @@ const proHeading = localFont({
   variable: "--font-pro-heading",
   declarations: [{ prop: "size-adjust", value: "150%" }],
 });
-const arabic = Noto_Kufi_Arabic({ weight: "700", subsets: ["arabic"], variable: "--font-ar" });
+const arabic = Noto_Kufi_Arabic({ weight: ["400", "500", "700"], subsets: ["arabic"], variable: "--font-ar" });
+// Arabic fallback for headings and pixel labels, scaled up like the fonts it stands in for.
+const arabicHeading = localFont({
+  src: "./fonts/NotoKufiArabic-Variable.ttf",
+  weight: "100 900",
+  variable: "--font-ar-head",
+  declarations: [{ prop: "size-adjust", value: "140%" }],
+});
 
 export const metadata: Metadata = {
   title: "Nelly Almaktoum",
@@ -60,7 +67,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${pixel.variable} ${body.variable} ${pro.variable} ${proHeading.variable} ${arabic.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${pixel.variable} ${body.variable} ${pro.variable} ${proHeading.variable} ${arabic.variable} ${arabicHeading.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: modeBootScript }} />
       </head>

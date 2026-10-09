@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { languages } from "./data";
+import { useT } from "./lang";
 import { HEART } from "./PixelHeart";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
@@ -77,6 +78,7 @@ type Props = {
 };
 
 export default function RunnerGame({ collected, onCollect }: Props) {
+  const t = useT();
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stateRef = useRef<State>(freshState());
   const collectedRef = useRef<string[]>(collected);
@@ -377,7 +379,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         }}
       />
       <p className="game-hint">
-        {mode === "playing" ? "SPACE / ↑ / TAP = JUMP" : "Click the screen, then press SPACE or tap to play"}
+        {t(mode === "playing" ? "SPACE / ↑ / TAP = JUMP" : "Click the screen, then press SPACE or tap to play")}
       </p>
     </div>
   );

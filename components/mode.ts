@@ -29,4 +29,4 @@ export function toggleTheme() {
 
 // Runs inline in <head> before first paint, so a returning visitor never sees the wrong theme flash.
 // Only once the start screen has been passed this session; otherwise the visitor picks there.
-export const modeBootScript = `try{var d=document.documentElement;if(sessionStorage.getItem("nelmkt-started")&&localStorage.getItem("${MODE_KEY}")==="pro")d.dataset.mode="pro";d.dataset.theme=localStorage.getItem("${THEME_KEY}")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")}catch(e){}`;
+export const modeBootScript = `try{var d=document.documentElement;if(sessionStorage.getItem("nelmkt-started")&&localStorage.getItem("${MODE_KEY}")==="pro")d.dataset.mode="pro";d.dataset.theme=localStorage.getItem("${THEME_KEY}")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");if(localStorage.getItem("nelmkt-lang")==="ar"){d.lang="ar";d.dir="rtl"}}catch(e){}`;

@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useT } from "./lang";
 
 // Page-level polish: rainbow scroll-progress bar, sections that step in as they
 // scroll into view, and a pixel back-to-top button.
 export default function PageFx() {
+  const t = useT();
   const [progress, setProgress] = useState(0);
   const [showTop, setShowTop] = useState(false);
 
@@ -53,7 +55,7 @@ export default function PageFx() {
         <svg width="12" height="10" viewBox="0 0 6 5" shapeRendering="crispEdges" aria-hidden="true">
           <path d="M2 0h2v1h1v1h1v1H4v2H2V3H0V2h1V1h1z" fill="currentColor" />
         </svg>
-        TOP
+        {t("TOP")}
       </a>
     </>
   );

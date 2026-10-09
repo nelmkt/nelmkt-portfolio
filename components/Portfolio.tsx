@@ -11,6 +11,7 @@ import PixelIcon from "./PixelIcon";
 import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
+import { type Lang, LangContext, LANG_KEY, applyLang, translate, useT } from "./lang";
 import { toggleMode, toggleTheme } from "./mode";
 import { academy, languages, links, party, profile, quests, sideQuests, skillTree, stages, trophies } from "./data";
 
@@ -22,6 +23,21 @@ const ramp = (i: number, n: number) => ({ ["--t" as string]: n > 1 ? i / (n - 1)
 export default function Portfolio() {
   const [collected, setCollected] = useState<string[]>([]);
   const [active, setActive] = useState("player");
+  const [lang, setLang] = useState<Lang>("en");
+  const tr = (s: string) => translate(lang, s);
+  const ar = lang === "ar";
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem(LANG_KEY) === "ar") setLang("ar");
+    } catch {}
+  }, []);
+
+  function switchLang() {
+    const next = ar ? "en" : "ar";
+    applyLang(next);
+    setLang(next);
+  }
 
   useEffect(() => {
     try {
@@ -58,7 +74,7 @@ export default function Portfolio() {
   const allUnlocked = collected.length === languages.length;
 
   return (
-    <>
+    <LangContext.Provider value={lang}>
       <StartScreen />
       <CheatCode />
       <PageFx />
@@ -82,6 +98,9 @@ export default function Portfolio() {
             <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" strokeWidth="2" />
             <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
           </svg>
+        </button>
+        <button type="button" className="lang-toggle" onClick={switchLang} lang={ar ? "en" : "ar"} aria-label={ar ? "Switch to English" : "التبديل إلى العربية"}>
+          {ar ? "EN" : "ع"}
         </button>
         <button type="button" className="mode-toggle" onClick={toggleMode}>
           <Dual a="PRO VIEW" p="Arcade view" />
@@ -119,15 +138,15 @@ export default function Portfolio() {
                   <span className="ar-plain" lang="ar">{profile.nameAr}</span>
                 </span>
               </h1>
-              <p className="player-headline">{profile.headline}</p>
-              <p className="player-tag">{profile.tagline}</p>
+              <p className="player-headline">{tr(profile.headline)}</p>
+              <p className="player-tag">{tr(profile.tagline)}</p>
               <div className="highlight">
                 <span className="highlight-icon" aria-hidden="true">
                   <PixelIcon name="star" size={22} />
                 </span>
                 <div>
-                  <p className="highlight-title">{profile.highlight}</p>
-                  <p className="highlight-detail">{profile.highlightDetail}</p>
+                  <p className="highlight-title">{tr(profile.highlight)}</p>
+                  <p className="highlight-detail">{tr(profile.highlightDetail)}</p>
                 </div>
               </div>
               <dl className="box stats">
@@ -136,13 +155,13 @@ export default function Portfolio() {
                     <dt>
                       <Dual a={s.label} p={s.pro} />
                     </dt>
-                    <dd>{s.value}</dd>
+                    <dd>{tr(s.value)}</dd>
                   </div>
                 ))}
               </dl>
               <div className="cta-row">
                 <a className="btn arcade-only" href="#bonus">
-                  <PixelIcon name="play" size={12} /> PLAY BONUS STAGE
+                  <PixelIcon name="play" size={12} /> {tr("PLAY BONUS STAGE")}
                 </a>
                 <a className="btn btn-alt" href="#save">
                   <PixelIcon name="mail" size={12} /> <Dual a="SAVE POINT" p="Get in touch" />
@@ -151,14 +170,14 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="box dialog">
-            <span className="dialog-name arcade-only">NELLY</span>
+            <span className="dialog-name arcade-only">{tr("NELLY")}</span>
             {profile.about.map((p) => (
-              <p key={p}>{p}</p>
+              <p key={p}>{tr(p)}</p>
             ))}
-            <p className="chips-label">FOCUS AREAS</p>
+            <p className="chips-label">{tr("FOCUS AREAS")}</p>
             <ul className="chips">
               {profile.interests.map((i) => (
-                <li key={i}>{i}</li>
+                <li key={i}>{tr(i)}</li>
               ))}
             </ul>
           </div>
@@ -168,7 +187,7 @@ export default function Portfolio() {
         <section id="bonus" className="stage arcade-only">
           <StageTag code="1-2" label="BONUS STAGE · LANGUAGE RUSH" pro="" />
           <p className="stage-lede">
-            The languages I program in, as collectibles. Jump to collect each one and avoid the bugs.
+            {tr("The languages I program in, as collectibles. Jump to collect each one and avoid the bugs.")}
           </p>
           <div className="box game-box">
             <RunnerGame collected={collected} onCollect={onCollect} />
@@ -177,14 +196,14 @@ export default function Portfolio() {
             {languages.map((l) => {
               const got = collected.includes(l.name);
               return (
-                <div key={l.name} className={`inv-slot${got ? " got" : ""}`} title={got ? l.name : "Locked"}>
+                <div key={l.name} className={`inv-slot${got ? " got" : ""}`} title={got ? l.name : tr("Locked")}>
                   <span className="gem" style={{ ["--gem" as string]: l.color }} />
                   <span className="inv-name">{got ? l.name : "???"}</span>
                 </div>
               );
             })}
           </div>
-          {allUnlocked && <p className="all-unlocked"><PixelIcon name="star" /> ALL LANGUAGES UNLOCKED <PixelIcon name="star" /></p>}
+          {allUnlocked && <p className="all-unlocked"><PixelIcon name="star" /> {tr("ALL LANGUAGES UNLOCKED")} <PixelIcon name="star" /></p>}
         </section>
 
         {/* 1-3 QUESTS */}
@@ -208,11 +227,11 @@ export default function Portfolio() {
                       {q.title} <span className="quest-ar">· <PixelText text={q.titleAr} size={13} scale={2} /><span className="ar-plain" lang="ar">{q.titleAr}</span></span>
                     </a>
                   </h3>
-                  <p>{q.summary}</p>
+                  <p>{tr(q.summary)}</p>
                   <h4><Dual a="OBJECTIVES CLEARED" p="Highlights" /></h4>
                   <ul className="objectives">
                     {q.objectives.map((o) => (
-                      <li key={o}>{o}</li>
+                      <li key={o}>{tr(o)}</li>
                     ))}
                   </ul>
                   <h4><Dual a="LOOT" p="Links" /></h4>
@@ -220,19 +239,19 @@ export default function Portfolio() {
                     {q.loot.map((l) => (
                       <li key={l.label}>
                         <a href={l.url} target="_blank" rel="noreferrer">
-                          <PixelIcon name="gem" size={10} /> {l.label}
+                          <PixelIcon name="gem" size={10} /> {tr(l.label)}
                         </a>
                       </li>
                     ))}
                     <li>
                       <a href={q.url} target="_blank" rel="noreferrer">
-                        <PixelIcon name="gem" size={10} /> Source on GitHub
+                        <PixelIcon name="gem" size={10} /> {tr("Source on GitHub")}
                       </a>
                     </li>
                   </ul>
                   <ul className="chips small">
                     {q.tags.map((t) => (
-                      <li key={t}>{t}</li>
+                      <li key={t}>{tr(t)}</li>
                     ))}
                   </ul>
                 </div>
@@ -254,12 +273,12 @@ export default function Portfolio() {
                   <p className="trophy-year">
                     <Dual a={`ACHIEVEMENT UNLOCKED${t.tier === "legendary" ? " · LEGENDARY" : ""}`} p={t.tier === "patent" ? "Patent" : t.tier === "legendary" ? "Distinction" : "Award"} />
                   </p>
-                  <h3>{t.title}</h3>
-                  <p className="trophy-detail">{t.detail}</p>
+                  <h3>{tr(t.title)}</h3>
+                  <p className="trophy-detail">{tr(t.detail)}</p>
                 </div>
                 <div className="trophy-meta">
-                  <span className="trophy-date">{t.year}</span>
-                  <span className="trophy-by">{t.by}</span>
+                  <span className="trophy-date">{tr(t.year)}</span>
+                  <span className="trophy-by">{tr(t.by)}</span>
                 </div>
               </li>
             ))}
@@ -272,10 +291,10 @@ export default function Portfolio() {
           <div className="academy">
             {academy.map((a, i) => (
               <div key={a.school} className="box school ramp" style={ramp(i, academy.length)}>
-                <p className="school-when">{a.when}</p>
-                <h3>{a.school}</h3>
-                <p className="school-degree">{a.degree}</p>
-                <p className="school-note">{a.note}</p>
+                <p className="school-when">{tr(a.when)}</p>
+                <h3>{tr(a.school)}</h3>
+                <p className="school-degree">{tr(a.degree)}</p>
+                <p className="school-note">{tr(a.note)}</p>
               </div>
             ))}
           </div>
@@ -285,9 +304,9 @@ export default function Portfolio() {
               <li key={s.title} className="box side ramp" style={ramp(i, sideQuests.length)}>
                 <span className="side-check"><PixelIcon name="check" size={14} /></span>
                 <div>
-                  <h4>{s.title}</h4>
+                  <h4>{tr(s.title)}</h4>
                   <p>
-                    {s.by} · {s.when}
+                    {tr(s.by)} · {tr(s.when)}
                   </p>
                 </div>
               </li>
@@ -299,18 +318,18 @@ export default function Portfolio() {
         <section id="skills" className="stage">
           <StageTag code="1-6" label="SKILL TREE" pro="Technical skills" />
           <div className="box lang-panel">
-            <h3>LANGUAGES</h3>
+            <h3>{tr("LANGUAGES")}</h3>
             <ul className="lang-list">
               {languages.map((l) => (
                 <li key={l.name} className={collected.includes(l.name) ? "got" : ""}>
                   <span className="gem" style={{ ["--gem" as string]: l.color }} />
                   <span className="lang-name">{l.name}</span>
-                  <span className="lang-meter" aria-label={l.tier === "MAIN" ? "Main language" : "Working knowledge"}>
+                  <span className="lang-meter" aria-label={tr(l.tier === "MAIN" ? "Main language" : "Working knowledge")}>
                     {Array.from({ length: 5 }, (_, i) => (
                       <i key={i} className={i < (l.tier === "MAIN" ? 5 : 3) ? "on" : ""} />
                     ))}
                   </span>
-                  <span className="lang-tier">{l.tier === "MAIN" ? "MAIN" : "WORKING"}</span>
+                  <span className="lang-tier">{tr(l.tier === "MAIN" ? "MAIN" : "WORKING")}</span>
                 </li>
               ))}
             </ul>
@@ -318,10 +337,10 @@ export default function Portfolio() {
           <div className="branches">
             {skillTree.map((b, i) => (
               <div key={b.branch} className="box branch ramp" style={ramp(i, skillTree.length)}>
-                <h3>{b.branch.toUpperCase()}</h3>
+                <h3>{ar ? tr(b.branch) : b.branch.toUpperCase()}</h3>
                 <ul className="chips">
                   {b.items.map((i) => (
-                    <li key={i}>{i}</li>
+                    <li key={i}>{tr(i)}</li>
                   ))}
                 </ul>
               </div>
@@ -337,9 +356,9 @@ export default function Portfolio() {
               <li key={p.role + p.where} className={`box member ramp${p.lead ? " lead" : ""}`} style={ramp(i, party.length)}>
                 <span className="slot">{String(i + 1).padStart(2, "0")}</span>
                 <div>
-                  <h3>{p.role}</h3>
-                  <p>{p.where}</p>
-                  <p className="member-when">{p.when}</p>
+                  <h3>{tr(p.role)}</h3>
+                  <p>{tr(p.where)}</p>
+                  <p className="member-when">{tr(p.when)}</p>
                 </div>
               </li>
             ))}
@@ -351,8 +370,8 @@ export default function Portfolio() {
           <StageTag code="1-8" label="SAVE POINT" pro="Contact" />
           <div className="box save">
             <div>
-              <h3>OPEN TO RESEARCH COLLABORATION</h3>
-              <p>The quickest way to reach me is LinkedIn or email. I work in Arabic and English.</p>
+              <h3>{tr("OPEN TO RESEARCH COLLABORATION")}</h3>
+              <p>{tr("The quickest way to reach me is LinkedIn or email. I work in Arabic and English.")}</p>
             </div>
           </div>
           <ul className="links">
@@ -367,7 +386,7 @@ export default function Portfolio() {
                 >
                   <ContactIcon name={l.label} />
                   <BrandIcon name={l.label} />
-                  <span className="link-label">{l.label}</span>
+                  <span className="link-label">{tr(l.label)}</span>
                   <span className="link-value">{l.value}</span>
                   <PixelIcon name="play" size={10} />
                 </a>
@@ -378,18 +397,21 @@ export default function Portfolio() {
       </main>
 
       <footer className="footer">
-        <p className="thanks arcade-only">THANKS FOR PLAYING!</p>
+        <p className="thanks arcade-only">{tr("THANKS FOR PLAYING!")}</p>
         <EasterEgg />
-        <p>© 2026 Nelly Almaktoum · Built with Next.js, TypeScript, HTML &amp; CSS</p>
+        <p>{tr("© 2026 Nelly Almaktoum · Built with Next.js, TypeScript, HTML & CSS")}</p>
       </footer>
-    </>
+    </LangContext.Provider>
   );
 }
 
 function StageTag({ code, label, pro }: { code: string; label: string; pro: string }) {
+  const t = useT();
   return (
     <h2 className="stage-tag">
-      <span className="stage-code arcade-only">STAGE {code}</span>
+      <span className="stage-code arcade-only">
+        {t("STAGE")} {code}
+      </span>
       <span className="stage-label">
         <Dual a={label} p={pro} />
       </span>
@@ -398,11 +420,13 @@ function StageTag({ code, label, pro }: { code: string; label: string; pro: stri
 }
 
 // The same spot reads as a game label in arcade mode and as plain wording in professional mode.
+// Both are passed through the Arabic dictionary when Arabic is on.
 function Dual({ a, p }: { a: string; p: string }) {
+  const t = useT();
   return (
     <>
-      <span className="arcade-only">{a}</span>
-      <span className="pro-only">{p}</span>
+      <span className="arcade-only">{t(a)}</span>
+      <span className="pro-only">{t(p)}</span>
     </>
   );
 }
