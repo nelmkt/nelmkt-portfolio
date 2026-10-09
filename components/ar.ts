@@ -24,6 +24,7 @@ export const AR: Record<string, string> = {
   NELMKT: "NELMKT",
   "Nelly Almaktoum": "نيللي المكتوم",
   "Photo of Nelly Almaktoum": "صورة نيللي المكتوم",
+  "Researcher & Innovator": "باحثة ومبتكرة",
   STAGE: "المرحلة",
   "PLAYER SELECT": "اختر شخصيتك",
   "BONUS STAGE - LANGUAGE RUSH": "مرحلة المكافأة - سباق اللغات",

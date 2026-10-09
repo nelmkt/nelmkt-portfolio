@@ -3845,3 +3845,56 @@ html[data-mode="pro"][lang="ar"] .egg.open {
     padding-bottom: 18px;
   }
 }
+
+/* ---------- batch: start panel, quest boxes, title cursor, pro card, pro phone projects ---------- */
+/* a touch less blur on the start panel */
+.start-inner {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+/* no MAIN QUEST / QUEST COMPLETE boxes on the arcade project cards */
+html:not([data-mode="pro"]) .quest-status {
+  display: none;
+}
+/* slimmer blinking cursor after arcade section titles */
+.stage-label::after {
+  width: 0.3em;
+}
+/* professional photo card: handle and role under the photo, like the arcade portrait */
+.player-role {
+  display: none;
+}
+html[data-mode="pro"] .player-handle {
+  display: block;
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+html[data-mode="pro"] .player-role {
+  display: block;
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+/* professional projects on phones: even image margins and phone-sized type */
+@media (max-width: 860px) {
+  html[data-mode="pro"] .quest-media,
+  html[data-mode="pro"][dir="rtl"] .quest-media {
+    margin: 16px 16px 0;
+    max-width: none;
+  }
+  html[data-mode="pro"] .quest-body {
+    padding: 18px 18px 22px;
+  }
+  html[data-mode="pro"] .quest h3 {
+    font-size: 24px;
+  }
+  html[data-mode="pro"] .quest-body > p,
+  html[data-mode="pro"] .objectives li {
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+}

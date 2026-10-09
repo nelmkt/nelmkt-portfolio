@@ -143,6 +143,7 @@ export default function Portfolio() {
                 <img className="portrait-photo" src="/photo.jpg" alt={tr("Photo of Nelly Almaktoum")} width={640} height={640} loading="lazy" />
               </div>
               <p className="player-handle">@{profile.handle}</p>
+              <p className="player-role">{tr("Researcher & Innovator")}</p>
               <div className="xp arcade-only">
                 <span>LV</span>
                 <div className="xp-bar">
@@ -334,7 +335,7 @@ export default function Portfolio() {
                 <div>
                   <h4>{tr(s.title)}</h4>
                   <p>
-                    {tr(s.by)} - {tr(s.when)}
+                    {s.by ? `${tr(s.by)} - ${tr(s.when)}` : tr(s.when)}
                   </p>
                 </div>
               </li>
@@ -354,7 +355,7 @@ export default function Portfolio() {
                   <span className="lang-name">{l.name}</span>
                   <span className="lang-meter" aria-label={tr(l.tier === "MAIN" ? "Main language" : "Working knowledge")}>
                     {Array.from({ length: 5 }, (_, i) => (
-                      <i key={i} className={i < (l.tier === "MAIN" ? 5 : 3) ? "on" : ""} />
+                      <i key={i} className={i < l.level ? "on" : ""} />
                     ))}
                   </span>
                   <span className="lang-tier">{tr(l.tier === "MAIN" ? "MAIN" : "WORKING")}</span>

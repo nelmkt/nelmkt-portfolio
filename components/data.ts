@@ -179,14 +179,15 @@ export const trophies = [
 
 // The languages from the README, in README order. Used by the mini-game too.
 export const languages = [
-  { name: "Python", short: "PY", color: "#3776AB", tier: "MAIN" },
-  { name: "Rust", short: "RS", color: "#DEA584", tier: "MAIN" },
-  { name: "Ruby", short: "RB", color: "#CC342D", tier: "MAIN" },
-  { name: "TypeScript", short: "TS", color: "#3178C6", tier: "MAIN" },
-  { name: "JavaScript", short: "JS", color: "#F7DF1E", tier: "MAIN" },
-  { name: "C++", short: "C++", color: "#00599C", tier: "WORKING" },
-  { name: "C#", short: "C#", color: "#512BD4", tier: "WORKING" },
-  { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING" },
+  // level: how many of the five skill boxes are lit in the Skill Tree.
+  { name: "Python", short: "PY", color: "#3776AB", tier: "MAIN", level: 5 },
+  { name: "Rust", short: "RS", color: "#DEA584", tier: "MAIN", level: 5 },
+  { name: "Ruby", short: "RB", color: "#CC342D", tier: "MAIN", level: 4 },
+  { name: "TypeScript", short: "TS", color: "#3178C6", tier: "MAIN", level: 5 },
+  { name: "JavaScript", short: "JS", color: "#F7DF1E", tier: "MAIN", level: 5 },
+  { name: "C++", short: "C++", color: "#00599C", tier: "WORKING", level: 3 },
+  { name: "C#", short: "C#", color: "#512BD4", tier: "WORKING", level: 3 },
+  { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING", level: 2 },
 ] as const;
 
 // Broad development skills first; ML is one strand among several.
@@ -241,7 +242,9 @@ export const academy = [
   },
 ];
 
-export const sideQuests = [
+export const sideQuests: { title: string; by?: string; when: string }[] = [
+  { title: "Myathoon 2027", when: "2027" },
+  { title: "IECE 2026", when: "2026" },
   { title: "Hackathon Al Hareeq", by: "Ministry of Environment, Water & Agriculture", when: "Dec 2025" },
   { title: "Consulting Championship 2025", by: "Aramco", when: "Dec 2025" },
   { title: "The 2nd Scientific Forum", by: "King Abdulaziz University", when: "Nov 2025" },
