@@ -2624,3 +2624,163 @@ html[data-mode="pro"][data-theme="dark"] .hud-nav a {
   --sec: var(--psec, #ec94ba);
   --accent-2: color-mix(in srgb, var(--psec, #ec94ba) 13%, var(--surface));
 }
+
+/* ---------- arcade breathing room ---------- */
+/* Departure Mono is a dense monospace, so the arcade side gets looser lines,
+   a touch of tracking and more padding than the original pixel font needed. */
+html:not([data-mode="pro"]) body {
+  font-size: 15.5px;
+  line-height: 1.95;
+  letter-spacing: 0.015em;
+  word-spacing: -0.12em;
+}
+html:not([data-mode="pro"]) .stage {
+  padding: 76px 0 28px;
+}
+html:not([data-mode="pro"]) .stage-tag {
+  margin-bottom: 32px;
+}
+html:not([data-mode="pro"]) .stage-lede {
+  margin: -12px 0 28px;
+}
+html:not([data-mode="pro"]) .player-tag {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+html:not([data-mode="pro"]) .highlight {
+  padding: 16px 20px;
+  margin-bottom: 28px;
+}
+html:not([data-mode="pro"]) .highlight-detail {
+  font-size: 14px;
+  line-height: 1.7;
+}
+html:not([data-mode="pro"]) .stats {
+  padding: 14px 22px;
+  row-gap: 4px;
+  margin-bottom: 28px;
+}
+html:not([data-mode="pro"]) .stats div {
+  padding: 10px 0;
+}
+html:not([data-mode="pro"]) .stats dt {
+  margin-bottom: 6px;
+}
+html:not([data-mode="pro"]) .stats dd {
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+html:not([data-mode="pro"]) .dialog {
+  margin-top: 44px;
+  padding: 34px 32px 28px;
+}
+html:not([data-mode="pro"]) .dialog p {
+  margin-bottom: 18px;
+  max-width: 66ch;
+}
+html:not([data-mode="pro"]) .chips {
+  gap: 10px;
+  margin-top: 14px;
+}
+html:not([data-mode="pro"]) .chips li {
+  font-size: 14px;
+  padding: 4px 12px;
+}
+html:not([data-mode="pro"]) .chips.small li {
+  font-size: 13px;
+}
+html:not([data-mode="pro"]) .quests {
+  gap: 40px;
+}
+html:not([data-mode="pro"]) .quest-body {
+  padding: 28px 32px 30px;
+}
+html:not([data-mode="pro"]) .quest-body > p:not(.quest-status) {
+  margin-bottom: 8px;
+}
+html:not([data-mode="pro"]) .quest h4 {
+  margin: 26px 0 12px;
+}
+html:not([data-mode="pro"]) .objectives li {
+  margin-bottom: 14px;
+  padding-left: 28px;
+}
+html:not([data-mode="pro"]) .loot {
+  row-gap: 8px;
+}
+html:not([data-mode="pro"]) .trophies {
+  gap: 18px;
+}
+html:not([data-mode="pro"]) .trophy {
+  padding: 22px 26px;
+  gap: 24px;
+}
+html:not([data-mode="pro"]) .trophy h3 {
+  margin-bottom: 6px;
+}
+html:not([data-mode="pro"]) .trophy-detail,
+html:not([data-mode="pro"]) .trophy-by {
+  line-height: 1.75;
+}
+html:not([data-mode="pro"]) .academy {
+  gap: 24px;
+}
+html:not([data-mode="pro"]) .school {
+  padding: 24px 26px;
+}
+html:not([data-mode="pro"]) .school-degree,
+html:not([data-mode="pro"]) .school-note {
+  line-height: 1.75;
+}
+html:not([data-mode="pro"]) .sub-tag {
+  margin-top: 44px;
+}
+html:not([data-mode="pro"]) .side-quests {
+  gap: 16px;
+}
+html:not([data-mode="pro"]) .side {
+  padding: 18px 20px;
+  gap: 14px;
+}
+html:not([data-mode="pro"]) .lang-panel {
+  padding: 26px 28px;
+}
+html:not([data-mode="pro"]) .branches {
+  column-gap: 26px;
+}
+html:not([data-mode="pro"]) .branch {
+  padding: 24px 24px 26px;
+  margin-bottom: 26px;
+}
+html:not([data-mode="pro"]) .party {
+  gap: 18px;
+}
+html:not([data-mode="pro"]) .member {
+  padding: 20px 22px;
+  gap: 16px;
+}
+html:not([data-mode="pro"]) .save {
+  padding: 26px 30px;
+  margin-bottom: 30px;
+}
+html:not([data-mode="pro"]) .links {
+  gap: 14px;
+}
+html:not([data-mode="pro"]) .link {
+  padding: 16px 22px;
+}
+@media (max-width: 520px) {
+  html:not([data-mode="pro"]) body {
+    font-size: 15px;
+  }
+  html:not([data-mode="pro"]) .dialog,
+  html:not([data-mode="pro"]) .quest-body {
+    padding: 26px 20px 22px;
+  }
+  html:not([data-mode="pro"]) .trophy,
+  html:not([data-mode="pro"]) .school,
+  html:not([data-mode="pro"]) .branch {
+    padding: 20px;
+  }
+}
