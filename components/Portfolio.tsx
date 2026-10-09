@@ -57,18 +57,27 @@ export default function Portfolio() {
     });
   }, []);
 
+  // The highlighted menu item is the last visible section whose top has passed 40%
+  // of the screen; at the very bottom of the page the last section wins.
   useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) => {
-        for (const e of entries) if (e.isIntersecting) setActive(e.target.id);
-      },
-      { rootMargin: "-40% 0px -55% 0px" },
-    );
-    stages.forEach((s) => {
-      const el = document.getElementById(s.id);
-      if (el) io.observe(el);
-    });
-    return () => io.disconnect();
+    const update = () => {
+      const line = window.innerHeight * 0.4;
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+      let current = "player";
+      for (const s of stages) {
+        const el = document.getElementById(s.id);
+        if (!el || !el.offsetParent) continue;
+        if (atBottom || el.getBoundingClientRect().top <= line) current = s.id;
+      }
+      setActive(current);
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
   }, []);
 
   const allUnlocked = collected.length === languages.length;

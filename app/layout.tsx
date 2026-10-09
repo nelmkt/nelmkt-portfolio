@@ -13,7 +13,7 @@ const pixel = localFont({
   declarations: [{ prop: "size-adjust", value: "200%" }],
 });
 // Chakra Petch: a squared, game-UI sans that keeps the arcade feel but reads easily in paragraphs.
-const body = Chakra_Petch({ weight: ["400", "500", "600"], subsets: ["latin"], variable: "--font-body" });
+const body = Chakra_Petch({ weight: ["400", "500", "600", "700"], subsets: ["latin"], variable: "--font-body" });
 // Professional mode swaps every pixel face for IBM Plex Sans (OFL). Headings get a
 // size-adjusted copy so the sizes tuned for the pixel font still read the same.
 const pro = localFont({ src: "./fonts/IBMPlexSans-Variable.ttf", weight: "100 700", variable: "--font-pro" });

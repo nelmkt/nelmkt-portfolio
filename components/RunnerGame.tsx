@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { languages } from "./data";
-import { useT } from "./lang";
+import { LangContext, translate, useT } from "./lang";
 import { HEART } from "./PixelHeart";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
@@ -79,6 +79,9 @@ type Props = {
 
 export default function RunnerGame({ collected, onCollect }: Props) {
   const t = useT();
+  // The canvas loop runs outside React renders, so it reads the language from a ref.
+  const langRef = useRef(useContext(LangContext));
+  langRef.current = useContext(LangContext);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const stateRef = useRef<State>(freshState());
   const collectedRef = useRef<string[]>(collected);
@@ -98,9 +101,9 @@ export default function RunnerGame({ collected, onCollect }: Props) {
     ctx.setTransform(RES, 0, 0, RES, 0, 0);
     ctx.imageSmoothingEnabled = false;
 
-    const font =
-      getComputedStyle(document.documentElement).getPropertyValue("--font-pixel").trim() ||
-      "monospace";
+    // Named faces (not --font-pixel) so Arabic falls back to Kufi, not the Arial-based fallback face.
+    const font = "pixel, arabicHeading, monospace";
+    const ar = () => langRef.current === "ar";
 
     let raf = 0;
     let last = performance.now();
@@ -156,7 +159,11 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         if (it.kind === "gem") {
           s.score += 50;
           const isNew = !collectedRef.current.includes(it.lang.name);
-          s.toast = isNew ? `${it.lang.name.toUpperCase()} UNLOCKED!` : `+50 ${it.lang.name.toUpperCase()}`;
+          s.toast = isNew
+            ? ar()
+              ? `تم فتح ${it.lang.name}!`
+              : `${it.lang.name.toUpperCase()} UNLOCKED!`
+            : `+50 ${it.lang.name.toUpperCase()}`;
           s.toastT = 70;
           if (isNew) onCollectRef.current(it.lang.name);
           return false;
@@ -164,7 +171,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         if (s.invuln > 0) return true;
         s.hearts--;
         s.invuln = 70;
-        s.toast = "OUCH! A BUG!";
+        s.toast = translate(langRef.current, "OUCH! A BUG!");
         s.toastT = 50;
         if (s.hearts <= 0) {
           s.mode = "over";
@@ -186,7 +193,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       ctx.font = `${size}px ${font}`;
       ctx.textAlign = align;
       ctx.fillStyle = color;
-      ctx.fillText(str, x, y);
+      ctx.fillText(translate(langRef.current, str), x, y);
     };
 
     const drawGem = (x: number, y: number, color: string, label: string, t: number) => {
@@ -282,9 +289,10 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       }
 
       // HUD
-      text(`SCORE ${String(s.score).padStart(5, "0")}`, 12, 18, 9, "#3b0f2e");
-      text(`BEST ${String(Math.max(bestRef.current, s.score)).padStart(5, "0")}`, 12, 32, 7, "#8a4f74");
-      text(`LANGS ${collectedRef.current.length}/${languages.length}`, W / 2, 18, 9, "#3b0f2e", "center");
+      const tr = (w: string) => translate(langRef.current, w);
+      text(`${tr("SCORE")} ${String(s.score).padStart(5, "0")}`, 12, 18, 9, "#3b0f2e");
+      text(`${tr("BEST")} ${String(Math.max(bestRef.current, s.score)).padStart(5, "0")}`, 12, 32, 7, "#8a4f74");
+      text(`${tr("LANGS")} ${collectedRef.current.length}/${languages.length}`, W / 2, 18, 9, "#3b0f2e", "center");
       for (let i = 0; i < 3; i++) {
         const full = i < s.hearts;
         const hx = W - 12 - (3 - i) * 20;
@@ -316,7 +324,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
           }
         } else {
           text("GAME OVER", W / 2, 74, 20, "#ff3d8b", "center");
-          text(`SCORE ${s.score}`, W / 2, 100, 10, "#3b0f2e", "center");
+          text(`${tr("SCORE")} ${s.score}`, W / 2, 100, 10, "#3b0f2e", "center");
           if (Math.floor(performance.now() / 500) % 2 === 0) {
             text("TAP OR PRESS SPACE TO RETRY", W / 2, 130, 10, "#3b0f2e", "center");
           }

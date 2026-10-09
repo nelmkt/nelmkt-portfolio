@@ -233,7 +233,16 @@ export const AR: Record<string, string> = {
   "Sep 2026": "سبتمبر 2026",
 
   TOP: "للأعلى",
-  "psst… decode me": "ششش… فُكّ شيفرتي",
+  // game (drawn on the canvas)
+  SCORE: "النقاط",
+  BEST: "الأفضل",
+  "OUCH! A BUG!": "آخ! خطأ برمجي!",
+  "LANGUAGE RUSH": "سباق اللغات",
+  "COLLECT THE LANGUAGE GEMS - DODGE THE BUGS": "اجمع جواهر اللغات - وتفادَ الأخطاء البرمجية",
+  "TAP OR PRESS SPACE TO START": "المس الشاشة أو اضغط المسافة للبدء",
+  "GAME OVER": "انتهت اللعبة",
+  "TAP OR PRESS SPACE TO RETRY": "المس الشاشة أو اضغط المسافة للمحاولة مجددًا",
+  "psst… decode me": "بسست… فك شيفرتي",
   "SPACE / ↑ / TAP = JUMP": "المسافة / ↑ / لمسة = قفزة",
   "Click the screen, then press SPACE or tap to play": "انقر على اللعبة، ثم اضغط المسافة أو المس الشاشة للعب",
 

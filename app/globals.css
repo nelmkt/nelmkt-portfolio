@@ -3091,3 +3091,59 @@ html[data-mode="pro"] p.pro-only {
     min-width: 220px;
   }
 }
+
+/* ---------- bold titles ---------- */
+/* The pixel face has no bold, so arcade titles get a crisp one-pixel "pixel bold"
+   (a copy of the glyphs shifted right) instead of a blurry synthetic bold. */
+html:not([data-mode="pro"]) .quest h3,
+html:not([data-mode="pro"]) .branch h3,
+html:not([data-mode="pro"]) .lang-panel h3,
+html:not([data-mode="pro"]) .save h3,
+html:not([data-mode="pro"]) .highlight-title,
+html:not([data-mode="pro"]) .sub-tag,
+html:not([data-mode="pro"]) .thanks {
+  text-shadow: 1px 0 0 currentColor;
+}
+html:not([data-mode="pro"]) .stage-label {
+  text-shadow: 1px 0 0 currentColor, 2px 2px 0 var(--shadow), 3px 2px 0 var(--shadow);
+}
+html:not([data-mode="pro"]) .player-name {
+  text-shadow: 1px 0 0 currentColor, 3px 3px 0 var(--accent-2), 4px 3px 0 var(--accent-2);
+}
+html:not([data-mode="pro"]) .trophy h3,
+html:not([data-mode="pro"]) .school h3,
+html:not([data-mode="pro"]) .member h3,
+html:not([data-mode="pro"]) .side h4 {
+  font-weight: 700;
+}
+/* professional mode: true bold for every heading */
+html[data-mode="pro"] .player-name,
+html[data-mode="pro"] .stage-label,
+html[data-mode="pro"] .quest h3,
+html[data-mode="pro"] .trophy h3,
+html[data-mode="pro"] .school h3,
+html[data-mode="pro"] .member h3,
+html[data-mode="pro"] .side h4,
+html[data-mode="pro"] .branch h3,
+html[data-mode="pro"] .lang-panel h3,
+html[data-mode="pro"] .save h3,
+html[data-mode="pro"] .highlight-title,
+html[data-mode="pro"] .sub-tag {
+  font-weight: 700;
+}
+/* Arabic titles use Kufi's real bold; the pixel face is never faked bold */
+html[lang="ar"] .player-name,
+html[lang="ar"] .stage-label,
+html[lang="ar"] .quest h3,
+html[lang="ar"] .trophy h3,
+html[lang="ar"] .school h3,
+html[lang="ar"] .member h3,
+html[lang="ar"] .side h4,
+html[lang="ar"] .branch h3,
+html[lang="ar"] .lang-panel h3,
+html[lang="ar"] .save h3,
+html[lang="ar"] .highlight-title,
+html[lang="ar"] .sub-tag {
+  font-weight: 700;
+  font-synthesis: none;
+}
