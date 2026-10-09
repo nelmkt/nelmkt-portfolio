@@ -135,7 +135,11 @@ export default function StartScreen() {
         </p>
         <div className="start-thermal" aria-hidden="true" />
         <p className="start-sub">
-          <span>Researcher &amp; Innovator</span> <span><i>-</i> ML Engineer</span> <span><i>-</i> Green Tech</span>
+          <span>Researcher &amp; Innovator</span>
+          <br />
+          <span>
+            ML Engineer <i>-</i> Green Tech
+          </span>
         </p>
         <div className="start-menu">
           <button

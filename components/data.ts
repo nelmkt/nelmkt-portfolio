@@ -47,6 +47,7 @@ export type Quest = {
   statusPro: string;
   url: string;
   image: string;
+  imageSize: [number, number];
   imageAlt: string;
   summary: string;
   objectives: string[];
@@ -62,7 +63,8 @@ export const quests: Quest[] = [
     status: "QUEST COMPLETE - OCT 2026 - PROTOTYPE READY",
     statusPro: "Oct 2026 - Prototype complete",
     url: "https://github.com/nelmkt/maeen",
-    image: "https://raw.githubusercontent.com/nelmkt/maeen/main/reports/leak_size_sweep.png",
+    image: "/projects/maeen.webp",
+    imageSize: [896, 504],
     imageAlt: "Maeen: leak detection and correct pipe segment for every leak size, from under 2% of the flow upward",
     summary:
       "Real-time detection, location and explanation of leaks and water-quality problems in water pipelines, turning in-pipe sensor streams into what is wrong, where, how serious, why and what to do.",
@@ -82,8 +84,8 @@ export const quests: Quest[] = [
     status: "MAIN QUEST - JUN–OCT 2026 - RELEASED",
     statusPro: "Jun–Oct 2026 - Released",
     url: "https://github.com/nelmkt/Wahaj-Framework",
-    image:
-      "https://raw.githubusercontent.com/nelmkt/Wahaj-Framework/v11-framework-ml/figures_r1/fig_r1_dose_contrasts.png",
+    image: "/projects/wahaj.webp",
+    imageSize: [1400, 885],
     imageAlt:
       "Wahaj: measured land surface temperature change for each number of greened pixels, relative to matched never-vegetated controls",
     summary:
@@ -107,8 +109,8 @@ export const quests: Quest[] = [
     status: "QUEST COMPLETE - OCT 2024–MAR 2025 - PATENTED - MULTI-AWARD",
     statusPro: "Oct 2024–Mar 2025 - Patented - Multiple awards",
     url: "https://github.com/nelmkt/Smart-Bin-Aykah",
-    image:
-      "https://raw.githubusercontent.com/nelmkt/Smart-Bin-Aykah/main/images/prototype.jpg",
+    image: "/projects/aykah.webp",
+    imageSize: [792, 800],
     imageAlt: "The Aykah smart bin prototype",
     summary:
       "A cost-effective, solar-powered IoT smart bin, taken from scientific research on a Sustainable Development Goal problem through to a working prototype and a business concept.",
@@ -207,7 +209,7 @@ export const languages = [
   { name: "JavaScript", short: "JS", color: "#F7DF1E", tier: "MAIN", level: 5 },
   { name: "C++", short: "C++", color: "#00599C", tier: "WORKING", level: 3 },
   { name: "C#", short: "C#", color: "#512BD4", tier: "WORKING", level: 3 },
-  { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING", level: 2 },
+  { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING", level: 3 },
 ] as const;
 
 // Broad development skills first; ML is one strand among several.

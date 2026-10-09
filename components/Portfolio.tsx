@@ -253,7 +253,14 @@ export default function Portfolio() {
             {quests.map((q, i) => (
               <article key={q.id} className="box quest ramp" style={ramp(i, quests.length)}>
                 <a className="quest-media" href={q.url} target="_blank" rel="noreferrer" aria-label={`${q.title} on GitHub`}>
-                  <img src={q.image} alt={q.imageAlt} />
+                  <img
+                    src={q.image}
+                    alt={q.imageAlt}
+                    width={q.imageSize[0]}
+                    height={q.imageSize[1]}
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span className="quest-media-tag" aria-hidden="true">
                     <Dual a="OPEN" p="View project" /> <PixelIcon name="play" size={8} />
                   </span>

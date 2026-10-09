@@ -4367,3 +4367,53 @@ html[data-mode="pro"] .player-ar .ar-plain {
   font-size: 1.3em;
   line-height: 1.35;
 }
+
+/* ---------- start screen refinement ---------- */
+/* one size token keeps the English and Arabic names in proportion at every width */
+.start-screen {
+  --st: clamp(30px, 5.2vw, 50px);
+}
+.start-title {
+  font-size: var(--st);
+}
+.start-ar {
+  margin: 14px 0 0;
+  line-height: 0;
+}
+.start-ar canvas {
+  width: auto !important;
+  height: calc(var(--st) * 1.42) !important;
+  max-width: 100%;
+}
+/* two tidy lines instead of a dangling dash when the subtitle wraps */
+.start-sub {
+  line-height: 1.85;
+}
+/* solid enough to read over the sun, selected or not */
+.start-menu .start-btn:not(.sel),
+.start-menu .start-pro:not(.sel),
+.start-menu .start-pro:not(.sel):hover,
+.start-menu .start-pro:not(.sel):focus-visible {
+  background: rgba(13, 3, 10, 0.72);
+}
+.start-menu button.sel {
+  background: rgba(58, 8, 36, 0.88);
+}
+.start-menu .start-btn:not(.sel):hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.start-inner {
+  background: rgba(13, 3, 10, 0.42);
+}
+@media (max-width: 520px) {
+  .start-inner {
+    padding: 24px 18px 20px;
+  }
+  .start-kicker {
+    margin-bottom: 14px;
+  }
+}
+/* room under the bilingual project title so Arabic marks never touch the text */
+html[data-mode="pro"] .quest h3 {
+  margin-bottom: 14px;
+}
