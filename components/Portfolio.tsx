@@ -253,7 +253,7 @@ export default function Portfolio() {
             {quests.map((q, i) => (
               <article key={q.id} className="box quest ramp" style={ramp(i, quests.length)}>
                 <a className="quest-media" href={q.url} target="_blank" rel="noreferrer" aria-label={`${q.title} on GitHub`}>
-                  <img src={q.image} alt={q.imageAlt} loading="lazy" />
+                  <img src={q.image} alt={q.imageAlt} />
                   <span className="quest-media-tag" aria-hidden="true">
                     <Dual a="OPEN" p="View project" /> <PixelIcon name="play" size={8} />
                   </span>
@@ -264,7 +264,7 @@ export default function Portfolio() {
                   </p>
                   <h3>
                     <a href={q.url} target="_blank" rel="noreferrer">
-                      {q.title} <span className="quest-ar">- <PixelText text={q.titleAr} size={13} scale={2} /><span className="ar-plain" lang="ar">{q.titleAr}</span></span>
+                      {q.title} <span className="quest-ar">- <PixelText text={q.titleAr} size={16} scale={2} /><span className="ar-plain" lang="ar">{q.titleAr}</span></span>
                     </a>
                   </h3>
                   <p>{tr(q.summary)}</p>

@@ -213,11 +213,11 @@ export const languages = [
 // Broad development skills first; ML is one strand among several.
 export const skillTree = [
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
-  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI"] },
-  { branch: "Tools", items: ["Git", "Docker"] },
+  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI", "REST APIs", "Pydantic"] },
+  { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "pytest"] },
   { branch: "UI & communication", items: ["UI prototyping", "Public speaking", "Scientific presentation"] },
-  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Anomaly detection", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
-  { branch: "Data", items: ["scikit-learn", "pandas", "NumPy"] },
+  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Anomaly detection", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines", "Explainable AI", "MLOps & model registry", "Drift monitoring", "Physics-based simulation"] },
+  { branch: "Data", items: ["scikit-learn", "pandas", "NumPy", "Matplotlib"] },
   { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
   {
     branch: "Hardware",
