@@ -228,7 +228,7 @@ export const AR: Record<string, string> = {
   "Saudi Water Authority": "الهيئة السعودية للمياه",
   "IECE 2026 - International Engineering Conference": "المؤتمر الهندسي الدولي IECE 2026",
   "Saudi Council of Engineers": "الهيئة السعودية للمهندسين",
-  "2nd Conference on Sustainability and Quality of Life": "المؤتمر الثاني للاستدامة وجودة الحياة",
+  "2nd Conference on Sustainability and Quality of Life - Research paper": "المؤتمر الثاني للاستدامة وجودة الحياة - ورقة بحثية",
   "Dec 2026": "ديسمبر 2026",
   "Hackathon Al Hareeq": "هاكاثون الحريق",
   "Ministry of Environment, Water & Agriculture": "وزارة البيئة والمياه والزراعة",
