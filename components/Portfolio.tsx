@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 import CheatCode from "./CheatCode";
+import BrandIcon from "./BrandIcon";
 import ContactIcon from "./ContactIcon";
 import EasterEgg from "./EasterEgg";
 import PageFx from "./PageFx";
@@ -365,6 +366,7 @@ export default function Portfolio() {
                   rel="noreferrer"
                 >
                   <ContactIcon name={l.label} />
+                  <BrandIcon name={l.label} />
                   <span className="link-label">{l.label}</span>
                   <span className="link-value">{l.value}</span>
                   <PixelIcon name="play" size={10} />

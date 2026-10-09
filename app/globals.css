@@ -397,11 +397,11 @@ main {
   color: var(--accent);
 }
 /* Arabic canvas is cropped to its pixels, so its left edge lines up with the
-   English name; its height tracks the English size (54px at the 40px max). */
+   English name; its height tracks the English size (64px at the 40px max), so the letters read at the same size. */
 .player-ar .pixel-text {
   display: block;
   width: auto !important;
-  height: calc(var(--name-size) * 1.35) !important;
+  height: calc(var(--name-size) * 1.6) !important;
 }
 .player-headline {
   font-family: var(--pixel);
@@ -2298,4 +2298,329 @@ html[data-mode="pro"][data-theme="dark"] .player-name {
 }
 html[data-mode="pro"][data-theme="dark"] .quest-media img {
   background: #fff;
+}
+
+/* professional mode: brand icons in the contact list */
+.brand-icon {
+  display: none;
+}
+html[data-mode="pro"] {
+  --brand-ink: #1d2433;
+}
+html[data-mode="pro"][data-theme="dark"] {
+  --brand-ink: #e7e9ef;
+}
+html[data-mode="pro"] .brand-icon {
+  display: grid;
+  place-items: center;
+}
+html[data-mode="pro"] .brand-icon svg {
+  display: block;
+}
+html[data-mode="pro"] .link {
+  grid-template-columns: 24px 150px 1fr;
+}
+@media (max-width: 560px) {
+  html[data-mode="pro"] .link {
+    grid-template-columns: 24px 1fr;
+  }
+  html[data-mode="pro"] .brand-icon {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  html[data-mode="pro"] .link-label,
+  html[data-mode="pro"] .link-value {
+    grid-column: 2;
+  }
+}
+
+/* professional mode: each section keeps its own muted colour */
+html[data-mode="pro"] #player,
+html[data-mode="pro"] .hud-nav a[href="#player"] {
+  --psec: #8c2f5a;
+}
+html[data-mode="pro"] #quests,
+html[data-mode="pro"] .hud-nav a[href="#quests"] {
+  --psec: #1f6f8b;
+}
+html[data-mode="pro"] #trophies,
+html[data-mode="pro"] .hud-nav a[href="#trophies"] {
+  --psec: #a0621a;
+}
+html[data-mode="pro"] #academy,
+html[data-mode="pro"] .hud-nav a[href="#academy"] {
+  --psec: #2f7d4f;
+}
+html[data-mode="pro"] #skills,
+html[data-mode="pro"] .hud-nav a[href="#skills"] {
+  --psec: #4b4fa8;
+}
+html[data-mode="pro"] #party,
+html[data-mode="pro"] .hud-nav a[href="#party"] {
+  --psec: #7a3f9a;
+}
+html[data-mode="pro"] #save,
+html[data-mode="pro"] .hud-nav a[href="#save"] {
+  --psec: #b0413e;
+}
+html[data-mode="pro"][data-theme="dark"] #player,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#player"] {
+  --psec: #ec94ba;
+}
+html[data-mode="pro"][data-theme="dark"] #quests,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#quests"] {
+  --psec: #6cc3dd;
+}
+html[data-mode="pro"][data-theme="dark"] #trophies,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#trophies"] {
+  --psec: #e2a85a;
+}
+html[data-mode="pro"][data-theme="dark"] #academy,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#academy"] {
+  --psec: #6fcf97;
+}
+html[data-mode="pro"][data-theme="dark"] #skills,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#skills"] {
+  --psec: #9da2f0;
+}
+html[data-mode="pro"][data-theme="dark"] #party,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#party"] {
+  --psec: #c79be0;
+}
+html[data-mode="pro"][data-theme="dark"] #save,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#save"] {
+  --psec: #f08a84;
+}
+html[data-mode="pro"] main .stage,
+html[data-mode="pro"] .hud-nav a {
+  --accent: var(--psec, #8c2f5a);
+  --sec: var(--psec, #8c2f5a);
+  --accent-2: color-mix(in srgb, var(--psec, #8c2f5a) 10%, var(--surface));
+}
+html[data-mode="pro"] .stage-label {
+  color: var(--ink);
+}
+html[data-mode="pro"] main .box {
+  border-top: 3px solid var(--accent);
+}
+html[data-mode="pro"] main .chips li {
+  border: none;
+}
+html[data-mode="pro"] .hud-nav a.on {
+  color: var(--accent);
+}
+
+/* professional mode: Arabic set to the same visual size as the English beside it */
+html[data-mode="pro"] .player-ar .ar-plain {
+  font-size: 0.72em;
+  line-height: 1.45;
+}
+html[data-mode="pro"] .quest-ar .ar-plain {
+  font-size: 0.95em;
+  margin-left: 2px;
+}
+
+/* professional dark: neutral charcoal rather than navy */
+html[data-mode="pro"][data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1c1c1c;
+  --surface-2: #262626;
+  --ink: #ececec;
+  --ink-soft: #a9a9a9;
+  --line: #323232;
+  --bar: #1c1c1c;
+  --on-accent: #121212;
+}
+html[data-mode="pro"][data-theme="dark"] .stage,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a {
+  --line: #323232;
+  --surface-2: #262626;
+  --ramp-lo: #323232;
+  --ramp-hi: #323232;
+}
+
+/* arcade: a lifted plum-black instead of near-black, with brighter text */
+:root {
+  --bg: #1a121b;
+  --bg-grid: rgba(255, 95, 162, 0.09);
+  --surface: #251a26;
+  --surface-2: #33233a;
+  --ink: #fff5fa;
+  --ink-soft: #e0c3d3;
+  --bar: #120c13;
+}
+.stage {
+  --surface-2: color-mix(in srgb, var(--sec) 16%, var(--surface));
+}
+
+/* arcade body text in Departure Mono: it is wide, so a touch smaller */
+body {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* small screens: logo and switches on one row, the section menu on its own row below */
+@media (max-width: 640px) {
+  .hud {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .hud-logo {
+    flex: 1;
+  }
+  .hud-nav {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
+html[data-mode="pro"] .highlight-title {
+  line-height: 1.35;
+}
+
+/* hover hint on the binary message */
+.egg {
+  position: relative;
+}
+.egg[data-hint]::after {
+  content: attr(data-hint);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px);
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  font-family: var(--pixel);
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--bar);
+  border: 1.5px solid var(--accent);
+  box-shadow: 3px 3px 0 var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s steps(3);
+}
+.egg[data-hint]:hover::after,
+.egg[data-hint]:focus-visible::after {
+  opacity: 1;
+}
+
+/* start screen, professional state: a calm title card in the pro palette */
+.start-screen.pro-start {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  text-align: left;
+  cursor: auto;
+}
+.start-screen.pro-start::after {
+  display: none;
+}
+.pro-start-theme {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+}
+.pro-start-card {
+  width: min(640px, 100%);
+  padding: 40px 44px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 12px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+.pro-start-kicker {
+  margin: 0 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.pro-start-name {
+  margin: 0;
+  font-family: var(--font-pro), system-ui, sans-serif;
+  font-size: clamp(32px, 6vw, 46px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+.pro-start-ar {
+  margin: 6px 0 0;
+  font-family: var(--font-ar), sans-serif;
+  font-weight: 700;
+  font-size: clamp(23px, 4.3vw, 33px);
+  line-height: 1.5;
+  color: var(--accent);
+}
+.pro-start-tag {
+  margin: 18px 0 6px;
+  font-size: 18px;
+  line-height: 1.55;
+}
+.pro-start-meta {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.pro-start-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 22px 0 0;
+  padding: 12px 16px;
+  background: var(--accent-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0 !important;
+}
+.pro-start-highlight b {
+  color: var(--accent);
+  font-weight: 600;
+}
+.pro-start-highlight span {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.pro-start-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.pro-start-enter,
+.pro-start-back {
+  font: 600 15px/1 var(--font-pro), system-ui, sans-serif;
+  padding: 13px 20px;
+  border-radius: 8px !important;
+  cursor: pointer;
+}
+.pro-start-enter {
+  color: var(--on-accent);
+  background: var(--accent);
+  border: 1.5px solid var(--accent);
+}
+.pro-start-enter:hover {
+  filter: brightness(1.1);
+}
+.pro-start-back {
+  color: var(--ink);
+  background: transparent;
+  border: 1.5px solid var(--line);
+}
+.pro-start-back:hover {
+  border-color: var(--ink-soft);
+}
+@media (max-width: 520px) {
+  .pro-start-card {
+    padding: 28px 22px;
+  }
+}
+
+/* dark professional theme keeps the per-section colours too */
+html[data-mode="pro"][data-theme="dark"] main .stage,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a {
+  --accent: var(--psec, #ec94ba);
+  --sec: var(--psec, #ec94ba);
+  --accent-2: color-mix(in srgb, var(--psec, #ec94ba) 13%, var(--surface));
 }

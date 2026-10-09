@@ -232,7 +232,7 @@ export const academy = [
     school: "Dar Al Fikr Schools",
     degree: "American High School Diploma",
     when: "2022 – 2025",
-    note: "Grade A+ · Graduation project: Aykah",
+    note: "Mawhiba Alumna: King Abdulaziz & His Companions Foundation for Giftedness & Creativity",
   },
 ];
 

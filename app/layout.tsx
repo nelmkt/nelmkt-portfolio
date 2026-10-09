@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DotGothic16, Noto_Kufi_Arabic } from "next/font/google";
+import { Noto_Kufi_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 import { modeBootScript } from "../components/mode";
 import "./pixel-icons.css";
@@ -12,8 +12,8 @@ const pixel = localFont({
   variable: "--font-pixel",
   declarations: [{ prop: "size-adjust", value: "200%" }],
 });
-// DotGothic16: a pixel face with open, evenly spaced letters, so paragraphs stay easy to read.
-const body = DotGothic16({ weight: "400", subsets: ["latin"], variable: "--font-body" });
+// Departure Mono (OFL): a pixel monospace drawn for legibility, so paragraphs stay easy to read.
+const body = localFont({ src: "./fonts/DepartureMono-Regular.woff2", variable: "--font-body" });
 // Professional mode swaps every pixel face for IBM Plex Sans (OFL). Headings get a
 // size-adjusted copy so the sizes tuned for the pixel font still read the same.
 const pro = localFont({ src: "./fonts/IBMPlexSans-Variable.ttf", weight: "100 700", variable: "--font-pro" });

@@ -59,6 +59,7 @@ export default function EasterEgg() {
       type="button"
       className={`egg arcade-only${decoded ? " open" : ""}`}
       onClick={toggle}
+      data-hint={decoded ? undefined : "psst… decode me"}
       aria-label={decoded ? `Decoded message: ${SECRET}. Click to encode again.` : "Binary-encoded secret message. Click to decode."}
     >
       <span className="egg-text">{text}</span>
