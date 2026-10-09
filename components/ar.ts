@@ -71,7 +71,7 @@ export const AR: Record<string, string> = {
 
   // ---------- profile ----------
   "FCIT Student @ KAU - Waed ’26 - IEEE ’25 - UNCCD COP16 ’24 - Mawhiba Alumna":
-    "طالبة في كلية الحاسبات بجامعة الملك عبدالعزيز - واعد ’26 - IEEE ’25 - UNCCD COP16 ’24 - خريجة موهبة",
+    "طالبة في كلية الحاسبات وتقنية المعلومات بجامعة الملك عبدالعزيز - واعد ’26 - IEEE ’25 - UNCCD COP16 ’24 - خريجة موهبة",
   "Undergraduate researcher and developer working across software, hardware, data and AI/ML.": "باحثة ومطوّرة جامعية، أعمل بين البرمجيات والعتاد والبيانات والذكاء الاصطناعي/تعلم الآلة.",
   "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.": "أدرس علوم الحاسب في جامعة الملك عبدالعزيز، وأستمتع بحل المشكلات بالبرمجة والعتاد: من نماذج تعلّم الآلة وتطبيقات الويب المتكاملة، إلى «آيكة»، حاوية النفايات الذكية العاملة بالطاقة الشمسية التي صممتها وبنيتها بنفسي من الفكرة حتى النموذج الأولي.",
   "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.": "تجمع أبحاثي بين الحوسبة والعالم الحقيقي: مسارات تعلّم آلة قابلة للتكرار، وبيانات الأقمار الصناعية، وإنترنت الأشياء. هدفي الدكتوراه ومسيرة في المجال الأكاديمي، وستجد مشاريعي في سجل المهام بالأسفل.",
