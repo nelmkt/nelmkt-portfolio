@@ -1874,38 +1874,39 @@ body {
 }
 
 /* ---------- professional mode ---------- */
-/* Monochrome, light and plain for faculty and reviewers: no grid, rainbow,
-   pixel fonts, game labels or the bonus stage. */
+/* A calm, light academic look for faculty and reviewers: navy ink on warm
+   off-white, one muted rose accent, no grid, rainbow, pixel fonts, portrait,
+   game labels or bonus stage. */
 html[data-mode="pro"] {
-  --bg: #ffffff;
+  --bg: #f8f7f4;
   --bg-grid: transparent;
   --surface: #ffffff;
-  --surface-2: #f3f3f3;
-  --ink: #1a1a1a;
-  --ink-soft: #555555;
-  --line: #d4d4d4;
-  --accent: #1a1a1a;
-  --accent-2: #e5e5e5;
+  --surface-2: #f1eee9;
+  --ink: #1d2433;
+  --ink-soft: #5b6272;
+  --line: #e4e0d9;
+  --accent: #8c2f5a;
+  --accent-2: #f5e8ee;
   --on-accent: #ffffff;
   --shadow: transparent;
-  --gold: #1a1a1a;
+  --gold: #8c2f5a;
   --bar: #ffffff;
-  --heart: #1a1a1a;
-  --thermal: linear-gradient(#1a1a1a, #1a1a1a);
+  --heart: #8c2f5a;
+  --thermal: linear-gradient(#8c2f5a, #8c2f5a);
   --pixel: var(--font-pro-heading), system-ui, sans-serif;
   --body: var(--font-pro), system-ui, sans-serif;
   color-scheme: light;
 }
 html[data-mode="pro"] .stage,
 html[data-mode="pro"] .hud-nav a {
-  --sec: #1a1a1a;
-  --accent: #1a1a1a;
-  --line: #d4d4d4;
+  --sec: #8c2f5a;
+  --accent: #8c2f5a;
+  --line: #e4e0d9;
   --shadow: transparent;
-  --accent-2: #e5e5e5;
-  --surface-2: #f3f3f3;
-  --ramp-lo: #d4d4d4;
-  --ramp-hi: #d4d4d4;
+  --accent-2: #f5e8ee;
+  --surface-2: #f1eee9;
+  --ramp-lo: #e4e0d9;
+  --ramp-hi: #e4e0d9;
 }
 html[data-mode="pro"] .arcade-only,
 html[data-mode="pro"] .hud-hearts,
@@ -2011,9 +2012,8 @@ html[data-mode="pro"] .link-label,
 html[data-mode="pro"] .link .pixel-icon {
   color: var(--ink);
 }
-html[data-mode="pro"] .contact-icon,
 html[data-mode="pro"] .gem {
-  filter: grayscale(1);
+  filter: saturate(0.6);
 }
 html[data-mode="pro"] .footer {
   background: #f7f7f7;
@@ -2049,7 +2049,121 @@ html[data-mode="pro"] .trophy.patent .trophy-date,
 html[data-mode="pro"] .trophy.legendary .trophy-date {
   color: var(--ink-soft);
 }
-html[data-mode="pro"] .objectives li::before,
-html[data-mode="pro"] .portrait-img {
-  filter: grayscale(1);
+html[data-mode="pro"] .objectives li::before {
+  filter: grayscale(1) brightness(0.6) sepia(1) hue-rotate(290deg) saturate(2.4);
+}
+
+/* professional mode: layout and surfaces */
+html[data-mode="pro"] .player-portrait {
+  display: none;
+}
+html[data-mode="pro"] .player-grid {
+  grid-template-columns: 1fr;
+}
+html[data-mode="pro"] .player-name {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+html[data-mode="pro"] main .box,
+html[data-mode="pro"] main .btn,
+html[data-mode="pro"] .highlight,
+html[data-mode="pro"] .highlight-icon,
+html[data-mode="pro"] .quest-media,
+html[data-mode="pro"] .quest-media img,
+html[data-mode="pro"] .mode-toggle,
+html[data-mode="pro"] .to-top,
+html[data-mode="pro"] .quest-status,
+html[data-mode="pro"] .trophy-icon,
+html[data-mode="pro"] .trophy-date,
+html[data-mode="pro"] .slot {
+  border-radius: 8px !important;
+}
+html[data-mode="pro"] main .box {
+  box-shadow: 0 1px 2px rgba(29, 36, 51, 0.04), 0 2px 8px rgba(29, 36, 51, 0.05) !important;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+html[data-mode="pro"] main .box:hover {
+  border-color: #d3cdc4;
+  box-shadow: 0 2px 4px rgba(29, 36, 51, 0.05), 0 8px 24px rgba(29, 36, 51, 0.08) !important;
+}
+html[data-mode="pro"] .quest-media {
+  overflow: hidden;
+}
+html[data-mode="pro"] .chips li {
+  border-radius: 999px !important;
+  border: none;
+  background: var(--accent-2);
+  color: var(--accent);
+  padding: 3px 12px;
+  font-size: 14px;
+}
+html[data-mode="pro"] .chips-label,
+html[data-mode="pro"] .stats dt,
+html[data-mode="pro"] .quest h4,
+html[data-mode="pro"] .trophy-year,
+html[data-mode="pro"] .school-when {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+html[data-mode="pro"] .highlight {
+  background: var(--accent-2);
+  border: none;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0 !important;
+}
+html[data-mode="pro"] .highlight-icon {
+  background: var(--accent);
+}
+html[data-mode="pro"] .highlight-title {
+  font-weight: 600;
+}
+html[data-mode="pro"] .hud {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+}
+html[data-mode="pro"] .hud-logo {
+  font-weight: 600;
+}
+html[data-mode="pro"] .hud-nav a:hover,
+html[data-mode="pro"] .hud-nav a.on {
+  border-bottom-color: var(--accent);
+}
+html[data-mode="pro"] .stage-tag {
+  padding-bottom: 12px;
+}
+html[data-mode="pro"] .stage-tag::after {
+  background: linear-gradient(90deg, var(--accent) 0 48px, var(--line) 48px);
+  height: 2px;
+}
+html[data-mode="pro"] .mode-toggle {
+  color: var(--accent);
+  border-color: var(--accent);
+  font-weight: 600;
+}
+html[data-mode="pro"] .mode-toggle:hover {
+  background: var(--accent);
+}
+html[data-mode="pro"] .trophy.legendary {
+  border-color: var(--accent);
+}
+html[data-mode="pro"] .trophy-icon {
+  background: var(--accent-2);
+  color: var(--accent);
+  border-color: transparent;
+}
+html[data-mode="pro"] .trophy.patent .trophy-icon {
+  background: var(--accent-2);
+  color: var(--accent);
+}
+html[data-mode="pro"] .footer {
+  background: var(--surface-2);
+}
+html[data-mode="pro"] .to-top {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: #fff;
+}
+html[data-mode="pro"] .to-top:hover {
+  background: var(--accent);
 }
