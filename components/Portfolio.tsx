@@ -162,7 +162,16 @@ export default function Portfolio() {
                   <span className="ar-plain" lang="ar">{profile.nameAr}</span>
                 </span>
               </h1>
-              <p className="player-headline">{tr(profile.headline)}</p>
+              <p className="player-headline">
+                {tr(profile.headline)
+                  .split(" - ")
+                  .map((part, i) => (
+                    <span key={part}>
+                      {i > 0 && <span className="hl-sep"> - </span>}
+                      <bdi>{part}</bdi>
+                    </span>
+                  ))}
+              </p>
               <p className="player-tag">{tr(profile.tagline)}</p>
               <div className="highlight">
                 <span className="highlight-icon" aria-hidden="true">

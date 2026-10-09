@@ -4211,3 +4211,37 @@ html[data-mode="pro"] .cfx-dot .cfx-pixel {
 .cfx-dot svg {
   filter: none;
 }
+
+/* headline items never break apart mid-item when wrapping */
+.player-headline bdi {
+  white-space: nowrap;
+}
+.player-headline > span:first-child bdi {
+  white-space: normal;
+}
+
+/* professional mode on phones: the UN banner gets room to breathe */
+@media (max-width: 520px) {
+  html[data-mode="pro"] .highlight {
+    padding: 20px 20px 20px 22px;
+    margin: 6px 0 28px;
+  }
+  html[data-mode="pro"] .highlight-title {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 10px;
+  }
+  html[data-mode="pro"] .highlight-detail {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  html[data-mode="pro"][lang="ar"] .highlight-title {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+}
+@media (max-width: 520px) {
+  html[data-mode="pro"]:not([lang="ar"]) .highlight-title {
+    line-height: 1.6;
+  }
+}
