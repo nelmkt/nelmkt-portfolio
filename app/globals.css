@@ -3093,8 +3093,9 @@ html[data-mode="pro"] p.pro-only {
 }
 
 /* ---------- bold titles ---------- */
-/* The pixel face has no bold, so arcade titles get a crisp one-pixel "pixel bold"
-   (a copy of the glyphs shifted right) instead of a blurry synthetic bold. */
+/* arcade titles use the pixel face's real semibold weight */
+html:not([data-mode="pro"]) .player-name,
+html:not([data-mode="pro"]) .stage-label,
 html:not([data-mode="pro"]) .quest h3,
 html:not([data-mode="pro"]) .branch h3,
 html:not([data-mode="pro"]) .lang-panel h3,
@@ -3102,13 +3103,7 @@ html:not([data-mode="pro"]) .save h3,
 html:not([data-mode="pro"]) .highlight-title,
 html:not([data-mode="pro"]) .sub-tag,
 html:not([data-mode="pro"]) .thanks {
-  text-shadow: 1px 0 0 currentColor;
-}
-html:not([data-mode="pro"]) .stage-label {
-  text-shadow: 1px 0 0 currentColor, 2px 2px 0 var(--shadow), 3px 2px 0 var(--shadow);
-}
-html:not([data-mode="pro"]) .player-name {
-  text-shadow: 1px 0 0 currentColor, 3px 3px 0 var(--accent-2), 4px 3px 0 var(--accent-2);
+  font-weight: 600;
 }
 html:not([data-mode="pro"]) .trophy h3,
 html:not([data-mode="pro"]) .school h3,

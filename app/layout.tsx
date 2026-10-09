@@ -5,12 +5,13 @@ import { modeBootScript } from "../components/mode";
 import "./pixel-icons.css";
 import "./globals.css";
 
-// Jersey 10: a bold, readable pixel font with lowercase, for titles and labels (OFL).
-// The stylesheet's sizes were set for wider pixel fonts, so size-adjust scales it up.
+// Pixelify Sans (OFL): an open, readable pixel face with real weights, for titles and labels.
+// The stylesheet's sizes were tuned for a smaller pixel font, so size-adjust scales it up.
 const pixel = localFont({
-  src: "./fonts/Jersey10-Regular.ttf",
+  src: "./fonts/PixelifySans-Variable.ttf",
+  weight: "400 700",
   variable: "--font-pixel",
-  declarations: [{ prop: "size-adjust", value: "200%" }],
+  declarations: [{ prop: "size-adjust", value: "145%" }],
 });
 // Chakra Petch: a squared, game-UI sans that keeps the arcade feel but reads easily in paragraphs.
 const body = Chakra_Petch({ weight: ["400", "500", "600", "700"], subsets: ["latin"], variable: "--font-body" });
