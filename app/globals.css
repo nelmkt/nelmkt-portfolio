@@ -4206,3 +4206,8 @@ html[data-mode="pro"] .cfx-dot .cfx-smooth {
 html[data-mode="pro"] .cfx-dot .cfx-pixel {
   display: none;
 }
+
+/* cursor: no glow around the arrow */
+.cfx-dot svg {
+  filter: none;
+}
