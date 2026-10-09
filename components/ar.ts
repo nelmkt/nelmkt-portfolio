@@ -106,6 +106,21 @@ export const AR: Record<string, string> = {
 
   // ---------- quests ----------
   Wahaj: "وهاج",
+  Maeen: "مَعين",
+  "NEW QUEST - OCT 2026 - IN PROGRESS": "مهمة جديدة - أكتوبر 2026 - قيد التطوير",
+  "Oct 2026 - In progress": "أكتوبر 2026 - قيد التطوير",
+  "Real-time detection, location and explanation of leaks and water-quality problems in water pipelines, turning in-pipe sensor streams into what is wrong, where, how serious, why and what to do.":
+    "رصد التسريبات ومشكلات جودة المياه في خطوط الأنابيب وتحديد مواقعها وتفسيرها لحظيًا، بتحويل قراءات الحساسات داخل الأنابيب إلى إجابات واضحة: ما المشكلة، وأين، وما مدى خطورتها، ولماذا، وما الذي ينبغي فعله.",
+  "Physics-aware features plus gradient boosting: 94.1% fault-type accuracy across 6 classes with 0.3% false alarms on unseen scenarios, against 78.5% for classic threshold rules":
+    "خصائص مبنية على فيزياء الجريان مع نماذج التعزيز التدرّجي: دقة 94.1% في تحديد نوع العطل بين 6 فئات، ونسبة إنذارات خاطئة 0.3% على سيناريوهات لم يرها النموذج، مقابل 78.5% لقواعد العتبات التقليدية",
+  "Locates faults to the right pair of devices 99.9% of the time, within about 110 m on a 5 km line, with a 5-minute median detection delay for leaks":
+    "يحدد موقع العطل بين الجهازين الصحيحين بنسبة 99.9%، وبدقة تقارب 110 أمتار على خط طوله 5 كم، ويرصد التسريب خلال 5 دقائق في المتوسط",
+  "Physics-based pipeline simulator with randomised leaks, blockages, contamination, corrosion and sensor faults while the real devices are being built":
+    "محاكٍ فيزيائي لخط الأنابيب يولّد تسريبات وانسدادات وتلوثًا وتآكلًا وأعطال حساسات متنوعة، ريثما تُبنى الأجهزة الحقيقية",
+  "FastAPI service with an Arabic/English dashboard, plain-language evidence for every alert, a model registry and a CI quality gate":
+    "خدمة FastAPI مع لوحة متابعة بالعربية والإنجليزية، وتفسير واضح لكل إنذار، وسجل للنماذج، وبوابة جودة آلية",
+  "Evaluation report": "تقرير التقييم",
+  "Anomaly detection": "رصد الحالات الشاذة",
   Aykah: "آيكة",
   "MAIN QUEST - JUN–OCT 2026 - RELEASED": "المهمة الرئيسية - يونيو – أكتوبر 2026 - منشور",
   "Jun–Oct 2026 - Released": "يونيو – أكتوبر 2026 - منشور",

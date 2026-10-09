@@ -56,6 +56,26 @@ export type Quest = {
 
 export const quests: Quest[] = [
   {
+    id: "maeen",
+    title: "Maeen",
+    titleAr: "مَعين",
+    status: "NEW QUEST - OCT 2026 - IN PROGRESS",
+    statusPro: "Oct 2026 - In progress",
+    url: "https://github.com/nelmkt/maeen",
+    image: "https://raw.githubusercontent.com/nelmkt/maeen/main/docs/dashboard.jpg",
+    imageAlt: "The Maeen dashboard flagging a possible leak between two devices on a water pipeline",
+    summary:
+      "Real-time detection, location and explanation of leaks and water-quality problems in water pipelines, turning in-pipe sensor streams into what is wrong, where, how serious, why and what to do.",
+    objectives: [
+      "Physics-aware features plus gradient boosting: 94.1% fault-type accuracy across 6 classes with 0.3% false alarms on unseen scenarios, against 78.5% for classic threshold rules",
+      "Locates faults to the right pair of devices 99.9% of the time, within about 110 m on a 5 km line, with a 5-minute median detection delay for leaks",
+      "Physics-based pipeline simulator with randomised leaks, blockages, contamination, corrosion and sensor faults while the real devices are being built",
+      "FastAPI service with an Arabic/English dashboard, plain-language evidence for every alert, a model registry and a CI quality gate",
+    ],
+    loot: [{ label: "Evaluation report", url: "https://github.com/nelmkt/maeen/blob/main/reports/EVALUATION.md" }],
+    tags: ["Python", "scikit-learn", "Anomaly detection", "FastAPI", "Docker"],
+  },
+  {
     id: "wahaj",
     title: "Wahaj",
     titleAr: "وهاج",
@@ -193,10 +213,10 @@ export const languages = [
 // Broad development skills first; ML is one strand among several.
 export const skillTree = [
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
-  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js"] },
+  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI"] },
   { branch: "Tools", items: ["Git", "Docker"] },
   { branch: "UI & communication", items: ["UI prototyping", "Public speaking", "Scientific presentation"] },
-  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
+  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Anomaly detection", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines"] },
   { branch: "Data", items: ["scikit-learn", "pandas", "NumPy"] },
   { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
   {
