@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import PixelText from "./PixelText";
 import { profile } from "./data";
-import { type Mode, setMode, toggleTheme } from "./mode";
+import { type Mode, setMode } from "./mode";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
 // Deterministic "random" so server and client render the same star field.
@@ -43,8 +43,6 @@ export default function StartScreen() {
   const [open, setOpen] = useState(true);
   const [leaving, setLeaving] = useState(false);
   const [best, setBest] = useState(0);
-  // PROFESSIONAL MODE first turns this screen into a plain title card; the visitor enters from there.
-  const [pro, setPro] = useState(false);
 
   useEffect(() => {
     try {
@@ -61,7 +59,7 @@ export default function StartScreen() {
       if (e.target instanceof HTMLButtonElement && e.key !== "Escape") return;
       if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
         e.preventDefault();
-        start(pro ? "pro" : "arcade");
+        start();
       }
     };
     window.addEventListener("keydown", onKey);
@@ -80,54 +78,7 @@ export default function StartScreen() {
     setTimeout(() => setOpen(false), 380);
   }
 
-  function choose(next: boolean) {
-    setMode(next ? "pro" : "arcade");
-    setPro(next);
-  }
-
   if (!open) return null;
-
-  if (pro) {
-    return (
-      <div
-        className={`start-screen pro-start${leaving ? " leaving" : ""}`}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Start screen"
-      >
-        <button type="button" className="theme-toggle pro-start-theme" onClick={toggleTheme} aria-label="Switch light or dark theme">
-          <svg className="theme-moon" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-          </svg>
-          <svg className="theme-sun" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" strokeWidth="2" />
-            <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
-        <div className="pro-start-card">
-          <p className="pro-start-kicker">Portfolio</p>
-          <h1 className="pro-start-name">{profile.name}</h1>
-          <p className="pro-start-ar" lang="ar">
-            {profile.nameAr}
-          </p>
-          <p className="pro-start-tag">{profile.tagline}</p>
-          <p className="pro-start-meta">{profile.headline}</p>
-          <p className="pro-start-highlight">
-            <b>{profile.highlight}</b>
-            <span>{profile.highlightDetail}</span>
-          </p>
-          <div className="pro-start-actions">
-            <button type="button" className="pro-start-enter" onClick={() => start("pro")} autoFocus>
-              View portfolio
-            </button>
-            <button type="button" className="pro-start-back" onClick={() => choose(false)}>
-              Back to arcade
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div
@@ -176,7 +127,7 @@ export default function StartScreen() {
         <button className="start-btn" onClick={() => start("arcade")} autoFocus>
           PRESS START
         </button>
-        <button className="start-pro" onClick={() => choose(true)}>
+        <button className="start-pro" onClick={() => start("pro")}>
           PROFESSIONAL MODE
         </button>
         <p className="start-meta">© 2026 · 1 PLAYER · PORTFOLIO EDITION</p>

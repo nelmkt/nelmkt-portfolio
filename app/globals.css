@@ -2506,118 +2506,6 @@ html[data-mode="pro"] .highlight-title {
   opacity: 1;
 }
 
-/* start screen, professional state: a calm title card in the pro palette */
-.start-screen.pro-start {
-  background: var(--bg);
-  color: var(--ink);
-  font-family: var(--body);
-  text-align: left;
-  cursor: auto;
-}
-.start-screen.pro-start::after {
-  display: none;
-}
-.pro-start-theme {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-}
-.pro-start-card {
-  width: min(640px, 100%);
-  padding: 40px 44px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-top: 3px solid var(--accent);
-  border-radius: 12px !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 16px 40px rgba(0, 0, 0, 0.08);
-}
-.pro-start-kicker {
-  margin: 0 0 14px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.pro-start-name {
-  margin: 0;
-  font-family: var(--font-pro), system-ui, sans-serif;
-  font-size: clamp(32px, 6vw, 46px);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-}
-.pro-start-ar {
-  margin: 6px 0 0;
-  font-family: var(--font-ar), sans-serif;
-  font-weight: 700;
-  font-size: clamp(23px, 4.3vw, 33px);
-  line-height: 1.5;
-  color: var(--accent);
-}
-.pro-start-tag {
-  margin: 18px 0 6px;
-  font-size: 18px;
-  line-height: 1.55;
-}
-.pro-start-meta {
-  margin: 0;
-  font-size: 14px;
-  color: var(--ink-soft);
-}
-.pro-start-highlight {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  margin: 22px 0 0;
-  padding: 12px 16px;
-  background: var(--accent-2);
-  border-left: 3px solid var(--accent);
-  border-radius: 0 8px 8px 0 !important;
-}
-.pro-start-highlight b {
-  color: var(--accent);
-  font-weight: 600;
-}
-.pro-start-highlight span {
-  font-size: 14px;
-  color: var(--ink-soft);
-}
-.pro-start-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
-}
-.pro-start-enter,
-.pro-start-back {
-  font: 600 15px/1 var(--font-pro), system-ui, sans-serif;
-  padding: 13px 20px;
-  border-radius: 8px !important;
-  cursor: pointer;
-}
-.pro-start-enter {
-  color: var(--on-accent);
-  background: var(--accent);
-  border: 1.5px solid var(--accent);
-}
-.pro-start-enter:hover {
-  filter: brightness(1.1);
-}
-.pro-start-back {
-  color: var(--ink);
-  background: transparent;
-  border: 1.5px solid var(--line);
-}
-.pro-start-back:hover {
-  border-color: var(--ink-soft);
-}
-@media (max-width: 520px) {
-  .pro-start-card {
-    padding: 28px 22px;
-  }
-}
-
 /* dark professional theme keeps the per-section colours too */
 html[data-mode="pro"][data-theme="dark"] main .stage,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a {
@@ -2803,4 +2691,193 @@ html[data-mode="pro"] .branches {
 .party > li,
 .academy > .school {
   height: 100%;
+}
+
+/* ---------- professional mode: motion and depth ---------- */
+html[data-mode="pro"] {
+  --pro-rainbow: linear-gradient(90deg, #b23a48, #c2611f, #a67c00, #2f7d4f, #1f6fa8, #4b4fa8, #7a3f9a);
+  --thermal: var(--pro-rainbow);
+}
+html[data-mode="pro"][data-theme="dark"] {
+  --pro-rainbow: linear-gradient(90deg, #f08a94, #f0a066, #e6c35c, #6fcf97, #6cb4ee, #9da2f0, #c79be0);
+  --thermal: var(--pro-rainbow);
+}
+/* soft colour washes behind the top of the page */
+html[data-mode="pro"] body {
+  background-image: radial-gradient(900px 420px at 8% -6%, color-mix(in srgb, #b23a48 9%, transparent), transparent 70%),
+    radial-gradient(800px 420px at 96% 4%, color-mix(in srgb, #1f6fa8 8%, transparent), transparent 70%);
+  background-repeat: no-repeat;
+}
+html[data-mode="pro"] .scroll-progress {
+  height: 3px;
+}
+html[data-mode="pro"] .hud::after {
+  background: var(--pro-rainbow);
+  height: 2px;
+  opacity: 0.85;
+}
+/* name: a slow rainbow sheen that settles on the ink colour */
+html[data-mode="pro"] .player-name {
+  background-image: linear-gradient(90deg, var(--ink) 0 45%, #b23a48 55%, #c2611f, #a67c00, #2f7d4f, #1f6fa8, #7a3f9a 85%, var(--ink) 95%);
+  background-size: 260% 100%;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: pro-sheen 9s ease-in-out 0.6s infinite alternate !important;
+}
+@keyframes pro-sheen {
+  to {
+    background-position: 100% 0;
+  }
+}
+/* sections rise in smoothly, and their cards follow one after another */
+html[data-mode="pro"].reveal-ready main .stage {
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+html[data-mode="pro"].reveal-ready main .stage.in {
+  transform: none;
+}
+html[data-mode="pro"].reveal-ready main .stage.in .box {
+  animation: pro-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both !important;
+}
+html[data-mode="pro"].reveal-ready main .stage.in li:nth-child(2) > .box,
+html[data-mode="pro"].reveal-ready main .stage.in .box:nth-child(2) {
+  animation-delay: 0.07s !important;
+}
+html[data-mode="pro"].reveal-ready main .stage.in li:nth-child(3) > .box,
+html[data-mode="pro"].reveal-ready main .stage.in .box:nth-child(3) {
+  animation-delay: 0.14s !important;
+}
+html[data-mode="pro"].reveal-ready main .stage.in li:nth-child(4) > .box,
+html[data-mode="pro"].reveal-ready main .stage.in .box:nth-child(4) {
+  animation-delay: 0.21s !important;
+}
+html[data-mode="pro"].reveal-ready main .stage.in li:nth-child(n + 5) > .box,
+html[data-mode="pro"].reveal-ready main .stage.in .box:nth-child(n + 5) {
+  animation-delay: 0.28s !important;
+}
+@keyframes pro-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+/* cards lift toward the pointer */
+html[data-mode="pro"] main .box {
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.25s, border-color 0.25s;
+}
+html[data-mode="pro"] main .box:hover {
+  transform: translateY(-3px) !important;
+}
+html[data-mode="pro"] .quest-media img {
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+html[data-mode="pro"] .quest-media:hover img {
+  transform: scale(1.04) !important;
+}
+/* chips fill with their section colour on hover */
+html[data-mode="pro"] .chips li {
+  transition: background-color 0.2s, color 0.2s;
+}
+html[data-mode="pro"] .chips li:hover {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+/* contact rows slide their icon forward */
+html[data-mode="pro"] .brand-icon {
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+html[data-mode="pro"] .link:hover .brand-icon {
+  transform: translateX(3px) scale(1.12);
+}
+html[data-mode="pro"] .link:hover .link-label {
+  color: var(--accent);
+}
+/* menu: an underline that grows from the left in each section's colour */
+html[data-mode="pro"] .hud-nav a {
+  position: relative;
+  border: 0 !important;
+  transition: color 0.2s;
+}
+html[data-mode="pro"] .hud-nav a::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 2px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+html[data-mode="pro"] .hud-nav a:hover::after,
+html[data-mode="pro"] .hud-nav a.on::after {
+  transform: scaleX(1);
+}
+html[data-mode="pro"] .hud-nav a:hover,
+html[data-mode="pro"] .hud-nav a.on {
+  color: var(--accent);
+}
+/* section headings: the colour bar grows in when the section appears */
+html[data-mode="pro"] .stage-tag::after {
+  background: linear-gradient(90deg, var(--accent) 0 56px, var(--line) 56px);
+  background-size: 0 100%, 100% 100%;
+}
+html[data-mode="pro"].reveal-ready .stage .stage-tag::after {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+}
+html[data-mode="pro"].reveal-ready .stage.in .stage-tag::after {
+  clip-path: inset(0 0 0 0);
+}
+html[data-mode="pro"] .btn {
+  transition: transform 0.2s, filter 0.2s;
+}
+html[data-mode="pro"] main .btn:hover {
+  transform: translateY(-2px) !important;
+  filter: brightness(1.08);
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-mode="pro"] .player-name,
+  html[data-mode="pro"].reveal-ready main .stage.in .box {
+    animation: none !important;
+  }
+  html[data-mode="pro"] main .box:hover,
+  html[data-mode="pro"] .quest-media:hover img {
+    transform: none !important;
+  }
+}
+
+/* the patent gets the same rainbow "legendary" frame as the UNCCD trophy */
+.trophy.patent {
+  border-image: var(--thermal) 1;
+  box-shadow: 4px 4px 0 var(--gold);
+}
+.trophy.patent .trophy-icon {
+  background: var(--gold);
+  color: #3b0f2e;
+}
+.trophy.patent .trophy-year {
+  color: var(--accent);
+}
+.trophy.patent .trophy-date {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+/* professional mode: both headline trophies get a rainbow outline */
+html[data-mode="pro"] main .trophy.legendary,
+html[data-mode="pro"] main .trophy.patent {
+  border: 1.5px solid transparent;
+  border-top-width: 3px;
+  background: linear-gradient(var(--surface), var(--surface)) padding-box, var(--pro-rainbow) border-box;
+}
+
+/* arcade: pixel check bullets take each section's colour */
+html:not([data-mode="pro"]) .objectives li::before {
+  background: var(--accent);
+  -webkit-mask: var(--px-check) center / contain no-repeat;
+  mask: var(--px-check) center / contain no-repeat;
 }
