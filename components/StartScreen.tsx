@@ -156,7 +156,7 @@ export default function StartScreen() {
             PROFESSIONAL MODE
           </button>
         </div>
-        <p className="start-meta">King Abdulaziz University - Jeddah, Saudi Arabia</p>
+        <p className="start-meta">Jeddah, Saudi Arabia</p>
       </div>
     </div>
   );
