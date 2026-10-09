@@ -4,7 +4,7 @@ export const profile = {
   name: "Nelly Almaktoum",
   nameAr: "نيللي المكتوم",
   handle: "nelmkt",
-  headline: "FCIT Student @ KAU · Waed ’26 · IEEE ’25 · UNCCD COP16 ’24 · Mawhiba Alumna",
+  headline: "FCIT Student @ KAU - Waed ’26 - IEEE ’25 - UNCCD COP16 ’24 - Mawhiba Alumna",
   tagline:
     "Undergraduate researcher and developer working across software, hardware, data and AI/ML.",
   // Bio shown in the "NELLY" dialog box, one string per paragraph.
@@ -13,14 +13,19 @@ export const profile = {
     "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.",
     "I'm also an artist, which probably explains why this site looks the way it does.",
   ],
+  // The professional view's bio: no game wording and no line about the arcade look.
+  aboutPro: [
+    "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.",
+    "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.",
+  ],
   // Headline achievement, shown as its own banner under the tagline.
   highlight: "Youngest UN-certified Saudi researcher",
-  highlightDetail: "6 national & international recognitions · 3 national & international awards",
+  highlightDetail: "6 national & international recognitions - 3 national & international awards",
   stats: [
-    { label: "CLASS", pro: "Role", value: "Researcher · Developer · ML Engineer" },
-    { label: "GUILD", pro: "University", value: "KAU · BS Computer Science · Waed track" },
+    { label: "CLASS", pro: "Role", value: "Researcher - Developer - ML Engineer" },
+    { label: "GUILD", pro: "University", value: "KAU - BS Computer Science - Waed track" },
     { label: "BASE", pro: "Location", value: "Jeddah, Saudi Arabia" },
-    { label: "LANGS", pro: "Languages", value: "Arabic · English" },
+    { label: "LANGS", pro: "Languages", value: "Arabic - English" },
     { label: "MAIN QUEST", pro: "Goal", value: "Ph.D. → academia" },
     { label: "SIDE QUEST", pro: "Outside research", value: "Design & painting" },
   ],
@@ -54,8 +59,8 @@ export const quests: Quest[] = [
     id: "wahaj",
     title: "Wahaj",
     titleAr: "وهاج",
-    status: "MAIN QUEST · JUN–OCT 2026 · RELEASED",
-    statusPro: "Jun–Oct 2026 · Released",
+    status: "MAIN QUEST - JUN–OCT 2026 - RELEASED",
+    statusPro: "Jun–Oct 2026 - Released",
     url: "https://github.com/nelmkt/Wahaj-Framework",
     image:
       "https://raw.githubusercontent.com/nelmkt/Wahaj-Framework/v11-framework-ml/figures_r1/fig_r1_dose_contrasts.png",
@@ -79,8 +84,8 @@ export const quests: Quest[] = [
     id: "aykah",
     title: "Aykah",
     titleAr: "آيكة",
-    status: "QUEST COMPLETE · OCT 2024–MAR 2025 · PATENTED · MULTI-AWARD",
-    statusPro: "Oct 2024–Mar 2025 · Patented · Multiple awards",
+    status: "QUEST COMPLETE - OCT 2024–MAR 2025 - PATENTED - MULTI-AWARD",
+    statusPro: "Oct 2024–Mar 2025 - Patented - Multiple awards",
     url: "https://github.com/nelmkt/Smart-Bin-Aykah",
     image:
       "https://raw.githubusercontent.com/nelmkt/Smart-Bin-Aykah/main/images/prototype.jpg",
@@ -224,7 +229,7 @@ export const party = [
 export const academy = [
   {
     school: "King Abdulaziz University",
-    degree: "BS, Computer Science · FCIT",
+    degree: "BS, Computer Science - FCIT",
     when: "2025 – 2030",
     note: "Waed: Distinctive Excellence track for gifted students",
   },

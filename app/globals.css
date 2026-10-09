@@ -3031,3 +3031,63 @@ html[lang="ar"] .chips li,
 html[lang="ar"] .chips.small li {
   font-size: 14px !important;
 }
+
+/* professional bio paragraphs stay block-level */
+html[data-mode="pro"] p.pro-only {
+  display: block;
+}
+
+/* ---------- start screen polish ---------- */
+/* subtitle in the pixel face with a dark outline so it reads over the sun;
+   each phrase stays on one line when it wraps on phones */
+.start-sub {
+  font-family: var(--pixel);
+  font-size: 13px;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+  color: #fff;
+  text-shadow: 2px 0 0 #1a0612, -2px 0 0 #1a0612, 0 2px 0 #1a0612, 0 -2px 0 #1a0612, 3px 3px 0 #1a0612;
+  margin-bottom: 30px;
+}
+.start-sub span {
+  white-space: nowrap;
+}
+.start-sub i {
+  font-style: normal;
+  color: #ff8ac0;
+  margin: 0 4px;
+}
+/* PRESS START and PROFESSIONAL MODE read as one arcade menu */
+.start-btn {
+  min-width: 250px;
+  justify-content: center;
+}
+.start-pro {
+  min-width: 250px;
+  margin: 26px auto 0;
+  padding: 12px 18px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  background: rgba(13, 3, 10, 0.75);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 4px 4px 0 #1a0612;
+  transition: background 0.1s steps(2), color 0.1s steps(2);
+}
+.start-pro:hover,
+.start-pro:focus-visible {
+  background: #fff;
+  color: #2a0a20;
+  text-shadow: none;
+}
+.start-meta {
+  margin-top: 30px;
+}
+@media (max-width: 520px) {
+  .start-sub {
+    font-size: 11px;
+  }
+  .start-btn,
+  .start-pro {
+    min-width: 220px;
+  }
+}

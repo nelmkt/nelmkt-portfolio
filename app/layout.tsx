@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Nelly Almaktoum · نيللي المكتوم, a retro arcade portfolio at nelmkt.com",
+        alt: "Nelly Almaktoum - نيللي المكتوم, a retro arcade portfolio at nelmkt.com",
       },
     ],
   },

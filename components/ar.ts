@@ -65,17 +65,19 @@ export const AR: Record<string, string> = {
   "OPEN TO RESEARCH COLLABORATION": "أرحّب بالتعاون البحثي",
   "The quickest way to reach me is LinkedIn or email. I work in Arabic and English.": "أسرع طريقة للتواصل معي عبر LinkedIn أو البريد الإلكتروني، وأتحدث العربية والإنجليزية.",
   "THANKS FOR PLAYING!": "شكرًا على اللعب!",
-  "© 2026 Nelly Almaktoum · Built with Next.js, TypeScript, HTML & CSS": "© 2026 نيللي المكتوم · بُني باستخدام Next.js وTypeScript وHTML وCSS",
+  "© 2026 Nelly Almaktoum - Built with Next.js, TypeScript, HTML & CSS": "© 2026 نيللي المكتوم - بُني باستخدام Next.js وTypeScript وHTML وCSS",
 
   // ---------- profile ----------
-  "FCIT Student @ KAU · Waed ’26 · IEEE ’25 · UNCCD COP16 ’24 · Mawhiba Alumna":
-    "طالبة في كلية الحاسبات بجامعة الملك عبدالعزيز · وعد ’26 · IEEE ’25 · UNCCD COP16 ’24 · خريجة موهبة",
+  "FCIT Student @ KAU - Waed ’26 - IEEE ’25 - UNCCD COP16 ’24 - Mawhiba Alumna":
+    "طالبة في كلية الحاسبات بجامعة الملك عبدالعزيز - واعد ’26 - IEEE ’25 - UNCCD COP16 ’24 - خريجة موهبة",
   "Undergraduate researcher and developer working across software, hardware, data and AI/ML.": "باحثة ومطوّرة جامعية، أعمل بين البرمجيات والعتاد والبيانات والذكاء الاصطناعي.",
   "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.": "أدرس علوم الحاسب في جامعة الملك عبدالعزيز، وأستمتع بحل المشكلات بالبرمجة والعتاد: من نماذج تعلّم الآلة وتطبيقات الويب المتكاملة، إلى «آيكة»، حاوية النفايات الذكية العاملة بالطاقة الشمسية التي صممتها وبنيتها بنفسي من الفكرة حتى النموذج الأولي.",
   "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.": "تجمع أبحاثي بين الحوسبة والعالم الحقيقي: مسارات تعلّم آلة قابلة للتكرار، وبيانات الأقمار الصناعية، وإنترنت الأشياء. هدفي الدكتوراه ومسيرة في المجال الأكاديمي، وستجد مشاريعي في سجل المهام بالأسفل.",
+  "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.":
+    "تجمع أبحاثي بين الحوسبة والعالم الحقيقي: مسارات تعلّم آلة قابلة للتكرار، وبيانات الأقمار الصناعية، وإنترنت الأشياء. هدفي الدكتوراه ومسيرة في المجال الأكاديمي، وستجد أعمالي في قسم الأبحاث والمشاريع أدناه.",
   "I'm also an artist, which probably explains why this site looks the way it does.": "وأنا فنانة أيضًا، ولعل هذا ما يفسّر شكل هذا الموقع.",
   "Youngest UN-certified Saudi researcher": "أصغر باحثة سعودية معتمدة من الأمم المتحدة",
-  "6 national & international recognitions · 3 national & international awards": "6 تكريمات و3 جوائز على المستويين الوطني والدولي",
+  "6 national & international recognitions - 3 national & international awards": "6 تكريمات و3 جوائز على المستويين الوطني والدولي",
   CLASS: "الدور",
   GUILD: "الجامعة",
   BASE: "المدينة",
@@ -88,10 +90,10 @@ export const AR: Record<string, string> = {
   Languages: "اللغات",
   Goal: "الهدف",
   "Outside research": "اهتمامات أخرى",
-  "Researcher · Developer · ML Engineer": "باحثة · مطوّرة · مهندسة تعلّم آلة",
-  "KAU · BS Computer Science · Waed track": "جامعة الملك عبدالعزيز · بكالوريوس علوم الحاسب · مسار وعد",
+  "Researcher - Developer - ML Engineer": "باحثة - مطوّرة - مهندسة تعلّم آلة",
+  "KAU - BS Computer Science - Waed track": "جامعة الملك عبدالعزيز - بكالوريوس علوم الحاسب - برنامج واعد",
   "Jeddah, Saudi Arabia": "جدة، السعودية",
-  "Arabic · English": "العربية والإنجليزية",
+  "Arabic - English": "العربية والإنجليزية",
   "Ph.D. → academia": "الدكتوراه ثم العمل الأكاديمي",
   "Design & painting": "التصميم والرسم",
   "AI/ML engineering": "هندسة الذكاء الاصطناعي وتعلّم الآلة",
@@ -103,10 +105,10 @@ export const AR: Record<string, string> = {
   // ---------- quests ----------
   Wahaj: "وهاج",
   Aykah: "آيكة",
-  "MAIN QUEST · JUN–OCT 2026 · RELEASED": "المهمة الرئيسية · يونيو – أكتوبر 2026 · منشور",
-  "Jun–Oct 2026 · Released": "يونيو – أكتوبر 2026 · منشور",
-  "QUEST COMPLETE · OCT 2024–MAR 2025 · PATENTED · MULTI-AWARD": "مهمة مكتملة · أكتوبر 2024 – مارس 2025 · براءة اختراع · عدة جوائز",
-  "Oct 2024–Mar 2025 · Patented · Multiple awards": "أكتوبر 2024 – مارس 2025 · براءة اختراع · عدة جوائز",
+  "MAIN QUEST - JUN–OCT 2026 - RELEASED": "المهمة الرئيسية - يونيو – أكتوبر 2026 - منشور",
+  "Jun–Oct 2026 - Released": "يونيو – أكتوبر 2026 - منشور",
+  "QUEST COMPLETE - OCT 2024–MAR 2025 - PATENTED - MULTI-AWARD": "مهمة مكتملة - أكتوبر 2024 – مارس 2025 - براءة اختراع - عدة جوائز",
+  "Oct 2024–Mar 2025 - Patented - Multiple awards": "أكتوبر 2024 – مارس 2025 - براءة اختراع - عدة جوائز",
   "A reproducible ML Python and Google Earth Engine framework for evaluating urban greening–energy trade-offs in desalination-dependent cities, with Jeddah as the case study.": "إطار عمل مفتوح وقابل للتكرار، مبني بـ Python وGoogle Earth Engine وتعلّم الآلة، يقيس أثر التشجير الحضري على الحرارة واستهلاك الطاقة في المدن التي تعتمد على تحلية المياه، وجدة نموذجًا.",
   "XGBoost land surface temperature model on Landsat 8, spatial cross-validation R² 0.795 on 19,650 cells, benchmarked against random forest, gradient boosting and linear regression": "نموذج XGBoost يتنبأ بحرارة سطح الأرض من صور Landsat 8، بدقة R² = 0.795 في تحقق مكاني على 19,650 خلية، مقارنةً بالغابة العشوائية والتعزيز التدرّجي والانحدار الخطي",
   "Matched-contrast benchmark: −1.18 °C per greened pixel outside the built-up area, stress-tested with emissivity re-retrieval, alternative NDVI thresholds and a thermal-footprint simulation": "كل بكسل مُشجَّر خارج المناطق العمرانية يخفض الحرارة 1.18 °م، وصمدت النتيجة أمام اختبارات متعددة: إعادة حساب الانبعاثية، وعتبات NDVI مختلفة، ومحاكاة للأثر الحراري",
@@ -184,7 +186,7 @@ export const AR: Record<string, string> = {
 
   // ---------- party ----------
   "Technical Team Lead": "قائدة الفريق التقني",
-  "Waed Students Community, King Abdulaziz University": "مجتمع طلاب وعد، جامعة الملك عبدالعزيز",
+  "Waed Students Community, King Abdulaziz University": "مجتمع طلاب واعد، جامعة الملك عبدالعزيز",
   "Sep 2026 – now": "سبتمبر 2026 – الآن",
   "Tech Department Member": "عضوة في القسم التقني",
   "IEEE, 2027 term": "IEEE، دورة 2027",
@@ -203,7 +205,7 @@ export const AR: Record<string, string> = {
   Member: "عضوة",
   "Scientific Research Club, KAU": "نادي البحث العلمي، جامعة الملك عبدالعزيز",
   Coordinator: "منسّقة",
-  "Annual Waed Workshop 2027": "ورشة وعد السنوية 2027",
+  "Annual Waed Workshop 2027": "ورشة واعد السنوية 2027",
   "Aug – Sep 2026": "أغسطس – سبتمبر 2026",
   "Intellectual & Electronics Sports Club, KAU": "نادي الرياضات الذهنية والإلكترونية، جامعة الملك عبدالعزيز",
   "Oct 2025 – Jun 2026": "أكتوبر 2025 – يونيو 2026",
@@ -212,9 +214,9 @@ export const AR: Record<string, string> = {
   "Jun 2025 – now": "يونيو 2025 – الآن",
 
   // ---------- academy ----------
-  "BS, Computer Science · FCIT": "بكالوريوس علوم الحاسب · كلية الحاسبات وتقنية المعلومات",
+  "BS, Computer Science - FCIT": "بكالوريوس علوم الحاسب - كلية الحاسبات وتقنية المعلومات",
   "2025 – 2030": "2025 – 2030",
-  "Waed: Distinctive Excellence track for gifted students": "وعد: مسار التميّز النوعي للطلبة الموهوبين",
+  "Waed: Distinctive Excellence track for gifted students": "واعد للتميز النوعي (المواهب الخاصة)",
   "Dar Al Fikr Schools": "مدارس دار الفكر",
   "American High School Diploma": "شهادة الثانوية الأمريكية",
   "2022 – 2025": "2022 – 2025",
@@ -227,7 +229,7 @@ export const AR: Record<string, string> = {
   Aramco: "أرامكو",
   "The 2nd Scientific Forum": "الملتقى العلمي الثاني",
   "Nov 2025": "نوفمبر 2025",
-  "Organizing Waed’s Annual Introductory Meeting & Workshop": "تنظيم اللقاء التعريفي والورشة السنوية لمجتمع وعد",
+  "Organizing Waed’s Annual Introductory Meeting & Workshop": "تنظيم اللقاء التعريفي والورشة السنوية لمجتمع واعد",
   "Sep 2026": "سبتمبر 2026",
 
   TOP: "للأعلى",

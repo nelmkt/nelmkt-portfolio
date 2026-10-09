@@ -171,9 +171,13 @@ export default function Portfolio() {
           </div>
           <div className="box dialog">
             <span className="dialog-name arcade-only">{tr("NELLY")}</span>
-            {/* The last line is about this site's arcade look, so the professional view leaves it out. */}
-            {profile.about.map((p, i) => (
-              <p key={p} className={i === profile.about.length - 1 ? "arcade-only" : undefined}>
+            {profile.about.map((p) => (
+              <p key={p} className="arcade-only">
+                {tr(p)}
+              </p>
+            ))}
+            {profile.aboutPro.map((p) => (
+              <p key={p} className="pro-only">
                 {tr(p)}
               </p>
             ))}
@@ -309,7 +313,7 @@ export default function Portfolio() {
                 <div>
                   <h4>{tr(s.title)}</h4>
                   <p>
-                    {tr(s.by)} · {tr(s.when)}
+                    {tr(s.by)} - {tr(s.when)}
                   </p>
                 </div>
               </li>
@@ -402,7 +406,7 @@ export default function Portfolio() {
       <footer className="footer">
         <p className="thanks arcade-only">{tr("THANKS FOR PLAYING!")}</p>
         <EasterEgg />
-        <p>{tr("© 2026 Nelly Almaktoum · Built with Next.js, TypeScript, HTML & CSS")}</p>
+        <p>{tr("© 2026 Nelly Almaktoum - Built with Next.js, TypeScript, HTML & CSS")}</p>
       </footer>
     </LangContext.Provider>
   );

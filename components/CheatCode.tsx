@@ -37,7 +37,7 @@ export default function CheatCode() {
     <div className="cheat-toast" role="status">
       CHEAT CODE ACTIVATED
       <br />
-      <b>+99 LIVES</b> · RAINBOW MODE
+      <b>+99 LIVES</b> - RAINBOW MODE
     </div>
   );
 }

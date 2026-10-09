@@ -123,14 +123,16 @@ export default function StartScreen() {
           <PixelText text={profile.nameAr} size={14} scale={3} shadow={["#b8306f", "#1a0612"]} />
         </p>
         <div className="start-thermal" aria-hidden="true" />
-        <p className="start-sub">Researcher &amp; Innovator · ML Engineer · Green Tech</p>
+        <p className="start-sub">
+          <span>Researcher &amp; Innovator</span> <span><i>-</i> ML Engineer</span> <span><i>-</i> Green Tech</span>
+        </p>
         <button className="start-btn" onClick={() => start("arcade")} autoFocus>
           PRESS START
         </button>
         <button className="start-pro" onClick={() => start("pro")}>
           PROFESSIONAL MODE
         </button>
-        <p className="start-meta">© 2026 · 1 PLAYER · PORTFOLIO EDITION</p>
+        <p className="start-meta">© 2026 - 1 PLAYER - PORTFOLIO EDITION</p>
       </div>
     </div>
   );

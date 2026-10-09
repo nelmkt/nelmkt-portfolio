@@ -310,7 +310,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         ctx.fillRect(0, 0, W, H);
         if (s.mode === "ready") {
           text("LANGUAGE RUSH", W / 2, 74, 18, "#ff3d8b", "center");
-          text("COLLECT THE LANGUAGE GEMS · DODGE THE BUGS", W / 2, 100, 8, "#3b0f2e", "center");
+          text("COLLECT THE LANGUAGE GEMS - DODGE THE BUGS", W / 2, 100, 8, "#3b0f2e", "center");
           if (Math.floor(performance.now() / 500) % 2 === 0) {
             text("TAP OR PRESS SPACE TO START", W / 2, 130, 10, "#3b0f2e", "center");
           }
