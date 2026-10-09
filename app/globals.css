@@ -3332,3 +3332,52 @@ html:not([data-mode="pro"]) .player-grid {
   font-size: 18px;
   letter-spacing: 0.02em;
 }
+
+/* ---------- headline achievement banner: easier to read ---------- */
+html:not([data-mode="pro"]) .highlight {
+  padding: 18px 22px;
+  gap: 18px;
+  background: linear-gradient(90deg, #2a1d06, #171018 85%);
+  border: 2px solid var(--gold);
+}
+html:not([data-mode="pro"]) .highlight-icon {
+  width: 48px;
+  height: 48px;
+}
+html:not([data-mode="pro"]) .highlight-title {
+  font-size: 19px;
+  line-height: 1.35;
+  color: #ffd75e;
+  text-shadow: 2px 2px 0 #1a0612;
+  letter-spacing: 0.01em;
+}
+html:not([data-mode="pro"]) .highlight-detail {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f1e3ea;
+}
+html[data-mode="pro"] .highlight-title {
+  font-size: 19px;
+}
+html[data-mode="pro"] .highlight-detail {
+  font-size: 15.5px;
+  color: var(--ink);
+}
+@media (max-width: 520px) {
+  html:not([data-mode="pro"]) .highlight {
+    padding: 14px 16px;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  html:not([data-mode="pro"]) .highlight-icon {
+    width: 34px;
+    height: 34px;
+  }
+  html:not([data-mode="pro"]) .highlight-title {
+    font-size: 14px;
+  }
+  html:not([data-mode="pro"]) .highlight-detail {
+    font-size: 15px;
+  }
+}
