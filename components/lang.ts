@@ -24,6 +24,7 @@ export function applyLang(lang: Lang) {
   const d = document.documentElement;
   d.lang = lang;
   d.dir = lang === "ar" ? "rtl" : "ltr";
+  document.title = lang === "ar" ? "نيللي المكتوم" : "Nelly Almaktoum";
   try {
     localStorage.setItem(LANG_KEY, lang);
   } catch {}

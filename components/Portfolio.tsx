@@ -29,9 +29,20 @@ export default function Portfolio() {
 
   useEffect(() => {
     try {
-      if (localStorage.getItem(LANG_KEY) === "ar") setLang("ar");
+      if (localStorage.getItem(LANG_KEY) === "ar") {
+        setLang("ar");
+        applyLang("ar");
+      }
     } catch {}
   }, []);
+
+  // The tab title follows the language (Next sets the English one at load, so this runs after it).
+  useEffect(() => {
+    const title = ar ? "نيللي المكتوم" : "Nelly Almaktoum";
+    document.title = title;
+    const id = setTimeout(() => (document.title = title), 50);
+    return () => clearTimeout(id);
+  }, [ar]);
 
   function switchLang() {
     const next = ar ? "en" : "ar";
