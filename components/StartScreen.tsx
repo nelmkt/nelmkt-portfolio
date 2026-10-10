@@ -86,7 +86,7 @@ export default function StartScreen() {
       sessionStorage.setItem("nelmkt-started", "1");
     } catch {}
     setLeaving(true);
-    setTimeout(() => setOpen(false), 380);
+    setTimeout(() => setOpen(false), 240);
   }
 
   if (!open) return null;

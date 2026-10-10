@@ -193,8 +193,8 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       if (s.tick % 6 === 0) s.score++;
     };
 
-    const text = (str: string, x: number, y: number, size: number, color: string, align: CanvasTextAlign = "left") => {
-      ctx.font = `${size}px ${font}`;
+    const text = (str: string, x: number, y: number, size: number, color: string, align: CanvasTextAlign = "left", bold = false) => {
+      ctx.font = `${bold ? "700 " : ""}${size}px ${font}`;
       ctx.textAlign = align;
       ctx.fillStyle = color;
       ctx.fillText(translate(langRef.current, str), x, y);
@@ -321,13 +321,13 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         ctx.fillStyle = "rgba(255, 247, 251, 0.88)";
         ctx.fillRect(0, 0, W, H);
         if (s.mode === "ready") {
-          text("LANGUAGE RUSH", W / 2, 74, 18, "#ff3d8b", "center");
+          text("LANGUAGE RUSH", W / 2, 74, 18, "#ff3d8b", "center", true);
           text("COLLECT THE LANGUAGE GEMS - DODGE THE BUGS", W / 2, 100, 8, "#3b0f2e", "center");
           if (Math.floor(performance.now() / 500) % 2 === 0) {
             text("TAP OR PRESS SPACE TO START", W / 2, 130, 10, "#3b0f2e", "center");
           }
         } else {
-          text("GAME OVER", W / 2, 74, 20, "#ff3d8b", "center");
+          text("GAME OVER", W / 2, 74, 20, "#ff3d8b", "center", true);
           text(`${tr("SCORE")} ${s.score}`, W / 2, 100, 10, "#3b0f2e", "center");
           if (Math.floor(performance.now() / 500) % 2 === 0) {
             text("TAP OR PRESS SPACE TO RETRY", W / 2, 130, 10, "#3b0f2e", "center");

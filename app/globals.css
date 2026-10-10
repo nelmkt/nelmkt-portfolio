@@ -1809,6 +1809,10 @@ body {
 .hud-nav a[href="#save"] {
   --sec: #ff6ec7;
 }
+#cv,
+.hud-nav a[href="#cv"] {
+  --sec: #e27bf0;
+}
 .stage {
   --accent: var(--sec);
   --line: color-mix(in srgb, var(--sec) 78%, #000);
@@ -2364,6 +2368,10 @@ html[data-mode="pro"] #save,
 html[data-mode="pro"] .hud-nav a[href="#save"] {
   --psec: #7a3f9a;
 }
+html[data-mode="pro"] #cv,
+html[data-mode="pro"] .hud-nav a[href="#cv"] {
+  --psec: #63479f;
+}
 html[data-mode="pro"][data-theme="dark"] #player,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#player"] {
   --psec: #f08a94;
@@ -2391,6 +2399,10 @@ html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#party"] {
 html[data-mode="pro"][data-theme="dark"] #save,
 html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#save"] {
   --psec: #c79be0;
+}
+html[data-mode="pro"][data-theme="dark"] #cv,
+html[data-mode="pro"][data-theme="dark"] .hud-nav a[href="#cv"] {
+  --psec: #b39fe8;
 }
 html[data-mode="pro"] main .stage,
 html[data-mode="pro"] .hud-nav a {
@@ -3489,9 +3501,18 @@ html:not([data-mode="pro"]) #save,
 html:not([data-mode="pro"]) #save * {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16' shape-rendering='crispEdges'%3E%3Crect x='0' y='0' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='8' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='7' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='8' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='9' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='15' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='15' width='1' height='1' fill='%231a0612'/%3E%3C/svg%3E") 0 0, auto;
 }
+html:not([data-mode="pro"]) #cv,
+html:not([data-mode="pro"]) #cv * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16' shape-rendering='crispEdges'%3E%3Crect x='0' y='0' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='8' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='7' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='8' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='9' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='15' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='15' width='1' height='1' fill='%231a0612'/%3E%3C/svg%3E") 0 0, auto;
+}
 html:not([data-mode="pro"]) #save a,
 html:not([data-mode="pro"]) #save button,
 html:not([data-mode="pro"]) #save .game-canvas {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16' shape-rendering='crispEdges'%3E%3Crect x='0' y='0' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='8' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='7' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='8' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='9' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='15' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='15' width='1' height='1' fill='%231a0612'/%3E%3C/svg%3E") 0 0, pointer;
+}
+html:not([data-mode="pro"]) #cv a,
+html:not([data-mode="pro"]) #cv button,
+html:not([data-mode="pro"]) #cv .game-canvas {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 16' shape-rendering='crispEdges'%3E%3Crect x='0' y='0' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='4' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='4' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='5' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='6' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='6' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='7' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='7' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='8' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='8' y='8' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='3' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='9' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='7' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='8' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='9' y='9' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='2' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='4' y='10' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='10' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='1' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='11' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='11' width='1' height='1' fill='%231a0612'/%3E%3Crect x='0' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='3' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='5' y='12' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='12' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='13' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='13' width='1' height='1' fill='%231a0612'/%3E%3Crect x='4' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='6' y='14' width='1' height='1' fill='%23ff6ec7'/%3E%3Crect x='7' y='14' width='1' height='1' fill='%231a0612'/%3E%3Crect x='5' y='15' width='1' height='1' fill='%231a0612'/%3E%3Crect x='6' y='15' width='1' height='1' fill='%231a0612'/%3E%3C/svg%3E") 0 0, pointer;
 }
 html[data-mode="pro"] #player,
@@ -3552,9 +3573,18 @@ html[data-mode="pro"] #save,
 html[data-mode="pro"] #save * {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%237a3f9a' stroke='%23ffffff' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
 }
+html[data-mode="pro"] #cv,
+html[data-mode="pro"] #cv * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%237a3f9a' stroke='%23ffffff' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
+}
 html[data-mode="pro"] #save a,
 html[data-mode="pro"] #save button,
 html[data-mode="pro"] #save .quest-media {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%237a3f9a' stroke='%23ffffff' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, pointer;
+}
+html[data-mode="pro"] #cv a,
+html[data-mode="pro"] #cv button,
+html[data-mode="pro"] #cv .quest-media {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%237a3f9a' stroke='%23ffffff' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, pointer;
 }
 html[data-mode="pro"][data-theme="dark"] #player,
@@ -3615,9 +3645,18 @@ html[data-mode="pro"][data-theme="dark"] #save,
 html[data-mode="pro"][data-theme="dark"] #save * {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%23c79be0' stroke='%23121212' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
 }
+html[data-mode="pro"][data-theme="dark"] #cv,
+html[data-mode="pro"][data-theme="dark"] #cv * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%23c79be0' stroke='%23121212' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, auto;
+}
 html[data-mode="pro"][data-theme="dark"] #save a,
 html[data-mode="pro"][data-theme="dark"] #save button,
 html[data-mode="pro"][data-theme="dark"] #save .quest-media {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%23c79be0' stroke='%23121212' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, pointer;
+}
+html[data-mode="pro"][data-theme="dark"] #cv a,
+html[data-mode="pro"][data-theme="dark"] #cv button,
+html[data-mode="pro"][data-theme="dark"] #cv .quest-media {
   cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M4 2.5 L4 19 L8.6 14.9 L11.6 21.3 L14.4 20 L11.4 13.7 L17.6 13.4 Z' fill='%23c79be0' stroke='%23121212' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E") 4 2, pointer;
 }
 
@@ -4416,4 +4455,160 @@ html[data-mode="pro"] .player-ar .ar-plain {
 /* room under the bilingual project title so Arabic marks never touch the text */
 html[data-mode="pro"] .quest h3 {
   margin-bottom: 14px;
+}
+
+/* collected-language star: spaced from the name on either side, in English and Arabic */
+.lang-list li.got .lang-name::after {
+  margin-left: 0;
+  margin-inline-start: 10px;
+}
+html[dir="rtl"] .lang-list li.got .lang-name::after {
+  margin-inline-start: 12px;
+}
+/* the bonus stage title, bold in Arabic too */
+html[lang="ar"] #bonus .stage-label {
+  font-weight: 700;
+}
+
+/* ---------- CV section ---------- */
+.cv-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+  gap: 28px;
+  align-items: center;
+}
+.cv-thumb {
+  display: block;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  background: #fff;
+  transition: transform 0.15s;
+}
+.cv-thumb:hover {
+  transform: translateY(-3px);
+}
+.cv-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.cv-card-body h3 {
+  margin: 0 0 8px;
+}
+.cv-card-body p {
+  margin: 0;
+}
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--pixel);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: background-color 0.15s, color 0.15s;
+}
+.cv-btn.primary,
+.cv-btn:hover {
+  background: var(--accent);
+  color: var(--on-accent, #fff);
+}
+.cv-btn.primary:hover {
+  filter: brightness(1.08);
+}
+html[data-mode="pro"] .cv-thumb {
+  border: 1px solid var(--line);
+  border-radius: 10px !important;
+}
+html[data-mode="pro"] .cv-btn {
+  font-family: inherit;
+  font-size: 14px;
+  border-width: 1px;
+  border-radius: 999px !important;
+  padding: 9px 18px;
+}
+html[lang="ar"] .cv-btn {
+  font-family: var(--font-ar), sans-serif;
+}
+@media (max-width: 640px) {
+  .cv-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* ---------- start screen: livelier and quicker ---------- */
+/* the scene moves with more energy */
+.start-floor {
+  animation-duration: 1.1s;
+}
+.start-runner {
+  animation-duration: 7s;
+}
+.start-star {
+  animation-duration: 2.6s;
+}
+/* the panel and its lines arrive in a quick cascade (the backdrop is opaque from the first frame) */
+.start-inner {
+  animation: start-pop 0.32s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+.start-inner > * {
+  animation: start-rise 0.34s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+.start-inner > :nth-child(1) { animation-delay: 0.04s; }
+.start-inner > :nth-child(2) { animation-delay: 0.08s; }
+.start-inner > :nth-child(3) { animation-delay: 0.12s; }
+.start-inner > :nth-child(4) { animation-delay: 0.16s; }
+.start-inner > :nth-child(5) { animation-delay: 0.2s; }
+.start-inner > :nth-child(6) { animation-delay: 0.24s; }
+.start-inner > :nth-child(7) { animation-delay: 0.28s; }
+@keyframes start-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+}
+@keyframes start-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+/* snappy menu: a small lift on hover and on the selected item */
+.start-menu .start-btn,
+.start-menu .start-pro {
+  transition: transform 0.12s ease-out, background-color 0.12s, border-color 0.12s, box-shadow 0.12s;
+}
+.start-menu button:hover,
+.start-menu button.sel {
+  transform: translateY(-2px);
+}
+.start-menu button:active {
+  transform: translateY(1px) scale(0.98);
+}
+/* a faster exit into the site */
+.start-screen.leaving {
+  animation: start-out 0.24s ease-in forwards;
+}
+@keyframes start-out {
+  to {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .start-inner,
+  .start-inner > *,
+  .start-screen.leaving {
+    animation: none !important;
+  }
 }

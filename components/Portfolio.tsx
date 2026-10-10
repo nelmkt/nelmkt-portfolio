@@ -14,6 +14,7 @@ import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
 import { type Lang, LangContext, LANG_KEY, applyLang, translate, useT } from "./lang";
 import { toggleMode, toggleTheme } from "./mode";
+import { cvPdf } from "./cv";
 import { academy, languages, links, party, profile, quests, sideQuests, skillTree, stages, trophies } from "./data";
 
 const STORE_KEY = "nelmkt-collected";
@@ -412,9 +413,31 @@ export default function Portfolio() {
           </ul>
         </section>
 
-        {/* 1-8 SAVE */}
+        {/* 1-8 CV */}
+        <section id="cv" className="stage">
+          <StageTag code="1-8" label="CHARACTER SHEET" pro="CV" />
+          <div className="box cv-card">
+            <a className="cv-thumb" href="/cv/" aria-label={tr("View my CV")}>
+              <img src="/cv-preview.webp" alt="" width={600} height={420} loading="lazy" decoding="async" />
+            </a>
+            <div className="cv-card-body">
+              <h3>{tr("MY FULL CV")}</h3>
+              <p>{tr("Education, research, patent, awards, leadership and activities, all in one place.")}</p>
+              <div className="cv-actions">
+                <a className="cv-btn primary" href="/cv/">
+                  {tr("View CV")}
+                </a>
+                <a className="cv-btn" href={cvPdf} download>
+                  {tr("Download PDF")}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 1-9 SAVE */}
         <section id="save" className="stage">
-          <StageTag code="1-8" label="SAVE POINT" pro="Contact" />
+          <StageTag code="1-9" label="SAVE POINT" pro="Contact" />
           <div className="box save">
             <div>
               <h3>{tr("OPEN TO RESEARCH COLLABORATION")}</h3>

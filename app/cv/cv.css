@@ -1,0 +1,252 @@
+/* The /cv page: a clean A4 sheet on screen, and the exact layout the PDF is printed from.
+   It sits inside the site's root layout, so it opts out of the arcade background and cursor. */
+html:has(.cv-wrap),
+body:has(.cv-wrap) {
+  color-scheme: light;
+  cursor: auto;
+  background: #e9e4e7;
+  background-image: none;
+}
+body:has(.cv-wrap) a {
+  cursor: pointer;
+}
+.cv-wrap {
+  --cv-ink: #1b1620;
+  --cv-soft: #4a4350;
+  --cv-accent: #b0305f;
+  --cv-rule: #1b1620;
+  min-height: 100vh;
+  padding: 72px 16px 48px;
+  color: var(--cv-ink);
+  font-family: var(--font-pro), "IBM Plex Sans", var(--font-ar), system-ui, sans-serif;
+  font-size: 10pt;
+  line-height: 1.42;
+}
+.cv-wrap * {
+  text-shadow: none !important;
+  animation: none !important;
+}
+.cv-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: rgba(27, 22, 32, 0.92);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  font-size: 14px;
+  font-weight: 600;
+}
+.cv-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+.cv-bar .cv-dl {
+  padding: 8px 16px;
+  background: var(--cv-accent);
+  border-radius: 999px !important;
+}
+.cv-bar .cv-dl:hover {
+  background: #cf3b72;
+}
+.cv-doc {
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 14mm 15mm;
+  background: #fff;
+  box-shadow: 0 10px 40px rgba(27, 22, 32, 0.18);
+}
+.cv-doc a {
+  color: var(--cv-accent);
+  text-decoration: none;
+}
+.cv-doc a:hover {
+  text-decoration: underline;
+}
+.cv-head {
+  text-align: center;
+  margin-bottom: 4mm;
+}
+.cv-head h1 {
+  margin: 0;
+  font-size: 21pt;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  color: var(--cv-ink);
+}
+.cv-title {
+  margin: 1.5mm 0 1.5mm;
+  font-size: 10.5pt;
+  font-weight: 600;
+  color: var(--cv-accent);
+}
+.cv-contact {
+  margin: 0;
+  font-size: 9pt;
+  color: var(--cv-soft);
+}
+.cv-dot {
+  color: #b9b0bd;
+}
+.cv-section {
+  margin-top: 3.5mm;
+}
+.cv-section h2 {
+  margin: 0 0 2mm;
+  padding-bottom: 0.8mm;
+  border-bottom: 1.2px solid var(--cv-rule);
+  font-size: 10.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cv-ink);
+}
+.cv-profile {
+  margin: 0;
+  text-align: justify;
+}
+.cv-entry {
+  margin-bottom: 2.2mm;
+  break-inside: avoid;
+}
+.cv-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4mm;
+}
+.cv-entry h3 {
+  margin: 0;
+  font-size: 10pt;
+  font-weight: 700;
+  color: var(--cv-ink);
+}
+.cv-sub {
+  font-style: italic;
+  color: var(--cv-soft);
+}
+.cv-sub .cv-link {
+  font-style: normal;
+  font-size: 9pt;
+  white-space: nowrap;
+}
+.cv-date {
+  flex: none;
+  font-style: italic;
+  font-size: 9.2pt;
+  color: var(--cv-soft);
+  white-space: nowrap;
+}
+.cv-doc ul {
+  margin: 0.8mm 0 0;
+  padding-left: 5mm;
+}
+.cv-doc li {
+  margin: 0 0 0.6mm;
+}
+.cv-doc li::marker {
+  color: var(--cv-accent);
+}
+.cv-lines {
+  list-style: none;
+  padding-left: 0 !important;
+}
+.cv-lines li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4mm;
+  padding-left: 5mm;
+  break-inside: avoid;
+}
+.cv-lines li::before {
+  content: "";
+  position: absolute;
+  left: 1.3mm;
+  top: 0.62em;
+  width: 1.15mm;
+  height: 1.15mm;
+  border-radius: 50% !important;
+  background: var(--cv-accent);
+}
+@media (max-width: 640px) {
+  .cv-wrap {
+    padding: 64px 0 0;
+    font-size: 13px;
+  }
+  .cv-doc {
+    padding: 22px 16px 28px;
+    box-shadow: none;
+  }
+  .cv-head h1 {
+    font-size: 24px;
+  }
+  .cv-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .cv-lines li {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 11mm 13mm;
+}
+@media print {
+  html:has(.cv-wrap),
+  html:has(.cv-wrap) body {
+    background: #fff !important;
+    background-image: none !important;
+  }
+  .cv-wrap {
+    padding: 0;
+    min-height: 0;
+  }
+  .cv-bar {
+    display: none;
+  }
+  .cv-doc {
+    max-width: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .cv-wrap {
+    font-size: 9.2pt;
+    line-height: 1.33;
+  }
+  .cv-head h1 {
+    font-size: 19pt;
+  }
+  .cv-head {
+    margin-bottom: 2.5mm;
+  }
+  .cv-section {
+    margin-top: 2.6mm;
+  }
+  .cv-section h2 {
+    margin-bottom: 1.4mm;
+  }
+  .cv-entry {
+    margin-bottom: 1.6mm;
+  }
+  .cv-doc li {
+    margin-bottom: 0.3mm;
+  }
+  .cv-section h2 {
+    break-after: avoid;
+  }
+  .cv-pubs {
+    break-inside: avoid;
+  }
+}
