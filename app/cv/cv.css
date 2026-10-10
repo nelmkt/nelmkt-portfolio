@@ -47,6 +47,18 @@ body:has(.cv-wrap) a {
   color: #fff;
   text-decoration: none;
 }
+.cv-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.cv-bar .cv-lang {
+  opacity: 0.85;
+}
+.cv-bar .cv-lang:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
 .cv-bar .cv-dl {
   padding: 8px 16px;
   background: var(--cv-accent);
@@ -146,7 +158,8 @@ body:has(.cv-wrap) a {
 }
 .cv-doc ul {
   margin: 0.8mm 0 0;
-  padding-left: 5mm;
+  padding: 0;
+  padding-inline-start: 5mm;
 }
 .cv-doc li {
   margin: 0 0 0.6mm;
@@ -156,7 +169,7 @@ body:has(.cv-wrap) a {
 }
 .cv-lines {
   list-style: none;
-  padding-left: 0 !important;
+  padding-inline-start: 0 !important;
 }
 .cv-lines li {
   position: relative;
@@ -164,13 +177,13 @@ body:has(.cv-wrap) a {
   justify-content: space-between;
   align-items: baseline;
   gap: 4mm;
-  padding-left: 5mm;
+  padding-inline-start: 5mm;
   break-inside: avoid;
 }
 .cv-lines li::before {
   content: "";
   position: absolute;
-  left: 1.3mm;
+  inset-inline-start: 1.3mm;
   top: 0.62em;
   width: 1.15mm;
   height: 1.15mm;
@@ -197,6 +210,26 @@ body:has(.cv-wrap) a {
     flex-direction: column;
     gap: 0;
   }
+}
+
+/* Arabic: the Kufi face, no letter-spacing (it breaks joined letters) and no slanted text */
+.cv-wrap[dir="rtl"] {
+  font-family: var(--font-ar), "Noto Kufi Arabic", sans-serif;
+  line-height: 1.6;
+}
+.cv-wrap[dir="rtl"] .cv-section h2,
+.cv-wrap[dir="rtl"] .cv-head h1 {
+  letter-spacing: 0;
+}
+.cv-wrap[dir="rtl"] .cv-sub,
+.cv-wrap[dir="rtl"] .cv-date {
+  font-style: normal;
+}
+.cv-wrap[dir="rtl"] .cv-date {
+  color: #6b6270;
+}
+.cv-wrap[dir="rtl"] .cv-lines li::before {
+  top: 0.8em;
 }
 
 @page {
@@ -248,5 +281,16 @@ body:has(.cv-wrap) a {
   }
   .cv-pubs {
     break-inside: avoid;
+  }
+}
+
+/* Arabic print: Kufi runs wider, so a slightly smaller size keeps the CV to two pages */
+@media print {
+  .cv-wrap[dir="rtl"] {
+    font-size: 8.3pt;
+    line-height: 1.42;
+  }
+  .cv-wrap[dir="rtl"] .cv-head h1 {
+    font-size: 17pt;
   }
 }

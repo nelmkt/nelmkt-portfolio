@@ -1,5 +1,6 @@
-// The CV: one source for the /cv page and the downloadable PDF (rendered from that page).
-// Kept in step with data.ts; the phone number is left out of the public version on purpose.
+// The CV in English and Arabic: one source for the /cv and /cv/ar pages and their PDFs
+// (each PDF is printed from its page). Kept in step with data.ts; the phone number is
+// left out of the public version on purpose.
 
 export type CvEntry = {
   title: string;
@@ -12,11 +13,16 @@ export type CvEntry = {
 
 export type CvLine = { lead: string; text?: string; date?: string; url?: string };
 
+export type CvLang = "en" | "ar";
+
 export const cvPdf = "/Nelly-Almaktoum-CV.pdf";
+export const cvPdfAr = "/Nelly-Almaktoum-CV-ar.pdf";
+export const cvPage = { en: "/cv/", ar: "/cv/ar/" } as const;
+export const cvPdfs = { en: cvPdf, ar: cvPdfAr } as const;
 
 export const cv = {
   name: "Nelly F. Almaktoum",
-  title: "Computer Science Student - Applied ML & Sustainability Researcher",
+  title: "Computer Science Student - ML Engineer - Researcher & Innovator",
   contact: [
     { label: "Jeddah, Saudi Arabia" },
     { label: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },
@@ -28,7 +34,7 @@ export const cv = {
   ] as { label: string; url?: string }[],
 
   profile:
-    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track and recipient of KAU's Academic Excellence Award. Applied ML and IoT researcher, and the youngest UN-certified Saudi researcher: the youngest of the seven winners of the UNCCD Young Researchers Award at COP16, selected from 209 researchers across 36 countries. Inventor of the patented Aykah smart bin and builder of Wahaj (urban greening and energy trade-offs) and Maeen (real-time pipeline leak detection). Leads the Technical Committee of the Waed Students Community and serves in IEEE, GDG and the Programming Club. Bilingual in Arabic and English, and aiming for a Ph.D. and an academic career.",
+    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track and recipient of KAU's Academic Excellence Award. ML engineer and IoT researcher, and the youngest UN-certified Saudi researcher: the youngest of the seven winners of the UNCCD Young Researchers Award at COP16, selected from 209 researchers across 36 countries. Inventor of the patented Aykah smart bin and builder of Wahaj (urban greening and energy trade-offs) and Maeen (real-time pipeline leak detection). Leads the Technical Committee of the Waed Students Community and serves in IEEE, GDG and the Programming Club. Bilingual in Arabic and English, and aiming for a Ph.D. and an academic career.",
 
   education: [
     {
@@ -165,7 +171,7 @@ export const cv = {
   skills: [
     { lead: "Programming", text: "Python, TypeScript, JavaScript, Rust, Ruby; working knowledge of C++, C# and Java." },
     {
-      lead: "ML & data",
+      lead: "ML engineering & data",
       text: "XGBoost, scikit-learn, pandas, NumPy, Matplotlib; anomaly detection, explainable AI, spatial cross-validation, counterfactual testing, reproducible pipelines, MLOps (model registry, drift monitoring).",
     },
     { lead: "Web & tools", text: "Next.js, Node.js, FastAPI, REST APIs, Pydantic, HTML/CSS; Git, Docker, GitHub Actions, pytest." },
@@ -181,3 +187,206 @@ export const cv = {
     { lead: "Interests", text: "Design and painting." },
   ] as CvLine[],
 };
+
+// Arabic CV: the same content, written for Arabic readers (not word for word).
+export const cvAr: typeof cv = {
+  name: "نيللي المكتوم",
+  title: "طالبة علوم حاسب - مهندسة تعلّم آلة - باحثة ومبتكرة",
+  contact: [
+    { label: "جدة، المملكة العربية السعودية" },
+    { label: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },
+    { label: "nelmkt.com", url: "https://nelmkt.com" },
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/nelmkt/" },
+    { label: "GitHub", url: "https://github.com/nelmkt" },
+    { label: "ORCID", url: "https://orcid.org/0009-0007-9887-0280" },
+    { label: "Google Scholar", url: "https://scholar.google.com/citations?user=MAgd-b0AAAAJ" },
+  ],
+
+  profile:
+    "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي، وحاصلة على جائزة التفوق الأكاديمي من الجامعة. مهندسة تعلّم آلة وباحثة في إنترنت الأشياء، وأصغر باحثة سعودية معتمدة من الأمم المتحدة: الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من اتفاقية الأمم المتحدة لمكافحة التصحر في COP16، من بين 209 باحثين من 36 دولة. مخترعة حاوية آيكة الذكية الحاصلة على براءة اختراع، ومطوّرة إطار وهاج (أثر التشجير الحضري على الطاقة) ونظام مَعين (رصد تسريبات الأنابيب لحظيًا). تقود اللجنة التقنية في مجتمع طلاب واعد، وتشارك في IEEE و GDG ونادي البرمجة. تتقن العربية والإنجليزية، وتطمح إلى الدكتوراه ومسيرة أكاديمية.",
+
+  education: [
+    {
+      title: "جامعة الملك عبدالعزيز، جدة",
+      role: "بكالوريوس علوم الحاسب، كلية الحاسبات وتقنية المعلومات",
+      date: "2025 – 2030 (متوقع)",
+      bullets: [
+        "مسار واعد للتميز النوعي للطلبة الموهوبين (منحة واعد).",
+        "جائزة التفوق الأكاديمي 2025 – 2026 لتحقيق معدل 4.5 فأعلى في فصلين دراسيين متتاليين.",
+      ],
+    },
+    {
+      title: "مدارس دار الفكر العالمية، جدة",
+      role: "شهادة الثانوية الأمريكية",
+      date: "2022 – 2025",
+      bullets: [
+        "خريجة موهبة: برامج إثرائية متقدمة في العلوم والتقنية عبر مؤسسة الملك عبدالعزيز ورجاله للموهبة والإبداع (2022 – 2025).",
+        "مشروع التخرج: آيكة، من بحث في أهداف التنمية المستدامة إلى نموذج أولي يعمل وفكرة مشروع تجاري.",
+      ],
+    },
+  ],
+
+  research: [
+    {
+      title: "مَعين: رصد تسريبات خطوط المياه وجودتها لحظيًا",
+      role: "قائدة تقنية ومطوّرة، ضمن فريق من خمسة أعضاء",
+      date: "أكتوبر 2026",
+      link: { label: "github.com/nelmkt/maeen", url: "https://github.com/nelmkt/maeen" },
+      bullets: [
+        "بنيتُ نظام تعلّم آلة متكاملًا يحوّل قراءات الحساسات داخل الأنابيب (الضغط والتدفق و pH و EC والصوت والاهتزاز) إلى إجابات واضحة: ما المشكلة، وأين، وما مدى خطورتها، ولماذا، وما العمل. النموذج الأولي مكتمل ويعمل.",
+        "خصائص مبنية على فيزياء الجريان مع التعزيز التدرّجي تحقق دقة 94.1% في تحديد نوع العطل بين 6 فئات على سيناريوهات لم يرها النموذج، مقابل 78.5% لقواعد العتبات التقليدية، بمعدل 0.06 إنذار كاذب في اليوم.",
+        "يحدد موقع العطل بين الجهازين الصحيحين بنسبة 99.9%، وبدقة تقارب 110 أمتار على خط طوله 5 كم، ويرصد التسريب خلال 5 دقائق في المتوسط.",
+        "خدمة FastAPI ولوحة متابعة بالعربية والإنجليزية تشرح أدلة كل إنذار بلغة واضحة، مع سجل للنماذج ومراقبة لانحراف البيانات وبوابة جودة آلية (Docker، GitHub Actions، pytest).",
+      ],
+    },
+    {
+      title: "إطار وهاج: الموازنة بين التشجير الحضري والطاقة",
+      role: "باحثة ومطوّرة",
+      date: "يونيو – أكتوبر 2026",
+      link: { label: "DOI 10.5281/zenodo.23168529", url: "https://doi.org/10.5281/zenodo.23168529" },
+      bullets: [
+        "إطار تعلّم آلة قابل للتكرار مبني بـ Python و Google Earth Engine للمدن المعتمدة على تحلية المياه، وجدة نموذجًا.",
+        "نموذج XGBoost لحرارة سطح الأرض من صور Landsat 8 بدقة R² = 0.795 في تحقق مكاني على 19,650 خلية، مقارنةً بالغابة العشوائية والتعزيز التدرّجي والانحدار الخطي.",
+        "انخفاض قدره 1.18 °م لكل بكسل مُشجَّر خارج المناطق العمرانية، مع اختبارات للسيناريوهات البديلة والمتانة، ومؤشر NEGI وحساب للمياه والطاقة (قرابة 2.9 – 5.3 ميغاواط ساعة سنويًا من طاقة التحلية لكل درجة تبريد).",
+      ],
+    },
+    {
+      title: "آيكة: حاوية نفايات ذكية بالطاقة الشمسية وإنترنت الأشياء",
+      role: "المخترعة وقائدة المشروع - براءة اختراع",
+      date: "أكتوبر 2024 – مارس 2025",
+      link: { label: "github.com/nelmkt/Smart-Bin-Aykah", url: "https://github.com/nelmkt/Smart-Bin-Aykah" },
+      bullets: [
+        "صممتُ حاوية ذكية منخفضة التكلفة وبنيتُها حتى النموذج الأولي: Raspberry Pi وحساس بالموجات فوق الصوتية لقياس الامتلاء وشاشة LCD ومؤشرات LED وتنقية للهواء وطاقة شمسية.",
+        "مبنية على استبيان مجتمعي شارك فيه 222 شخصًا حول عادات التخلص من النفايات وتقبّل الحلول الذكية، وطُوّرت إلى فكرة مشروع تجاري بهوية مستقلة.",
+        "فازت بجائزة الباحثين الشباب في COP16، وحصلت على براءة اختراع، ونشرت عنها صحيفة Saudi Gazette.",
+      ],
+    },
+  ],
+
+  publications: [
+    { lead: "براءة اختراع", text: "نظام آيكة الذكي لإدارة النفايات (المخترعة)." },
+    { lead: "ورقة بحثية", text: "المؤتمر الثاني للاستدامة وجودة الحياة، جامعة الملك عبدالعزيز.", date: "2026" },
+    {
+      lead: "إصدار برمجي",
+      text: "إطار وهاج، Zenodo، DOI 10.5281/zenodo.23168529.",
+      date: "2026",
+      url: "https://doi.org/10.5281/zenodo.23168529",
+    },
+    {
+      lead: "إعلام",
+      text: "مقال عن رحلة ابتكار حاوية آيكة، صحيفة Saudi Gazette.",
+      date: "سبتمبر 2026",
+      url: "https://saudigazette.com.sa/article/664214/saudi-arabia/how-curiosity-led-a-saudi-teenager-to-develop-a-un-award-winning-smart-waste-management-solution",
+    },
+  ],
+
+  awards: [
+    {
+      title: "جائزة الباحثين الشباب، COP16",
+      role: "فائزة في فئة التقنيات الحديثة (اتفاقية الأمم المتحدة لمكافحة التصحر)",
+      date: "ديسمبر 2024",
+      bullets: [
+        "الأصغر بين الفائزين السبعة من بين 209 باحثين وأساتذة من 36 دولة، ونلتُها في السادسة عشرة.",
+        "وتكريم وطني من وزارة البيئة والمياه والزراعة والمركز الوطني للأرصاد.",
+      ],
+    },
+    {
+      title: "مسابقة IEEE للأفكار الإبداعية، المؤتمر الدولي الثاني والعشرون للتعلم والتقنية",
+      role: "مقدّمة وقائدة فريق، جامعة عفت",
+      date: "يناير 2025",
+      bullets: [
+        "قدّمتُ ورقة علمية نالت أحد أعلى التقييمات في معرض اندماج الإنسان والآلة (HMF) أمام لجنة من أساتذة التقنية والمبتكرين، وقدتُ فريقًا من خمسة أعضاء.",
+      ],
+    },
+    {
+      title: "الملتقى والمعرض السنوي الخامس والعشرون لأبحاث التخرج",
+      role: "عارضة، مدارس دار الفكر العالمية",
+      date: "2025",
+      bullets: [
+        "عرضتُ نموذجًا أوليًا للطاقة الخضراء المتجددة ونظّمتُ أركان البحث، وقدتُ التفاعل مع الزوار وقدّمتُ للضيوف والمختصين.",
+      ],
+    },
+  ],
+
+  moreAwards: [
+    { lead: "جائزة التفوق الأكاديمي 2025 – 2026", text: "جامعة الملك عبدالعزيز", date: "يونيو 2026" },
+    { lead: "شهادة شكر وتقدير", text: "جامعة الملك عبدالعزيز، للمشاركة المتميزة في المسابقات المحلية والدولية", date: "سبتمبر 2026" },
+    { lead: "الفوز في هاكاثونات", text: "عدة هاكاثونات محلية" },
+    { lead: "أولمبياد الرياضيات الوطني", text: "المرحلة النهائية، ممثلةً للمنطقة الغربية", date: "فبراير 2022" },
+  ],
+
+  leadership: [
+    { lead: "قائدة الفريق التقني", text: "مجتمع طلاب واعد، جامعة الملك عبدالعزيز", date: "سبتمبر 2026 – الآن" },
+    { lead: "منسّقة مشروع Talks X", text: "يوم الهندسة 2027، جامعة الملك عبدالعزيز", date: "سبتمبر 2026 – الآن" },
+    { lead: "مختصة التنسيق والتصميم", text: "لجنة التخطيط ليوم الهندسة 2027", date: "أغسطس 2026 – الآن" },
+    { lead: "عضوة في القسم التقني", text: "IEEE (دورة 2027)", date: "أكتوبر 2026 – الآن" },
+    { lead: "عضوة في القسم التقني", text: "نادي البرمجة (دورة 2027)", date: "أكتوبر 2026 – الآن" },
+    { lead: "عضوة في فريق تجربة المجتمع", text: "مجموعات مطوري Google، جامعة الملك عبدالعزيز", date: "أكتوبر 2026 – الآن" },
+    { lead: "منظِّمة ومنسّقة فعاليات", text: "أولمبياد اللغة الإنجليزية (ELO)، جامعة الملك عبدالعزيز", date: "أكتوبر 2026" },
+    { lead: "منسّقة", text: "اللقاء التعريفي والورشة السنوية لواعد 2027", date: "أغسطس – سبتمبر 2026" },
+    { lead: "عضوة", text: "نادي البحث العلمي، جامعة الملك عبدالعزيز", date: "سبتمبر 2026 – الآن" },
+    { lead: "عضوة", text: "نادي الرياضات الذهنية والإلكترونية، جامعة الملك عبدالعزيز", date: "أكتوبر 2025 – يونيو 2026" },
+  ],
+
+  events: [
+    { lead: "مياهثون 2027", text: "الهيئة السعودية للمياه", date: "2027" },
+    { lead: "IECE 2026", text: "المؤتمر والمعرض الهندسي الدولي، الهيئة السعودية للمهندسين", date: "ديسمبر 2026" },
+    { lead: "المؤتمر الثاني للاستدامة وجودة الحياة", text: "جامعة الملك عبدالعزيز (ورقة بحثية)", date: "2026" },
+    { lead: "هاكاثون الحريق", text: "وزارة البيئة والمياه والزراعة", date: "ديسمبر 2025" },
+    { lead: "بطولة أرامكو للاستشارات", text: "مشاركة", date: "ديسمبر 2025" },
+    { lead: "الملتقى العلمي الثاني", text: "جامعة الملك عبدالعزيز", date: "نوفمبر 2025" },
+  ],
+
+  skills: [
+    { lead: "البرمجة", text: "Python، TypeScript، JavaScript، Rust، Ruby، ومعرفة عملية بـ C++ و C# و Java." },
+    {
+      lead: "هندسة تعلّم الآلة والبيانات",
+      text: "XGBoost، scikit-learn، pandas، NumPy، Matplotlib؛ رصد الحالات الشاذة، والذكاء الاصطناعي القابل للتفسير، والتحقق المتقاطع المكاني، واختبارات السيناريوهات البديلة، والمسارات القابلة للتكرار، و MLOps (سجل النماذج ومراقبة انحراف البيانات).",
+    },
+    { lead: "الويب والأدوات", text: "Next.js، Node.js، FastAPI، واجهات REST، Pydantic، HTML/CSS؛ Git، Docker، GitHub Actions، pytest." },
+    {
+      lead: "الاستشعار عن بعد والعتاد",
+      text: "Google Earth Engine، Landsat 8؛ Raspberry Pi، والأنظمة المدمجة وحساسات الموجات فوق الصوتية وواجهات LCD/LED والطاقة الشمسية ونمذجة إنترنت الأشياء.",
+    },
+    {
+      lead: "القيادة والتواصل",
+      text: "قيادة اللجان، وتنسيق الفعاليات، وقيادة الفرق، والعروض العلمية أمام لجان الخبراء، والتنسيق والتصميم البصري.",
+    },
+    { lead: "اللغات", text: "العربية (اللغة الأم)، والإنجليزية (بطلاقة)." },
+    { lead: "الاهتمامات", text: "التصميم والرسم." },
+  ],
+};
+
+export const cvs = { en: cv, ar: cvAr } as const;
+
+// Section titles and page chrome in each language.
+export const cvLabels = {
+  en: {
+    profile: "Profile",
+    education: "Education",
+    research: "Research & Projects",
+    publications: "Patent, Publications & Media",
+    awards: "Awards & Honors",
+    leadership: "Leadership & Extracurricular Activities",
+    events: "Conferences, Competitions & Events",
+    skills: "Skills",
+    back: "← nelmkt.com",
+    download: "Download PDF",
+    other: "العربية",
+    sep: ", ",
+  },
+  ar: {
+    profile: "نبذة",
+    education: "التعليم",
+    research: "الأبحاث والمشاريع",
+    publications: "براءة الاختراع والمنشورات والإعلام",
+    awards: "الجوائز والتكريم",
+    leadership: "القيادة والأنشطة اللاصفية",
+    events: "المؤتمرات والمسابقات والفعاليات",
+    skills: "المهارات",
+    back: "nelmkt.com →",
+    download: "تحميل PDF",
+    other: "English",
+    sep: "، ",
+  },
+} as const;
