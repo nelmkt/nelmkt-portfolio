@@ -1,5 +1,3 @@
-// Pixel-art app icons for the contact list: a brand-coloured 10x10 tile with a
-// white glyph, so they match the rest of the site's pixel look.
 
 const ICONS: Record<string, { bg: string; fg?: string; rows: string[] }> = {
   LinkedIn: {
@@ -47,7 +45,6 @@ const ICONS: Record<string, { bg: string; fg?: string; rows: string[] }> = {
       "..........",
     ],
   },
-  // white circle with the Octocat cut out of it, like GitHub's mark
   GitHub: {
     bg: "#24292F",
     rows: [

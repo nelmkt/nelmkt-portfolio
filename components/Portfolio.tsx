@@ -19,7 +19,6 @@ import { academy, languages, links, party, profile, quests, sideQuests, skillTre
 
 const STORE_KEY = "nelmkt-collected";
 
-// Position in a stack of boxes, 0 (first, deep pink) to 1 (last, pastel pink).
 const ramp = (i: number, n: number) => ({ ["--t" as string]: n > 1 ? i / (n - 1) : 0 });
 
 export default function Portfolio() {
@@ -38,7 +37,6 @@ export default function Portfolio() {
     } catch {}
   }, []);
 
-  // The tab title follows the language (Next sets the English one at load, so this runs after it).
   useEffect(() => {
     const title = ar ? "نيللي المكتوم" : "Nelly Almaktoum";
     document.title = title;
@@ -70,8 +68,6 @@ export default function Portfolio() {
     });
   }, []);
 
-  // The highlighted menu item is the last visible section whose top has passed 40%
-  // of the screen; at the very bottom of the page the last section wins.
   useEffect(() => {
     const update = () => {
       const line = window.innerHeight * 0.4;
@@ -136,7 +132,6 @@ export default function Portfolio() {
       </header>
 
       <main>
-        {/* 1-1 PLAYER */}
         <section id="player" className="stage">
           <StageTag code="1-1" label="PLAYER SELECT" pro="About" />
           <div className="player-grid">
@@ -224,7 +219,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 1-2 BONUS */}
         <section id="bonus" className="stage arcade-only">
           <StageTag code="1-2" label="BONUS STAGE - LANGUAGE RUSH" pro="" />
           <p className="stage-lede">
@@ -247,7 +241,6 @@ export default function Portfolio() {
           {allUnlocked && <p className="all-unlocked"><PixelIcon name="star" /> {tr("ALL LANGUAGES UNLOCKED")} <PixelIcon name="star" /></p>}
         </section>
 
-        {/* 1-3 QUESTS */}
         <section id="quests" className="stage">
           <StageTag code="1-3" label="QUEST LOG" pro="Research & projects" />
           <div className="quests">
@@ -308,7 +301,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 1-4 TROPHIES */}
         <section id="trophies" className="stage">
           <StageTag code="1-4" label="TROPHY ROOM" pro="Recognition" />
           <ol className="trophies">
@@ -333,7 +325,6 @@ export default function Portfolio() {
           </ol>
         </section>
 
-        {/* 1-5 ACADEMY */}
         <section id="academy" className="stage">
           <StageTag code="1-5" label="ACADEMY & SIDE QUESTS" pro="Education & activities" />
           <div className="academy">
@@ -362,7 +353,6 @@ export default function Portfolio() {
           </ul>
         </section>
 
-        {/* 1-6 SKILLS */}
         <section id="skills" className="stage">
           <StageTag code="1-6" label="SKILL TREE" pro="Technical skills" />
           <div className="box lang-panel">
@@ -396,7 +386,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 1-7 PARTY */}
         <section id="party" className="stage">
           <StageTag code="1-7" label="PARTY & GUILDS" pro="Leadership & community" />
           <ul className="party">
@@ -413,7 +402,6 @@ export default function Portfolio() {
           </ul>
         </section>
 
-        {/* 1-8 CV */}
         <section id="cv" className="stage">
           <StageTag code="1-8" label="CHARACTER SHEET" pro="CV" />
           <div className="box cv-card">
@@ -421,7 +409,9 @@ export default function Portfolio() {
               <img src={ar ? "/cv-preview-ar.webp" : "/cv-preview.webp"} alt="" width={600} height={420} loading="lazy" decoding="async" />
             </a>
             <div className="cv-card-body">
-              <h3>{tr("MY FULL CV")}</h3>
+              <h3>
+                <Dual a="MY FULL CV" p="Full CV" />
+              </h3>
               <p>{tr("Education, research, patent, awards, leadership and activities, all in one place.")}</p>
               <div className="cv-actions">
                 <a className="cv-btn primary" href={cvPage[ar ? "ar" : "en"]}>
@@ -435,7 +425,6 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* 1-9 SAVE */}
         <section id="save" className="stage">
           <StageTag code="1-9" label="SAVE POINT" pro="Contact" />
           <div className="box save">
@@ -489,8 +478,6 @@ function StageTag({ code, label, pro }: { code: string; label: string; pro: stri
   );
 }
 
-// The same spot reads as a game label in arcade mode and as plain wording in professional mode.
-// Both are passed through the Arabic dictionary when Arabic is on.
 function Dual({ a, p }: { a: string; p: string }) {
   const t = useT();
   return (

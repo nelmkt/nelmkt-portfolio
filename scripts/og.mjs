@@ -1,12 +1,10 @@
-// Builds public/og.png, the 1200x630 link-preview image, in the start-screen style.
-// Run: npm run og
 import { Resvg } from "@resvg/resvg-js";
 import { writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
-const W = 1200, H = 630, HZ = 410; // horizon
+const W = 1200, H = 630, HZ = 410;
 
 const grid = (rows, x0, y0, s, colors) =>
   rows
@@ -15,7 +13,6 @@ const grid = (rows, x0, y0, s, colors) =>
     )
     .join("");
 
-// Standing pose of the runner sprite (components/sprite.ts).
 const SPRITE = [
   "....kkkkkk......", "...kHHHHHHkk....", "..kHHhhHHHHHk.k.", ".kHHhHHHHHHHHkHk", ".kHHHHHkHHHkHHHk",
   ".kHHHkSSkHkSSHk.", ".kHkGWEGGGWEGkHk", ".kHkGEEGSGEEGkHk", "..kHsSSSSSSSsHk.", "..kHkSSSTSSSkHk.",
@@ -40,14 +37,11 @@ const slats = [[HZ - 70, 6], [HZ - 48, 9], [HZ - 26, 12]]
   .map(([y, h]) => `<rect x="${W / 2 - 220}" y="${y}" width="440" height="${h}" fill="url(#sky)"/>`)
   .join("");
 
-// Stacked pixel shadow (dark, then pink), like the start-screen title.
 const shadowed = (txt, x, y, size, family, step) =>
   [["#1a0612", step * 2], ["#b8306f", step], ["#ffffff", 0]]
     .map(([fill, d]) => `<text x="${x + d}" y="${y + d}" font-size="${size}" font-family="${family}" font-weight="700" fill="${fill}" text-anchor="middle">${txt}</text>`)
     .join("");
 
-// Pixel Arabic, like components/PixelText.tsx: render tiny, keep solid pixels, crop,
-// then redraw each pixel as a scale x scale square with the stacked shadow.
 const pixelArabic = (txt, cx, top, size, scale) => {
   const sw = size * 20, sh = size * 3;
   const tiny = new Resvg(

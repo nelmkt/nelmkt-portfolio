@@ -1,4 +1,3 @@
-// All content is taken from github.com/nelmkt (profile + README) and linkedin.com/in/nelmkt.
 
 export const profile = {
   name: "Nelly Almaktoum",
@@ -7,18 +6,15 @@ export const profile = {
   headline: "FCIT Student @ KAU - Waed ’26 - IEEE ’25 - UNCCD COP16 ’24 - Mawhiba Alumna",
   tagline:
     "Undergraduate researcher and developer working across software, hardware, data and AI/ML.",
-  // Bio shown in the "NELLY" dialog box, one string per paragraph.
   about: [
     "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.",
     "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT, from measuring what urban greening really does in Wahaj to catching pipeline leaks in real time with Maeen. I'm aiming for a Ph.D. and a career in academia. My projects are in the Quest Log below.",
     "I'm also an artist, which probably explains why this site looks the way it does.",
   ],
-  // The professional view's bio: no game wording and no line about the arcade look.
   aboutPro: [
     "I'm a computer science student at King Abdulaziz University who loves solving problems with code and hardware, from machine learning models and full-stack web apps to Aykah, a solar-powered smart waste bin I designed, built and prototyped end to end.",
     "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT, from measuring what urban greening really does in Wahaj to catching pipeline leaks in real time with Maeen. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.",
   ],
-  // Headline achievement, shown as its own banner under the tagline.
   highlight: "Youngest UN-certified Saudi researcher",
   highlightDetail: "6 national & international recognitions - 3 national & international awards",
   stats: [
@@ -29,7 +25,6 @@ export const profile = {
     { label: "MAIN QUEST", pro: "Goal", value: "Ph.D. → academia" },
     { label: "SIDE QUEST", pro: "Outside research", value: "Design & painting" },
   ],
-  // Focus areas: technical and research only, in one consistent form.
   interests: [
     "AI/ML engineering",
     "Full-stack web development",
@@ -199,9 +194,7 @@ export const trophies = [
   },
 ];
 
-// The languages from the README, in README order. Used by the mini-game too.
 export const languages = [
-  // level: how many of the five skill boxes are lit in the Skill Tree.
   { name: "Python", short: "PY", color: "#3776AB", tier: "MAIN", level: 5 },
   { name: "Rust", short: "RS", color: "#DEA584", tier: "MAIN", level: 5 },
   { name: "Ruby", short: "RB", color: "#CC342D", tier: "MAIN", level: 4 },
@@ -212,7 +205,6 @@ export const languages = [
   { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING", level: 3 },
 ] as const;
 
-// Broad development skills first; ML is one strand among several.
 export const skillTree = [
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
   { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI", "REST APIs", "Pydantic"] },

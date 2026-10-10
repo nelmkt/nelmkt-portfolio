@@ -6,7 +6,6 @@ import { profile } from "./data";
 import { type Mode, setMode } from "./mode";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
-// Deterministic "random" so server and client render the same star field.
 const STARS = Array.from({ length: 28 }, (_, i) => {
   const r = (n: number) => ((Math.sin(i * 97.13 + n * 13.7) + 1) / 2) % 1;
   return {
@@ -43,7 +42,6 @@ export default function StartScreen() {
   const [open, setOpen] = useState(true);
   const [leaving, setLeaving] = useState(false);
   const [best, setBest] = useState(0);
-  // Which menu item is highlighted (0 = PRESS START, 1 = PROFESSIONAL MODE).
   const [sel, setSel] = useState(0);
 
   useEffect(() => {
@@ -57,7 +55,6 @@ export default function StartScreen() {
     if (!open) return;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
-      // Up/down moves between the two menu items, like an arcade cabinet.
       if (e.key === "ArrowUp" || e.key === "ArrowDown") {
         e.preventDefault();
         const items = [...document.querySelectorAll<HTMLButtonElement>(".start-menu button")];
@@ -66,7 +63,6 @@ export default function StartScreen() {
         items[next]?.focus();
         return;
       }
-      // Enter/Space on a focused button already clicks it; let that button decide.
       if (e.target instanceof HTMLButtonElement && e.key !== "Escape") return;
       if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
         e.preventDefault();
