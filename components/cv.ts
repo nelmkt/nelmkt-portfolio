@@ -190,7 +190,7 @@ export const cv = {
 
 // Arabic CV: the same content, written for Arabic readers (not word for word).
 export const cvAr: typeof cv = {
-  name: "نيللي المكتوم",
+  name: "نيللي فيصل المكتوم",
   title: "طالبة علوم حاسب - مهندسة تعلّم آلة - باحثة ومبتكرة",
   contact: [
     { label: "جدة، المملكة العربية السعودية" },

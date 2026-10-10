@@ -124,43 +124,46 @@ export default function StartScreen() {
       </div>
 
       <div className="start-inner">
-        <p className="start-kicker">NELMKT PRESENTS</p>
-        <h1 className="start-title">
-          NELLY
-          <br />
-          ALMAKTOUM
-        </h1>
-        <p className="start-ar">
-          <PixelText text={profile.nameAr} size={14} scale={3} shadow="#b8306f" />
-        </p>
-        <div className="start-thermal" aria-hidden="true" />
-        <p className="start-sub">
-          <span>Researcher &amp; Innovator</span>
-          <br />
-          <span>
-            ML Engineer <i>-</i> Green Tech
-          </span>
-        </p>
-        <div className="start-menu">
-          <button
-            className={`start-btn${sel === 0 ? " sel" : ""}`}
-            onClick={() => start("arcade")}
-            onFocus={() => setSel(0)}
-            onMouseEnter={() => setSel(0)}
-            autoFocus
-          >
-            PRESS START
-          </button>
-          <button
-            className={`start-pro${sel === 1 ? " sel" : ""}`}
-            onClick={() => start("pro")}
-            onFocus={() => setSel(1)}
-            onMouseEnter={() => setSel(1)}
-          >
-            PROFESSIONAL MODE
-          </button>
+        <div className="start-top">
+          <p className="start-kicker">NELMKT PRESENTS</p>
+          <h1 className="start-title">
+            NELLY
+            <br />
+            ALMAKTOUM
+          </h1>
+          <p className="start-ar">
+            <PixelText text={profile.nameAr} size={14} scale={3} shadow="#b8306f" />
+          </p>
+          <div className="start-thermal" aria-hidden="true" />
         </div>
-        <p className="start-meta">Jeddah, Saudi Arabia</p>
+        <div className="start-bottom">
+          <p className="start-sub">
+            <span>Researcher &amp; Innovator</span>
+            <br />
+            <span>
+              ML Engineer <i>-</i> Green Tech
+            </span>
+          </p>
+          <div className="start-menu">
+            <button
+              className={`start-btn${sel === 0 ? " sel" : ""}`}
+              onClick={() => start("arcade")}
+              onFocus={() => setSel(0)}
+              onMouseEnter={() => setSel(0)}
+              autoFocus
+            >
+              PRESS START
+            </button>
+            <button
+              className={`start-pro${sel === 1 ? " sel" : ""}`}
+              onClick={() => start("pro")}
+              onFocus={() => setSel(1)}
+              onMouseEnter={() => setSel(1)}
+            >
+              PROFESSIONAL MODE
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
