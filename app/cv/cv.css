@@ -1,5 +1,3 @@
-/* The /cv page: a clean A4 sheet on screen, and the exact layout the PDF is printed from.
-   It sits inside the site's root layout, so it opts out of the arcade background and cursor. */
 html:has(.cv-wrap),
 body:has(.cv-wrap) {
   color-scheme: light;
@@ -212,7 +210,6 @@ body:has(.cv-wrap) a {
   }
 }
 
-/* Arabic: the Kufi face, no letter-spacing (it breaks joined letters) and no slanted text */
 .cv-wrap[dir="rtl"] {
   font-family: var(--font-ar), "Noto Kufi Arabic", sans-serif;
   line-height: 1.6;
@@ -284,7 +281,6 @@ body:has(.cv-wrap) a {
   }
 }
 
-/* Arabic print: Kufi runs wider, so a slightly smaller size keeps the CV to two pages */
 @media print {
   .cv-wrap[dir="rtl"] {
     font-size: 8.3pt;

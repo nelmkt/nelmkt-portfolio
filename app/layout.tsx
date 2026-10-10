@@ -5,17 +5,13 @@ import { modeBootScript } from "../components/mode";
 import "./pixel-icons.css";
 import "./globals.css";
 
-// Pixelify Sans (OFL): an open, readable pixel face with real weights, for titles and labels.
-// The stylesheet's sizes were tuned for a smaller pixel font, so size-adjust scales it up.
 const pixel = localFont({
   src: "./fonts/PixelifySans-Variable.woff2",
   weight: "400 700",
   variable: "--font-pixel",
   declarations: [{ prop: "size-adjust", value: "145%" }],
 });
-// Jersey 15 (OFL): sturdy, very legible pixel lettering for the headline achievement banner.
 const banner = localFont({ src: "./fonts/Jersey15-Regular.woff2", variable: "--font-banner" });
-// The same face, digits only, for the numbers drawn in the bonus game (scaled to match the pixel labels).
 const digits = localFont({
   src: "./fonts/Jersey15-Regular.woff2",
   variable: "--font-digits",
@@ -25,10 +21,7 @@ const digits = localFont({
     { prop: "size-adjust", value: "175%" },
   ],
 });
-// Chakra Petch: a squared, game-UI sans that keeps the arcade feel but reads easily in paragraphs.
 const body = Chakra_Petch({ weight: ["400", "500", "600", "700"], subsets: ["latin"], variable: "--font-body" });
-// Professional mode swaps every pixel face for IBM Plex Sans (OFL). Headings get a
-// size-adjusted copy so the sizes tuned for the pixel font still read the same.
 const pro = localFont({ src: "./fonts/IBMPlexSans-Variable.woff2", weight: "100 700", variable: "--font-pro", preload: false });
 const proHeading = localFont({
   src: "./fonts/IBMPlexSans-Variable.woff2",
@@ -38,7 +31,6 @@ const proHeading = localFont({
   declarations: [{ prop: "size-adjust", value: "150%" }],
 });
 const arabic = Noto_Kufi_Arabic({ weight: ["400", "500", "700"], subsets: ["arabic"], variable: "--font-ar" });
-// Arabic fallback for headings and pixel labels, scaled up like the fonts it stands in for.
 const arabicHeading = localFont({
   src: "./fonts/NotoKufiArabic-Variable.woff2",
   weight: "100 900",

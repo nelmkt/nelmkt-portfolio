@@ -60,7 +60,6 @@ function Lines({ items, sep, colon = false }: { items: CvLine[]; sep: string; co
   );
 }
 
-// The whole CV in one language; /cv and /cv/ar each render one of these.
 export default function CvDocument({ lang }: { lang: CvLang }) {
   const cv = cvs[lang];
   const t = cvLabels[lang];

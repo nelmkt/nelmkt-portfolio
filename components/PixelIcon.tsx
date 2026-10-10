@@ -1,5 +1,3 @@
-// Tiny pixel-art icons drawn from 8x8 grids, used instead of emoji/text glyphs
-// so every symbol on the site matches the pixel look. Colour comes from currentColor.
 
 const ICONS = {
   trophy: [

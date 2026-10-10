@@ -1,6 +1,3 @@
-// The CV in English and Arabic: one source for the /cv and /cv/ar pages and their PDFs
-// (each PDF is printed from its page). Kept in step with data.ts; the phone number is
-// left out of the public version on purpose.
 
 export type CvEntry = {
   title: string;
@@ -188,7 +185,6 @@ export const cv = {
   ] as CvLine[],
 };
 
-// Arabic CV: the same content, written for Arabic readers (not word for word).
 export const cvAr: typeof cv = {
   name: "نيللي فيصل المكتوم",
   title: "طالبة علوم حاسب - مهندسة تعلّم آلة - باحثة ومبتكرة",
@@ -359,7 +355,6 @@ export const cvAr: typeof cv = {
 
 export const cvs = { en: cv, ar: cvAr } as const;
 
-// Section titles and page chrome in each language.
 export const cvLabels = {
   en: {
     profile: "Profile",

@@ -1,9 +1,5 @@
-// Arabic translations, keyed by the exact English text shown on the page.
-// Anything missing here simply stays in English, so names of tools, languages
-// and libraries (Python, XGBoost, Raspberry Pi…) are left out on purpose.
 
 export const AR: Record<string, string> = {
-  // ---------- top bar, buttons, labels ----------
   "PRO VIEW": "الوضع المهني",
   "Arcade view": "وضع الأركيد",
   PLAYER: "اللاعبة",
@@ -16,6 +12,7 @@ export const AR: Record<string, string> = {
   CV: "السيرة الذاتية",
   "CHARACTER SHEET": "السيرة الذاتية",
   "MY FULL CV": "سيرتي الذاتية كاملة",
+  "Full CV": "السيرة الذاتية كاملة",
   "Education, research, patent, awards, leadership and activities, all in one place.": "التعليم والأبحاث وبراءة الاختراع والجوائز والقيادة والأنشطة، في مكان واحد.",
   "View CV": "عرض السيرة الذاتية",
   "View my CV": "عرض سيرتي الذاتية",
@@ -76,7 +73,6 @@ export const AR: Record<string, string> = {
   "THANKS FOR PLAYING!": "شكرًا على اللعب!",
   "© 2026 Nelly Almaktoum - Built with Next.js, TypeScript, HTML & CSS": "© 2026 نيللي المكتوم - بُني باستخدام Next.js وTypeScript وHTML وCSS",
 
-  // ---------- profile ----------
   "FCIT Student @ KAU - Waed ’26 - IEEE ’25 - UNCCD COP16 ’24 - Mawhiba Alumna":
     "طالبة في كلية الحاسبات وتقنية المعلومات بجامعة الملك عبدالعزيز - واعد 2026 - IEEE 2025 - UNCCD COP16 2024 - خريجة موهبة",
   "Undergraduate researcher and developer working across software, hardware, data and AI/ML.": "باحثة ومطوّرة جامعية، أعمل بين البرمجيات والعتاد والبيانات والذكاء الاصطناعي/تعلم الآلة.",
@@ -110,7 +106,6 @@ export const AR: Record<string, string> = {
   "Remote sensing": "الاستشعار عن بُعد",
   "Sustainable technology": "التقنيات المستدامة",
 
-  // ---------- quests ----------
   Wahaj: "وهاج",
   Maeen: "مَعين",
   "QUEST COMPLETE - AUG–OCT 2026 - PROTOTYPE READY": "مهمة مكتملة - أغسطس – أكتوبر 2026 - النموذج الأولي جاهز",
@@ -154,7 +149,6 @@ export const AR: Record<string, string> = {
   "Solar power": "الطاقة الشمسية",
   "Rapid prototyping": "النمذجة السريعة",
 
-  // ---------- trophies ----------
   PATENT: "براءة اختراع",
   "SEP 2026": "سبتمبر 2026",
   "JUN 2026": "يونيو 2026",
@@ -188,7 +182,6 @@ export const AR: Record<string, string> = {
   "Representing the Western Region in the competition’s fourth edition": "مثّلت المنطقة الغربية في النسخة الرابعة من المسابقة",
   "Ministry of Education, Saudi Arabia": "وزارة التعليم",
 
-  // ---------- skills ----------
   "Front end": "الواجهة الأمامية",
   "Back end": "الواجهة الخلفية",
   Tools: "الأدوات",
@@ -211,7 +204,6 @@ export const AR: Record<string, string> = {
   "IoT prototyping": "نمذجة إنترنت الأشياء",
   "Skeleton prototyping": "النماذج الهيكلية",
 
-  // ---------- party ----------
   "Technical Team Lead": "قائد الفريق التقني",
   "Waed Students Community, King Abdulaziz University": "مجتمع طلاب واعد، جامعة الملك عبدالعزيز",
   "Sep 2026 – now": "سبتمبر 2026 – الآن",
@@ -240,7 +232,6 @@ export const AR: Record<string, string> = {
   "Mawhiba: STEM enrichment classes for gifted students, 2022–2025": "موهبة: برامج إثرائية في العلوم والتقنية للطلبة الموهوبين، 2022 – 2025",
   "Jun 2025 – now": "يونيو 2025 – الآن",
 
-  // ---------- academy ----------
   "BS, Computer Science - FCIT": "بكالوريوس علوم الحاسب - كلية الحاسبات وتقنية المعلومات",
   "2025 – 2030": "2025 – 2030",
   "Waed: Distinctive Excellence track for gifted students": "واعد للتميز النوعي (المواهب الخاصة)",
@@ -266,7 +257,6 @@ export const AR: Record<string, string> = {
   "Sep 2026": "سبتمبر 2026",
 
   TOP: "للأعلى",
-  // game (drawn on the canvas)
   SCORE: "النقاط",
   BEST: "الأفضل",
   "OUCH! A BUG!": "آخ! خطأ برمجي!",
@@ -281,6 +271,5 @@ export const AR: Record<string, string> = {
   "SPACE / ↑ / TAP = JUMP": "المسافة / ↑ / لمسة = قفزة",
   "Click the screen, then press SPACE or tap to play": "انقر على اللعبة، ثم اضغط المسافة أو المس الشاشة للعب",
 
-  // ---------- contact labels ----------
   Email: "البريد الإلكتروني",
 };

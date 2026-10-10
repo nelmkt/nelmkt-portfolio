@@ -1,5 +1,3 @@
-// 16x20 pixel player sprite, styled after the portrait: messy black hair with a tuft,
-// side strands, round glasses, tongue out, black top, black shoes. Drawn by the mini-game.
 
 export const PALETTE: Record<string, string> = {
   k: "#140c12", // outline
@@ -42,10 +40,9 @@ const LEGS_STRIDE = ["..kPPk....kPPk..", ".kFFFk....kFFFk."];
 const LEGS_PASS = ["....kPPkkPPk....", "....kFFkkFFk...."];
 const LEGS_TUCK = ["...kPPk..kPPk...", "...kFFk..kFFk..."];
 
-// [run A, run B, jump]
 export const FRAMES = [BODY.concat(LEGS_STRIDE), BODY.concat(LEGS_PASS), BODY.concat(LEGS_TUCK)];
 export const SPRITE_W = 16;
-export const SPRITE_H = 20; // 18 body rows + 2 leg rows
+export const SPRITE_H = 20;
 
 export function drawSprite(
   ctx: CanvasRenderingContext2D,

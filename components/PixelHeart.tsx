@@ -1,4 +1,3 @@
-// 7x6 pixel heart, shared shape with the mini-game's HUD hearts.
 export const HEART = [".XX.XX.", "XXXXXXX", "XXXXXXX", ".XXXXX.", "..XXX..", "...X..."];
 
 export default function PixelHeart({ size = 16, empty = false }: { size?: number; empty?: boolean }) {

@@ -3,8 +3,6 @@
 import { createContext, useContext } from "react";
 import { AR } from "./ar";
 
-// English or Arabic. The choice lives on <html lang dir> (Arabic flips the
-// layout right-to-left) and is remembered per browser.
 export type Lang = "en" | "ar";
 
 export const LANG_KEY = "nelmkt-lang";

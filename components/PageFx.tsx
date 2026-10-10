@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { useT } from "./lang";
 
-// Page-level polish: rainbow scroll-progress bar, sections that step in as they
-// scroll into view, and a pixel back-to-top button.
 export default function PageFx() {
   const t = useT();
   const [progress, setProgress] = useState(0);
@@ -20,8 +18,6 @@ export default function PageFx() {
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
 
-    // Reveal-on-scroll. Sections are only hidden once JS is running (the class on <html>),
-    // so the page still reads fine without it, and reduced-motion users skip the effect.
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let io: IntersectionObserver | undefined;
     if (!reduce) {

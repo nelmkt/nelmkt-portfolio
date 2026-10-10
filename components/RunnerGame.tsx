@@ -8,7 +8,7 @@ import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
 const W = 640;
 const H = 200;
-const RES = 2; // internal resolution multiplier for crisper text
+const RES = 2;
 const GROUND = 168;
 const SCALE = 3;
 const PW = SPRITE_W * SCALE;
@@ -79,7 +79,6 @@ type Props = {
 
 export default function RunnerGame({ collected, onCollect }: Props) {
   const t = useT();
-  // The canvas loop runs outside React renders, so it reads the language from a ref.
   const langRef = useRef(useContext(LangContext));
   langRef.current = useContext(LangContext);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -101,10 +100,7 @@ export default function RunnerGame({ collected, onCollect }: Props) {
     ctx.setTransform(RES, 0, 0, RES, 0, 0);
     ctx.imageSmoothingEnabled = false;
 
-    // Named faces (not --font-pixel) so Arabic falls back to Kufi, not the Arial-based fallback face.
-    // "digits" only covers 0-9, / and +, so numbers get the clearer Jersey 15 pixel face.
     const font = "digits, pixel, arabicHeading, monospace";
-    // Canvas text does not trigger font downloads on its own, so ask for the faces up front.
     document.fonts?.load("16px digits", "0123456789/+");
     document.fonts?.load("600 16px pixel", "SCORE");
     const ar = () => langRef.current === "ar";
@@ -245,7 +241,6 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       ctx.fillStyle = sky;
       ctx.fillRect(0, 0, W, H);
 
-      // clouds
       ctx.fillStyle = "#ffffff";
       for (let i = 0; i < 4; i++) {
         const cx = ((i * 190 - s.scroll * 0.2) % (W + 120) + W + 120) % (W + 120) - 60;
@@ -254,7 +249,6 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         ctx.fillRect(cx + 8, cy - 8, 24, 8);
       }
 
-      // pixel hills
       ctx.fillStyle = "#ffc9de";
       for (let i = 0; i < 6; i++) {
         const hx = ((i * 140 - s.scroll * 0.45) % (W + 140) + W + 140) % (W + 140) - 70;
@@ -263,7 +257,6 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         }
       }
 
-      // ground
       ctx.fillStyle = "#3b0f2e";
       ctx.fillRect(0, GROUND, W, 4);
       ctx.fillStyle = "#ffc2da";
@@ -283,7 +276,6 @@ export default function RunnerGame({ collected, onCollect }: Props) {
       const airborne = s.py < GROUND - PH;
       const frame = airborne ? FRAMES[2] : FRAMES[Math.floor(s.tick / 7) % 2];
 
-      // pixel ground shadow that shrinks as the runner rises
       const lift = Math.min(1, (GROUND - PH - s.py) / 110);
       const shadowW = Math.round((PW - 12) * (1 - lift * 0.6) / 3) * 3;
       ctx.fillStyle = "rgba(59, 15, 46, 0.22)";
@@ -292,7 +284,6 @@ export default function RunnerGame({ collected, onCollect }: Props) {
         drawSprite(ctx, frame, PX, s.py, SCALE);
       }
 
-      // HUD
       const tr = (w: string) => translate(langRef.current, w);
       text(`${tr("SCORE")} ${String(s.score).padStart(5, "0")}`, 12, 18, 9, "#3b0f2e");
       text(`${tr("BEST")} ${String(Math.max(bestRef.current, s.score)).padStart(5, "0")}`, 12, 32, 7, "#8a4f74");

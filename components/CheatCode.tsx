@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 const KONAMI = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
 
-// ↑↑↓↓←→←→BA: rainbow mode for a few seconds and a cheat toast.
 export default function CheatCode() {
   const [on, setOn] = useState(false);
 

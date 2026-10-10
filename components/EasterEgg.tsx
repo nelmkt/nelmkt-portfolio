@@ -3,8 +3,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { LangContext, useT } from "./lang";
 
-// A line from Nelly's own post about her journey, hidden as 8-bit binary (the
-// UTF-8 bytes, so the Arabic version encodes the same way).
 const SECRETS = { en: "stay curious", ar: "ابقَ فضوليًا" };
 const toBinary = (s: string) =>
   Array.from(new TextEncoder().encode(s), (b) => b.toString(2).padStart(8, "0")).join(" ");
@@ -37,7 +35,6 @@ export default function EasterEgg() {
     };
   }, []);
 
-  // Switching language re-hides the message in that language.
   useEffect(() => {
     if (timer.current) clearInterval(timer.current);
     timer.current = null;
@@ -54,7 +51,6 @@ export default function EasterEgg() {
       setText(target);
       return;
     }
-    // Scramble from binary into the message (or back), one character at a time.
     let i = 0;
     timer.current = setInterval(() => {
       i++;
@@ -82,7 +78,6 @@ export default function EasterEgg() {
           : t("Binary-encoded secret message. Click to decode.")
       }
     >
-      {/* binary always reads left to right; the decoded Arabic reads right to left */}
       <span className="egg-text" dir={decoded && lang === "ar" ? "rtl" : "ltr"}>
         {text}
       </span>

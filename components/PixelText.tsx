@@ -4,18 +4,13 @@ import { useEffect, useRef } from "react";
 
 type Props = {
   text: string;
-  /** glyph height in source pixels; smaller = chunkier */
   size?: number;
-  /** on-screen size of one pixel */
   scale?: number;
-  /** pixel drop shadow colour(s); each extra colour sits one more pixel out, like stacked text-shadows */
   shadow?: string | string[];
   className?: string;
   lang?: string;
 };
 
-// Renders text at a tiny size with anti-aliasing thresholded away, then scales it
-// up with nearest-neighbour so any script (here Arabic) gets a true pixel look.
 export default function PixelText({ text, size = 13, scale = 3, shadow, className, lang = "ar" }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
   const shadowKey = (Array.isArray(shadow) ? shadow : shadow ? [shadow] : []).join("|");
@@ -61,8 +56,6 @@ export default function PixelText({ text, size = 13, scale = 3, shadow, classNam
           }
       if (maxX < 0) return;
 
-      // Crop to the inked pixels so the canvas edge is the glyph edge; this lets the
-      // text line up with neighbouring HTML text instead of floating in padding.
       const cw = maxX - minX + 1 + shadows.length;
       const ch = maxY - minY + 1 + shadows.length;
       canvas.width = cw;
@@ -80,7 +73,6 @@ export default function PixelText({ text, size = 13, scale = 3, shadow, classNam
         const v = c.match(/^var\((--[\w-]+)\)$/);
         return v ? getComputedStyle(canvas).getPropertyValue(v[1]).trim() : c;
       };
-      // farthest shadow first, then nearer ones, then the glyphs
       for (let k = shadows.length - 1; k >= 0; k--) paint(resolve(shadows[k]), k + 1, k + 1);
       paint(color, 0, 0);
     };

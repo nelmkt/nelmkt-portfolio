@@ -2,11 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-// A drawn cursor that fades into the colour of the section under it.
-// Mouse/trackpad only; touch devices and failed scripts keep the regular
-// (section-coloured) CSS cursors.
 
-// Pixel arrow for the arcade side: X = dark outline, O = section colour.
 const PIXEL_ARROW = [
   "X.........",
   "XX........",
@@ -42,7 +38,6 @@ export default function CursorFx() {
 
     let px = -100;
     let py = -100;
-    // Colour follows the section under the pointer; the CSS transition makes the change glide.
     const paint = (target: Element | null) => {
       const stage = target?.closest(".stage");
       if (stage !== lastStage) {
@@ -60,7 +55,6 @@ export default function CursorFx() {
       dot.style.transform = `translate(${px}px, ${py}px)`;
       paint(e.target instanceof Element ? e.target : null);
     };
-    // Scrolling moves the page under a still pointer, so re-check what it is over.
     const scroll = () => {
       if (wrap.classList.contains("on")) paint(document.elementFromPoint(px, py));
     };
