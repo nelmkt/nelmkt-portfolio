@@ -113,8 +113,8 @@ export const AR: Record<string, string> = {
   // ---------- quests ----------
   Wahaj: "وهاج",
   Maeen: "مَعين",
-  "QUEST COMPLETE - OCT 2026 - PROTOTYPE READY": "مهمة مكتملة - أكتوبر 2026 - النموذج الأولي جاهز",
-  "Oct 2026 - Prototype complete": "أكتوبر 2026 - نموذج أولي مكتمل",
+  "QUEST COMPLETE - AUG–OCT 2026 - PROTOTYPE READY": "مهمة مكتملة - أغسطس – أكتوبر 2026 - النموذج الأولي جاهز",
+  "Aug–Oct 2026 - Prototype complete": "أغسطس – أكتوبر 2026 - نموذج أولي مكتمل",
   "Real-time detection, location and explanation of leaks and water-quality problems in water pipelines, turning in-pipe sensor streams into what is wrong, where, how serious, why and what to do.":
     "رصد التسريبات ومشكلات جودة المياه في خطوط الأنابيب وتحديد مواقعها وتفسيرها لحظيًا، بتحويل قراءات الحساسات داخل الأنابيب إلى إجابات واضحة: ما المشكلة، وأين، وما مدى خطورتها، ولماذا، وما الذي ينبغي فعله.",
   "Physics-aware features plus gradient boosting: 94.1% fault-type accuracy across 6 classes with 0.3% false alarms on unseen scenarios, against 78.5% for classic threshold rules":

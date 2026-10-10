@@ -61,7 +61,7 @@ export const cv = {
     {
       title: "Maeen (مَعين): Real-Time Pipeline Leak & Water-Quality Detection",
       role: "Technical lead and developer, five-person team",
-      date: "Oct 2026",
+      date: "Aug – Oct 2026",
       link: { label: "github.com/nelmkt/maeen", url: "https://github.com/nelmkt/maeen" },
       bullets: [
         "Built an end-to-end ML system that turns in-pipe sensor streams (pressure, flow, pH, EC, acoustics, vibration) into what is wrong, where, how serious, why and what to do. The working prototype is complete.",
@@ -230,7 +230,7 @@ export const cvAr: typeof cv = {
     {
       title: "مَعين: رصد تسريبات خطوط المياه وجودتها لحظيًا",
       role: "قائدة تقنية ومطوّرة، ضمن فريق من خمسة أعضاء",
-      date: "أكتوبر 2026",
+      date: "أغسطس – أكتوبر 2026",
       link: { label: "github.com/nelmkt/maeen", url: "https://github.com/nelmkt/maeen" },
       bullets: [
         "بنيتُ نظام تعلّم آلة متكاملًا يحوّل قراءات الحساسات داخل الأنابيب (الضغط والتدفق و pH و EC والصوت والاهتزاز) إلى إجابات واضحة: ما المشكلة، وأين، وما مدى خطورتها، ولماذا، وما العمل. النموذج الأولي مكتمل ويعمل.",
