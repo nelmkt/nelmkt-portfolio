@@ -31,7 +31,7 @@ export const cv = {
   ] as { label: string; url?: string }[],
 
   profile:
-    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track and recipient of KAU's Academic Excellence Award. ML engineer and IoT researcher, and the youngest UN-certified Saudi researcher: the youngest of the seven winners of the UNCCD Young Researchers Award at COP16, selected from 209 researchers across 36 countries. Inventor of the patented Aykah smart bin and builder of Wahaj (urban greening and energy trade-offs) and Maeen (real-time pipeline leak detection). Leads the Technical Committee of the Waed Students Community and serves in IEEE, GDG and the Programming Club. Bilingual in Arabic and English, and aiming for a Ph.D. and an academic career.",
+    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track. ML engineer and IoT researcher, and the youngest UN-certified Saudi researcher: the youngest of the seven winners of the UNCCD Young Researchers Award at COP16, selected from 209 researchers across 36 countries. Inventor of the patented Aykah smart bin and builder of Wahaj (urban greening and energy trade-offs) and Maeen (real-time pipeline leak detection). Leads the Technical Committee of the Waed Students Community and serves in IEEE, GDG and the Programming Club. Bilingual in Arabic and English, and aiming for a Ph.D. and an academic career.",
 
   education: [
     {
@@ -199,7 +199,7 @@ export const cvAr: typeof cv = {
   ],
 
   profile:
-    "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي، وحاصلة على جائزة التفوق الأكاديمي من الجامعة. مهندسة تعلّم آلة وباحثة في إنترنت الأشياء، وأصغر باحثة سعودية معتمدة من الأمم المتحدة: الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من اتفاقية الأمم المتحدة لمكافحة التصحر في COP16، من بين 209 باحثين من 36 دولة. مخترعة حاوية آيكة الذكية الحاصلة على براءة اختراع، ومطوّرة إطار وهاج (أثر التشجير الحضري على الطاقة) ونظام مَعين (رصد تسريبات الأنابيب لحظيًا). تقود اللجنة التقنية في مجتمع طلاب واعد، وتشارك في IEEE و GDG ونادي البرمجة. تتقن العربية والإنجليزية، وتطمح إلى الدكتوراه ومسيرة أكاديمية.",
+    "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي. مهندسة تعلّم آلة وباحثة في إنترنت الأشياء، وأصغر باحثة سعودية معتمدة من الأمم المتحدة: الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من اتفاقية الأمم المتحدة لمكافحة التصحر في COP16، من بين 209 باحثين من 36 دولة. مخترعة حاوية آيكة الذكية الحاصلة على براءة اختراع، ومطوّرة إطار وهاج (أثر التشجير الحضري على الطاقة) ونظام مَعين (رصد تسريبات الأنابيب لحظيًا). تقود اللجنة التقنية في مجتمع طلاب واعد، وتشارك في IEEE و GDG ونادي البرمجة. تتقن العربية والإنجليزية، وتطمح إلى الدكتوراه ومسيرة أكاديمية.",
 
   education: [
     {
