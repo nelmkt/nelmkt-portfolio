@@ -228,7 +228,7 @@ export const skillTree = [
 ];
 
 export const party = [
-  { role: "Technical Team Lead", where: "Waed Students Community, King Abdulaziz University", when: "Sep 2026 – now", lead: true },
+  { role: "Technical Team Lead", where: "Waed Students Community, King Abdulaziz University", when: "Sep 2026 – now" },
   { role: "Tech Department Member", where: "IEEE, 2027 term", when: "Oct 2026 – now" },
   { role: "Tech Department Member", where: "Programming Club, 2027 term", when: "Oct 2026 – now" },
   { role: "CM Experience Member", where: "Google Developer Groups, KAU", when: "Oct 2026 – now" },
