@@ -390,7 +390,7 @@ export default function Portfolio() {
           <StageTag code="1-7" label="PARTY & GUILDS" pro="Leadership & community" />
           <ul className="party">
             {party.map((p, i) => (
-              <li key={p.role + p.where} className={`box member ramp${p.lead ? " lead" : ""}`} style={ramp(i, party.length)}>
+              <li key={p.role + p.where} className="box member ramp" style={ramp(i, party.length)}>
                 <span className="slot">{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <h3>{tr(p.role)}</h3>
