@@ -200,15 +200,16 @@ export const languages = [
   { name: "Ruby", short: "RB", color: "#CC342D", tier: "MAIN", level: 4 },
   { name: "TypeScript", short: "TS", color: "#3178C6", tier: "MAIN", level: 5 },
   { name: "JavaScript", short: "JS", color: "#F7DF1E", tier: "MAIN", level: 5 },
+  { name: "SQL", short: "SQL", color: "#7CB9E8", tier: "WORKING", level: 3 },
   { name: "C++", short: "C++", color: "#00599C", tier: "WORKING", level: 3 },
   { name: "C#", short: "C#", color: "#512BD4", tier: "WORKING", level: 3 },
   { name: "Java", short: "JV", color: "#E76F00", tier: "WORKING", level: 3 },
 ] as const;
 
 export const skillTree = [
-  { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js"] },
-  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI", "REST APIs", "Pydantic"] },
-  { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "pytest"] },
+  { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Arabic RTL interfaces"] },
+  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI", "REST APIs", "WebSockets", "Pydantic", "SQLite"] },
+  { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "GitHub Pages", "pytest", "Pyodide", "Web Workers"] },
   { branch: "UI & communication", items: ["UI prototyping", "Public speaking", "Scientific presentation"] },
   { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Anomaly detection", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines", "Explainable AI", "MLOps & model registry", "Drift monitoring", "Physics-based simulation"] },
   { branch: "Data", items: ["scikit-learn", "pandas", "NumPy", "Matplotlib"] },
@@ -230,7 +231,7 @@ export const skillTree = [
 export const party = [
   { role: "Technical Team Lead", where: "Waed Students Community, King Abdulaziz University", when: "Sep 2026 – now" },
   { role: "Tech Department Member", where: "IEEE, 2027 term", when: "Oct 2026 – now" },
-  { role: "Tech Department Member", where: "Programming Club, 2027 term", when: "Oct 2026 – now" },
+  { role: "Tech Department Vice Leader", where: "Programming Club, 2027 term", when: "Oct 2026 – now" },
   { role: "CM Experience Member", where: "Google Developer Groups, KAU", when: "Oct 2026 – now" },
   { role: "Organizer & Event Coordinator", where: "English Language Olympiad (ELO), KAU", when: "Oct 2026" },
   { role: "Project Coordinator, Talks X", where: "Engineering Day 2027, KAU", when: "Sep 2026 – now" },

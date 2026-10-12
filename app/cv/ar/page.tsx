@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CvDocument from "@/components/CvDocument";
+import CvDocument from "../../../components/CvDocument";
 
 export const metadata: Metadata = {
   title: "السيرة الذاتية - نيللي المكتوم",

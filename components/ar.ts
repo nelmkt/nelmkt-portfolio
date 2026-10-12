@@ -184,6 +184,9 @@ export const AR: Record<string, string> = {
 
   "Front end": "الواجهة الأمامية",
   "Back end": "الواجهة الخلفية",
+  "Arabic RTL interfaces": "واجهات عربية من اليمين إلى اليسار",
+  "WebSockets": "اتصالات WebSocket",
+  "Web Workers": "عمليات Web Workers في المتصفح",
   Tools: "الأدوات",
   "UI & communication": "الواجهات والتواصل",
   "ML engineering": "هندسة تعلّم الآلة",
@@ -205,6 +208,7 @@ export const AR: Record<string, string> = {
   "Skeleton prototyping": "النماذج الهيكلية",
 
   "Technical Team Lead": "قائد الفريق التقني",
+  "Tech Department Vice Leader": "نائبة قائدة القسم التقني",
   "Waed Students Community, King Abdulaziz University": "مجتمع طلاب واعد، جامعة الملك عبدالعزيز",
   "Sep 2026 – now": "سبتمبر 2026 – الآن",
   "Tech Department Member": "عضو في القسم التقني",

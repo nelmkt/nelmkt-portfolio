@@ -31,7 +31,7 @@ export const cv = {
   ] as { label: string; url?: string }[],
 
   profile:
-    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track. ML engineer and IoT researcher, and the youngest UN-certified Saudi researcher: the youngest of the seven winners of the UNCCD Young Researchers Award at COP16, selected from 209 researchers across 36 countries. Inventor of the patented Aykah smart bin and builder of Wahaj (urban greening and energy trade-offs) and Maeen (real-time pipeline leak detection). Leads the Technical Committee of the Waed Students Community and serves in IEEE, GDG and the Programming Club. Bilingual in Arabic and English, and aiming for a Ph.D. and an academic career.",
+    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track. ML engineer and IoT researcher, and the youngest UN-certified Saudi researcher: the youngest of the seven winners of the UNCCD Young Researchers Award at COP16, selected from 209 researchers across 36 countries. Inventor of the patented Aykah smart bin and builder of Wahaj (urban greening and energy trade-offs) and Maeen (real-time pipeline leak detection). Leads the Technical Committee of the Waed Students Community, serves in IEEE and GDG, and is Tech Department Vice Leader at the Programming Club. Bilingual in Arabic and English, and aiming for a Ph.D. and an academic career.",
 
   education: [
     {
@@ -148,7 +148,7 @@ export const cv = {
     { lead: "Project Coordinator, Talks X", text: "Engineering Day 2027, KAU", date: "Sep 2026 – Present" },
     { lead: "Layout & Design Specialist", text: "Engineering Day 2027 Planning Department", date: "Aug 2026 – Present" },
     { lead: "Technical Department Member", text: "IEEE (2027 term)", date: "Oct 2026 – Present" },
-    { lead: "Technical Department Member", text: "Programming Club (2027 term)", date: "Oct 2026 – Present" },
+    { lead: "Tech Department Vice Leader", text: "Programming Club (2027 term)", date: "Oct 2026 – Present" },
     { lead: "CM Experience Member", text: "Google Developer Groups, KAU", date: "Oct 2026 – Present" },
     { lead: "Organizer & Event Coordinator", text: "English Language Olympiad (ELO), KAU", date: "Oct 2026" },
     { lead: "Coordinator", text: "Annual Waed Workshop & Introductory Meeting 2027", date: "Aug – Sep 2026" },
@@ -166,12 +166,12 @@ export const cv = {
   ] as CvLine[],
 
   skills: [
-    { lead: "Programming", text: "Python, TypeScript, JavaScript, Rust, Ruby; working knowledge of C++, C# and Java." },
+    { lead: "Programming", text: "Python, TypeScript, JavaScript, Rust, Ruby; working knowledge of SQL, C++, C# and Java." },
     {
       lead: "ML engineering & data",
       text: "XGBoost, scikit-learn, pandas, NumPy, Matplotlib; anomaly detection, explainable AI, spatial cross-validation, counterfactual testing, reproducible pipelines, MLOps (model registry, drift monitoring).",
     },
-    { lead: "Web & tools", text: "Next.js, Node.js, FastAPI, REST APIs, Pydantic, HTML/CSS; Git, Docker, GitHub Actions, pytest." },
+    { lead: "Web & tools", text: "React, Next.js, Tailwind CSS, HTML/CSS, Node.js, FastAPI, REST APIs, WebSockets, Pydantic, SQLite, Pyodide and Web Workers; Git, Docker, GitHub Actions, GitHub Pages, pytest." },
     {
       lead: "Remote sensing & hardware",
       text: "Google Earth Engine, Landsat 8; Raspberry Pi, embedded systems, ultrasonic sensors, LCD/LED interfaces, solar power, IoT prototyping.",
@@ -199,7 +199,7 @@ export const cvAr: typeof cv = {
   ],
 
   profile:
-    "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي. مهندسة تعلّم آلة وباحثة في إنترنت الأشياء، وأصغر باحثة سعودية معتمدة من الأمم المتحدة: الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من اتفاقية الأمم المتحدة لمكافحة التصحر في COP16، من بين 209 باحثين من 36 دولة. مخترعة حاوية آيكة الذكية الحاصلة على براءة اختراع، ومطوّرة إطار وهاج (أثر التشجير الحضري على الطاقة) ونظام مَعين (رصد تسريبات الأنابيب لحظيًا). تقود اللجنة التقنية في مجتمع طلاب واعد، وتشارك في IEEE و GDG ونادي البرمجة. تتقن العربية والإنجليزية، وتطمح إلى الدكتوراه ومسيرة أكاديمية.",
+    "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي. مهندسة تعلّم آلة وباحثة في إنترنت الأشياء، وأصغر باحثة سعودية معتمدة من الأمم المتحدة: الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من اتفاقية الأمم المتحدة لمكافحة التصحر في COP16، من بين 209 باحثين من 36 دولة. مخترعة حاوية آيكة الذكية الحاصلة على براءة اختراع، ومطوّرة إطار وهاج (أثر التشجير الحضري على الطاقة) ونظام مَعين (رصد تسريبات الأنابيب لحظيًا). تقود اللجنة التقنية في مجتمع طلاب واعد، وتشارك في IEEE و GDG، وتشغل منصب نائبة قائدة القسم التقني في نادي البرمجة. تتقن العربية والإنجليزية، وتطمح إلى الدكتوراه ومسيرة أكاديمية.",
 
   education: [
     {
@@ -316,7 +316,7 @@ export const cvAr: typeof cv = {
     { lead: "منسّقة مشروع Talks X", text: "يوم الهندسة 2027، جامعة الملك عبدالعزيز", date: "سبتمبر 2026 – الآن" },
     { lead: "مختصة التنسيق والتصميم", text: "لجنة التخطيط ليوم الهندسة 2027", date: "أغسطس 2026 – الآن" },
     { lead: "عضوة في القسم التقني", text: "IEEE (دورة 2027)", date: "أكتوبر 2026 – الآن" },
-    { lead: "عضوة في القسم التقني", text: "نادي البرمجة (دورة 2027)", date: "أكتوبر 2026 – الآن" },
+    { lead: "نائبة قائدة القسم التقني", text: "نادي البرمجة (دورة 2027)", date: "أكتوبر 2026 – الآن" },
     { lead: "عضوة في فريق تجربة المجتمع", text: "مجموعات مطوري Google، جامعة الملك عبدالعزيز", date: "أكتوبر 2026 – الآن" },
     { lead: "منظِّمة ومنسّقة فعاليات", text: "أولمبياد اللغة الإنجليزية (ELO)، جامعة الملك عبدالعزيز", date: "أكتوبر 2026" },
     { lead: "منسّقة", text: "اللقاء التعريفي والورشة السنوية لواعد 2027", date: "أغسطس – سبتمبر 2026" },
@@ -334,12 +334,12 @@ export const cvAr: typeof cv = {
   ],
 
   skills: [
-    { lead: "البرمجة", text: "Python، TypeScript، JavaScript، Rust، Ruby، ومعرفة عملية بـ C++ و C# و Java." },
+    { lead: "البرمجة", text: "Python، TypeScript، JavaScript، Rust، Ruby، ومعرفة عملية بـ SQL و C++ و C# و Java." },
     {
       lead: "هندسة تعلّم الآلة والبيانات",
       text: "XGBoost، scikit-learn، pandas، NumPy، Matplotlib؛ رصد الحالات الشاذة، والذكاء الاصطناعي القابل للتفسير، والتحقق المتقاطع المكاني، واختبارات السيناريوهات البديلة، والمسارات القابلة للتكرار، و MLOps (سجل النماذج ومراقبة انحراف البيانات).",
     },
-    { lead: "الويب والأدوات", text: "Next.js، Node.js، FastAPI، واجهات REST، Pydantic، HTML/CSS؛ Git، Docker، GitHub Actions، pytest." },
+    { lead: "الويب والأدوات", text: "React، Next.js، Tailwind CSS، HTML/CSS، Node.js، FastAPI، واجهات REST، WebSockets، Pydantic، SQLite، Pyodide وWeb Workers؛ Git، Docker، GitHub Actions، GitHub Pages، pytest." },
     {
       lead: "الاستشعار عن بعد والعتاد",
       text: "Google Earth Engine، Landsat 8؛ Raspberry Pi، والأنظمة المدمجة وحساسات الموجات فوق الصوتية وواجهات LCD/LED والطاقة الشمسية ونمذجة إنترنت الأشياء.",
