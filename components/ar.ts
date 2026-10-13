@@ -165,7 +165,7 @@ export const AR: Record<string, string> = {
   "Certificate of Appreciation": "شهادة شكر وتقدير",
   "For distinguished participation in local and international competitions": "تقديرًا لمشاركتي المتميزة في المسابقات المحلية والدولية",
   "King Abdulaziz University": "جامعة الملك عبدالعزيز",
-  "Academic Excellence Award 2025–2026": "جائزة التفوق الأكاديمي 2025 – 2026",
+  "Academic Excellence Award 2025–2026": "شهادة التفوق الأكاديمي ل2025-2026",
   "GPA of 4.5 or higher across two consecutive semesters": "معدل 4.5 فأعلى لفصلين دراسيين متتاليين",
   "IEEE Ideation Competition": "مسابقة IEEE للأفكار الإبداعية",
   "Presenter & team lead at the 22nd International Learning and Technology Conference (Effat University): a top-ranked paper at the Human Machine Fusion exhibition, leading a team of five": "قدّمتُ وقدتُ فريقًا من خمسة أعضاء في المؤتمر الدولي الثاني والعشرين للتعلم والتقنية بجامعة عفت، ونالت ورقتنا أحد أعلى التقييمات في معرض اندماج الإنسان والآلة",
