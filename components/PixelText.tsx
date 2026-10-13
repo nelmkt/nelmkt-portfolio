@@ -81,7 +81,15 @@ export default function PixelText({ text, size = 13, scale = 3, shadow, classNam
     document.fonts?.load(font, text).then(draw).catch(() => {});
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
     mq.addEventListener("change", draw);
-    return () => mq.removeEventListener("change", draw);
+    const observer = new MutationObserver(draw);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-mode", "data-theme", "lang", "dir"],
+    });
+    return () => {
+      mq.removeEventListener("change", draw);
+      observer.disconnect();
+    };
   }, [text, size, scale, shadowKey]);
 
   return <canvas ref={ref} className={`pixel-text ${className ?? ""}`} role="img" aria-label={text} lang={lang} />;
