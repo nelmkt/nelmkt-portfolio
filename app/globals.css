@@ -391,9 +391,10 @@ main {
   height: calc(var(--name-size) * 1.6) !important;
 }
 .player-headline {
-  font-family: var(--pixel);
-  font-size: 9px;
-  line-height: 2;
+  font-family: var(--body);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
   color: var(--ink-soft);
   margin: 0 0 12px;
 }
@@ -1530,9 +1531,9 @@ body {
   line-height: 1.7;
 }
 .player-headline {
-  font-size: 11px;
-  line-height: 1.9;
-  letter-spacing: 0.02em;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 .player-tag {
   font-size: 20px;
