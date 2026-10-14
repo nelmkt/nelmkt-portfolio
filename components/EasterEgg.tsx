@@ -43,25 +43,23 @@ export default function EasterEgg() {
   }, [lang]);
 
   function toggle() {
-    if (decoded) return;
     if (timer.current) clearInterval(timer.current);
-    const instant = window.matchMedia(
-      "(max-width: 640px), (pointer: coarse), (prefers-reduced-motion: reduce)",
-    ).matches;
-    setDecoded(true);
-    if (instant) {
-      setText(secret);
+    const target = decoded ? binary : secret;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setDecoded(!decoded);
+    if (reduce) {
+      setText(target);
       return;
     }
     let i = 0;
     timer.current = setInterval(() => {
       i++;
-      const settled = secret.slice(0, i);
-      const noise = Array.from({ length: Math.max(0, Math.min(secret.length - i, 24)) }, () =>
+      const settled = target.slice(0, i);
+      const noise = Array.from({ length: Math.max(0, Math.min(target.length - i, 24)) }, () =>
         Math.random() < 0.5 ? "0" : "1",
       ).join("");
       setText(settled + noise);
-      if (i >= secret.length && timer.current) {
+      if (i >= target.length && timer.current) {
         clearInterval(timer.current);
         timer.current = null;
       }
@@ -76,7 +74,7 @@ export default function EasterEgg() {
       data-hint={decoded ? undefined : t("psst… decode me")}
       aria-label={
         decoded
-          ? t(`Decoded message: ${secret}.`)
+          ? t(`Decoded message: ${secret}. Click to encode again.`)
           : t("Binary-encoded secret message. Click to decode.")
       }
     >
