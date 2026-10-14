@@ -1,4 +1,6 @@
-# Press Start!
+# nelmkt.com.. Press Start!
+
+A pink, retro arcade-style portfolio for **Nelly Almaktoum**: undergraduate researcher and innovator working on AI, machine learning and green tech.
 
 **Live:** [nelmkt.com](https://nelmkt.com)
 
@@ -12,7 +14,7 @@
 | 1-3 | Quest Log | Research projects: Wahaj and Aykah |
 | 1-4 | Trophy Room | Awards, recognition and the Aykah patent |
 | 1-5 | Academy & Side Quests | Education, competitions and events |
-| 1-6 | Skill Tree | Languages, ML engineering, data, remote sensing, web and hardware |
+| 1-6 | Skill Tree | Languages, AI research, ML engineering, data, web and hardware |
 | 1-7 | Party & Guilds | Community and leadership roles |
 | 1-8 | Save Point | Contact links |
 
