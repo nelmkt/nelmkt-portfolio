@@ -171,8 +171,8 @@ export const cv = {
     },
     { lead: "Web & tools", text: "React, Next.js, Tailwind CSS, HTML/CSS, Node.js, FastAPI, REST APIs, WebSockets, Pydantic, SQLite, Pyodide and Web Workers; Git, Docker, GitHub Actions, GitHub Pages, pytest." },
     {
-      lead: "Remote sensing & hardware",
-      text: "Google Earth Engine, Landsat 8; Raspberry Pi, embedded systems, ultrasonic sensors, LCD/LED interfaces, solar power, IoT prototyping.",
+      lead: "Hardware & IoT",
+      text: "Raspberry Pi, embedded systems, ultrasonic sensors, LCD/LED interfaces, solar power, IoT prototyping.",
     },
     {
       lead: "Leadership & communication",
@@ -337,8 +337,8 @@ export const cvAr: typeof cv = {
     },
     { lead: "الويب والأدوات", text: "React، Next.js، Tailwind CSS، HTML/CSS، Node.js، FastAPI، واجهات REST، WebSockets، Pydantic، SQLite، Pyodide وWeb Workers؛ Git، Docker، GitHub Actions، GitHub Pages، pytest." },
     {
-      lead: "الاستشعار عن بعد والعتاد",
-      text: "Google Earth Engine، Landsat 8؛ Raspberry Pi، والأنظمة المدمجة وحساسات الموجات فوق الصوتية وواجهات LCD/LED والطاقة الشمسية ونمذجة إنترنت الأشياء.",
+      lead: "العتاد وإنترنت الأشياء",
+      text: "Raspberry Pi، والأنظمة المدمجة وحساسات الموجات فوق الصوتية وواجهات LCD/LED والطاقة الشمسية ونمذجة إنترنت الأشياء.",
     },
     {
       lead: "القيادة والتواصل",

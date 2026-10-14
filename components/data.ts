@@ -29,7 +29,7 @@ export const profile = {
     "AI/ML engineering",
     "Full-stack web development",
     "IoT & embedded systems",
-    "Remote sensing",
+    "Neural networks & deep learning",
     "Sustainable technology",
   ],
 };
@@ -70,7 +70,7 @@ export const quests: Quest[] = [
       "FastAPI service with an Arabic/English dashboard, plain-language evidence for every alert, a model registry and a CI quality gate",
     ],
     loot: [{ label: "Evaluation report", url: "https://github.com/nelmkt/maeen/blob/main/reports/EVALUATION.md" }],
-    tags: ["Python", "scikit-learn", "Anomaly detection", "FastAPI", "Docker"],
+    tags: ["Python", "scikit-learn", "Model evaluation", "FastAPI", "Docker"],
   },
   {
     id: "wahaj",
@@ -95,7 +95,7 @@ export const quests: Quest[] = [
       { label: "Zenodo DOI 10.5281/zenodo.23168529", url: "https://doi.org/10.5281/zenodo.23168529" },
       { label: "Latest release", url: "https://github.com/nelmkt/Wahaj-Framework/releases/latest" },
     ],
-    tags: ["Python", "XGBoost", "Google Earth Engine", "Landsat 8", "Spatial statistics"],
+    tags: ["Python", "XGBoost", "Google Earth Engine", "Landsat 8", "Model benchmarking"],
   },
   {
     id: "aykah",
@@ -211,9 +211,9 @@ export const skillTree = [
   { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI", "REST APIs", "WebSockets", "Pydantic", "SQLite"] },
   { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "GitHub Pages", "pytest", "Pyodide", "Web Workers"] },
   { branch: "UI & communication", items: ["UI prototyping", "Public speaking", "Scientific presentation"] },
-  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Anomaly detection", "Random forest & gradient boosting", "Spatial cross-validation", "Counterfactual testing", "Reproducible ML pipelines", "Explainable AI", "MLOps & model registry", "Drift monitoring", "Physics-based simulation"] },
+  { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Counterfactual testing", "Reproducible ML pipelines", "Explainable AI", "MLOps & model registry", "Drift monitoring", "Physics-based simulation"] },
   { branch: "Data", items: ["scikit-learn", "pandas", "NumPy", "Matplotlib"] },
-  { branch: "Remote sensing", items: ["Google Earth Engine", "Landsat 8 Collection 2"] },
+  { branch: "AI research", items: ["Neural networks", "Deep learning", "Representation learning", "Supervised learning", "Model evaluation & generalization"] },
   {
     branch: "Hardware",
     items: [
