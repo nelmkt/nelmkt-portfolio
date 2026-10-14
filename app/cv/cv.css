@@ -122,6 +122,9 @@ body:has(.cv-wrap) a {
   margin: 0;
   text-align: justify;
 }
+.cv-interests {
+  margin: 1.2mm 0 0;
+}
 .cv-entry {
   margin-bottom: 2.2mm;
   break-inside: avoid;
@@ -288,5 +291,8 @@ body:has(.cv-wrap) a {
   }
   .cv-wrap[dir="rtl"] .cv-head h1 {
     font-size: 17pt;
+  }
+  .cv-wrap[dir="rtl"] .cv-awards {
+    break-before: page;
   }
 }
