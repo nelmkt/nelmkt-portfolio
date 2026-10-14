@@ -270,7 +270,7 @@ export const AR: Record<string, string> = {
   "GAME OVER": "انتهت اللعبة",
   "TAP OR PRESS SPACE TO RETRY": "المس الشاشة أو اضغط المسافة للمحاولة مجددًا",
   "psst… decode me": "بسست… فك شيفرتي",
-  "Decoded message: ابقَ فضوليًا. Click to encode again.": "الرسالة بعد فك الشيفرة: ابقَ فضوليًا. انقر لإخفائها مجددًا.",
+  "Decoded message: ابقَ فضوليًا.": "الرسالة بعد فك الشيفرة: ابقَ فضوليًا.",
   "Binary-encoded secret message. Click to decode.": "رسالة سرية مشفّرة بالنظام الثنائي. انقر لفك شيفرتها.",
   "SPACE / ↑ / TAP = JUMP": "المسافة / ↑ / لمسة = قفزة",
   "Click the screen, then press SPACE or tap to play": "انقر على اللعبة، ثم اضغط المسافة أو المس الشاشة للعب",
