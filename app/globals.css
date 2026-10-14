@@ -1066,7 +1066,7 @@ main {
   color: var(--accent);
 }
 .egg-text {
-  word-break: break-all;
+  word-break: normal;
 }
 
 .pixel-text {
