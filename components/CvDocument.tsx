@@ -94,6 +94,7 @@ export default function CvDocument({ lang }: { lang: CvLang }) {
 
         <Section title={t.profile}>
           <p className="cv-profile">{cv.profile}</p>
+          <p className="cv-interests"><strong>{t.researchInterests}:</strong> {cv.researchInterests[0].text}</p>
         </Section>
         <Section title={t.education}>
           <Entries items={cv.education} />
@@ -104,7 +105,7 @@ export default function CvDocument({ lang }: { lang: CvLang }) {
         <Section title={t.publications} className="cv-pubs">
           <Lines items={cv.publications} sep={t.sep} colon />
         </Section>
-        <Section title={t.awards}>
+        <Section title={t.awards} className="cv-awards">
           <Entries items={cv.awards} />
           <Lines items={cv.moreAwards} sep={t.sep} />
         </Section>

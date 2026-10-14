@@ -19,7 +19,7 @@ export const cvPdfs = { en: cvPdf, ar: cvPdfAr } as const;
 
 export const cv = {
   name: "Nelly F. Almaktoum",
-  title: "Computer Science Student - ML Engineer - Researcher & Innovator",
+  title: "Computer Science Student | Machine Learning & AI Research",
   contact: [
     { label: "Jeddah, Saudi Arabia" },
     { label: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },
@@ -31,7 +31,11 @@ export const cv = {
   ] as { label: string; url?: string }[],
 
   profile:
-    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track. ML engineer and IoT researcher, and the youngest UN-certified Saudi researcher: the youngest of the seven winners of the UNCCD Young Researchers Award at COP16, selected from 209 researchers across 36 countries. Inventor of the patented Aykah smart bin and builder of Wahaj (urban greening and energy trade-offs) and Maeen (real-time pipeline leak detection). Leads the Technical Committee of the Waed Students Community, serves in IEEE and GDG, and is Tech Department Vice Leader at the Programming Club. Bilingual in Arabic and English, and aiming for a Ph.D. and an academic career.",
+    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track, preparing for Ph.D. study and an academic research career in machine learning and AI. My work applies reproducible, interpretable ML to environmental and infrastructure problems: spatial modeling of urban heat in Wahaj, sensor-based leak detection in Maeen, and IoT prototyping in the patented Aykah smart bin. I was the youngest of seven UNCCD Young Researchers Award winners at COP16, selected from 209 researchers across 36 countries.",
+
+  researchInterests: [
+    { lead: "Research interests", text: "Trustworthy and explainable ML; anomaly detection in sensor streams; geospatial ML and remote sensing; AI for environmental sustainability and resilient infrastructure." },
+  ] as CvLine[],
 
   education: [
     {
@@ -61,10 +65,10 @@ export const cv = {
       date: "Aug – Oct 2026",
       link: { label: "github.com/nelmkt/maeen", url: "https://github.com/nelmkt/maeen" },
       bullets: [
-        "Built an end-to-end ML system that turns in-pipe sensor streams (pressure, flow, pH, EC, acoustics, vibration) into what is wrong, where, how serious, why and what to do. The working prototype is complete.",
+        "Developed a reproducible ML pipeline for multivariate in-pipe sensor streams (pressure, flow, pH, EC, acoustics and vibration), from physics-aware feature engineering to fault classification, localization and evidence-based alerts.",
         "Physics-aware features with gradient boosting reach 94.1% fault-type accuracy across 6 classes on unseen scenarios, against 78.5% for classic threshold rules, with 0.06 false alarms per day.",
         "Locates faults to the right pair of devices 99.9% of the time, within about 110 m on a 5 km line, with a 5-minute median detection delay for leaks.",
-        "Shipped a FastAPI service and an Arabic/English dashboard with plain-language evidence for every alert, a model registry, drift monitoring and a CI quality gate (Docker, GitHub Actions, pytest).",
+        "Built a working prototype with a FastAPI service, bilingual evidence-based dashboard, model registry, drift monitoring and CI quality gate (Docker, GitHub Actions, pytest).",
       ],
     },
     {
@@ -73,7 +77,7 @@ export const cv = {
       date: "Jun – Oct 2026",
       link: { label: "DOI 10.5281/zenodo.23168529", url: "https://doi.org/10.5281/zenodo.23168529" },
       bullets: [
-        "Reproducible Python and Google Earth Engine ML framework for desalination-dependent cities, with Jeddah as the case study.",
+        "Developed a reproducible Python and Google Earth Engine research framework to study urban greening, surface temperature and desalination energy trade-offs, using Jeddah as a case study.",
         "XGBoost land surface temperature model on Landsat 8: spatial cross-validation R² 0.795 on 19,650 cells, benchmarked against random forest, gradient boosting and linear regression.",
         "Matched-contrast benchmark of −1.18 °C per greened pixel outside the built-up area, with counterfactual gates and robustness tests, plus a NEGI index and a water–energy ledger (about 2.9–5.3 MWh/yr of desalination energy per degree of cooling).",
       ],
@@ -99,12 +103,6 @@ export const cv = {
       text: "Wahaj Framework, Zenodo, DOI 10.5281/zenodo.23168529.",
       date: "2026",
       url: "https://doi.org/10.5281/zenodo.23168529",
-    },
-    {
-      lead: "Media",
-      text: "Feature on the journey behind the Aykah smart bin, Saudi Gazette.",
-      date: "Sep 2026",
-      url: "https://saudigazette.com.sa/article/664214/saudi-arabia/how-curiosity-led-a-saudi-teenager-to-develop-a-un-award-winning-smart-waste-management-solution",
     },
   ] as CvLine[],
 
@@ -187,7 +185,7 @@ export const cv = {
 
 export const cvAr: typeof cv = {
   name: "نيللي فيصل المكتوم",
-  title: "طالبة علوم حاسب - مهندسة تعلّم آلة - باحثة ومبتكرة",
+  title: "طالبة علوم حاسب | أبحاث تعلّم الآلة والذكاء الاصطناعي",
   contact: [
     { label: "جدة، المملكة العربية السعودية" },
     { label: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },
@@ -199,7 +197,11 @@ export const cvAr: typeof cv = {
   ],
 
   profile:
-    "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي. مهندسة تعلّم آلة وباحثة في إنترنت الأشياء، وأصغر باحثة سعودية معتمدة من الأمم المتحدة: الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من اتفاقية الأمم المتحدة لمكافحة التصحر في COP16، من بين 209 باحثين من 36 دولة. مخترعة حاوية آيكة الذكية الحاصلة على براءة اختراع، ومطوّرة إطار وهاج (أثر التشجير الحضري على الطاقة) ونظام مَعين (رصد تسريبات الأنابيب لحظيًا). تقود اللجنة التقنية في مجتمع طلاب واعد، وتشارك في IEEE و GDG، وتشغل منصب نائبة قائدة القسم التقني في نادي البرمجة. تتقن العربية والإنجليزية، وتطمح إلى الدكتوراه ومسيرة أكاديمية.",
+    "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي، وأسعى إلى دراسة الدكتوراه ومسيرة بحثية أكاديمية في تعلّم الآلة والذكاء الاصطناعي. أطبّق نماذج قابلة للتكرار والتفسير على تحديات البيئة والبنية التحتية: نمذجة الحرارة الحضرية في وهاج، ورصد تسريبات المياه من بيانات الحساسات في مَعين، والنموذج الأولي لحاوية آيكة الذكية الحاصلة على براءة اختراع. كنتُ الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من UNCCD في COP16، من بين 209 باحثين من 36 دولة.",
+
+  researchInterests: [
+    { lead: "الاهتمامات البحثية", text: "تعلّم الآلة الموثوق والقابل للتفسير؛ رصد الحالات الشاذة في بيانات الحساسات؛ التعلّم الآلي الجغرافي والاستشعار عن بعد؛ توظيف الذكاء الاصطناعي للاستدامة البيئية ومرونة البنية التحتية." },
+  ],
 
   education: [
     {
@@ -229,10 +231,10 @@ export const cvAr: typeof cv = {
       date: "أغسطس – أكتوبر 2026",
       link: { label: "github.com/nelmkt/maeen", url: "https://github.com/nelmkt/maeen" },
       bullets: [
-        "بنيتُ نظام تعلّم آلة متكاملًا يحوّل قراءات الحساسات داخل الأنابيب (الضغط والتدفق و pH و EC والصوت والاهتزاز) إلى إجابات واضحة: ما المشكلة، وأين، وما مدى خطورتها، ولماذا، وما العمل. النموذج الأولي مكتمل ويعمل.",
+        "طوّرتُ مسار تعلّم آلة قابلًا للتكرار لقراءات حساسات متعددة داخل الأنابيب (الضغط والتدفق و pH و EC والصوت والاهتزاز)، من استخراج خصائص مبنية على الفيزياء إلى تصنيف الأعطال وتحديد مواقعها وتفسير الإنذارات.",
         "خصائص مبنية على فيزياء الجريان مع التعزيز التدرّجي تحقق دقة 94.1% في تحديد نوع العطل بين 6 فئات على سيناريوهات لم يرها النموذج، مقابل 78.5% لقواعد العتبات التقليدية، بمعدل 0.06 إنذار كاذب في اليوم.",
         "يحدد موقع العطل بين الجهازين الصحيحين بنسبة 99.9%، وبدقة تقارب 110 أمتار على خط طوله 5 كم، ويرصد التسريب خلال 5 دقائق في المتوسط.",
-        "خدمة FastAPI ولوحة متابعة بالعربية والإنجليزية تشرح أدلة كل إنذار بلغة واضحة، مع سجل للنماذج ومراقبة لانحراف البيانات وبوابة جودة آلية (Docker، GitHub Actions، pytest).",
+        "نموذج أولي يعمل بخدمة FastAPI ولوحة متابعة ثنائية اللغة تعرض أدلة كل إنذار، مع سجل للنماذج ومراقبة لانحراف البيانات وبوابة جودة آلية (Docker، GitHub Actions، pytest).",
       ],
     },
     {
@@ -241,7 +243,7 @@ export const cvAr: typeof cv = {
       date: "يونيو – أكتوبر 2026",
       link: { label: "DOI 10.5281/zenodo.23168529", url: "https://doi.org/10.5281/zenodo.23168529" },
       bullets: [
-        "إطار تعلّم آلة قابل للتكرار مبني بـ Python و Google Earth Engine للمدن المعتمدة على تحلية المياه، وجدة نموذجًا.",
+        "طوّرتُ إطارًا بحثيًا قابلًا للتكرار باستخدام Python و Google Earth Engine لدراسة أثر التشجير الحضري على حرارة السطح واستهلاك طاقة التحلية، مع جدة دراسة حالة.",
         "نموذج XGBoost لحرارة سطح الأرض من صور Landsat 8 بدقة R² = 0.795 في تحقق مكاني على 19,650 خلية، مقارنةً بالغابة العشوائية والتعزيز التدرّجي والانحدار الخطي.",
         "انخفاض قدره 1.18 °م لكل بكسل مُشجَّر خارج المناطق العمرانية، مع اختبارات للسيناريوهات البديلة والمتانة، ومؤشر NEGI وحساب للمياه والطاقة (قرابة 2.9 – 5.3 ميغاواط ساعة سنويًا من طاقة التحلية لكل درجة تبريد).",
       ],
@@ -267,12 +269,6 @@ export const cvAr: typeof cv = {
       text: "إطار وهاج، Zenodo، DOI 10.5281/zenodo.23168529.",
       date: "2026",
       url: "https://doi.org/10.5281/zenodo.23168529",
-    },
-    {
-      lead: "إعلام",
-      text: "مقال عن رحلة ابتكار حاوية آيكة، صحيفة Saudi Gazette.",
-      date: "سبتمبر 2026",
-      url: "https://saudigazette.com.sa/article/664214/saudi-arabia/how-curiosity-led-a-saudi-teenager-to-develop-a-un-award-winning-smart-waste-management-solution",
     },
   ],
 
@@ -358,9 +354,10 @@ export const cvs = { en: cv, ar: cvAr } as const;
 export const cvLabels = {
   en: {
     profile: "Profile",
+    researchInterests: "Research interests",
     education: "Education",
-    research: "Research & Projects",
-    publications: "Patent, Publications & Media",
+    research: "Research Experience & Selected Projects",
+    publications: "Research Outputs & Patent",
     awards: "Awards & Honors",
     leadership: "Leadership & Extracurricular Activities",
     events: "Conferences, Competitions & Events",
@@ -372,9 +369,10 @@ export const cvLabels = {
   },
   ar: {
     profile: "نبذة",
+    researchInterests: "الاهتمامات البحثية",
     education: "التعليم",
-    research: "الأبحاث والمشاريع",
-    publications: "براءة الاختراع والمنشورات والإعلام",
+    research: "الخبرة البحثية ومشاريع مختارة",
+    publications: "المخرجات البحثية وبراءة الاختراع",
     awards: "الجوائز والتكريم",
     leadership: "القيادة والأنشطة اللاصفية",
     events: "المؤتمرات والمسابقات والفعاليات",
