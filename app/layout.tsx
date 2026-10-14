@@ -42,7 +42,7 @@ const arabicHeading = localFont({
 export const metadata: Metadata = {
   title: "Nelly Almaktoum",
   description:
-    "Nelly Almaktoum: undergraduate researcher at King Abdulaziz University working on applied ML, remote sensing and green technology.",
+    "Nelly Almaktoum: undergraduate researcher at King Abdulaziz University working on machine learning, AI and green technology.",
   metadataBase: new URL("https://nelmkt.com"),
   openGraph: {
     title: "Nelly Almaktoum",
