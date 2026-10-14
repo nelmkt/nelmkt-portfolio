@@ -31,10 +31,10 @@ export const cv = {
   ] as { label: string; url?: string }[],
 
   profile:
-    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track, preparing for Ph.D. study and an academic research career in machine learning and AI. My work applies reproducible, interpretable ML to environmental and infrastructure problems: spatial modeling of urban heat in Wahaj, sensor-based leak detection in Maeen, and IoT prototyping in the patented Aykah smart bin. I was the youngest of seven UNCCD Young Researchers Award winners at COP16, selected from 209 researchers across 36 countries.",
+    "Computer Science student at King Abdulaziz University on the Waed Distinctive Excellence track, preparing for Ph.D. study and an academic research career in machine learning and AI. My work applies reproducible, interpretable ML to environmental and infrastructure problems: modeling urban heat in Wahaj, sensor-based leak detection in Maeen, and IoT prototyping in the patented Aykah smart bin. I was the youngest of seven UNCCD Young Researchers Award winners at COP16, selected from 209 researchers across 36 countries.",
 
   researchInterests: [
-    { lead: "Research interests", text: "Trustworthy and explainable ML; anomaly detection in sensor streams; geospatial ML and remote sensing; AI for environmental sustainability and resilient infrastructure." },
+    { lead: "Research interests", text: "Neural networks and deep learning; representation learning; trustworthy and explainable AI; model evaluation and generalization; AI for environmental sustainability and resilient infrastructure." },
   ] as CvLine[],
 
   education: [
@@ -166,8 +166,8 @@ export const cv = {
   skills: [
     { lead: "Programming", text: "Python, TypeScript, JavaScript, Rust, Ruby; working knowledge of SQL, C++, C# and Java." },
     {
-      lead: "ML engineering & data",
-      text: "XGBoost, scikit-learn, pandas, NumPy, Matplotlib; anomaly detection, explainable AI, spatial cross-validation, counterfactual testing, reproducible pipelines, MLOps (model registry, drift monitoring).",
+      lead: "Machine learning & AI",
+      text: "Neural networks, deep learning, XGBoost, scikit-learn, pandas, NumPy, Matplotlib; feature engineering, model training and benchmarking, explainable AI, cross-validation, counterfactual testing, reproducible pipelines, MLOps (model registry, drift monitoring).",
     },
     { lead: "Web & tools", text: "React, Next.js, Tailwind CSS, HTML/CSS, Node.js, FastAPI, REST APIs, WebSockets, Pydantic, SQLite, Pyodide and Web Workers; Git, Docker, GitHub Actions, GitHub Pages, pytest." },
     {
@@ -200,7 +200,7 @@ export const cvAr: typeof cv = {
     "طالبة علوم حاسب في جامعة الملك عبدالعزيز ضمن مسار واعد للتميز النوعي، وأسعى إلى دراسة الدكتوراه ومسيرة بحثية أكاديمية في تعلّم الآلة والذكاء الاصطناعي. أطبّق نماذج قابلة للتكرار والتفسير على تحديات البيئة والبنية التحتية: نمذجة الحرارة الحضرية في وهاج، ورصد تسريبات المياه من بيانات الحساسات في مَعين، والنموذج الأولي لحاوية آيكة الذكية الحاصلة على براءة اختراع. كنتُ الأصغر بين الفائزين السبعة بجائزة الباحثين الشباب من UNCCD في COP16، من بين 209 باحثين من 36 دولة.",
 
   researchInterests: [
-    { lead: "الاهتمامات البحثية", text: "تعلّم الآلة الموثوق والقابل للتفسير؛ رصد الحالات الشاذة في بيانات الحساسات؛ التعلّم الآلي الجغرافي والاستشعار عن بعد؛ توظيف الذكاء الاصطناعي للاستدامة البيئية ومرونة البنية التحتية." },
+    { lead: "الاهتمامات البحثية", text: "الشبكات العصبية والتعلّم العميق؛ تعلّم التمثيلات؛ الذكاء الاصطناعي الموثوق والقابل للتفسير؛ تقييم النماذج وقدرتها على التعميم؛ توظيف الذكاء الاصطناعي للاستدامة البيئية ومرونة البنية التحتية." },
   ],
 
   education: [
@@ -332,8 +332,8 @@ export const cvAr: typeof cv = {
   skills: [
     { lead: "البرمجة", text: "Python، TypeScript، JavaScript، Rust، Ruby، ومعرفة عملية بـ SQL و C++ و C# و Java." },
     {
-      lead: "هندسة تعلّم الآلة والبيانات",
-      text: "XGBoost، scikit-learn، pandas، NumPy، Matplotlib؛ رصد الحالات الشاذة، والذكاء الاصطناعي القابل للتفسير، والتحقق المتقاطع المكاني، واختبارات السيناريوهات البديلة، والمسارات القابلة للتكرار، و MLOps (سجل النماذج ومراقبة انحراف البيانات).",
+      lead: "تعلّم الآلة والذكاء الاصطناعي",
+      text: "الشبكات العصبية، التعلّم العميق، XGBoost، scikit-learn، pandas، NumPy، Matplotlib؛ هندسة الخصائص، وتدريب النماذج ومقارنتها، والذكاء الاصطناعي القابل للتفسير، والتحقق المتقاطع، واختبارات السيناريوهات البديلة، والمسارات القابلة للتكرار، و MLOps (سجل النماذج ومراقبة انحراف البيانات).",
     },
     { lead: "الويب والأدوات", text: "React، Next.js، Tailwind CSS، HTML/CSS، Node.js، FastAPI، واجهات REST، WebSockets، Pydantic، SQLite، Pyodide وWeb Workers؛ Git، Docker، GitHub Actions، GitHub Pages، pytest." },
     {
