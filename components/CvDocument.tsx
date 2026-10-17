@@ -115,6 +115,9 @@ export default function CvDocument({ lang }: { lang: CvLang }) {
         <Section title={t.events}>
           <Lines items={cv.events} sep={t.sep} />
         </Section>
+        <Section title={t.submissions}>
+          <Lines items={cv.submissions} sep={t.sep} />
+        </Section>
         <Section title={t.skills}>
           <Lines items={cv.skills} sep={t.sep} colon />
         </Section>

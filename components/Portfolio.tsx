@@ -15,7 +15,7 @@ import StartScreen from "./StartScreen";
 import { type Lang, LangContext, LANG_KEY, applyLang, translate, useT } from "./lang";
 import { toggleMode, toggleTheme } from "./mode";
 import { cvPage, cvPdfs } from "./cv";
-import { academy, languages, links, party, profile, quests, sideQuests, skillTree, stages, trophies } from "./data";
+import { academy, languages, links, party, profile, quests, sideQuests, skillTree, submissions, stages, trophies } from "./data";
 
 const STORE_KEY = "nelmkt-collected";
 
@@ -346,6 +346,20 @@ export default function Portfolio() {
                   <h4>{tr(s.title)}</h4>
                   <p>
                     {s.by ? `${tr(s.by)} - ${tr(s.when)}` : tr(s.when)}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <h3 className="sub-tag"><Dual a="QUESTS IN PROGRESS" p="Current submissions" /></h3>
+          <ul className="side-quests">
+            {submissions.map((s, i) => (
+              <li key={s.title} className="box side ramp" style={ramp(i, submissions.length)}>
+                <span className="side-check"><PixelIcon name="play" size={14} /></span>
+                <div>
+                  <h4>{tr(s.title)}</h4>
+                  <p>
+                    {tr(s.status)} - {tr(s.when)}
                   </p>
                 </div>
               </li>

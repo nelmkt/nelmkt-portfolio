@@ -147,6 +147,7 @@ export const cv = {
     { lead: "Layout & Design Specialist", text: "Engineering Day 2027 Planning Department", date: "Aug 2026 – Present" },
     { lead: "Technical Department Member", text: "IEEE (2027 term)", date: "Oct 2026 – Present" },
     { lead: "Tech Department Vice Leader", text: "Programming Club (2027 term)", date: "Oct 2026 – Present" },
+    { lead: "Tech Member", text: "Microsoft Learn Student Ambassadors Club (LSAC), KAU", date: "Oct 2026 – Present" },
     { lead: "CM Experience Member", text: "Google Developer Groups, KAU", date: "Oct 2026 – Present" },
     { lead: "Organizer & Event Coordinator", text: "English Language Olympiad (ELO), KAU", date: "Oct 2026" },
     { lead: "Coordinator", text: "Annual Waed Workshop & Introductory Meeting 2027", date: "Aug – Sep 2026" },
@@ -163,11 +164,22 @@ export const cv = {
     { lead: "The 2nd Scientific Forum", text: "King Abdulaziz University", date: "Nov 2025" },
   ] as CvLine[],
 
+  submissions: [
+    { lead: "Global Sustainability Challenge 2026–27", text: "Wahaj, submitted (team 1330)", date: "Oct 2026" },
+    { lead: "KAUST Academy AI Specialization 2026/27", text: "application submitted, under review", date: "Oct 2026" },
+    { lead: "IOCE 2027", text: "Wahaj, abstract submitted (Sciforum-215772)", date: "Oct 2026" },
+    { lead: "i3EC’26", text: "Aykah, final entry submitted", date: "Oct 2026" },
+    { lead: "WAW 2026", text: "Wahaj, manuscript submitted", date: "Oct 2026" },
+    { lead: "Wilkes Climate Innovation Prize 2027", text: "Wahaj, submitted", date: "Oct 2026" },
+    { lead: "IGIIDeation 2027", text: "Aykah, abstract and paper submitted", date: "Oct 2026" },
+    { lead: "Saudi HPC/AI 2026 at KAUST", text: "Wahaj, registered and e-poster submitted", date: "Oct 2026" },
+  ] as CvLine[],
+
   skills: [
     { lead: "Programming", text: "Python, TypeScript, JavaScript, Rust, Ruby; working knowledge of SQL, C++, C# and Java." },
     {
       lead: "Machine learning & AI",
-      text: "Neural networks, deep learning, XGBoost, scikit-learn, pandas, NumPy, Matplotlib; feature engineering, model training and benchmarking, explainable AI, cross-validation, counterfactual testing, reproducible pipelines, MLOps (model registry, drift monitoring).",
+      text: "Deep learning, XGBoost, scikit-learn, pandas, NumPy, Matplotlib; feature engineering, model training and benchmarking, explainable AI, cross-validation, counterfactual testing, reproducible pipelines, MLOps (model registry, drift monitoring).",
     },
     { lead: "Web & tools", text: "React, Next.js, Tailwind CSS, HTML/CSS, Node.js, FastAPI, REST APIs, WebSockets, Pydantic, SQLite, Pyodide and Web Workers; Git, Docker, GitHub Actions, GitHub Pages, pytest." },
     {
@@ -313,6 +325,7 @@ export const cvAr: typeof cv = {
     { lead: "مختصة التنسيق والتصميم", text: "لجنة التخطيط ليوم الهندسة 2027", date: "أغسطس 2026 – الآن" },
     { lead: "عضوة في القسم التقني", text: "IEEE (دورة 2027)", date: "أكتوبر 2026 – الآن" },
     { lead: "نائبة قائدة القسم التقني", text: "نادي البرمجة (دورة 2027)", date: "أكتوبر 2026 – الآن" },
+    { lead: "عضوة تقنية", text: "نادي سفراء مايكروسوفت للطلاب (LSAC)، جامعة الملك عبدالعزيز", date: "أكتوبر 2026 – الآن" },
     { lead: "عضوة في فريق تجربة المجتمع", text: "مجموعات مطوري Google، جامعة الملك عبدالعزيز", date: "أكتوبر 2026 – الآن" },
     { lead: "منظِّمة ومنسّقة فعاليات", text: "أولمبياد اللغة الإنجليزية (ELO)، جامعة الملك عبدالعزيز", date: "أكتوبر 2026" },
     { lead: "منسّقة", text: "اللقاء التعريفي والورشة السنوية لواعد 2027", date: "أغسطس – سبتمبر 2026" },
@@ -329,11 +342,22 @@ export const cvAr: typeof cv = {
     { lead: "الملتقى العلمي الثاني", text: "جامعة الملك عبدالعزيز", date: "نوفمبر 2025" },
   ],
 
+  submissions: [
+    { lead: "تحدي الاستدامة العالمي 2026–27", text: "وهّاج، تم التقديم (الفريق 1330)", date: "أكتوبر 2026" },
+    { lead: "تخصص الذكاء الاصطناعي في أكاديمية كاوست 2026/27", text: "تم التقديم، قيد المراجعة", date: "أكتوبر 2026" },
+    { lead: "IOCE 2027", text: "وهّاج، تم تقديم الملخص (Sciforum-215772)", date: "أكتوبر 2026" },
+    { lead: "i3EC’26", text: "آيكة، تم تقديم المشاركة النهائية", date: "أكتوبر 2026" },
+    { lead: "WAW 2026", text: "وهّاج، تم إرسال الورقة البحثية", date: "أكتوبر 2026" },
+    { lead: "جائزة ويلكس لابتكار المناخ 2027", text: "وهّاج، تم التقديم", date: "أكتوبر 2026" },
+    { lead: "IGIIDeation 2027", text: "آيكة، تم تقديم الملخص والورقة", date: "أكتوبر 2026" },
+    { lead: "مؤتمر الحوسبة عالية الأداء والذكاء الاصطناعي السعودي 2026 في كاوست", text: "وهّاج، تم التسجيل وتقديم الملصق الإلكتروني", date: "أكتوبر 2026" },
+  ],
+
   skills: [
     { lead: "البرمجة", text: "Python، TypeScript، JavaScript، Rust، Ruby، ومعرفة عملية بـ SQL و C++ و C# و Java." },
     {
       lead: "تعلّم الآلة والذكاء الاصطناعي",
-      text: "الشبكات العصبية، التعلّم العميق، XGBoost، scikit-learn، pandas، NumPy، Matplotlib؛ هندسة الخصائص، وتدريب النماذج ومقارنتها، والذكاء الاصطناعي القابل للتفسير، والتحقق المتقاطع، واختبارات السيناريوهات البديلة، والمسارات القابلة للتكرار، و MLOps (سجل النماذج ومراقبة انحراف البيانات).",
+      text: "التعلّم العميق، XGBoost، scikit-learn، pandas، NumPy، Matplotlib؛ هندسة الخصائص، وتدريب النماذج ومقارنتها، والذكاء الاصطناعي القابل للتفسير، والتحقق المتقاطع، واختبارات السيناريوهات البديلة، والمسارات القابلة للتكرار، و MLOps (سجل النماذج ومراقبة انحراف البيانات).",
     },
     { lead: "الويب والأدوات", text: "React، Next.js، Tailwind CSS، HTML/CSS، Node.js، FastAPI، واجهات REST، WebSockets، Pydantic، SQLite، Pyodide وWeb Workers؛ Git، Docker، GitHub Actions، GitHub Pages، pytest." },
     {
@@ -361,6 +385,7 @@ export const cvLabels = {
     awards: "Awards & Honors",
     leadership: "Leadership & Extracurricular Activities",
     events: "Conferences, Competitions & Events",
+    submissions: "Submissions & Applications",
     skills: "Skills",
     back: "← nelmkt.com",
     download: "Download PDF",
@@ -376,6 +401,7 @@ export const cvLabels = {
     awards: "الجوائز والتكريم",
     leadership: "القيادة والأنشطة اللاصفية",
     events: "المؤتمرات والمسابقات والفعاليات",
+    submissions: "المشاركات والطلبات المقدّمة",
     skills: "المهارات",
     back: "nelmkt.com →",
     download: "تحميل PDF",
