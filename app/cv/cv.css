@@ -234,7 +234,7 @@ body:has(.cv-wrap) a {
 
 @page {
   size: A4;
-  margin: 11mm 13mm;
+  margin: 9mm 12mm;
 }
 @media print {
   html:has(.cv-wrap),
@@ -287,7 +287,7 @@ body:has(.cv-wrap) a {
 @media print {
   .cv-wrap[dir="rtl"] {
     font-size: 8pt;
-    line-height: 1.38;
+    line-height: 1.34;
   }
   .cv-wrap[dir="rtl"] .cv-head h1 {
     font-size: 17pt;

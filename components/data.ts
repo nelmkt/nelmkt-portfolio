@@ -208,12 +208,12 @@ export const languages = [
 
 export const skillTree = [
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Arabic RTL interfaces"] },
-  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI", "REST APIs", "WebSockets", "Pydantic", "SQLite"] },
-  { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "GitHub Pages", "pytest", "Pyodide", "Web Workers"] },
+  { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI & REST APIs", "WebSockets", "Pydantic", "SQLite"] },
+  { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "GitHub Pages", "pytest", "Pyodide"] },
   { branch: "UI & communication", items: ["UI prototyping", "Public speaking", "Scientific presentation"] },
   { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Counterfactual testing", "Reproducible ML pipelines", "Explainable AI", "MLOps & model registry", "Drift monitoring", "Physics-based simulation"] },
   { branch: "Data", items: ["scikit-learn", "pandas", "NumPy", "Matplotlib"] },
-  { branch: "AI research", items: ["Deep learning", "Representation learning", "Supervised learning", "Model evaluation & generalization"] },
+  { branch: "AI research", items: ["Representation learning", "Supervised learning", "Model evaluation & generalization"] },
   {
     branch: "Hardware",
     items: [
@@ -232,8 +232,9 @@ export const party = [
   { role: "Technical Team Lead", where: "Waed Students Community, King Abdulaziz University", when: "Sep 2026 – now" },
   { role: "Tech Department Member", where: "IEEE, 2027 term", when: "Oct 2026 – now" },
   { role: "Tech Department Vice Leader", where: "Programming Club, 2027 term", when: "Oct 2026 – now" },
-  { role: "Tech Member", where: "Microsoft Learn Student Ambassadors Club (LSAC), KAU", when: "Oct 2026 – now" },
+  { role: "Tech Department Member", where: "Microsoft Learn Student Ambassadors Club (LSAC), KAU", when: "Oct 2026 – now" },
   { role: "CM Experience Member", where: "Google Developer Groups, KAU", when: "Oct 2026 – now" },
+  { role: "Project Manager, Library Initiative", where: "CM Experience, Google Developer Groups, KAU", when: "Oct 2026 – now" },
   { role: "Organizer & Event Coordinator", where: "English Language Olympiad (ELO), KAU", when: "Oct 2026" },
   { role: "Project Coordinator, Talks X", where: "Engineering Day 2027, KAU", when: "Sep 2026 – now" },
   { role: "Layout & Design Specialist", where: "Engineering Day 2027 Planning Department", when: "Aug 2026 – now" },
@@ -269,14 +270,14 @@ export const sideQuests: { title: string; by?: string; when: string }[] = [
 ];
 
 export const submissions: { title: string; status: string; when: string }[] = [
-  { title: "Global Sustainability Challenge 2026–27", status: "Wahaj - submitted, team 1330", when: "Oct 2026" },
-  { title: "KAUST Academy AI Specialization 2026/27", status: "Application submitted, under review", when: "Oct 2026" },
-  { title: "IOCE 2027", status: "Wahaj - abstract submitted (Sciforum-215772)", when: "Oct 2026" },
-  { title: "i3EC’26", status: "Aykah - final entry submitted", when: "Oct 2026" },
-  { title: "WAW 2026", status: "Wahaj - manuscript submitted", when: "Oct 2026" },
-  { title: "Wilkes Climate Innovation Prize 2027", status: "Wahaj - submitted", when: "Oct 2026" },
-  { title: "IGIIDeation 2027", status: "Aykah - abstract and paper submitted", when: "Oct 2026" },
-  { title: "Saudi HPC/AI 2026 at KAUST", status: "Wahaj - registered, e-poster submitted", when: "Oct 2026" },
+  { title: "Global Sustainability Challenge 2026–27 (Stanford Doerr School of Sustainability and partner universities)", status: "Submitted (team 1330)", when: "Oct 2026" },
+  { title: "KAUST Academy Artificial Intelligence Specialization 2026/27", status: "Application submitted, under review", when: "Oct 2026" },
+  { title: "2nd International Online Conference on Environments (IOCE 2027), MDPI", status: "Abstract submitted (Sciforum-215772)", when: "Oct 2026" },
+  { title: "i3EC’26", status: "Final entry submitted", when: "Oct 2026" },
+  { title: "WAW 2026", status: "Manuscript submitted", when: "Oct 2026" },
+  { title: "Wilkes Climate Innovation Prize 2027, Wilkes Center for Climate Science & Policy, University of Utah", status: "Submitted", when: "Oct 2026" },
+  { title: "International Grand Invention, Innovation and Design Expo (IGIIDeation 2027), IIUM", status: "Abstract and paper submitted", when: "Oct 2026" },
+  { title: "Saudi HPC/AI Conference 2026, KAUST", status: "Registered, e-poster submitted", when: "Oct 2026" },
 ];
 
 export const links = [
