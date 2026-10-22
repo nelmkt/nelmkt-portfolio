@@ -274,6 +274,8 @@ export const AR: Record<string, string> = {
   "Saudi Council of Engineers": "الهيئة السعودية للمهندسين",
   "2nd Conference on Sustainability and Quality of Life - Research paper": "المؤتمر الثاني للاستدامة وجودة الحياة - ورقة بحثية",
   "Dec 2026": "ديسمبر 2026",
+  "Seoul International Invention Fair (SIIF) 2026, COEX, Seoul": "معرض سيول الدولي للاختراعات (SIIF) 2026، مركز كوكس، سيول",
+  "Nominated by King Abdulaziz University to exhibit Wahaj": "مرشّحة من جامعة الملك عبدالعزيز لعرض مشروع وهّاج",
   "Hackathon Al Hareeq": "هاكاثون الحريق",
   "Ministry of Environment, Water & Agriculture": "وزارة البيئة والمياه والزراعة",
   "Dec 2025": "ديسمبر 2025",

@@ -166,6 +166,7 @@ export const cv = {
   ] as CvLine[],
 
   submissions: [
+    { lead: "Seoul International Invention Fair (SIIF) 2026, COEX, Seoul", text: "nominated by King Abdulaziz University to exhibit Wahaj", date: "Dec 2026" },
     { lead: "Global Sustainability Challenge 2026–27 (Stanford Doerr School of Sustainability and partner universities)", text: "submitted (team 1330)", date: "Oct 2026" },
     { lead: "KAUST Academy Artificial Intelligence Specialization 2026/27", text: "application submitted, under review", date: "Oct 2026" },
     { lead: "2nd International Online Conference on Environments (IOCE 2027), MDPI", text: "abstract submitted (Sciforum-215772)", date: "Oct 2026" },
@@ -345,6 +346,7 @@ export const cvAr: typeof cv = {
   ],
 
   submissions: [
+    { lead: "معرض سيول الدولي للاختراعات (SIIF) 2026", text: "ترشيح من الجامعة لعرض وهّاج", date: "ديسمبر 2026" },
     { lead: "تحدي الاستدامة العالمي 2026–27 (كلية دور للاستدامة بجامعة ستانفورد وجامعات شريكة)", text: "تم التقديم (الفريق 1330)", date: "أكتوبر 2026" },
     { lead: "تخصص الذكاء الاصطناعي في أكاديمية كاوست 2026/27", text: "تم التقديم، قيد المراجعة", date: "أكتوبر 2026" },
     { lead: "المؤتمر الدولي الثاني الإلكتروني للبيئات (IOCE 2027)، MDPI", text: "تم تقديم الملخص (Sciforum-215772)", date: "أكتوبر 2026" },
