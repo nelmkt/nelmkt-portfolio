@@ -174,7 +174,6 @@ export const cv = {
     { lead: "WAW 2026", text: "manuscript submitted", date: "Oct 2026" },
     { lead: "Wilkes Climate Innovation Prize 2027, Wilkes Center for Climate Science & Policy, University of Utah", text: "submitted", date: "Oct 2026" },
     { lead: "International Grand Invention, Innovation and Design Expo (IGIIDeation 2027), IIUM", text: "abstract and paper submitted", date: "Oct 2026" },
-    { lead: "Saudi HPC/AI Conference 2026, KAUST", text: "registered, e-poster submitted", date: "Oct 2026" },
   ] as CvLine[],
 
   skills: [
@@ -354,7 +353,6 @@ export const cvAr: typeof cv = {
     { lead: "WAW 2026", text: "تم إرسال الورقة البحثية", date: "أكتوبر 2026" },
     { lead: "جائزة ويلكس لابتكار المناخ 2027، مركز ويلكس لعلوم وسياسات المناخ بجامعة يوتا", text: "تم التقديم", date: "أكتوبر 2026" },
     { lead: "المعرض الدولي الكبير للاختراع والابتكار والتصميم (IGIIDeation 2027)، الجامعة الإسلامية العالمية بماليزيا", text: "تم تقديم الملخص والورقة", date: "أكتوبر 2026" },
-    { lead: "مؤتمر الحوسبة عالية الأداء والذكاء الاصطناعي السعودي 2026، كاوست", text: "تم التسجيل وتقديم الملصق الإلكتروني", date: "أكتوبر 2026" },
   ],
 
   skills: [
