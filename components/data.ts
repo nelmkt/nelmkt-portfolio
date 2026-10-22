@@ -278,7 +278,6 @@ export const submissions: { title: string; status: string; when: string }[] = [
   { title: "WAW 2026", status: "Manuscript submitted", when: "Oct 2026" },
   { title: "Wilkes Climate Innovation Prize 2027, Wilkes Center for Climate Science & Policy, University of Utah", status: "Submitted", when: "Oct 2026" },
   { title: "International Grand Invention, Innovation and Design Expo (IGIIDeation 2027), IIUM", status: "Abstract and paper submitted", when: "Oct 2026" },
-  { title: "Saudi HPC/AI Conference 2026, KAUST", status: "Registered, e-poster submitted", when: "Oct 2026" },
 ];
 
 export const links = [

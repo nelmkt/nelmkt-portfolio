@@ -231,8 +231,6 @@ export const AR: Record<string, string> = {
   "Submitted": "تم التقديم",
   "International Grand Invention, Innovation and Design Expo (IGIIDeation 2027), IIUM": "المعرض الدولي الكبير للاختراع والابتكار والتصميم (IGIIDeation 2027)، الجامعة الإسلامية العالمية بماليزيا",
   "Abstract and paper submitted": "تم تقديم الملخص والورقة",
-  "Saudi HPC/AI Conference 2026, KAUST": "مؤتمر الحوسبة عالية الأداء والذكاء الاصطناعي السعودي 2026، كاوست",
-  "Registered, e-poster submitted": "تم التسجيل وتقديم الملصق الإلكتروني",
   "Microsoft Learn Student Ambassadors Club (LSAC), KAU": "نادي سفراء مايكروسوفت للطلاب (LSAC)، جامعة الملك عبدالعزيز",
   "QUESTS IN PROGRESS": "مهام قيد التقدّم",
   "Current submissions": "المشاركات المقدّمة حاليًا",
