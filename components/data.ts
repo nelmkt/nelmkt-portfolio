@@ -137,6 +137,7 @@ export const trophies = [
   {
     year: "NOV 2026",
     title: "Poster Finalist - Saudi HPC/AI Conference 2026",
+    proof: "/proof/kaust-hpcai-finalist.png",
     detail: "Finalist in the student poster session with “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”",
     by: "King Abdullah University of Science and Technology (KAUST)",
     tier: "silver",
@@ -144,6 +145,7 @@ export const trophies = [
   {
     year: "SEP 2026",
     title: "Featured - Saudi Gazette",
+    proof: "https://saudigazette.com.sa/article/664214/saudi-arabia/how-curiosity-led-a-saudi-teenager-to-develop-a-un-award-winning-smart-waste-management-solution",
     detail: "Feature story on my journey from curiosity to the award-winning Aykah smart bin",
     by: "Saudi Gazette",
     tier: "gold",
@@ -151,6 +153,7 @@ export const trophies = [
   {
     year: "SEP 2026",
     title: "Certificate of Appreciation",
+    proof: "/proof/kau-appreciation.jpg",
     detail: "For distinguished participation in local and international competitions",
     by: "King Abdulaziz University",
     tier: "silver",
@@ -158,21 +161,24 @@ export const trophies = [
   {
     year: "JUN 2026",
     title: "Academic Excellence Award 2025–2026",
+    proof: "/proof/kau-academic-excellence.jpg",
     detail: "GPA of 4.5 or higher across two consecutive semesters",
     by: "King Abdulaziz University",
     tier: "gold",
   },
   {
     year: "JAN 2025",
-    title: "IEEE Ideation Competition",
+    title: "IEEE Ideation Competition - 3rd Place",
+    proof: "/proof/ieee-ideation-effat.jpg",
     detail:
-      "Presenter & team lead at the 22nd International Learning and Technology Conference (Effat University): a top-ranked paper at the Human Machine Fusion exhibition, leading a team of five",
+      "3rd place for best technological innovation in the Ideathon at the 22nd International Learning and Technology Conference (Effat University), as presenter and team lead of five",
     by: "IEEE",
     tier: "silver",
   },
   {
     year: "DEC 2024",
     title: "Young Researchers Award - Modern Technologies",
+    proof: "/proof/unccd-cop16-young-researchers.jpg",
     detail:
       "Selected by an international panel and received at 16, making me the youngest UN-certified Saudi researcher (youngest of 209 researchers and professors from 36 countries)",
     by: "United Nations Convention to Combat Desertification (UNCCD COP16)",
@@ -181,6 +187,7 @@ export const trophies = [
   {
     year: "NATIONAL",
     title: "National Recognition - NCM",
+    proof: "https://x.com/NCMKSA/status/1867220237566849266",
     detail: "Official recognition of Aykah among the selected Young Researchers at UNCCD COP16",
     by: "National Center for Meteorology (NCM)",
     tier: "gold",
@@ -195,6 +202,7 @@ export const trophies = [
   {
     year: "FEB 2022",
     title: "National Mathematics Olympiad - Final Stage",
+    proof: "/proof/math-olympiad-2022.jpg",
     detail: "Representing the Western Region in the competition’s fourth edition",
     by: "Ministry of Education, Saudi Arabia",
     tier: "gold",

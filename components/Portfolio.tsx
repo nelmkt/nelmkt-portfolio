@@ -319,6 +319,11 @@ export default function Portfolio() {
                 <div className="trophy-meta">
                   <span className="trophy-date">{tr(t.year)}</span>
                   <span className="trophy-by">{tr(t.by)}</span>
+                  {t.proof && (
+                    <a className="trophy-proof" href={t.proof} target="_blank" rel="noopener noreferrer">
+                      {tr("View proof")} ↗
+                    </a>
+                  )}
                 </div>
               </li>
             ))}
