@@ -81,7 +81,7 @@ export const AR: Record<string, string> = {
   "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT, from measuring what urban greening really does in Wahaj to catching pipeline leaks in real time with Maeen. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.": "تجمع أبحاثي بين الحوسبة والعالم الحقيقي: مسارات تعلّم آلة قابلة للتكرار، وبيانات الأقمار الصناعية، وإنترنت الأشياء، من قياس الأثر الحقيقي للتشجير الحضري في «وهاج» إلى رصد تسريبات الأنابيب لحظيًا في «مَعين». هدفي الدكتوراه ومسيرة في المجال الأكاديمي، وستجد أعمالي في قسم الأبحاث والمشاريع أدناه.",
   "I'm also an artist, which probably explains why this site looks the way it does.": "وأنا فنانة أيضًا، ولعل هذا ما يفسّر شكل هذا الموقع.",
   "Youngest UN-certified Saudi researcher": "أصغر باحثة سعودية معتمدة من الأمم المتحدة",
-  "6 national & international recognitions - 3 national & international awards": "6 تكريمات و3 جوائز على المستويين الوطني والدولي",
+  "7 national & international recognitions - 3 national & international awards": "7 تكريمات و3 جوائز على المستويين الوطني والدولي",
   CLASS: "الدور",
   GUILD: "الجامعة",
   BASE: "المدينة",
