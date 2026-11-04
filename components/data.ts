@@ -209,10 +209,10 @@ export const languages = [
 export const skillTree = [
   { branch: "Front end", items: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Arabic RTL interfaces"] },
   { branch: "Back end", items: ["Python", "Ruby", "Rust", "Node.js", "FastAPI & REST APIs", "WebSockets", "Pydantic", "SQLite"] },
-  { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "GitHub Pages", "pytest", "Pyodide"] },
+  { branch: "Tools", items: ["Git", "Docker", "GitHub Actions", "GitHub Pages", "pytest", "Pyodide", "MATLAB"] },
   { branch: "UI & communication", items: ["UI prototyping", "Public speaking", "Scientific presentation"] },
   { branch: "ML engineering", items: ["Model training & benchmarking", "XGBoost", "Random forest & gradient boosting", "Counterfactual testing", "Reproducible ML pipelines", "Explainable AI", "MLOps & model registry", "Drift monitoring", "Physics-based simulation"] },
-  { branch: "Data", items: ["scikit-learn", "pandas", "NumPy", "Matplotlib"] },
+  { branch: "Data", items: ["PyTorch", "scikit-learn", "pandas", "NumPy", "Matplotlib"] },
   { branch: "AI research", items: ["Representation learning", "Supervised learning", "Model evaluation & generalization"] },
   {
     branch: "Hardware",
@@ -230,11 +230,11 @@ export const skillTree = [
 
 export const party = [
   { role: "Technical Team Lead", where: "Waed Students Community, King Abdulaziz University", when: "Sep 2026 – now" },
+  { role: "Webmaster", where: "IEEE KAU SB (Female) Research Community, 2027 term", when: "Nov 2026 – now" },
   { role: "Tech Department Member", where: "IEEE, 2027 term", when: "Oct 2026 – now" },
   { role: "Tech Department Vice Leader", where: "Programming Club, 2027 term", when: "Oct 2026 – now" },
-  { role: "Tech Department Member", where: "Microsoft Learn Student Ambassadors Club (LSAC), KAU", when: "Oct 2026 – now" },
+  { role: "Tech Department Vice Leader", where: "Microsoft Learn Student Ambassadors Club (LSAC), KAU", when: "Oct 2026 – now" },
   { role: "CM Experience Member", where: "Google Developer Groups, KAU", when: "Oct 2026 – now" },
-  { role: "Project Manager, Library Initiative", where: "CM Experience, Google Developer Groups, KAU", when: "Oct 2026 – now" },
   { role: "Organizer & Event Coordinator", where: "English Language Olympiad (ELO), KAU", when: "Oct 2026" },
   { role: "Project Coordinator, Talks X", where: "Engineering Day 2027, KAU", when: "Sep 2026 – now" },
   { role: "Layout & Design Specialist", where: "Engineering Day 2027 Planning Department", when: "Aug 2026 – now" },
