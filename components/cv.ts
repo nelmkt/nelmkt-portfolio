@@ -117,11 +117,11 @@ export const cv = {
       ],
     },
     {
-      title: "IEEE Ideation Competition, 22nd International Learning & Technology Conference",
+      title: "IEEE Ideation Competition (3rd Place), 22nd International Learning & Technology Conference",
       role: "Presenter and team lead, Effat University",
       date: "Jan 2025",
       bullets: [
-        "Presented a top-ranked scientific paper at the Human Machine Fusion (HMF) exhibition to a committee of technology professors and innovators, and led a cross-functional team of five.",
+        "Won 3rd place for best technological innovation; presented our paper at the Human Machine Fusion (HMF) exhibition to a committee of technology professors and innovators, and led a team of five.",
       ],
     },
     {
@@ -297,11 +297,11 @@ export const cvAr: typeof cv = {
       ],
     },
     {
-      title: "مسابقة IEEE للأفكار الإبداعية، المؤتمر الدولي الثاني والعشرون للتعلم والتقنية",
+      title: "مسابقة IEEE للأفكار الإبداعية (المركز الثالث)، المؤتمر الدولي الثاني والعشرون للتعلم والتقنية",
       role: "مقدّمة وقائدة فريق، جامعة عفت",
       date: "يناير 2025",
       bullets: [
-        "قدّمتُ ورقة علمية نالت أحد أعلى التقييمات في معرض اندماج الإنسان والآلة (HMF) أمام لجنة من أساتذة التقنية والمبتكرين، وقدتُ فريقًا من خمسة أعضاء.",
+        "حصدتُ المركز الثالث لأفضل ابتكار تقني، وقدّمتُ ورقتنا في معرض اندماج الإنسان والآلة (HMF) أمام لجنة من أساتذة التقنية والمبتكرين، وقدتُ فريقًا من خمسة أعضاء.",
       ],
     },
     {

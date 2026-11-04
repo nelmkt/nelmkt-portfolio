@@ -4780,3 +4780,27 @@ html[data-mode="pro"] .cv-card-body h3 {
     padding: 0 18px 18px;
   }
 }
+
+/* clickable proof on trophy cards */
+.trophy {
+  position: relative;
+}
+.trophy-proof {
+  font-family: var(--pixel);
+  font-size: 8px;
+  line-height: 1.6;
+  color: var(--accent);
+  text-decoration: none;
+}
+.trophy-proof::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.trophy:has(.trophy-proof):hover {
+  transform: translate(-2px, -2px);
+}
+.trophy-proof:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
