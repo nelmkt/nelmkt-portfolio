@@ -16,7 +16,7 @@ export const profile = {
     "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT, from measuring what urban greening really does in Wahaj to catching pipeline leaks in real time with Maeen. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.",
   ],
   highlight: "Youngest UN-certified Saudi researcher",
-  highlightDetail: "6 national & international recognitions - 3 national & international awards",
+  highlightDetail: "7 national & international recognitions - 3 national & international awards",
   stats: [
     { label: "CLASS", pro: "Role", value: "Researcher - Developer - ML Engineer" },
     { label: "GUILD", pro: "University", value: "KAU - BS Computer Science - Waed track" },
