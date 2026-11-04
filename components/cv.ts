@@ -135,6 +135,7 @@ export const cv = {
   ] as CvEntry[],
 
   moreAwards: [
+    { lead: "Poster Finalist, Saudi HPC/AI Conference 2026", text: "KAUST, student poster session: “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”", date: "Nov 2026" },
     { lead: "Academic Excellence Award 2025–2026", text: "King Abdulaziz University", date: "Jun 2026" },
     { lead: "Certificate of Appreciation", text: "KAU, for distinguished participation in local and international competitions", date: "Sep 2026" },
     { lead: "Hackathon winner", text: "multiple local hackathons" },
@@ -314,6 +315,7 @@ export const cvAr: typeof cv = {
   ],
 
   moreAwards: [
+    { lead: "متأهلة للنهائيات في جلسة الملصقات، مؤتمر الحوسبة عالية الأداء والذكاء الاصطناعي السعودي 2026", text: "كاوست: “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”", date: "نوفمبر 2026" },
     { lead: "شهادة التفوق الأكاديمي ل2025-2026", text: "جامعة الملك عبدالعزيز", date: "يونيو 2026" },
     { lead: "شهادة شكر وتقدير", text: "جامعة الملك عبدالعزيز، للمشاركة المتميزة في المسابقات المحلية والدولية", date: "سبتمبر 2026" },
     { lead: "الفوز في هاكاثونات", text: "عدة هاكاثونات محلية" },

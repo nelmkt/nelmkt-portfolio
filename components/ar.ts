@@ -151,6 +151,10 @@ export const AR: Record<string, string> = {
 
   PATENT: "براءة اختراع",
   "SEP 2026": "سبتمبر 2026",
+  "NOV 2026": "نوفمبر 2026",
+  "Poster Finalist - Saudi HPC/AI Conference 2026": "متأهلة للنهائيات في جلسة الملصقات - مؤتمر الحوسبة عالية الأداء والذكاء الاصطناعي السعودي 2026",
+  "Finalist in the student poster session with “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”": "متأهلة للنهائيات في جلسة ملصقات الطلاب بملصق بعنوان “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”",
+  "King Abdullah University of Science and Technology (KAUST)": "جامعة الملك عبدالله للعلوم والتقنية (كاوست)",
   "JUN 2026": "يونيو 2026",
   "JAN 2025": "يناير 2025",
   "DEC 2024": "ديسمبر 2024",

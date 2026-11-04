@@ -135,6 +135,13 @@ export const trophies = [
     tier: "patent",
   },
   {
+    year: "NOV 2026",
+    title: "Poster Finalist - Saudi HPC/AI Conference 2026",
+    detail: "Finalist in the student poster session with “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”",
+    by: "King Abdullah University of Science and Technology (KAUST)",
+    tier: "silver",
+  },
+  {
     year: "SEP 2026",
     title: "Featured - Saudi Gazette",
     detail: "Feature story on my journey from curiosity to the award-winning Aykah smart bin",
