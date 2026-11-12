@@ -160,7 +160,6 @@ export const cv = {
 
   events: [
     { lead: "Miyahthon 2027", text: "Saudi Water Authority", date: "2027" },
-    { lead: "IECE 2026", text: "International Engineering Conference & Exhibition, Saudi Council of Engineers", date: "Dec 2026" },
     { lead: "2nd Conference on Sustainability and Quality of Life", text: "King Abdulaziz University (research paper)", date: "2026" },
     { lead: "Hackathon Al Hareeq", text: "Ministry of Environment, Water & Agriculture", date: "Dec 2025" },
     { lead: "Aramco Consulting Championship", text: "participant", date: "Dec 2025" },
@@ -340,7 +339,6 @@ export const cvAr: typeof cv = {
 
   events: [
     { lead: "مياهثون 2027", text: "الهيئة السعودية للمياه", date: "2027" },
-    { lead: "IECE 2026", text: "المؤتمر والمعرض الهندسي الدولي، الهيئة السعودية للمهندسين", date: "ديسمبر 2026" },
     { lead: "المؤتمر الثاني للاستدامة وجودة الحياة", text: "جامعة الملك عبدالعزيز (ورقة بحثية)", date: "2026" },
     { lead: "هاكاثون الحريق", text: "وزارة البيئة والمياه والزراعة", date: "ديسمبر 2025" },
     { lead: "بطولة أرامكو للاستشارات", text: "مشاركة", date: "ديسمبر 2025" },

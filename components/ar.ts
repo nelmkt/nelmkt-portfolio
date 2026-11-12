@@ -278,7 +278,6 @@ export const AR: Record<string, string> = {
     "خريجة موهبة: مؤسسة الملك عبدالعزيز ورجاله للموهبة والإبداع",
   "Miyahthon 2027": "مياهثون 2027",
   "Saudi Water Authority": "الهيئة السعودية للمياه",
-  "IECE 2026 - International Engineering Conference": "المؤتمر الهندسي الدولي IECE 2026",
   "Saudi Council of Engineers": "الهيئة السعودية للمهندسين",
   "2nd Conference on Sustainability and Quality of Life - Research paper": "المؤتمر الثاني للاستدامة وجودة الحياة - ورقة بحثية",
   "Dec 2026": "ديسمبر 2026",
