@@ -16,7 +16,7 @@ export const profile = {
     "My research connects computing with real-world systems: reproducible ML pipelines, satellite data and IoT, from measuring what urban greening really does in Wahaj to catching pipeline leaks in real time with Maeen. I'm aiming for a Ph.D. and a career in academia. You'll find my work under Research & projects below.",
   ],
   highlight: "Youngest UN-certified Saudi researcher",
-  highlightDetail: "7 national & international recognitions - 3 national & international awards",
+  highlightDetail: "8 national & international recognitions - 4 national & international awards",
   stats: [
     { label: "CLASS", pro: "Role", value: "Researcher - Developer - ML Engineer" },
     { label: "GUILD", pro: "University", value: "KAU - BS Computer Science - Waed track" },
@@ -133,6 +133,20 @@ export const trophies = [
     detail: "Patent for Aykah, the solar-powered IoT smart waste management system",
     by: "Inventor: Nelly Almaktoum",
     tier: "patent",
+  },
+  {
+    year: "NOV 2026",
+    title: "Bronze Medal - i3EC’26",
+    detail: "International Invention, Innovation & Entrepreneurship Idea Competition 2026, representing King Abdulaziz University with Aykah",
+    by: "Kolej Poly-Tech MARA (KPTM), Malaysia",
+    tier: "gold",
+  },
+  {
+    year: "NOV 2026",
+    title: "International Recognition - KPTM",
+    detail: "Recognized by the organizer of i3EC’26 for Aykah’s bronze-medal entry, representing King Abdulaziz University",
+    by: "Kolej Poly-Tech MARA (KPTM), Malaysia",
+    tier: "gold",
   },
   {
     year: "NOV 2026",
@@ -289,7 +303,6 @@ export const submissions: { title: string; status: string; when: string }[] = [
   { title: "Global Sustainability Challenge 2026–27 (Stanford Doerr School of Sustainability and partner universities)", status: "Submitted (team 1330)", when: "Oct 2026" },
   { title: "KAUST Academy Artificial Intelligence Specialization 2026/27", status: "Application submitted, under review", when: "Oct 2026" },
   { title: "2nd International Online Conference on Environments (IOCE 2027), MDPI", status: "Abstract submitted (Sciforum-215772)", when: "Oct 2026" },
-  { title: "i3EC’26", status: "Final entry submitted", when: "Oct 2026" },
   { title: "WAW 2026", status: "Manuscript submitted", when: "Oct 2026" },
   { title: "Wilkes Climate Innovation Prize 2027, Wilkes Center for Climate Science & Policy, University of Utah", status: "Submitted", when: "Oct 2026" },
   { title: "International Grand Invention, Innovation and Design Expo (IGIIDeation 2027), IIUM", status: "Abstract and paper submitted", when: "Oct 2026" },
