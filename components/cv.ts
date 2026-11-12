@@ -135,6 +135,7 @@ export const cv = {
   ] as CvEntry[],
 
   moreAwards: [
+    { lead: "Bronze Medal, International Invention, Innovation & Entrepreneurship Idea Competition 2026 (i3EC’26)", text: "representing King Abdulaziz University with Aykah; recognized by Kolej Poly-Tech MARA (KPTM)", date: "Nov 2026" },
     { lead: "Poster Finalist, Saudi HPC/AI Conference 2026", text: "KAUST, student poster session: “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”", date: "Nov 2026" },
     { lead: "Academic Excellence Award 2025–2026", text: "King Abdulaziz University", date: "Jun 2026" },
     { lead: "Certificate of Appreciation", text: "KAU, for distinguished participation in local and international competitions", date: "Sep 2026" },
@@ -171,7 +172,6 @@ export const cv = {
     { lead: "Global Sustainability Challenge 2026–27 (Stanford Doerr School of Sustainability and partner universities)", text: "submitted (team 1330)", date: "Oct 2026" },
     { lead: "KAUST Academy Artificial Intelligence Specialization 2026/27", text: "application submitted, under review", date: "Oct 2026" },
     { lead: "2nd International Online Conference on Environments (IOCE 2027), MDPI", text: "abstract submitted (Sciforum-215772)", date: "Oct 2026" },
-    { lead: "i3EC’26", text: "final entry submitted", date: "Oct 2026" },
     { lead: "WAW 2026", text: "manuscript submitted", date: "Oct 2026" },
     { lead: "Wilkes Climate Innovation Prize 2027, Wilkes Center for Climate Science & Policy, University of Utah", text: "submitted", date: "Oct 2026" },
     { lead: "International Grand Invention, Innovation and Design Expo (IGIIDeation 2027), IIUM", text: "abstract and paper submitted", date: "Oct 2026" },
@@ -315,6 +315,7 @@ export const cvAr: typeof cv = {
   ],
 
   moreAwards: [
+    { lead: "الميدالية البرونزية، i3EC’26 (ماليزيا)", text: "ممثلةً جامعة الملك عبدالعزيز بآيكة، مع تكريم من KPTM", date: "نوفمبر 2026" },
     { lead: "متأهلة للنهائيات في جلسة الملصقات، مؤتمر الحوسبة عالية الأداء والذكاء الاصطناعي السعودي 2026", text: "كاوست: “When an Accurate Urban Heat Model Cannot Forecast Greening Effects in Jeddah”", date: "نوفمبر 2026" },
     { lead: "شهادة التفوق الأكاديمي ل2025-2026", text: "جامعة الملك عبدالعزيز", date: "يونيو 2026" },
     { lead: "شهادة شكر وتقدير", text: "جامعة الملك عبدالعزيز، للمشاركة المتميزة في المسابقات المحلية والدولية", date: "سبتمبر 2026" },
@@ -351,7 +352,6 @@ export const cvAr: typeof cv = {
     { lead: "تحدي الاستدامة العالمي 2026–27 (كلية دور للاستدامة بجامعة ستانفورد وجامعات شريكة)", text: "تم التقديم (الفريق 1330)", date: "أكتوبر 2026" },
     { lead: "تخصص الذكاء الاصطناعي في أكاديمية كاوست 2026/27", text: "تم التقديم، قيد المراجعة", date: "أكتوبر 2026" },
     { lead: "المؤتمر الدولي الثاني الإلكتروني للبيئات (IOCE 2027)، MDPI", text: "تم تقديم الملخص (Sciforum-215772)", date: "أكتوبر 2026" },
-    { lead: "i3EC’26", text: "تم تقديم المشاركة النهائية", date: "أكتوبر 2026" },
     { lead: "WAW 2026", text: "تم إرسال الورقة البحثية", date: "أكتوبر 2026" },
     { lead: "جائزة ويلكس لابتكار المناخ 2027، مركز ويلكس لعلوم وسياسات المناخ بجامعة يوتا", text: "تم التقديم", date: "أكتوبر 2026" },
     { lead: "المعرض الدولي الكبير للاختراع والابتكار والتصميم (IGIIDeation 2027)، الجامعة الإسلامية العالمية بماليزيا", text: "تم تقديم الملخص والورقة", date: "أكتوبر 2026" },
