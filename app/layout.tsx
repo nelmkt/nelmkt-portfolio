@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Chakra_Petch, Noto_Kufi_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 import { modeBootScript } from "../components/mode";
+import PersonSchema from "../components/PersonSchema";
 import "./pixel-icons.css";
 import "./globals.css";
 
@@ -40,10 +41,13 @@ const arabicHeading = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Nelly Almaktoum",
+  title: "Nelly Almaktoum (نيللي المكتوم) - ML Researcher & Innovator",
   description:
-    "Nelly Almaktoum: undergraduate researcher at King Abdulaziz University working on machine learning, AI and green technology.",
+    "Nelly Almaktoum (نيللي المكتوم) is a Saudi undergraduate researcher at King Abdulaziz University working on machine learning, AI and green technology, and the inventor of Aykah, a patented solar-powered IoT smart waste bin.",
   metadataBase: new URL("https://nelmkt.com"),
+  alternates: { canonical: "/" },
+  authors: [{ name: "Nelly Almaktoum", url: "https://nelmkt.com" }],
+  keywords: ["Nelly Almaktoum", "نيللي المكتوم", "nelmkt", "Aykah", "Wahaj", "King Abdulaziz University", "machine learning", "Saudi researcher"],
   openGraph: {
     title: "Nelly Almaktoum",
     description: "Researcher & innovator: ML engineering and green tech. Press start.",
@@ -78,7 +82,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script dangerouslySetInnerHTML={{ __html: modeBootScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <PersonSchema />
+        {children}
+      </body>
     </html>
   );
 }
