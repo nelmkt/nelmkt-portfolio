@@ -143,9 +143,9 @@ export const trophies = [
   },
   {
     year: "NOV 2026",
-    title: "International Recognition - KPTM",
-    detail: "Recognized by the organizer of i3EC’26 for Aykah’s bronze-medal entry, representing King Abdulaziz University",
-    by: "Kolej Poly-Tech MARA (KPTM), Malaysia",
+    title: "International Recognition - MIICA",
+    detail: "Recognized for Aykah’s bronze-medal entry at i3EC’26, representing King Abdulaziz University",
+    by: "Malaysia Innovation, Invention & Creativity Association (MIICA)",
     tier: "gold",
   },
   {
