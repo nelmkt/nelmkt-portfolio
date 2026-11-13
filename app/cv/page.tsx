@@ -4,6 +4,7 @@ import CvDocument from "../../components/CvDocument";
 export const metadata: Metadata = {
   title: "CV - Nelly Almaktoum",
   description: "The CV of Nelly Almaktoum: Computer Science student, ML engineer and researcher.",
+  alternates: { canonical: "/cv/", languages: { en: "/cv/", ar: "/cv/ar/" } },
 };
 
 const toArabic = `try{if(localStorage.getItem("nelmkt-lang")==="ar")location.replace("/cv/ar/")}catch(e){}`;
