@@ -134,11 +134,11 @@ export default function StartScreen() {
         </div>
         <div className="start-bottom">
           <p className="start-sub">
-            <span>
-              ML Researcher <i>-</i> Inventor
-            </span>
+            <span>Researcher &amp; Innovator</span>
             <br />
-            <span>King Abdulaziz University</span>
+            <span>
+              ML Engineer <i>-</i> Green Tech
+            </span>
           </p>
           <p className="start-choose">CHOOSE YOUR VIEW</p>
           <div className="start-menu start-choices">
@@ -166,9 +166,6 @@ export default function StartScreen() {
               <span className="choice-title">PROFESSIONAL</span>
             </button>
           </div>
-          <p className="start-hint" aria-hidden="true">
-            <kbd>←</kbd> <kbd>→</kbd> choose <span>-</span> <kbd>ENTER</kbd> start
-          </p>
         </div>
       </div>
     </div>
