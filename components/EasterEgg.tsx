@@ -3,10 +3,10 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { LangContext, useT } from "./lang";
 
-const SECRETS = { en: "stay curious", ar: "ابقَ فضوليًا" };
+const SECRETS = { en: "stay curious", ar: "ابقَ فضوليًا", ko: "호기심을 잃지 마" /* TEMPORARY Korean */ };
 const toBinary = (s: string) =>
   Array.from(new TextEncoder().encode(s), (b) => b.toString(2).padStart(8, "0")).join(" ");
-const BINARY = { en: toBinary(SECRETS.en), ar: toBinary(SECRETS.ar) };
+const BINARY = { en: toBinary(SECRETS.en), ar: toBinary(SECRETS.ar), ko: toBinary(SECRETS.ko) };
 
 const BANNER = [
   " _  _  ___  _     __  __  _  __ _____ ",
