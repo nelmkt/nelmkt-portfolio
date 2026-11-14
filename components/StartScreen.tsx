@@ -148,7 +148,11 @@ export default function StartScreen() {
               onFocus={() => setSel(0)}
               onMouseEnter={() => setSel(0)}
             >
-              <span className="choice-title">▶ ARCADE</span>
+              <svg className="choice-ic" width="18" height="12" viewBox="0 0 12 8" shapeRendering="crispEdges" aria-hidden="true">
+                <path d="M2 0h8v1h1v1h1v5h-1v1H8V7H4v1H1V7H0V2h1V1h1z" fill="currentColor" />
+                <path d="M2 3h1V2h1v1h1v1H4v1H3V4H2z M8 2h1v1H8z M9 4h1v1H9z" fill="var(--choice-bg)" />
+              </svg>
+              <span className="choice-title">ARCADE</span>
             </button>
             <button
               className={`start-choice choice-pro${sel === 1 ? " sel" : ""}`}
@@ -156,6 +160,9 @@ export default function StartScreen() {
               onFocus={() => setSel(1)}
               onMouseEnter={() => setSel(1)}
             >
+              <svg className="choice-ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 8h16v11H4z M9 8V5h6v3 M4 13h16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+              </svg>
               <span className="choice-title">Professional</span>
             </button>
           </div>
