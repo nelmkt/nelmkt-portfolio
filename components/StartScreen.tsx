@@ -42,7 +42,7 @@ export default function StartScreen() {
   const [open, setOpen] = useState(true);
   const [leaving, setLeaving] = useState(false);
   const [best, setBest] = useState(0);
-  const [sel, setSel] = useState(0);
+  const [sel, setSel] = useState(-1);
 
   useEffect(() => {
     try {
@@ -58,13 +58,13 @@ export default function StartScreen() {
       if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
         e.preventDefault();
         const items = [...document.querySelectorAll<HTMLButtonElement>(".start-menu button")];
-        const next = (sel + 1) % items.length;
+        const next = sel < 0 ? 0 : (sel + 1) % items.length;
         setSel(next);
         items[next]?.focus();
         return;
       }
       if (e.target instanceof HTMLButtonElement && e.key !== "Escape") return;
-      if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
+      if ((e.key === "Enter" || e.key === " " || e.key === "Escape") && sel >= 0) {
         e.preventDefault();
         start(sel === 1 ? "pro" : "arcade");
       }
@@ -147,10 +147,8 @@ export default function StartScreen() {
               onClick={() => start("arcade")}
               onFocus={() => setSel(0)}
               onMouseEnter={() => setSel(0)}
-              autoFocus
             >
               <span className="choice-title">▶ ARCADE</span>
-              <span className="choice-desc">Play through my work: quests, trophies and a mini-game</span>
             </button>
             <button
               className={`start-choice choice-pro${sel === 1 ? " sel" : ""}`}
@@ -159,7 +157,6 @@ export default function StartScreen() {
               onMouseEnter={() => setSel(1)}
             >
               <span className="choice-title">Professional</span>
-              <span className="choice-desc">A clean, classic portfolio and CV</span>
             </button>
           </div>
         </div>
