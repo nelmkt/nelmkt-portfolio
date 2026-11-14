@@ -89,38 +89,35 @@ export default function StartScreen() {
 
   return (
     <div
-      className={`start-screen${leaving ? " leaving" : ""}`}
+      className={`start-screen split${leaving ? " leaving" : ""}`}
       role="dialog"
       aria-modal="true"
-      aria-label="Start screen"
+      aria-label="Start screen: choose arcade or professional view"
     >
-      <div className="start-sky" aria-hidden="true">
-        {STARS.map((s, i) => (
-          <span
-            key={i}
-            className={`start-star${s.pink ? " pink" : ""}`}
-            style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
-          />
-        ))}
-        <div className="start-sun" />
-      </div>
-      <div className="start-floor" aria-hidden="true" />
-      <StartRunner />
+      <section className="split-half split-arcade">
+        <div className="start-sky" aria-hidden="true">
+          {STARS.map((s, i) => (
+            <span
+              key={i}
+              className={`start-star${s.pink ? " pink" : ""}`}
+              style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
+            />
+          ))}
+          <div className="start-sun" />
+        </div>
+        <div className="start-floor" aria-hidden="true" />
+        <StartRunner />
 
-      <div className="start-arcade" aria-hidden="true">
-        <span>
-          <b>1UP</b> 000000
-        </span>
-        <span>
-          <b>HI-SCORE</b> {String(best).padStart(6, "0")}
-        </span>
-        <span>
-          <b>CREDIT</b> 01
-        </span>
-      </div>
+        <div className="start-arcade" aria-hidden="true">
+          <span>
+            <b>1UP</b> 000000
+          </span>
+          <span>
+            <b>HI-SCORE</b> {String(best).padStart(6, "0")}
+          </span>
+        </div>
 
-      <div className="start-inner">
-        <div className="start-top">
+        <div className="split-content">
           <p className="start-kicker">NELMKT PRESENTS</p>
           <h1 className="start-title">
             NELLY
@@ -128,20 +125,11 @@ export default function StartScreen() {
             ALMAKTOUM
           </h1>
           <p className="start-ar">
-            <PixelText text={profile.nameAr} size={14} scale={3} shadow="#b8306f" />
+            <PixelText text={profile.nameAr} size={14} scale={2} shadow="#b8306f" />
           </p>
           <div className="start-thermal" aria-hidden="true" />
-        </div>
-        <div className="start-bottom">
-          <p className="start-sub">
-            <span>Researcher &amp; Innovator</span>
-            <br />
-            <span>
-              ML Engineer <i>-</i> Green Tech
-            </span>
-          </p>
-          <p className="start-choose">CHOOSE YOUR VIEW</p>
-          <div className="start-menu start-choices">
+          <p className="start-sub">Play through my work</p>
+          <div className="start-menu">
             <button
               className={`start-choice choice-arcade${sel === 0 ? " sel" : ""}`}
               onClick={() => start("arcade")}
@@ -154,6 +142,24 @@ export default function StartScreen() {
               </svg>
               <span className="choice-title">ARCADE</span>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="split-half split-pro">
+        <div className="split-content">
+          <p className="pro-kicker">Portfolio &amp; CV</p>
+          <h2 className="pro-name">Nelly Almaktoum</h2>
+          <p className="pro-ar" lang="ar" dir="rtl">
+            نيللي المكتوم
+          </p>
+          <span className="pro-rule" aria-hidden="true" />
+          <p className="pro-sub">
+            ML Researcher &amp; Inventor
+            <br />
+            King Abdulaziz University
+          </p>
+          <div className="start-menu">
             <button
               className={`start-choice choice-pro${sel === 1 ? " sel" : ""}`}
               onClick={() => start("pro")}
@@ -167,6 +173,10 @@ export default function StartScreen() {
             </button>
           </div>
         </div>
+      </section>
+
+      <div className="split-or" aria-hidden="true">
+        OR
       </div>
     </div>
   );
