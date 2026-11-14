@@ -297,16 +297,6 @@ export const sideQuests: { title: string; by?: string; when: string }[] = [
   { title: "Organizing Waed’s Annual Introductory Meeting & Workshop", by: "King Abdulaziz University", when: "Sep 2026" },
 ];
 
-export const submissions: { title: string; status: string; when: string }[] = [
-  { title: "Seoul International Invention Fair (SIIF) 2026, COEX, Seoul", status: "Nominated by King Abdulaziz University to exhibit Wahaj", when: "Dec 2026" },
-  { title: "Global Sustainability Challenge 2026–27 (Stanford Doerr School of Sustainability and partner universities)", status: "Submitted (team 1330)", when: "Oct 2026" },
-  { title: "KAUST Academy Artificial Intelligence Specialization 2026/27", status: "Application submitted, under review", when: "Oct 2026" },
-  { title: "2nd International Online Conference on Environments (IOCE 2027), MDPI", status: "Abstract submitted (Sciforum-215772)", when: "Oct 2026" },
-  { title: "WAW 2026", status: "Manuscript submitted", when: "Oct 2026" },
-  { title: "Wilkes Climate Innovation Prize 2027, Wilkes Center for Climate Science & Policy, University of Utah", status: "Submitted", when: "Oct 2026" },
-  { title: "International Grand Invention, Innovation and Design Expo (IGIIDeation 2027), IIUM", status: "Abstract and paper submitted", when: "Oct 2026" },
-];
-
 export const links = [
   { label: "LinkedIn", value: "in/nelmkt", url: "https://www.linkedin.com/in/nelmkt/" },
   { label: "Email", value: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },

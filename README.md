@@ -1,24 +1,32 @@
-# nelmkt.com.. Press Start!
+# nelmkt.com - Press Start!
 
-A pink, retro arcade-style portfolio for **Nelly Almaktoum**: undergraduate researcher and innovator working on AI, machine learning and green tech.
+The portfolio of **Nelly Almaktoum**: undergraduate researcher and inventor working on AI/ML, remote sensing and IoT at King Abdulaziz University.
 
-**Live:** [nelmkt.com](https://nelmkt.com)
+**Live:** [nelmkt.com](https://nelmkt.com) · **Contact card:** [nelmkt.com/card](https://nelmkt.com/card)
+
+## Two ways to view it
+
+Visitors choose on the start screen and can switch any time from the top bar.
+
+- **Arcade** - a pink retro game: pixel fonts, stages, trophies and a mini-game.
+- **Professional** - a clean portfolio layout with light and dark themes.
+
+Both are available in English and Arabic.
 
 ## Stages
 
-| Stage | | What's there |
-| --- | --- | --- |
-| Start | Title screen | Synthwave sunset, scrolling grid and a running pixel sprite |
-| 1-1 | Player Select | Profile, stats and interests |
-| 1-2 | Bonus Stage | *Language Rush*, a mini-game for collecting my programming languages |
-| 1-3 | Quest Log | Research projects: Wahaj and Aykah |
-| 1-4 | Trophy Room | Awards, recognition and the Aykah patent |
-| 1-5 | Academy & Side Quests | Education, competitions and events |
-| 1-6 | Skill Tree | Languages, AI research, ML engineering, data, web and hardware |
-| 1-7 | Party & Guilds | Community and leadership roles |
-| 1-8 | Save Point | Contact links |
+| Stage | Arcade | Professional | What's there |
+| --- | --- | --- | --- |
+| 1-1 | Player | About | Profile, stats and interests |
+| 1-2 | Bonus | - | *Language Rush*, a mini-game for collecting my programming languages |
+| 1-3 | Quests | Projects | Wahaj, Maeen and Aykah |
+| 1-4 | Trophies | Recognition | Awards, recognition and the Aykah patent, with proof links |
+| 1-5 | Academy | Education | Education, competitions and events |
+| 1-6 | Skills | Skills | Languages, AI research, ML engineering, data, web and hardware |
+| 1-7 | Party | Leadership | Community and leadership roles |
+| 1-8 | Save | Contact | Contact links |
 
-There are a couple of hidden extras for curious players.
+The full CV lives at [/cv](https://nelmkt.com/cv/) (English) and [/cv/ar](https://nelmkt.com/cv/ar/) (Arabic), with PDF downloads. There are a couple of hidden extras for curious players.
 
 ## Built with
 
