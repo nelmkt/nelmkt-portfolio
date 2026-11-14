@@ -488,7 +488,7 @@ export default function Portfolio() {
 
       <footer className="footer">
         <p className="thanks arcade-only">{tr("THANKS FOR PLAYING!")}</p>
-        <p className="thanks thanks-pro pro-only">{tr("Thanks for stopping by.")}</p>
+        <p className="thanks thanks-pro pro-only">{tr("End of file - for now.")}</p>
         <EasterEgg />
         <p>{tr("© 2026 Nelly Almaktoum - Built with Next.js, TypeScript, HTML & CSS")}</p>
       </footer>
