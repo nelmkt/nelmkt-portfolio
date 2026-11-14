@@ -41,7 +41,7 @@ const arabicHeading = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Nelly Almaktoum (نيللي المكتوم) - ML Researcher & Innovator",
+  title: "Nelly Almaktoum (نيللي المكتوم) - ML Researcher & Inventor",
   description:
     "Nelly Almaktoum (نيللي المكتوم) is a Saudi undergraduate researcher at King Abdulaziz University working on machine learning, AI and green technology, and the inventor of Aykah, a patented solar-powered IoT smart waste bin.",
   metadataBase: new URL("https://nelmkt.com"),
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   keywords: ["Nelly Almaktoum", "نيللي المكتوم", "nelmkt", "Aykah", "Wahaj", "King Abdulaziz University", "machine learning", "Saudi researcher"],
   openGraph: {
     title: "Nelly Almaktoum",
-    description: "Researcher & innovator: ML engineering and green tech. Press start.",
+    description: "ML researcher and inventor at King Abdulaziz University. Press start.",
     url: "https://nelmkt.com",
     siteName: "Nelly Almaktoum",
     type: "website",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Nelly Almaktoum",
-    description: "Researcher & innovator: ML engineering and green tech. Press start.",
+    description: "ML researcher and inventor at King Abdulaziz University. Press start.",
     images: ["/og.png"],
   },
   icons: { icon: "/favicon.svg" },

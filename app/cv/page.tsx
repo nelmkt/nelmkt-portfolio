@@ -3,7 +3,7 @@ import CvDocument from "../../components/CvDocument";
 
 export const metadata: Metadata = {
   title: "CV - Nelly Almaktoum",
-  description: "The CV of Nelly Almaktoum: Computer Science student, ML engineer and researcher.",
+  description: "The CV of Nelly Almaktoum: ML researcher and inventor at King Abdulaziz University.",
   alternates: { canonical: "/cv/", languages: { en: "/cv/", ar: "/cv/ar/" } },
 };
 

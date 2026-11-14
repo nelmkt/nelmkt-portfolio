@@ -158,7 +158,7 @@ export default function Portfolio() {
                 <img className="portrait-photo" src="/photo.jpg" alt={tr("Photo of Nelly Almaktoum")} width={640} height={640} loading="lazy" />
               </div>
               <p className="player-handle">@{profile.handle}</p>
-              <p className="player-role">{tr("Researcher & Innovator")}</p>
+              <p className="player-role">{tr("ML Researcher & Inventor")}</p>
               <div className="xp arcade-only">
                 <span>LV</span>
                 <div className="xp-bar">
