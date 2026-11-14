@@ -4962,3 +4962,92 @@ html[data-mode="pro"] .thanks-pro {
     letter-spacing: 0.08em;
   }
 }
+
+/* always-visible view switch */
+.mode-switch {
+  flex: none;
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  background: #1f0d1a;
+  border: 1.5px solid #b36b93;
+}
+.mode-switch button {
+  font-family: var(--pixel);
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  padding: 6px 9px;
+  color: #d9a3be;
+  background: transparent;
+  border: 0;
+  cursor: var(--px-cursor) 0 0, pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.mode-switch button:hover {
+  color: #fff;
+  background: rgba(255, 61, 139, 0.18);
+}
+html:not([data-mode="pro"]) .mode-switch .ms-arcade {
+  color: #1a0612;
+  background: #ff5fa2;
+}
+html[data-mode="pro"] .mode-switch {
+  padding: 3px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px !important;
+}
+html[data-mode="pro"] .mode-switch button {
+  font-family: var(--font-pro), system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 6px 12px;
+  color: var(--accent);
+  border-radius: 999px !important;
+  cursor: pointer;
+}
+html[data-mode="pro"] .mode-switch button:hover {
+  background: var(--accent-2);
+}
+html[data-mode="pro"] .mode-switch .ms-pro {
+  color: #fff;
+  background: var(--accent);
+}
+html[lang="ar"] .mode-switch button {
+  font-family: var(--font-ar), sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+@media (max-width: 680px) {
+  .mode-switch button {
+    padding: 6px 7px;
+  }
+  html[data-mode="pro"] .mode-switch button {
+    padding: 5px 9px;
+    font-size: 11px;
+  }
+}
+
+/* start screen fits narrow phones */
+.start-screen {
+  overflow-x: hidden;
+}
+.start-inner {
+  max-width: 100%;
+}
+@media (max-width: 440px) {
+  .start-title {
+    font-size: clamp(22px, 8.4vw, 36px);
+  }
+  .start-menu.start-choices {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .start-menu .start-choice {
+    width: 210px;
+  }
+}
