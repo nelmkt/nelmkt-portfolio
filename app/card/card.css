@@ -9,9 +9,6 @@
 .cp-inner {
   width: 100%;
   max-width: 400px;
-  padding: 22px 22px 18px;
-  background: #0f070d;
-  border: 1px solid #2a1424;
   text-align: center;
 }
 
@@ -28,7 +25,7 @@
 .cp-stage {
   position: relative;
   height: 112px;
-  margin: 18px -22px 0;
+  margin: 18px 0 0;
   overflow: hidden;
 }
 .cp-runner {
@@ -153,8 +150,8 @@
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
-  background: #160b14;
-  border: 1px solid #2a1424;
+  background: rgba(255, 95, 162, 0.05);
+  border: 0;
   color: #f2e3eb;
   text-decoration: none;
   text-align: left;
@@ -162,8 +159,7 @@
 }
 .cp-rows a:hover,
 .cp-rows a:focus-visible {
-  border-color: #ff5fa2;
-  background: #1e0e1a;
+  background: rgba(255, 95, 162, 0.12);
 }
 .cp-ic {
   flex: none;
