@@ -4804,3 +4804,15 @@ html[data-mode="pro"] .cv-card-body h3 {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
+
+/* TEMPORARY: Korean translation */
+html[lang="ko"] {
+  --body: "Chakra Petch", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  --pixel: pixel, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", monospace;
+}
+.lang-toggle:lang(ko) {
+  font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 9px 6px;
+}

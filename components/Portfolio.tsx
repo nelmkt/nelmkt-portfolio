@@ -30,19 +30,27 @@ export default function Portfolio() {
 
   useEffect(() => {
     try {
-      if (localStorage.getItem(LANG_KEY) === "ar") {
-        setLang("ar");
-        applyLang("ar");
+      const saved = localStorage.getItem(LANG_KEY);
+      if (saved === "ar" || saved === "ko") {
+        setLang(saved);
+        applyLang(saved);
       }
     } catch {}
   }, []);
 
   useEffect(() => {
-    const title = ar ? "نيللي المكتوم" : "Nelly Almaktoum";
+    const title = ar ? "نيللي المكتوم" : lang === "ko" ? "넬리 알마크툼" : "Nelly Almaktoum";
     document.title = title;
     const id = setTimeout(() => (document.title = title), 50);
     return () => clearTimeout(id);
-  }, [ar]);
+  }, [ar, lang]);
+
+  // TEMPORARY: Korean toggle
+  function switchKo() {
+    const next = lang === "ko" ? "en" : "ko";
+    applyLang(next);
+    setLang(next);
+  }
 
   function switchLang() {
     const next = ar ? "en" : "ar";
@@ -120,6 +128,10 @@ export default function Portfolio() {
         </button>
         <button type="button" className="lang-toggle" onClick={switchLang} lang={ar ? "en" : "ar"} aria-label={ar ? "Switch to English" : "التبديل إلى العربية"}>
           {ar ? "EN" : "ع"}
+        </button>
+        {/* TEMPORARY: Korean toggle */}
+        <button type="button" className="lang-toggle ko-toggle" onClick={switchKo} lang={lang === "ko" ? "en" : "ko"} aria-label={lang === "ko" ? "Switch to English" : "한국어로 보기"}>
+          {lang === "ko" ? "EN" : "한"}
         </button>
         <button type="button" className="mode-toggle" onClick={toggleMode}>
           <Dual a="PRO VIEW" p="Arcade view" />
