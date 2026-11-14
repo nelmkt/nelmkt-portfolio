@@ -28,11 +28,11 @@
   font-size: clamp(42px, 13vw, 54px);
   line-height: 0.86;
   letter-spacing: 2px;
-  color: #ff5fa2;
-  text-shadow: 0 3px 0 #8a1f52;
+  color: #df7aa3;
+  text-shadow: 0 3px 0 #7a3354;
 }
 .cp-name span:last-child {
-  color: #ffd6e7;
+  color: #f2dbe5;
   text-shadow: 0 3px 0 #6b3a55;
 }
 .cp-ar {
@@ -62,17 +62,17 @@
   font-size: 15px;
   letter-spacing: 1.5px;
   color: #fff;
-  background: #ff5fa2;
+  background: #df7aa3;
   text-decoration: none;
-  box-shadow: 0 4px 0 #a8205f;
+  box-shadow: 0 4px 0 #8e3f62;
   transition: transform 0.08s, box-shadow 0.08s, background 0.15s;
 }
 .cp-save:hover {
-  background: #ff3d8b;
+  background: #d0698f;
 }
 .cp-save:active {
   transform: translateY(3px);
-  box-shadow: 0 1px 0 #a8205f;
+  box-shadow: 0 1px 0 #8e3f62;
 }
 
 .cp-rows {
@@ -87,7 +87,7 @@
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
-  background: rgba(255, 95, 162, 0.05);
+  background: rgba(223, 122, 163, 0.05);
   color: #f2e3eb;
   text-decoration: none;
   text-align: left;
@@ -95,7 +95,7 @@
 }
 .cp-rows a:hover,
 .cp-rows a:focus-visible {
-  background: rgba(255, 95, 162, 0.12);
+  background: rgba(223, 122, 163, 0.12);
 }
 .cp-ic {
   flex: none;
@@ -104,8 +104,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ff5fa2;
-  background: rgba(255, 95, 162, 0.12);
+  color: #df7aa3;
+  background: rgba(223, 122, 163, 0.12);
 }
 .cp-row-text {
   display: flex;
@@ -131,7 +131,7 @@
   transition: color 0.15s, transform 0.15s;
 }
 .cp-rows a:hover .cp-chev {
-  color: #ff5fa2;
+  color: #df7aa3;
   transform: translateX(2px);
 }
 
@@ -146,7 +146,7 @@
   text-decoration: none;
 }
 .cp-foot a:hover {
-  color: #ff5fa2;
+  color: #df7aa3;
 }
 
 .cp-actions {
@@ -163,15 +163,15 @@
   font-family: var(--font-pixel), monospace;
   font-size: 12px;
   letter-spacing: 1px;
-  color: #ff5fa2;
-  background: rgba(255, 95, 162, 0.1);
+  color: #df7aa3;
+  background: rgba(223, 122, 163, 0.1);
   border: 0;
   cursor: pointer;
   box-shadow: 0 4px 0 #3d0a25;
   transition: transform 0.08s, box-shadow 0.08s, background 0.15s;
 }
 .cp-share:hover {
-  background: rgba(255, 95, 162, 0.18);
+  background: rgba(223, 122, 163, 0.18);
 }
 .cp-share:active {
   transform: translateY(3px);
