@@ -52,7 +52,7 @@ export default function CardPage() {
               <Frame key={i} frame={f} i={i} />
             ))}
           </div>
-          <div className="cp-ground" />
+          <div className="cp-shadow" />
         </div>
 
         <h1 className="cp-name">

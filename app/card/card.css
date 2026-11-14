@@ -24,8 +24,8 @@
 /* running character */
 .cp-stage {
   position: relative;
-  height: 112px;
-  margin: 18px 0 0;
+  height: 100px;
+  margin: 14px 0 0;
   overflow: hidden;
 }
 .cp-runner {
@@ -64,22 +64,20 @@
     opacity: 0;
   }
 }
-.cp-ground {
+.cp-shadow {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 10px;
-  border-top: 2px solid #ff5fa2;
-  background: repeating-linear-gradient(90deg, #5e1f4f 0 10px, transparent 10px 24px);
-  background-size: 24px 3px;
-  background-repeat: repeat-x;
-  background-position: 0 4px;
-  animation: cp-scroll 0.42s linear infinite;
+  left: 50%;
+  bottom: 4px;
+  width: 46px;
+  height: 7px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 50% !important;
+  animation: cp-squash 0.42s steps(3) infinite;
 }
-@keyframes cp-scroll {
-  to {
-    background-position: -24px 4px;
+@keyframes cp-squash {
+  50% {
+    width: 40px;
   }
 }
 
@@ -201,7 +199,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .cp-frame,
-  .cp-ground {
+  .cp-shadow {
     animation: none;
   }
   .cp-frame-1,
