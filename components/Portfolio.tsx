@@ -13,7 +13,7 @@ import PixelText from "./PixelText";
 import RunnerGame from "./RunnerGame";
 import StartScreen from "./StartScreen";
 import { type Lang, LangContext, LANG_KEY, applyLang, translate, useT } from "./lang";
-import { toggleMode, toggleTheme } from "./mode";
+import { setMode, toggleTheme } from "./mode";
 import { cvPage, cvPdfs } from "./cv";
 import { academy, languages, links, party, profile, quests, sideQuests, skillTree, stages, trophies } from "./data";
 
@@ -133,9 +133,14 @@ export default function Portfolio() {
         <button type="button" className="lang-toggle ko-toggle" onClick={switchKo} lang={lang === "ko" ? "en" : "ko"} aria-label={lang === "ko" ? "Switch to English" : "한국어로 보기"}>
           {lang === "ko" ? "EN" : "한"}
         </button>
-        <button type="button" className="mode-toggle" onClick={toggleMode}>
-          <Dual a="PRO VIEW" p="Arcade view" />
-        </button>
+        <div className="mode-switch" role="group" aria-label="Choose view">
+          <button type="button" className="ms-arcade" onClick={() => setMode("arcade")}>
+            {tr("ARCADE")}
+          </button>
+          <button type="button" className="ms-pro" onClick={() => setMode("pro")}>
+            {tr("PRO")}
+          </button>
+        </div>
         <div className="hud-hearts" aria-hidden="true">
           <PixelHeart />
           <PixelHeart />

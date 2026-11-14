@@ -1,6 +1,8 @@
 // TEMPORARY: Korean translation (remove together with the 한 button in Portfolio.tsx).
 
 export const KO: Record<string, string> = {
+  "ARCADE": "아케이드",
+  "PRO": "프로",
   "PRO VIEW": "프로 보기",
   "Arcade view": "아케이드 보기",
   "PLAYER": "플레이어",

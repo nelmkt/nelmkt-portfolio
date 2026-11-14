@@ -1,5 +1,7 @@
 
 export const AR: Record<string, string> = {
+  ARCADE: "أركيد",
+  PRO: "مهني",
   "PRO VIEW": "الوضع المهني",
   "Arcade view": "وضع الأركيد",
   PLAYER: "اللاعبة",
