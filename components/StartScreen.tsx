@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import PixelText from "./PixelText";
+import { profile } from "./data";
 import { type Mode, setMode } from "./mode";
-import { FRAMES, PALETTE, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
+import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
 const STARS = Array.from({ length: 28 }, (_, i) => {
   const r = (n: number) => ((Math.sin(i * 97.13 + n * 13.7) + 1) / 2) % 1;
@@ -34,18 +36,6 @@ function StartRunner() {
     return () => clearInterval(id);
   }, []);
   return <canvas ref={ref} className="start-runner" width={SPRITE_W} height={SPRITE_H} aria-hidden="true" />;
-}
-
-function MiniSprite() {
-  return (
-    <svg className="pv-sprite" viewBox={`0 0 ${SPRITE_W} ${SPRITE_H}`} shapeRendering="crispEdges" aria-hidden="true">
-      {FRAMES[0].flatMap((line, y) =>
-        line.split("").map((c, x) =>
-          PALETTE[c] ? <rect key={`${x}-${y}`} x={x} y={y} width={1.05} height={1.05} fill={PALETTE[c]} /> : null,
-        ),
-      )}
-    </svg>
-  );
 }
 
 export default function StartScreen() {
@@ -99,101 +89,81 @@ export default function StartScreen() {
 
   return (
     <div
-      className={`start-screen blend${leaving ? " leaving" : ""}`}
+      className={`start-screen${leaving ? " leaving" : ""}`}
       role="dialog"
       aria-modal="true"
       aria-label="Start screen"
     >
-      <div className="blend-bg" aria-hidden="true" />
-      <div className="blend-grid" aria-hidden="true" />
+      <div className="start-sky" aria-hidden="true">
+        {STARS.map((s, i) => (
+          <span
+            key={i}
+            className={`start-star${s.pink ? " pink" : ""}`}
+            style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
+          />
+        ))}
+        <div className="start-sun" />
+      </div>
+      <div className="start-floor" aria-hidden="true" />
+      <StartRunner />
 
-      <div className="blend-top" aria-hidden="true">
+      <div className="start-arcade" aria-hidden="true">
         <span>
-          <b>P1</b> NELMKT
+          <b>1UP</b> 000000
         </span>
-        <span>nelmkt.com</span>
+        <span>
+          <b>HI-SCORE</b> {String(best).padStart(6, "0")}
+        </span>
+        <span>
+          <b>CREDIT</b> 01
+        </span>
       </div>
 
       <div className="start-inner">
         <div className="start-top">
-          <p className="blend-kicker">PORTFOLIO</p>
-          <h1 className="blend-name">Nelly Almaktoum</h1>
-          <p className="blend-ar" lang="ar" dir="rtl">
-            نيللي المكتوم
+          <p className="start-kicker">NELMKT PRESENTS</p>
+          <h1 className="start-title">
+            NELLY
+            <br />
+            ALMAKTOUM
+          </h1>
+          <p className="start-ar">
+            <PixelText text={profile.nameAr} size={14} scale={3} shadow="#b8306f" />
           </p>
           <div className="start-thermal" aria-hidden="true" />
         </div>
         <div className="start-bottom">
-          <p className="blend-sub">
-            ML Researcher - Inventor
+          <p className="start-sub">
+            <span>Researcher &amp; Innovator</span>
             <br />
-            King Abdulaziz University
+            <span>
+              ML Engineer <i>-</i> Green Tech
+            </span>
           </p>
           <p className="start-choose">CHOOSE YOUR VIEW</p>
-          <div className="start-menu start-cards">
+          <div className="start-menu start-choices">
             <button
-              className={`start-card card-arcade${sel === 0 ? " sel" : ""}`}
+              className={`start-choice choice-arcade${sel === 0 ? " sel" : ""}`}
               onClick={() => start("arcade")}
               onFocus={() => setSel(0)}
               onMouseEnter={() => setSel(0)}
-              aria-label="Open the arcade view"
             >
-              <span className="pv pv-arcade" aria-hidden="true">
-                <span className="pv-hud">
-                  <b>P1</b> <i>♥♥♥</i>
-                </span>
-                <span className="pv-sun" />
-                <span className="pv-grid" />
-                <span className="pv-title">
-                  NELLY
-                  <br />
-                  ALMAKTOUM
-                </span>
-                <MiniSprite />
-              </span>
-              <span className={`start-choice choice-arcade${sel === 0 ? " sel" : ""}`}>
-                <svg className="choice-ic" width="18" height="12" viewBox="0 0 12 8" shapeRendering="crispEdges" aria-hidden="true">
+              <svg className="choice-ic" width="18" height="12" viewBox="0 0 12 8" shapeRendering="crispEdges" aria-hidden="true">
                 <path d="M2 0h8v1h1v1h1v5h-1v1H8V7H4v1H1V7H0V2h1V1h1z" fill="currentColor" />
                 <path d="M2 3h1V2h1v1h1v1H4v1H3V4H2z M8 2h1v1H8z M9 4h1v1H9z" fill="var(--choice-bg)" />
               </svg>
-                <span className="choice-title">ARCADE</span>
-              </span>
+              <span className="choice-title">ARCADE</span>
             </button>
             <button
-              className={`start-card card-pro${sel === 1 ? " sel" : ""}`}
+              className={`start-choice choice-pro${sel === 1 ? " sel" : ""}`}
               onClick={() => start("pro")}
               onFocus={() => setSel(1)}
               onMouseEnter={() => setSel(1)}
-              aria-label="Open the professional view"
             >
-              <span className="pv pv-pro" aria-hidden="true">
-                <span className="pv-bar">
-                  <b>Nelly Almaktoum</b>
-                  <i />
-                  <i />
-                  <i />
-                </span>
-                <span className="pv-body">
-                  <img src="/photo.jpg" alt="" width={44} height={44} />
-                  <span className="pv-lines">
-                    <b>About</b>
-                    <u />
-                    <u />
-                    <u />
-                  </span>
-                </span>
-                <span className="pv-cards">
-                  <span />
-                  <span />
-                  <span />
-                </span>
-              </span>
-              <span className={`start-choice choice-pro${sel === 1 ? " sel" : ""}`}>
-                <svg className="choice-ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="choice-ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M4 8h16v11H4z M9 8V5h6v3 M4 13h16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
               </svg>
-                <span className="choice-title">PROFESSIONAL</span>
-              </span>
+              <span className="choice-title">PROFESSIONAL</span>
             </button>
           </div>
         </div>
