@@ -39,7 +39,7 @@ export default function Portfolio() {
   }, []);
 
   useEffect(() => {
-    const title = ar ? "نيللي المكتوم" : lang === "ko" ? "넬리 알마크툼" : "Nelly Almaktoum";
+    const title = ar ? "نيللي المكتوم" : lang === "ko" ? "넬리 알막툼" : "Nelly Almaktoum";
     document.title = title;
     const id = setTimeout(() => (document.title = title), 50);
     return () => clearTimeout(id);
