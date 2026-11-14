@@ -5216,3 +5216,63 @@ html[lang="ar"] .mode-switch button {
     right: 10px;
   }
 }
+
+/* crisper start screen */
+.start-screen.blend {
+  background: #0e0b11;
+}
+.blend-bg {
+  background: linear-gradient(180deg, #16111a 0%, #0e0b11 60%);
+}
+.blend-grid {
+  display: none;
+}
+.blend-top {
+  color: #a99aa3;
+}
+.blend-kicker {
+  color: #ff7ab4;
+}
+.blend-name {
+  color: #ffffff;
+}
+.blend-ar {
+  color: #ddd2d8;
+}
+.blend-sub {
+  color: #cfc3ca;
+}
+.start-screen.blend .start-choose {
+  color: #b3a5ad;
+}
+.pv,
+.pv-arcade,
+.pv-pro {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.55);
+}
+.pv-arcade {
+  background: linear-gradient(#14041a 0%, #3d0a35 40%, #a3195f 63.5%, #0b0209 64%);
+}
+.pv-sun {
+  opacity: 1;
+  background: linear-gradient(#ffe066, #ff8a1f 55%, #ff2f7a);
+}
+.pv-grid {
+  opacity: 0.9;
+  background-image: linear-gradient(#ff4f97 1px, transparent 1px), linear-gradient(90deg, #ff4f97 1px, transparent 1px);
+}
+.pv-title {
+  color: #ffffff;
+  text-shadow: 1px 1px 0 #d92d74;
+}
+.pv-pro {
+  background: #ffffff;
+}
+.pv-bar {
+  background: #faf8f6;
+}
+.pv-lines u,
+.pv-bar i {
+  background: #e2ddd7;
+}
