@@ -163,7 +163,7 @@ export default function StartScreen() {
               <svg className="choice-ic" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M4 8h16v11H4z M9 8V5h6v3 M4 13h16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
               </svg>
-              <span className="choice-title">Professional</span>
+              <span className="choice-title">PROFESSIONAL</span>
             </button>
           </div>
         </div>
