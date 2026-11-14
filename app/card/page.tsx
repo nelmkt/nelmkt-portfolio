@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { FRAMES, PALETTE, SPRITE_W, SPRITE_H } from "../../components/sprite";
 import ShareButton from "./ShareButton";
 import "./card.css";
 
@@ -8,21 +7,6 @@ export const metadata: Metadata = {
   description: "Save Nelly Almaktoum's contact details: ML researcher and inventor at King Abdulaziz University.",
   alternates: { canonical: "/card/" },
 };
-
-function Frame({ frame, i }: { frame: string[]; i: number }) {
-  const rects: React.ReactNode[] = [];
-  frame.forEach((line, y) =>
-    line.split("").forEach((c, x) => {
-      const fill = PALETTE[c];
-      if (fill) rects.push(<rect key={`${x}-${y}`} x={x} y={y} width={1.05} height={1.05} fill={fill} />);
-    }),
-  );
-  return (
-    <svg className={`cp-frame cp-frame-${i}`} viewBox={`0 0 ${SPRITE_W} ${SPRITE_H}`} shapeRendering="crispEdges" aria-hidden="true">
-      {rects}
-    </svg>
-  );
-}
 
 const ICON = {
   mail: "M3 6h18v12H3z M3 6l9 7 9-7",
@@ -42,17 +26,6 @@ export default function CardPage() {
   return (
     <main className="cp">
       <div className="cp-inner">
-        <div className="cp-stage" aria-hidden="true">
-          <div className="cp-walker">
-            <div className="cp-facing">
-              {FRAMES.map((f, i) => (
-                <Frame key={i} frame={f} i={i} />
-              ))}
-            </div>
-            <span className="cp-shadow" />
-          </div>
-        </div>
-
         <p className="cp-kicker">PLAYER 1</p>
         <h1 className="cp-name">
           <span>NELLY</span>
@@ -62,11 +35,6 @@ export default function CardPage() {
           نيللي المكتوم
         </p>
 
-        <ul className="cp-tags" aria-label="Roles">
-          <li>ML Researcher</li>
-          <li>Inventor</li>
-          <li>Patent holder</li>
-        </ul>
         <p className="cp-org">
           Faculty of Computing &amp; IT
           <br />
