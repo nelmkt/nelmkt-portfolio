@@ -18,7 +18,7 @@ export const profile = {
   highlight: "Youngest UN-certified Saudi researcher",
   highlightDetail: "8 national & international recognitions - 4 national & international awards",
   stats: [
-    { label: "CLASS", pro: "Role", value: "Researcher - Developer - ML Engineer" },
+    { label: "CLASS", pro: "Role", value: "ML Researcher - Inventor - Developer" },
     { label: "GUILD", pro: "University", value: "KAU - BS Computer Science - Waed track" },
     { label: "BASE", pro: "Location", value: "Jeddah, Saudi Arabia" },
     { label: "LANGS", pro: "Languages", value: "Arabic - English" },
@@ -299,7 +299,7 @@ export const sideQuests: { title: string; by?: string; when: string }[] = [
 
 export const links = [
   { label: "LinkedIn", value: "in/nelmkt", url: "https://www.linkedin.com/in/nelmkt/" },
-  { label: "Email", value: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },
+  { label: "Email", value: "nelly@nelmkt.com", url: "mailto:nelly@nelmkt.com" },
   { label: "X", value: "@nelmkt", url: "https://x.com/nelmkt" },
   { label: "GitHub", value: "nelmkt", url: "https://github.com/nelmkt" },
   { label: "ORCID", value: "0009-0007-9887-0280", url: "https://orcid.org/0009-0007-9887-0280" },

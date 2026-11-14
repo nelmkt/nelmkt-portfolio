@@ -134,10 +134,10 @@ export default function StartScreen() {
         </div>
         <div className="start-bottom">
           <p className="start-sub">
-            <span>Researcher &amp; Innovator</span>
+            <span>ML Researcher &amp; Inventor</span>
             <br />
             <span>
-              ML Engineer <i>-</i> Green Tech
+              King Abdulaziz University
             </span>
           </p>
           <p className="start-choose">CHOOSE YOUR VIEW</p>

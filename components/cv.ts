@@ -22,7 +22,7 @@ export const cv = {
   title: "Computer Science Student | Machine Learning & AI Research",
   contact: [
     { label: "Jeddah, Saudi Arabia" },
-    { label: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },
+    { label: "nelly@nelmkt.com", url: "mailto:nelly@nelmkt.com" },
     { label: "nelmkt.com", url: "https://nelmkt.com" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/nelmkt/" },
     { label: "GitHub", url: "https://github.com/nelmkt" },
@@ -201,7 +201,7 @@ export const cvAr: typeof cv = {
   title: "طالبة علوم حاسب | أبحاث تعلّم الآلة والذكاء الاصطناعي",
   contact: [
     { label: "جدة، المملكة العربية السعودية" },
-    { label: "scifinel@gmail.com", url: "mailto:scifinel@gmail.com" },
+    { label: "nelly@nelmkt.com", url: "mailto:nelly@nelmkt.com" },
     { label: "nelmkt.com", url: "https://nelmkt.com" },
     { label: "LinkedIn", url: "https://www.linkedin.com/in/nelmkt/" },
     { label: "GitHub", url: "https://github.com/nelmkt" },

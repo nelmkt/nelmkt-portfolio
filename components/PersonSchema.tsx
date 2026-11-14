@@ -10,7 +10,7 @@ const person = {
   alternateName: ["نيللي المكتوم", "Nelly F. Almaktoum", "nelmkt"],
   url: "https://nelmkt.com/",
   image: "https://nelmkt.com/portrait.jpg",
-  jobTitle: "Computer Science student, ML engineer and researcher",
+  jobTitle: "ML Researcher & Inventor",
   description:
     "Saudi undergraduate researcher at King Abdulaziz University working on machine learning, AI and green technology; inventor of Aykah, a patented solar-powered IoT smart waste bin.",
   nationality: { "@type": "Country", name: "Saudi Arabia" },

@@ -3,7 +3,7 @@ import CvDocument from "../../../components/CvDocument";
 
 export const metadata: Metadata = {
   title: "السيرة الذاتية - نيللي المكتوم",
-  description: "السيرة الذاتية لنيللي المكتوم: طالبة علوم حاسب ومهندسة تعلّم آلة وباحثة.",
+  description: "السيرة الذاتية لنيللي المكتوم: باحثة في تعلّم الآلة ومخترعة في جامعة الملك عبدالعزيز.",
   alternates: { canonical: "/cv/ar/", languages: { en: "/cv/", ar: "/cv/ar/" } },
 };
 

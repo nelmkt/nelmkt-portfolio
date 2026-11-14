@@ -32,6 +32,8 @@ export const KO: Record<string, string> = {
   "Nelly Almaktoum": "넬리 알막툼",
   "Photo of Nelly Almaktoum": "넬리 알막툼의 사진",
   "Researcher & Innovator": "연구자 & 발명가",
+  "ML Researcher & Inventor": "ML 연구자 & 발명가",
+  "ML Researcher - Inventor - Developer": "ML 연구자 - 발명가 - 개발자",
   "STAGE": "스테이지",
   "PLAYER SELECT": "플레이어 선택",
   "BONUS STAGE - LANGUAGE RUSH": "보너스 스테이지 - 랭귀지 러시",
