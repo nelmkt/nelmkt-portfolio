@@ -140,6 +140,7 @@ export const trophies = [
     detail: "International Invention, Innovation & Entrepreneurship Idea Competition 2026, representing King Abdulaziz University with Aykah",
     by: "Kolej Poly-Tech MARA (KPTM), Malaysia",
     tier: "gold",
+    proof: "/proof/i3ec-26-bronze-results.jpg",
   },
   {
     year: "NOV 2026",
