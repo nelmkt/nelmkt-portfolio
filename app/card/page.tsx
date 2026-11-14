@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FRAMES, PALETTE, SPRITE_W, SPRITE_H } from "../../components/sprite";
+import ShareButton from "./ShareButton";
 import "./card.css";
 
 export const metadata: Metadata = {
@@ -66,14 +67,21 @@ export default function CardPage() {
           <li>Inventor</li>
           <li>Patent holder</li>
         </ul>
-        <p className="cp-org">Faculty of Computing &amp; IT - King Abdulaziz University</p>
+        <p className="cp-org">
+          Faculty of Computing &amp; IT
+          <br />
+          King Abdulaziz University
+        </p>
 
-        <a className="cp-save" href="/nelly-almaktoum.vcf" download>
+        <div className="cp-actions">
+          <a className="cp-save" href="/nelly-almaktoum.vcf" download>
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 4v11 M7 10l5 5 5-5 M5 20h14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="square" />
           </svg>
           SAVE CONTACT
-        </a>
+          </a>
+          <ShareButton />
+        </div>
 
         <ul className="cp-rows">
           {rows.map((r) => (
