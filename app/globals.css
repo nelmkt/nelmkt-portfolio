@@ -5153,3 +5153,66 @@ html[lang="ar"] .mode-switch button {
     padding: 7px 7px 0;
   }
 }
+
+/* preview cards: calmer, straight, matched */
+.card-arcade,
+.card-pro {
+  transform: none;
+}
+.start-card.sel {
+  transform: translateY(-4px);
+}
+.start-card:active {
+  transform: translateY(-1px);
+}
+.pv,
+.pv-arcade,
+.pv-pro {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+}
+.start-card.sel .pv {
+  border-color: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+}
+.pv-arcade {
+  background: linear-gradient(#120510 0%, #2a0a24 45%, #4c1238 64%, #0d030a 64.5%);
+}
+.pv-hud {
+  display: none;
+}
+.pv-title {
+  top: 16px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-shadow: 1px 1px 0 #b8306f;
+}
+.pv-sun {
+  top: 64%;
+  width: 56px;
+  height: 28px;
+  opacity: 0.9;
+}
+.pv-grid {
+  top: 64%;
+  opacity: 0.45;
+}
+.pv-sprite {
+  left: auto;
+  right: 18px;
+  bottom: 6px;
+}
+@media (max-width: 560px) {
+  .pv-title {
+    top: 12px;
+    font-size: 9px;
+  }
+  .pv-sun {
+    width: 38px;
+    height: 19px;
+  }
+  .pv-sprite {
+    right: 10px;
+  }
+}
