@@ -71,6 +71,7 @@ export const KO: Record<string, string> = {
   "Locked": "잠김",
   "OPEN TO RESEARCH COLLABORATION": "연구 협업 환영",
   "The quickest way to reach me is LinkedIn or email. I work in Arabic and English.": "LinkedIn이나 이메일로 연락하시는 게 가장 빨라요. 아랍어와 영어로 소통합니다.",
+  "Thanks for stopping by.": "방문해 주셔서 감사합니다.",
   "THANKS FOR PLAYING!": "플레이해 주셔서 감사합니다!",
   "© 2026 Nelly Almaktoum - Built with Next.js, TypeScript, HTML & CSS": "© 2026 넬리 알막툼 - Next.js, TypeScript, HTML & CSS로 제작",
   "FCIT Student @ KAU - Waed ’26 - IEEE ’25 - UNCCD COP16 ’24 - Mawhiba Alumna": "KAU 컴퓨팅·정보기술대학 재학 - Waed ’26 - IEEE ’25 - UNCCD COP16 ’24 - Mawhiba 동문",

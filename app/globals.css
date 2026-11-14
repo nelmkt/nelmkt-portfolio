@@ -4816,3 +4816,10 @@ html[lang="ko"] {
   font-weight: 700;
   padding: 5px 9px 6px;
 }
+
+html[data-mode="pro"] .thanks-pro {
+  display: block;
+  font-size: 18px !important;
+  font-weight: 600;
+  color: var(--ink);
+}
