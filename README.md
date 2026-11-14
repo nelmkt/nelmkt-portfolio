@@ -24,7 +24,8 @@ Both are available in English and Arabic.
 | 1-5 | Academy | Education | Education, competitions and events |
 | 1-6 | Skills | Skills | Languages, AI research, ML engineering, data, web and hardware |
 | 1-7 | Party | Leadership | Community and leadership roles |
-| 1-8 | Save | Contact | Contact links |
+| 1-8 | CV | CV | Full CV preview with a PDF download |
+| 1-9 | Save | Contact | Contact links |
 
 The full CV lives at [/cv](https://nelmkt.com/cv/) (English) and [/cv/ar](https://nelmkt.com/cv/ar/) (Arabic), with PDF downloads. There are a couple of hidden extras for curious players.
 
