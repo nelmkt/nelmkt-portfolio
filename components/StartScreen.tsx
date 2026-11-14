@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import PixelText from "./PixelText";
-import { profile } from "./data";
 import { type Mode, setMode } from "./mode";
 import { FRAMES, SPRITE_H, SPRITE_W, drawSprite } from "./sprite";
 
@@ -89,56 +87,36 @@ export default function StartScreen() {
 
   return (
     <div
-      className={`start-screen${leaving ? " leaving" : ""}`}
+      className={`start-screen blend${leaving ? " leaving" : ""}`}
       role="dialog"
       aria-modal="true"
       aria-label="Start screen"
     >
-      <div className="start-sky" aria-hidden="true">
-        {STARS.map((s, i) => (
-          <span
-            key={i}
-            className={`start-star${s.pink ? " pink" : ""}`}
-            style={{ left: s.left, top: s.top, width: s.size, height: s.size, animationDelay: s.delay }}
-          />
-        ))}
-        <div className="start-sun" />
-      </div>
-      <div className="start-floor" aria-hidden="true" />
+      <div className="blend-bg" aria-hidden="true" />
+      <div className="blend-grid" aria-hidden="true" />
       <StartRunner />
 
-      <div className="start-arcade" aria-hidden="true">
+      <div className="blend-top" aria-hidden="true">
         <span>
-          <b>1UP</b> 000000
+          <b>P1</b> NELMKT
         </span>
-        <span>
-          <b>HI-SCORE</b> {String(best).padStart(6, "0")}
-        </span>
-        <span>
-          <b>CREDIT</b> 01
-        </span>
+        <span>nelmkt.com</span>
       </div>
 
       <div className="start-inner">
         <div className="start-top">
-          <p className="start-kicker">NELMKT PRESENTS</p>
-          <h1 className="start-title">
-            NELLY
-            <br />
-            ALMAKTOUM
-          </h1>
-          <p className="start-ar">
-            <PixelText text={profile.nameAr} size={14} scale={3} shadow="#b8306f" />
+          <p className="blend-kicker">PORTFOLIO</p>
+          <h1 className="blend-name">Nelly Almaktoum</h1>
+          <p className="blend-ar" lang="ar" dir="rtl">
+            نيللي المكتوم
           </p>
           <div className="start-thermal" aria-hidden="true" />
         </div>
         <div className="start-bottom">
-          <p className="start-sub">
-            <span>
-              ML Researcher <i>-</i> Inventor
-            </span>
+          <p className="blend-sub">
+            ML Researcher - Inventor
             <br />
-            <span>King Abdulaziz University</span>
+            King Abdulaziz University
           </p>
           <p className="start-choose">CHOOSE YOUR VIEW</p>
           <div className="start-menu start-choices">
@@ -166,9 +144,6 @@ export default function StartScreen() {
               <span className="choice-title">PROFESSIONAL</span>
             </button>
           </div>
-          <p className="start-hint" aria-hidden="true">
-            <kbd>←</kbd> <kbd>→</kbd> choose <span>-</span> <kbd>ENTER</kbd> start
-          </p>
         </div>
       </div>
     </div>
