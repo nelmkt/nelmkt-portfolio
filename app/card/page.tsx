@@ -41,34 +41,38 @@ export default function CardPage() {
   return (
     <main className="cp">
       <div className="cp-inner">
-        <div className="cp-top">
-          <span>PLAYER 1</span>
-          <span>nelmkt.com</span>
-        </div>
-
         <div className="cp-stage" aria-hidden="true">
-          <div className="cp-runner">
-            {FRAMES.map((f, i) => (
-              <Frame key={i} frame={f} i={i} />
-            ))}
+          <div className="cp-walker">
+            <div className="cp-facing">
+              {FRAMES.map((f, i) => (
+                <Frame key={i} frame={f} i={i} />
+              ))}
+            </div>
+            <span className="cp-shadow" />
           </div>
-          <div className="cp-shadow" />
         </div>
 
+        <p className="cp-kicker">PLAYER 1</p>
         <h1 className="cp-name">
-          <span>Nelly</span> <span>Almaktoum</span>
+          <span>NELLY</span>
+          <span>ALMAKTOUM</span>
         </h1>
         <p className="cp-ar" lang="ar" dir="rtl">
           نيللي المكتوم
         </p>
-        <p className="cp-role">ML Researcher &amp; Inventor</p>
-        <p className="cp-org">Faculty of Computing &amp; IT, King Abdulaziz University</p>
+
+        <ul className="cp-tags" aria-label="Roles">
+          <li>ML Researcher</li>
+          <li>Inventor</li>
+          <li>Patent holder</li>
+        </ul>
+        <p className="cp-org">Faculty of Computing &amp; IT - King Abdulaziz University</p>
 
         <a className="cp-save" href="/nelly-almaktoum.vcf" download>
           <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 4v11 M7 10l5 5 5-5 M5 20h14" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="square" />
+            <path d="M12 4v11 M7 10l5 5 5-5 M5 20h14" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="square" />
           </svg>
-          Save contact
+          SAVE CONTACT
         </a>
 
         <ul className="cp-rows">
@@ -89,6 +93,10 @@ export default function CardPage() {
             </li>
           ))}
         </ul>
+
+        <p className="cp-foot">
+          <a href="/">nelmkt.com</a>
+        </p>
       </div>
     </main>
   );
