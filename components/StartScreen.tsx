@@ -55,7 +55,7 @@ export default function StartScreen() {
     if (!open) return;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+      if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)) {
         e.preventDefault();
         const items = [...document.querySelectorAll<HTMLButtonElement>(".start-menu button")];
         const next = (sel + 1) % items.length;
@@ -66,7 +66,7 @@ export default function StartScreen() {
       if (e.target instanceof HTMLButtonElement && e.key !== "Escape") return;
       if (e.key === "Enter" || e.key === " " || e.key === "Escape") {
         e.preventDefault();
-        start();
+        start(sel === 1 ? "pro" : "arcade");
       }
     };
     window.addEventListener("keydown", onKey);
@@ -140,23 +140,26 @@ export default function StartScreen() {
               ML Engineer <i>-</i> Green Tech
             </span>
           </p>
-          <div className="start-menu">
+          <p className="start-choose">CHOOSE YOUR VIEW</p>
+          <div className="start-menu start-choices">
             <button
-              className={`start-btn${sel === 0 ? " sel" : ""}`}
+              className={`start-choice choice-arcade${sel === 0 ? " sel" : ""}`}
               onClick={() => start("arcade")}
               onFocus={() => setSel(0)}
               onMouseEnter={() => setSel(0)}
               autoFocus
             >
-              PRESS START
+              <span className="choice-title">▶ ARCADE</span>
+              <span className="choice-desc">Play through my work: quests, trophies and a mini-game</span>
             </button>
             <button
-              className={`start-pro${sel === 1 ? " sel" : ""}`}
+              className={`start-choice choice-pro${sel === 1 ? " sel" : ""}`}
               onClick={() => start("pro")}
               onFocus={() => setSel(1)}
               onMouseEnter={() => setSel(1)}
             >
-              PROFESSIONAL MODE
+              <span className="choice-title">Professional</span>
+              <span className="choice-desc">A clean, classic portfolio and CV</span>
             </button>
           </div>
         </div>
