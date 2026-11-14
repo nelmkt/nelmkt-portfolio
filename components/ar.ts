@@ -70,6 +70,7 @@ export const AR: Record<string, string> = {
   Locked: "مقفلة",
   "OPEN TO RESEARCH COLLABORATION": "أرحّب بالتعاون البحثي",
   "The quickest way to reach me is LinkedIn or email. I work in Arabic and English.": "أسرع طريقة للتواصل معي عبر LinkedIn أو البريد الإلكتروني، وأتحدث العربية والإنجليزية.",
+  "Thanks for stopping by.": "شكرًا لزيارتك.",
   "THANKS FOR PLAYING!": "شكرًا على اللعب!",
   "© 2026 Nelly Almaktoum - Built with Next.js, TypeScript, HTML & CSS": "© 2026 نيللي المكتوم - بُني باستخدام Next.js وTypeScript وHTML وCSS",
 
