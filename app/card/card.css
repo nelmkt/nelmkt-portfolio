@@ -4,95 +4,212 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 36px 20px;
 }
 .cp-inner {
   width: 100%;
-  max-width: 380px;
+  max-width: 400px;
+  padding: 22px 22px 18px;
+  background: #0f070d;
+  border: 1px solid #2a1424;
   text-align: center;
 }
-.cp-sprite {
-  display: block;
-  width: 72px;
-  height: 90px;
-  margin: 0 auto 22px;
+
+.cp-top {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-pixel), monospace;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #8f6b80;
 }
+
+/* running character */
+.cp-stage {
+  position: relative;
+  height: 112px;
+  margin: 18px -22px 0;
+  overflow: hidden;
+}
+.cp-runner {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  width: 64px;
+  height: 80px;
+  transform: translateX(-50%);
+}
+.cp-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: cp-run 0.42s steps(1, end) infinite;
+}
+.cp-frame-0 {
+  opacity: 1;
+}
+.cp-frame-1 {
+  animation-delay: 0.14s;
+}
+.cp-frame-2 {
+  animation-delay: 0.28s;
+}
+@keyframes cp-run {
+  0% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.cp-ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+  border-top: 2px solid #ff5fa2;
+  background: repeating-linear-gradient(90deg, #5e1f4f 0 10px, transparent 10px 24px);
+  background-size: 24px 3px;
+  background-repeat: repeat-x;
+  background-position: 0 4px;
+  animation: cp-scroll 0.42s linear infinite;
+}
+@keyframes cp-scroll {
+  to {
+    background-position: -24px 4px;
+  }
+}
+
 .cp-name {
-  margin: 0;
+  margin: 20px 0 0;
   font-family: var(--font-banner), monospace;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 42px;
   line-height: 1;
   letter-spacing: 1px;
   color: #ff5fa2;
 }
+.cp-name span:last-child {
+  color: #ffd6e7;
+}
 .cp-ar {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   font-family: var(--font-ar), sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #c494ae;
 }
 .cp-role {
-  margin: 18px 0 0;
+  margin: 16px 0 0;
   font-size: 16px;
   font-weight: 600;
   color: #f2e3eb;
 }
 .cp-org {
-  margin: 4px 0 0;
+  margin: 3px 0 0;
   font-size: 14px;
   line-height: 1.5;
-  color: #c494ae;
+  color: #a98399;
 }
+
 .cp-save {
-  display: block;
-  margin: 28px 0 14px;
-  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 24px 0 12px;
+  padding: 13px;
   font-size: 16px;
   font-weight: 600;
-  letter-spacing: 0.3px;
   color: #fff;
   background: #ff5fa2;
   text-decoration: none;
-  transition: background 0.15s;
+  box-shadow: 0 4px 0 #a8205f;
+  transition: transform 0.08s, box-shadow 0.08s, background 0.15s;
 }
-.cp-save:hover,
-.cp-save:focus-visible {
+.cp-save:hover {
   background: #ff3d8b;
 }
+.cp-save:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #a8205f;
+}
+
 .cp-rows {
   list-style: none;
-  margin: 0;
+  margin: 16px 0 0;
   padding: 0;
-  border-top: 1px solid #2a1424;
+  display: grid;
+  gap: 8px;
 }
 .cp-rows a {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 4px;
-  border-bottom: 1px solid #2a1424;
+  padding: 10px 12px;
+  background: #160b14;
+  border: 1px solid #2a1424;
   color: #f2e3eb;
   text-decoration: none;
-  font-size: 15px;
-  transition: color 0.15s;
+  text-align: left;
+  transition: border-color 0.15s, background 0.15s;
 }
 .cp-rows a:hover,
 .cp-rows a:focus-visible {
-  color: #ff5fa2;
+  border-color: #ff5fa2;
+  background: #1e0e1a;
 }
-.cp-rows svg {
+.cp-ic {
   flex: none;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ff5fa2;
+  background: rgba(255, 95, 162, 0.12);
+}
+.cp-row-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
 }
 .cp-row-label {
-  color: #c494ae;
+  font-size: 12px;
+  color: #a98399;
 }
 .cp-row-value {
-  margin-left: auto;
-  min-width: 0;
+  font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.cp-chev {
+  flex: none;
+  font-size: 22px;
+  line-height: 1;
+  color: #5e1f4f;
+  transition: color 0.15s, transform 0.15s;
+}
+.cp-rows a:hover .cp-chev {
+  color: #ff5fa2;
+  transform: translateX(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cp-frame,
+  .cp-ground {
+    animation: none;
+  }
+  .cp-frame-1,
+  .cp-frame-2 {
+    display: none;
+  }
 }
